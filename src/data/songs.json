@@ -2,6 +2,8 @@
   {
     "id": 1,
     "title": "Eclipse",
+    "artist_name": "Pink Floyd",
+    "album_name": "The Dark Side of the Moon",
     "description": "001日目の紹介文",
     "image": "/images/001.jpg",
     "players": {
@@ -12,6 +14,8 @@
   {
     "id": 2,
     "title": "実験4号",
+    "artist_name": "The Pees",
+    "album_name": "リハビリ中断",
     "description": "002日目の紹介文",
     "image": "/images/002.jpg",
     "players": {
@@ -22,6 +26,8 @@
   {
     "id": 3,
     "title": "雪んこ",
+    "artist_name": "Takaki Horigome",
+    "album_name": "Home Ground",
     "description": "003日目の紹介文",
     "image": "/images/003.jpg",
     "players": {
@@ -32,6 +38,8 @@
   {
     "id": 4,
     "title": "Luv N' Haight - Single Version",
+    "artist_name": "Sly & The Family Stone",
+    "album_name": "There's a Riot Goin' On",
     "description": "004日目の紹介文",
     "image": "/images/004.jpg",
     "players": {
@@ -42,6 +50,8 @@
   {
     "id": 5,
     "title": "I Love Music",
+    "artist_name": "Ahmad Jamal Trio",
+    "album_name": "The Awakening",
     "description": "005日目の紹介文",
     "image": "/images/005.jpg",
     "players": {
@@ -52,6 +62,8 @@
   {
     "id": 6,
     "title": "The Flower Called Nowhere",
+    "artist_name": "Stereolab",
+    "album_name": "Dots And Loops (Expanded Edition)",
     "description": "006日目の紹介文",
     "image": "/images/006.jpg",
     "players": {
@@ -62,6 +74,8 @@
   {
     "id": 7,
     "title": "Starry Sky",
+    "artist_name": "CAPSULE",
+    "album_name": "Sugarless GiRL",
     "description": "007日目の紹介文",
     "image": "/images/007.jpg",
     "players": {
@@ -72,6 +86,8 @@
   {
     "id": 8,
     "title": "Post Panic!",
+    "artist_name": "Navy Blue",
+    "album_name": "Song of Sage: Post Panic!",
     "description": "008日目の紹介文",
     "image": "/images/008.jpg",
     "players": {
@@ -82,6 +98,8 @@
   {
     "id": 9,
     "title": "It's a Lovely Day Today",
+    "artist_name": "Connie Stevens",
+    "album_name": "Conchetta",
     "description": "009日目の紹介文",
     "image": "/images/009.jpg",
     "players": {
@@ -92,6 +110,8 @@
   {
     "id": 10,
     "title": "Kick & Loud",
+    "artist_name": "GEISHA GIRLS",
+    "album_name": "Grandma Is Still Alive",
     "description": "010日目の紹介文",
     "image": "/images/010.jpg",
     "players": {
@@ -102,6 +122,8 @@
   {
     "id": 11,
     "title": "Need You - Asher Postman Remix",
+    "artist_name": "Ember Island",
+    "album_name": "Ember Island (Remixed)",
     "description": "011日目の紹介文",
     "image": "/images/011.jpg",
     "players": {
@@ -112,6 +134,8 @@
   {
     "id": 12,
     "title": "21世紀の自殺者",
+    "artist_name": "0.8Syooogeki",
+    "album_name": "エスノファンキードフトエフスキーカムカムクラブ",
     "description": "012日目の紹介文",
     "image": "/images/012.jpg",
     "players": {
@@ -122,6 +146,8 @@
   {
     "id": 13,
     "title": "Satori Part I",
+    "artist_name": "Flower Travellin' Band",
+    "album_name": "Satori",
     "description": "013日目の紹介文",
     "image": "/images/013.jpg",
     "players": {
@@ -132,6 +158,8 @@
   {
     "id": 14,
     "title": "Üher",
+    "artist_name": "NaraBara",
+    "album_name": "Hamt Zamin Hümüs",
     "description": "014日目の紹介文",
     "image": "/images/014.jpg",
     "players": {
@@ -142,6 +170,8 @@
   {
     "id": 15,
     "title": "vitamin",
+    "artist_name": "South Penguin",
+    "album_name": "R",
     "description": "015日目の紹介文",
     "image": "/images/015.jpg",
     "players": {
@@ -152,6 +182,8 @@
   {
     "id": 16,
     "title": "Ghana",
+    "artist_name": "D.A.N.",
+    "album_name": "D.A.N.",
     "description": "016日目の紹介文",
     "image": "/images/016.jpg",
     "players": {
@@ -162,6 +194,8 @@
   {
     "id": 17,
     "title": "How High The Moon",
+    "artist_name": "Ella Fitzgerald",
+    "album_name": "Lullabies Of Birdland",
     "description": "017日目の紹介文",
     "image": "/images/017.jpg",
     "players": {
@@ -172,6 +206,8 @@
   {
     "id": 18,
     "title": "inner universe",
+    "artist_name": "Origa",
+    "album_name": "攻殻機動隊 STAND ALONE COMPLEX　O.S.T.＋",
     "description": "018日目の紹介文",
     "image": "/images/018.jpg",
     "players": {
@@ -182,6 +218,8 @@
   {
     "id": 19,
     "title": "Nuclear Burn",
+    "artist_name": "Brand X",
+    "album_name": "Unorthodox Behaviour",
     "description": "019日目の紹介文",
     "image": "/images/019.jpg",
     "players": {
@@ -192,6 +230,8 @@
   {
     "id": 20,
     "title": "Long Road Home",
+    "artist_name": "Caroline Polachek",
+    "album_name": "Desire, I Want To Turn Into You: Everasking Edition",
     "description": "020日目の紹介文",
     "image": "/images/020.jpg",
     "players": {
@@ -202,6 +242,8 @@
   {
     "id": 21,
     "title": "Lento",
+    "artist_name": "Julieta Venegas",
+    "album_name": "Realmente Lo Mejor",
     "description": "021日目の紹介文",
     "image": "/images/021.jpg",
     "players": {
@@ -212,6 +254,8 @@
   {
     "id": 22,
     "title": "T o K Y o F R U I T !",
+    "artist_name": "TOKYOPILL",
+    "album_name": "Abandon The Flesh !",
     "description": "022日目の紹介文",
     "image": "/images/022.jpg",
     "players": {
@@ -222,6 +266,8 @@
   {
     "id": 23,
     "title": "Ain't No Mountain High Enough",
+    "artist_name": "Marvin Gaye",
+    "album_name": "United",
     "description": "023日目の紹介文",
     "image": "/images/023.jpg",
     "players": {
@@ -232,6 +278,8 @@
   {
     "id": 24,
     "title": "Odaigahara",
+    "artist_name": "EVISBEATS",
+    "album_name": "That's Life",
     "description": "024日目の紹介文",
     "image": "/images/024.jpg",
     "players": {
@@ -242,6 +290,8 @@
   {
     "id": 25,
     "title": "MOON (feat. Herbie Hancock)",
+    "artist_name": "DOMi & JD BECK",
+    "album_name": "NOT TiGHT",
     "description": "025日目の紹介文",
     "image": "/images/025.jpg",
     "players": {
@@ -252,6 +302,8 @@
   {
     "id": 26,
     "title": "Shake Your Rump",
+    "artist_name": "Beastie Boys",
+    "album_name": "Paul's Boutique (20th Anniversary Edition / Remastered)",
     "description": "026日目の紹介文",
     "image": "/images/026.jpg",
     "players": {
@@ -262,6 +314,8 @@
   {
     "id": 27,
     "title": "ハイウェイ",
+    "artist_name": "Quruli",
+    "album_name": "ハイウェイ",
     "description": "027日目の紹介文",
     "image": "/images/027.jpg",
     "players": {
@@ -272,6 +326,8 @@
   {
     "id": 28,
     "title": "We Don't Play No Mo",
+    "artist_name": "1 9 0 5",
+    "album_name": "We Don't Play No Mo",
     "description": "028日目の紹介文",
     "image": "/images/028.jpg",
     "players": {
@@ -282,6 +338,8 @@
   {
     "id": 29,
     "title": "機械仕掛乃宇宙",
+    "artist_name": "Ichiko Aoba",
+    "album_name": "０",
     "description": "029日目の紹介文",
     "image": "/images/029.jpg",
     "players": {
@@ -292,6 +350,8 @@
   {
     "id": 30,
     "title": "THOT'S PRAYER!",
+    "artist_name": "JPEGMAFIA",
+    "album_name": "LP!",
     "description": "030日目の紹介文",
     "image": "/images/030.jpg",
     "players": {
@@ -302,6 +362,8 @@
   {
     "id": 31,
     "title": "Mother Nature's Bitch",
+    "artist_name": "Okay Kaya",
+    "album_name": "Watch This Liquid Pour Itself",
     "description": "031日目の紹介文",
     "image": "/images/031.jpg",
     "players": {
@@ -312,6 +374,8 @@
   {
     "id": 32,
     "title": "The Dachstein Angels",
+    "artist_name": "Wally Badarou",
+    "album_name": "Words Of A Mountain",
     "description": "032日目の紹介文",
     "image": "/images/032.jpg",
     "players": {
@@ -322,6 +386,8 @@
   {
     "id": 33,
     "title": "Street Fighter Mas",
+    "artist_name": "Kamasi Washington",
+    "album_name": "Heaven and Earth",
     "description": "033日目の紹介文",
     "image": "/images/033.jpg",
     "players": {
@@ -332,6 +398,8 @@
   {
     "id": 34,
     "title": "夢のいくら",
+    "artist_name": "Kicell",
+    "album_name": "夢",
     "description": "034日目の紹介文",
     "image": "/images/034.jpg",
     "players": {
@@ -342,6 +410,8 @@
   {
     "id": 35,
     "title": "Runaway",
+    "artist_name": "R3HAB",
+    "album_name": "Runaway",
     "description": "035日目の紹介文",
     "image": "/images/035.jpg",
     "players": {
@@ -352,6 +422,8 @@
   {
     "id": 36,
     "title": "Born Under Punches (The Heat Goes On) - 2005 Remaster",
+    "artist_name": "Talking Heads",
+    "album_name": "Remain in Light (Deluxe Version)",
     "description": "036日目の紹介文",
     "image": "/images/036.jpg",
     "players": {
@@ -362,6 +434,8 @@
   {
     "id": 37,
     "title": "4:02",
+    "artist_name": "A$AP Ferg",
+    "album_name": "Trap Lord",
     "description": "037日目の紹介文",
     "image": "/images/037.jpg",
     "players": {
@@ -372,6 +446,8 @@
   {
     "id": 38,
     "title": "Too Proud",
+    "artist_name": "Hikaru Utada",
+    "album_name": "初恋",
     "description": "038日目の紹介文",
     "image": "/images/038.jpg",
     "players": {
@@ -382,6 +458,8 @@
   {
     "id": 39,
     "title": "まっすぐ歩けない",
+    "artist_name": "Yukadan",
+    "album_name": "セカンド・ハンド",
     "description": "039日目の紹介文",
     "image": "/images/039.jpg",
     "players": {
@@ -392,6 +470,8 @@
   {
     "id": 40,
     "title": "Oh Yeah",
+    "artist_name": "CAN",
+    "album_name": "Tago Mago",
     "description": "040日目の紹介文",
     "image": "/images/040.jpg",
     "players": {
@@ -402,6 +482,8 @@
   {
     "id": 41,
     "title": "Alger la blanche",
+    "artist_name": "Nicolas Godin",
+    "album_name": "Au service de la France",
     "description": "041日目の紹介文",
     "image": "/images/041.jpg",
     "players": {
@@ -412,6 +494,8 @@
   {
     "id": 42,
     "title": "恋は流星",
+    "artist_name": "Minako Yoshida",
+    "album_name": "TWILIGHT ZONE",
     "description": "042日目の紹介文",
     "image": "/images/042.jpg",
     "players": {
@@ -422,6 +506,8 @@
   {
     "id": 43,
     "title": "A Day In The Life - Remastered 2009",
+    "artist_name": "The Beatles",
+    "album_name": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
     "description": "043日目の紹介文",
     "image": "/images/043.jpg",
     "players": {
@@ -432,6 +518,8 @@
   {
     "id": 44,
     "title": "Kintsugi",
+    "artist_name": "DROELOE",
+    "album_name": "Kintsugi",
     "description": "044日目の紹介文",
     "image": "/images/044.jpg",
     "players": {
@@ -442,6 +530,8 @@
   {
     "id": 45,
     "title": "You (feat. Travis Scott)",
+    "artist_name": "Don Toliver",
+    "album_name": "Life of a DON",
     "description": "045日目の紹介文",
     "image": "/images/045.jpg",
     "players": {
@@ -452,6 +542,8 @@
   {
     "id": 46,
     "title": "The Sun Ain't Gonna Shine (Anymore)",
+    "artist_name": "Frankie Valli",
+    "album_name": "Solo",
     "description": "046日目の紹介文",
     "image": "/images/046.jpg",
     "players": {
@@ -462,6 +554,8 @@
   {
     "id": 47,
     "title": "Für immer",
+    "artist_name": "NEU!",
+    "album_name": "NEU! 2",
     "description": "047日目の紹介文",
     "image": "/images/047.jpg",
     "players": {
@@ -472,6 +566,8 @@
   {
     "id": 48,
     "title": "Thom Ki Ki",
+    "artist_name": "Yin Yin",
+    "album_name": "The Rabbit That Hunts Tigers",
     "description": "048日目の紹介文",
     "image": "/images/048.jpg",
     "players": {
@@ -482,6 +578,8 @@
   {
     "id": 49,
     "title": "miss you",
+    "artist_name": "m-flo",
+    "album_name": "ASTROMANTIC",
     "description": "049日目の紹介文",
     "image": "/images/049.jpg",
     "players": {
@@ -492,6 +590,8 @@
   {
     "id": 50,
     "title": "Thin Floors And Tall Ceilings",
+    "artist_name": "ODESZA",
+    "album_name": "A Moment Apart",
     "description": "050日目の紹介文",
     "image": "/images/050.jpg",
     "players": {
@@ -502,6 +602,8 @@
   {
     "id": 51,
     "title": "燃え殻",
+    "artist_name": "umanohone",
+    "album_name": "馬の骨",
     "description": "051日目の紹介文",
     "image": "/images/051.jpg",
     "players": {
@@ -512,6 +614,8 @@
   {
     "id": 52,
     "title": "Your Daddy Loves You (For Gia Louise)",
+    "artist_name": "Gil Scott-Heron",
+    "album_name": "Real Eyes",
     "description": "052日目の紹介文",
     "image": "/images/052.jpg",
     "players": {
@@ -522,6 +626,8 @@
   {
     "id": 53,
     "title": "Slipped Disc",
+    "artist_name": "Lizzy Mercier Descloux",
+    "album_name": "Mambo Nassau",
     "description": "053日目の紹介文",
     "image": "/images/053.jpg",
     "players": {
@@ -532,6 +638,8 @@
   {
     "id": 54,
     "title": "Aspetto ancora un giorno",
+    "artist_name": "Piero Piccioni",
+    "album_name": "Quelle strane occasioni",
     "description": "054日目の紹介文",
     "image": "/images/054.jpg",
     "players": {
@@ -542,6 +650,8 @@
   {
     "id": 55,
     "title": "Santé",
+    "artist_name": "Whyte",
+    "album_name": "A Bedroom of One's Own",
     "description": "055日目の紹介文",
     "image": "/images/055.jpg",
     "players": {
@@ -552,6 +662,8 @@
   {
     "id": 56,
     "title": "4:44",
+    "artist_name": "JAY-Z",
+    "album_name": "4:44",
     "description": "056日目の紹介文",
     "image": "/images/056.jpg",
     "players": {
@@ -562,6 +674,8 @@
   {
     "id": 57,
     "title": "Hot Chocolate (feat. Jerry Paper)",
+    "artist_name": "Tyler, The Creator",
+    "album_name": "Music Inspired by Illumination & Dr. Seuss' The Grinch",
     "description": "057日目の紹介文",
     "image": "/images/057.jpg",
     "players": {
@@ -572,6 +686,8 @@
   {
     "id": 58,
     "title": "わたしの金曜日",
+    "artist_name": "角銅真実",
+    "album_name": "oar",
     "description": "058日目の紹介文",
     "image": "/images/058.jpg",
     "players": {
@@ -582,6 +698,8 @@
   {
     "id": 59,
     "title": "そいえば台湾",
+    "artist_name": "FUJIN CLUB",
+    "album_name": "そいえば台湾",
     "description": "059日目の紹介文",
     "image": "/images/059.jpg",
     "players": {
@@ -592,6 +710,8 @@
   {
     "id": 60,
     "title": "日曜日",
+    "artist_name": "Gestalt Girl",
+    "album_name": "Amoeba",
     "description": "060日目の紹介文",
     "image": "/images/060.jpg",
     "players": {
@@ -602,6 +722,8 @@
   {
     "id": 61,
     "title": "Theme from Goodbye Renaldo",
+    "artist_name": "Squarepusher",
+    "album_name": "Feed Me Weird Things (Remastered)",
     "description": "061日目の紹介文",
     "image": "/images/061.jpg",
     "players": {
@@ -612,6 +734,8 @@
   {
     "id": 62,
     "title": "Cuando",
+    "artist_name": "Kiko Veneno",
+    "album_name": "El Pimiento Indomable",
     "description": "062日目の紹介文",
     "image": "/images/062.jpg",
     "players": {
@@ -622,6 +746,8 @@
   {
     "id": 63,
     "title": "Before The Dawn",
+    "artist_name": "Patrice Rushen",
+    "album_name": "Before The Dawn (Deluxe Japanese Import Edition)",
     "description": "063日目の紹介文",
     "image": "/images/063.jpg",
     "players": {
@@ -632,6 +758,8 @@
   {
     "id": 64,
     "title": "Brasil Pandeiro",
+    "artist_name": "Novos Baianos",
+    "album_name": "Acabou Chorare",
     "description": "064日目の紹介文",
     "image": "/images/064.jpg",
     "players": {
@@ -642,6 +770,8 @@
   {
     "id": 65,
     "title": "Freefall",
+    "artist_name": "Camel",
+    "album_name": "Mirage",
     "description": "065日目の紹介文",
     "image": "/images/065.jpg",
     "players": {
@@ -652,6 +782,8 @@
   {
     "id": 66,
     "title": "Italy",
+    "artist_name": "Samiyam",
+    "album_name": "Wish You Were Here",
     "description": "066日目の紹介文",
     "image": "/images/066.jpg",
     "players": {
@@ -662,6 +794,8 @@
   {
     "id": 67,
     "title": "FANTAZIA",
+    "artist_name": "Roy Blair",
+    "album_name": "GRAFFITI",
     "description": "067日目の紹介文",
     "image": "/images/067.jpg",
     "players": {
@@ -672,6 +806,8 @@
   {
     "id": 68,
     "title": "ぼくたちの失敗",
+    "artist_name": "森田童子",
+    "album_name": "ぼくたちの失敗",
     "description": "068日目の紹介文",
     "image": "/images/068.jpg",
     "players": {
@@ -682,6 +818,8 @@
   {
     "id": 69,
     "title": "Mr. Dodo",
+    "artist_name": "Bert Joris",
+    "album_name": "Jazz Master Tracks, Vol. 3 (Octet Sessions)",
     "description": "069日目の紹介文",
     "image": "/images/069.jpg",
     "players": {
@@ -692,6 +830,8 @@
   {
     "id": 70,
     "title": "あなたから遠くへ",
+    "artist_name": "金延幸子",
+    "album_name": "み空",
     "description": "070日目の紹介文",
     "image": "/images/070.jpg",
     "players": {
@@ -702,6 +842,8 @@
   {
     "id": 71,
     "title": "Waters of March",
+    "artist_name": "Art Garfunkel",
+    "album_name": "Breakaway",
     "description": "071日目の紹介文",
     "image": "/images/071.jpg",
     "players": {
@@ -712,6 +854,8 @@
   {
     "id": 72,
     "title": "Over the Rainbow",
+    "artist_name": "Israel Kamakawiwo'ole",
+    "album_name": "Alone In Iz World",
     "description": "072日目の紹介文",
     "image": "/images/072.jpg",
     "players": {
@@ -722,6 +866,8 @@
   {
     "id": 73,
     "title": "グッドバイ",
+    "artist_name": "toe",
+    "album_name": "New Sentimentality - EP",
     "description": "073日目の紹介文",
     "image": "/images/073.jpg",
     "players": {
@@ -732,6 +878,8 @@
   {
     "id": 74,
     "title": "Metrópole",
+    "artist_name": "Cesar Camargo Mariano",
+    "album_name": "São Paulo - Brasil",
     "description": "074日目の紹介文",
     "image": "/images/074.jpg",
     "players": {
@@ -742,6 +890,8 @@
   {
     "id": 75,
     "title": "温泉街♨︎ feat.Kou-kei",
+    "artist_name": "ZETTAKUN",
+    "album_name": "温泉街♨︎ feat.Kou-kei",
     "description": "075日目の紹介文",
     "image": "/images/075.jpg",
     "players": {
@@ -752,6 +902,8 @@
   {
     "id": 76,
     "title": "I'd Have You Anytime (2014 Remaster)",
+    "artist_name": "George Harrison",
+    "album_name": "All Things Must Pass (2014 Remaster)",
     "description": "076日目の紹介文",
     "image": "/images/076.jpg",
     "players": {
@@ -762,6 +914,8 @@
   {
     "id": 77,
     "title": "Don't Know Why",
+    "artist_name": "parthenope",
+    "album_name": "Blue Note Re:imagined II",
     "description": "077日目の紹介文",
     "image": "/images/077.jpg",
     "players": {
@@ -772,6 +926,8 @@
   {
     "id": 78,
     "title": "Shimmy Shimmy Ya",
+    "artist_name": "Ol' Dirty Bastard",
+    "album_name": "Return to the 36 Chambers: The Dirty Version",
     "description": "078日目の紹介文",
     "image": "/images/078.jpg",
     "players": {
@@ -782,6 +938,8 @@
   {
     "id": 79,
     "title": "心臓の扉",
+    "artist_name": "Mariah",
+    "album_name": "うたかたの日々",
     "description": "079日目の紹介文",
     "image": "/images/079.jpg",
     "players": {
@@ -792,6 +950,8 @@
   {
     "id": 80,
     "title": "回転扉の内側は春？",
+    "artist_name": "君島大空",
+    "album_name": "映帶する煙",
     "description": "080日目の紹介文",
     "image": "/images/080.jpg",
     "players": {
@@ -802,6 +962,8 @@
   {
     "id": 81,
     "title": "Touch (feat. Paul Williams)",
+    "artist_name": "Daft Punk",
+    "album_name": "Random Access Memories",
     "description": "081日目の紹介文",
     "image": "/images/081.jpg",
     "players": {
@@ -812,6 +974,8 @@
   {
     "id": 82,
     "title": "It's Not For Me To Say",
+    "artist_name": "Johnny Mathis",
+    "album_name": "Johnny's Greatest Hits",
     "description": "082日目の紹介文",
     "image": "/images/082.jpg",
     "players": {
@@ -822,6 +986,8 @@
   {
     "id": 83,
     "title": "Come Back As A Flower",
+    "artist_name": "Stevie Wonder",
+    "album_name": "Journey Through The Secret Life Of Plants",
     "description": "083日目の紹介文",
     "image": "/images/083.jpg",
     "players": {
@@ -832,6 +998,8 @@
   {
     "id": 84,
     "title": "Hope For Happiness",
+    "artist_name": "Soft Machine",
+    "album_name": "The Soft Machine (Remastered And Expanded)",
     "description": "084日目の紹介文",
     "image": "/images/084.jpg",
     "players": {
@@ -842,6 +1010,8 @@
   {
     "id": 85,
     "title": "Weed Song",
+    "artist_name": "Bone Thugs-N-Harmony",
+    "album_name": "BTNHRESURRECTION",
     "description": "085日目の紹介文",
     "image": "/images/085.jpg",
     "players": {
@@ -852,6 +1022,8 @@
   {
     "id": 86,
     "title": "Plastic Creek Stomp",
+    "artist_name": "Henry Franklin",
+    "album_name": "The Skipper",
     "description": "086日目の紹介文",
     "image": "/images/086.jpg",
     "players": {
@@ -862,6 +1034,8 @@
   {
     "id": 87,
     "title": "Virtual Insanity - Remastered 2013",
+    "artist_name": "Jamiroquai",
+    "album_name": "Travelling Without Moving (Remastered)",
     "description": "087日目の紹介文",
     "image": "/images/087.jpg",
     "players": {
@@ -872,6 +1046,8 @@
   {
     "id": 88,
     "title": "The Minx",
+    "artist_name": "The Cyrkle",
+    "album_name": "The Minx (Original Soundtrack)",
     "description": "088日目の紹介文",
     "image": "/images/088.jpg",
     "players": {
@@ -882,6 +1058,8 @@
   {
     "id": 89,
     "title": "LA MANERA",
+    "artist_name": "Versis",
+    "album_name": "VíA DEL SOL",
     "description": "089日目の紹介文",
     "image": "/images/089.jpg",
     "players": {
@@ -892,6 +1070,8 @@
   {
     "id": 90,
     "title": "Shut Em Down",
+    "artist_name": "Public Enemy",
+    "album_name": "Apocalypse 91… The Enemy Strikes Black",
     "description": "090日目の紹介文",
     "image": "/images/090.jpg",
     "players": {
@@ -902,6 +1082,8 @@
   {
     "id": 91,
     "title": "Isometric (Intro)",
+    "artist_name": "Madeon",
+    "album_name": "Adventure (Deluxe)",
     "description": "091日目の紹介文",
     "image": "/images/091.jpg",
     "players": {
@@ -912,6 +1094,8 @@
   {
     "id": 92,
     "title": "Celebration",
+    "artist_name": "Kanye West",
+    "album_name": "Late Registration",
     "description": "092日目の紹介文",
     "image": "/images/092.jpg",
     "players": {
@@ -922,6 +1106,8 @@
   {
     "id": 93,
     "title": "Take the \"A\" Train",
+    "artist_name": "Duke Ellington",
+    "album_name": "Jazz Profiles",
     "description": "093日目の紹介文",
     "image": "/images/093.jpg",
     "players": {
@@ -932,6 +1118,8 @@
   {
     "id": 94,
     "title": "The Late Show",
+    "artist_name": "SCHA DARA PARR",
+    "album_name": "5th WHEEL 2 the COACH Standard of 90's",
     "description": "094日目の紹介文",
     "image": "/images/094.jpg",
     "players": {
@@ -942,6 +1130,8 @@
   {
     "id": 95,
     "title": "Third Wind",
+    "artist_name": "Pat Metheny Group",
+    "album_name": "Still Life (Talking)",
     "description": "095日目の紹介文",
     "image": "/images/095.jpg",
     "players": {
@@ -952,6 +1142,8 @@
   {
     "id": 96,
     "title": "ANSWER SONG",
+    "artist_name": "Cymbals",
+    "album_name": "午前８時の脱走計画",
     "description": "096日目の紹介文",
     "image": "/images/096.jpg",
     "players": {
@@ -962,6 +1154,8 @@
   {
     "id": 97,
     "title": "Tuesday",
+    "artist_name": "Télépopmusik",
+    "album_name": "Angel Milk",
     "description": "097日目の紹介文",
     "image": "/images/097.jpg",
     "players": {
@@ -972,6 +1166,8 @@
   {
     "id": 98,
     "title": "in 20XX",
+    "artist_name": "Dos Monos",
+    "album_name": "Dos City",
     "description": "098日目の紹介文",
     "image": "/images/098.jpg",
     "players": {
@@ -982,6 +1178,8 @@
   {
     "id": 99,
     "title": "21st Century Schizoid Man - Including \"Mirrors\"",
+    "artist_name": "King Crimson",
+    "album_name": "In The Court Of The Crimson King (Expanded & Remastered Original Album Mix)",
     "description": "099日目の紹介文",
     "image": "/images/099.jpg",
     "players": {
@@ -992,6 +1190,8 @@
   {
     "id": 100,
     "title": "Seasons of Love",
+    "artist_name": "Rosario Dawson",
+    "album_name": "RENT (Original Motion Picture Soundtrack)",
     "description": "100日目の紹介文",
     "image": "/images/100.jpg",
     "players": {
@@ -1002,6 +1202,8 @@
   {
     "id": 101,
     "title": "Brown Skin",
+    "artist_name": "PARTYNEXTDOOR",
+    "album_name": "PARTYNEXTDOOR 3 (P3)",
     "description": "101日目の紹介文",
     "image": "/images/101.jpg",
     "players": {
@@ -1012,6 +1214,8 @@
   {
     "id": 102,
     "title": "My Brain",
+    "artist_name": "Mose Allison",
+    "album_name": "The Way Of The World",
     "description": "102日目の紹介文",
     "image": "/images/102.jpg",
     "players": {
@@ -1022,6 +1226,8 @@
   {
     "id": 103,
     "title": "City",
+    "artist_name": "MonyHorse",
+    "album_name": "TBOA JOURNEY",
     "description": "103日目の紹介文",
     "image": "/images/103.jpg",
     "players": {
@@ -1032,6 +1238,8 @@
   {
     "id": 104,
     "title": "Não Tem Nada Não",
+    "artist_name": "Marcos Valle",
+    "album_name": "Previsão Do Tempo",
     "description": "104日目の紹介文",
     "image": "/images/104.jpg",
     "players": {
@@ -1042,6 +1250,8 @@
   {
     "id": 105,
     "title": "Do Re Mi",
+    "artist_name": "Citrobal",
+    "album_name": "My Caution Line",
     "description": "105日目の紹介文",
     "image": "/images/105.jpg",
     "players": {
@@ -1052,6 +1262,8 @@
   {
     "id": 106,
     "title": "Pony",
+    "artist_name": "Deluxe",
+    "album_name": "Polishing Peanuts EP",
     "description": "106日目の紹介文",
     "image": "/images/106.jpg",
     "players": {
@@ -1062,6 +1274,8 @@
   {
     "id": 107,
     "title": "Troubles",
+    "artist_name": "Keanu Silva",
+    "album_name": "Troubles",
     "description": "107日目の紹介文",
     "image": "/images/107.jpg",
     "players": {
@@ -1072,6 +1286,8 @@
   {
     "id": 108,
     "title": "HARU",
+    "artist_name": "パジャマで海なんかいかない",
+    "album_name": "HARU",
     "description": "108日目の紹介文",
     "image": "/images/108.jpg",
     "players": {
@@ -1082,6 +1298,8 @@
   {
     "id": 109,
     "title": "モンキー・マジック",
+    "artist_name": "Godiego",
+    "album_name": "モンキー・マジック",
     "description": "109日目の紹介文",
     "image": "/images/109.jpg",
     "players": {
@@ -1092,6 +1310,8 @@
   {
     "id": 110,
     "title": "(Exchange)",
+    "artist_name": "Massive Attack",
+    "album_name": "Mezzanine",
     "description": "110日目の紹介文",
     "image": "/images/110.jpg",
     "players": {
@@ -1102,6 +1322,8 @@
   {
     "id": 111,
     "title": "Ode to an African Violet",
+    "artist_name": "Mort Garson",
+    "album_name": "Mother Earth's Plantasia",
     "description": "111日目の紹介文",
     "image": "/images/111.jpg",
     "players": {
@@ -1112,6 +1334,8 @@
   {
     "id": 112,
     "title": "マシマロ",
+    "artist_name": "Tamio Okuda",
+    "album_name": "GOLDBLEND",
     "description": "112日目の紹介文",
     "image": "/images/112.jpg",
     "players": {
@@ -1122,6 +1346,8 @@
   {
     "id": 113,
     "title": "Chega De Saudade",
+    "artist_name": "Antônio Carlos Jobim",
+    "album_name": "Inédito",
     "description": "113日目の紹介文",
     "image": "/images/113.jpg",
     "players": {
@@ -1132,6 +1358,8 @@
   {
     "id": 114,
     "title": "Spa",
+    "artist_name": "Faberyayo",
+    "album_name": "Das Drama",
     "description": "114日目の紹介文",
     "image": "/images/114.jpg",
     "players": {
@@ -1142,6 +1370,8 @@
   {
     "id": 115,
     "title": "tron_new_rose_hifi_v2",
+    "artist_name": "Toro y Moi",
+    "album_name": "Soul Trash",
     "description": "115日目の紹介文",
     "image": "/images/115.jpg",
     "players": {
@@ -1152,6 +1382,8 @@
   {
     "id": 116,
     "title": "It Could Happen To You",
+    "artist_name": "Bill Evans",
+    "album_name": "Some Other Time: The Lost Session From The Black Forest",
     "description": "116日目の紹介文",
     "image": "/images/116.jpg",
     "players": {
@@ -1162,6 +1394,8 @@
   {
     "id": 117,
     "title": "You Got The Love",
+    "artist_name": "Rufus & Chaka Khan",
+    "album_name": "Rags To Rufus",
     "description": "117日目の紹介文",
     "image": "/images/117.jpg",
     "players": {
@@ -1172,6 +1406,8 @@
   {
     "id": 118,
     "title": "The Place Where He Inserted the Blade",
+    "artist_name": "Black Country, New Road",
+    "album_name": "Ants From Up There",
     "description": "118日目の紹介文",
     "image": "/images/118.jpg",
     "players": {
@@ -1182,6 +1418,8 @@
   {
     "id": 119,
     "title": "House of the Rising Sun",
+    "artist_name": "The Animals",
+    "album_name": "The Singles Plus",
     "description": "119日目の紹介文",
     "image": "/images/119.jpg",
     "players": {
@@ -1192,6 +1430,8 @@
   {
     "id": 120,
     "title": "Maria Ninguém",
+    "artist_name": "Bola Sete",
+    "album_name": "É a Bola da Vez",
     "description": "120日目の紹介文",
     "image": "/images/120.jpg",
     "players": {
@@ -1202,6 +1442,8 @@
   {
     "id": 121,
     "title": "Shiraiki",
+    "artist_name": "Masakatsu Takagi",
+    "album_name": "Kagayaki",
     "description": "121日目の紹介文",
     "image": "/images/121.jpg",
     "players": {
@@ -1212,6 +1454,8 @@
   {
     "id": 122,
     "title": "ベッテン・フォールズ",
+    "artist_name": "cero",
+    "album_name": "POLY LIFE MULTI SOUL",
     "description": "122日目の紹介文",
     "image": "/images/122.jpg",
     "players": {
@@ -1222,6 +1466,8 @@
   {
     "id": 123,
     "title": "The Lion Turtle",
+    "artist_name": "Oded Tzur",
+    "album_name": "Isabela",
     "description": "123日目の紹介文",
     "image": "/images/123.jpg",
     "players": {
@@ -1232,6 +1478,8 @@
   {
     "id": 124,
     "title": "Assaji",
+    "artist_name": "JUMADIBA",
+    "album_name": "Assaji",
     "description": "124日目の紹介文",
     "image": "/images/124.jpg",
     "players": {
@@ -1242,6 +1490,8 @@
   {
     "id": 125,
     "title": "Thousand Knives",
+    "artist_name": "Ryuichi Sakamoto",
+    "album_name": "/05",
     "description": "125日目の紹介文",
     "image": "/images/125.jpg",
     "players": {
@@ -1252,6 +1502,8 @@
   {
     "id": 126,
     "title": "Les règles",
+    "artist_name": "Chassol",
+    "album_name": "Ludi",
     "description": "126日目の紹介文",
     "image": "/images/126.jpg",
     "players": {
@@ -1262,6 +1514,8 @@
   {
     "id": 127,
     "title": "Gal",
+    "artist_name": "Shai Maestro",
+    "album_name": "The Road to Ithaca",
     "description": "127日目の紹介文",
     "image": "/images/127.jpg",
     "players": {
@@ -1272,6 +1526,8 @@
   {
     "id": 128,
     "title": "Aquarius",
+    "artist_name": "Boards of Canada",
+    "album_name": "Music Has The Right To Children",
     "description": "128日目の紹介文",
     "image": "/images/128.jpg",
     "players": {
@@ -1282,6 +1538,8 @@
   {
     "id": 129,
     "title": "Varsity",
+    "artist_name": "Smith Westerns",
+    "album_name": "Soft Will",
     "description": "129日目の紹介文",
     "image": "/images/129.jpg",
     "players": {
@@ -1292,6 +1550,8 @@
   {
     "id": 130,
     "title": "シークレットシークレット",
+    "artist_name": "Perfume",
+    "album_name": "GAME",
     "description": "130日目の紹介文",
     "image": "/images/130.jpg",
     "players": {
@@ -1302,6 +1562,8 @@
   {
     "id": 131,
     "title": "TECHNOVA",
+    "artist_name": "TOWA TEI",
+    "album_name": "FUTURE LISTENING!",
     "description": "131日目の紹介文",
     "image": "/images/131.jpg",
     "players": {
@@ -1312,6 +1574,8 @@
   {
     "id": 132,
     "title": "気い狂て",
+    "artist_name": "Inu",
+    "album_name": "メシ喰うな！",
     "description": "132日目の紹介文",
     "image": "/images/132.jpg",
     "players": {
@@ -1322,6 +1586,8 @@
   {
     "id": 133,
     "title": "Here I Go",
+    "artist_name": "Syd Barrett",
+    "album_name": "The Madcap Laughs",
     "description": "133日目の紹介文",
     "image": "/images/133.jpg",
     "players": {
@@ -1332,6 +1598,8 @@
   {
     "id": 134,
     "title": "I'm So Tired",
+    "artist_name": "Fugazi",
+    "album_name": "Instrument Soundtrack",
     "description": "134日目の紹介文",
     "image": "/images/134.jpg",
     "players": {
@@ -1342,6 +1610,8 @@
   {
     "id": 135,
     "title": "All Day Sucker",
+    "artist_name": "Stevie Wonder",
+    "album_name": "Songs In The Key Of Life",
     "description": "135日目の紹介文",
     "image": "/images/135.jpg",
     "players": {
@@ -1352,6 +1622,8 @@
   {
     "id": 136,
     "title": "Flying Teapot - Remastered 2018",
+    "artist_name": "Gong",
+    "album_name": "Flying Teapot (Deluxe Edition)",
     "description": "136日目の紹介文",
     "image": "/images/136.jpg",
     "players": {
@@ -1362,6 +1634,8 @@
   {
     "id": 137,
     "title": "Runnin'",
+    "artist_name": "The Pharcyde",
+    "album_name": "Labcabincalifornia (Deluxe Edition)",
     "description": "137日目の紹介文",
     "image": "/images/137.jpg",
     "players": {
@@ -1372,6 +1646,8 @@
   {
     "id": 138,
     "title": "塀までひとっとび",
+    "artist_name": "Sadistic Mika Band",
+    "album_name": "黒船",
     "description": "138日目の紹介文",
     "image": "/images/138.jpg",
     "players": {
@@ -1382,6 +1658,8 @@
   {
     "id": 139,
     "title": "Amor Mio",
+    "artist_name": "Frank Sark",
+    "album_name": "Latin Crooners",
     "description": "139日目の紹介文",
     "image": "/images/139.jpg",
     "players": {
@@ -1392,6 +1670,8 @@
   {
     "id": 140,
     "title": "Nia (Poem: Complete the Circle)",
+    "artist_name": "JuJu",
+    "album_name": "Chapter Two: Nia",
     "description": "140日目の紹介文",
     "image": "/images/140.jpg",
     "players": {
@@ -1402,6 +1682,8 @@
   {
     "id": 141,
     "title": "Shelter",
+    "artist_name": "Porter Robinson",
+    "album_name": "Shelter",
     "description": "141日目の紹介文",
     "image": "/images/141.jpg",
     "players": {
@@ -1412,6 +1694,8 @@
   {
     "id": 142,
     "title": "Lucille",
+    "artist_name": "Little Richard",
+    "album_name": "The Essential Little Richard",
     "description": "142日目の紹介文",
     "image": "/images/142.jpg",
     "players": {
@@ -1422,6 +1706,8 @@
   {
     "id": 143,
     "title": "The Cisco Kid",
+    "artist_name": "War",
+    "album_name": "Greatest Hits",
     "description": "143日目の紹介文",
     "image": "/images/143.jpg",
     "players": {
@@ -1432,6 +1718,8 @@
   {
     "id": 144,
     "title": "Sticky",
+    "artist_name": "Les Sins",
+    "album_name": "Michael",
     "description": "144日目の紹介文",
     "image": "/images/144.jpg",
     "players": {
@@ -1442,6 +1730,8 @@
   {
     "id": 145,
     "title": "Fun Time",
+    "artist_name": "DJ Quads",
+    "album_name": "Fun Time",
     "description": "145日目の紹介文",
     "image": "/images/145.jpg",
     "players": {
@@ -1452,6 +1742,8 @@
   {
     "id": 146,
     "title": "五番街のマリ−へ",
+    "artist_name": "ペドロ&カプリシャス",
+    "album_name": "決定盤ペドロ＆カプリシャスVol.2",
     "description": "146日目の紹介文",
     "image": "/images/146.jpg",
     "players": {
@@ -1462,6 +1754,8 @@
   {
     "id": 147,
     "title": "Time Today",
+    "artist_name": "Kero Kero Bonito",
+    "album_name": "Time 'n' Place",
     "description": "147日目の紹介文",
     "image": "/images/147.jpg",
     "players": {
@@ -1472,6 +1766,8 @@
   {
     "id": 148,
     "title": "Endomorph (Dedicated to My Parents) - Remastered",
+    "artist_name": "Allan Holdsworth",
+    "album_name": "Secrets (Remastered)",
     "description": "148日目の紹介文",
     "image": "/images/148.jpg",
     "players": {
@@ -1482,6 +1778,8 @@
   {
     "id": 149,
     "title": "You're Everything",
+    "artist_name": "Chick Corea",
+    "album_name": "Light As A Feather",
     "description": "149日目の紹介文",
     "image": "/images/149.jpg",
     "players": {
@@ -1492,6 +1790,8 @@
   {
     "id": 150,
     "title": "Must Be Love",
+    "artist_name": "Yung Bae",
+    "album_name": "Bae 5",
     "description": "150日目の紹介文",
     "image": "/images/150.jpg",
     "players": {
@@ -1502,6 +1802,8 @@
   {
     "id": 151,
     "title": "やめられないなぜか",
+    "artist_name": "Shintaro Sakamoto",
+    "album_name": "ナマで踊ろう",
     "description": "151日目の紹介文",
     "image": "/images/151.jpg",
     "players": {
@@ -1512,6 +1814,8 @@
   {
     "id": 152,
     "title": "Re:Re:　(2006 横浜アリーナ)",
+    "artist_name": "ASIAN KUNG-FU GENERATION",
+    "album_name": "フィードバックファイル",
     "description": "152日目の紹介文",
     "image": "/images/152.jpg",
     "players": {
@@ -1522,6 +1826,8 @@
   {
     "id": 153,
     "title": "Lusaka By Night",
+    "artist_name": "John Wizards",
+    "album_name": "John Wizards",
     "description": "153日目の紹介文",
     "image": "/images/153.jpg",
     "players": {
@@ -1532,6 +1838,8 @@
   {
     "id": 154,
     "title": "Melody",
+    "artist_name": "Oliver Heldens",
+    "album_name": "Melody",
     "description": "154日目の紹介文",
     "image": "/images/154.jpg",
     "players": {
@@ -1542,6 +1850,8 @@
   {
     "id": 155,
     "title": "翠星交響楽 I章　黎明 ― [プロローグ]（Chaos）",
+    "artist_name": "芸能山城組",
+    "album_name": "翠星交響楽",
     "description": "155日目の紹介文",
     "image": "/images/155.jpg",
     "players": {
@@ -1552,6 +1862,8 @@
   {
     "id": 156,
     "title": "Managua",
+    "artist_name": "Finis Africae",
+    "album_name": "Finis Africae",
     "description": "156日目の紹介文",
     "image": "/images/156.jpg",
     "players": {
@@ -1562,6 +1874,8 @@
   {
     "id": 157,
     "title": "Lazy Summer Day",
+    "artist_name": "Yung Lean",
+    "album_name": "Lazy Summer Day / Chinese Restaurant",
     "description": "157日目の紹介文",
     "image": "/images/157.jpg",
     "players": {
@@ -1572,6 +1886,8 @@
   {
     "id": 158,
     "title": "Pirão e Colher de Pau",
+    "artist_name": "Os Originais Do Samba",
+    "album_name": "Os Originais do Samba",
     "description": "158日目の紹介文",
     "image": "/images/158.jpg",
     "players": {
@@ -1582,6 +1898,8 @@
   {
     "id": 159,
     "title": "Less - Afrojack Remix",
+    "artist_name": "Elise Eriksen",
+    "album_name": "Less (Afrojack Remix)",
     "description": "159日目の紹介文",
     "image": "/images/159.jpg",
     "players": {
@@ -1592,6 +1910,8 @@
   {
     "id": 160,
     "title": "SIMOON",
+    "artist_name": "Tokyo Ska Paradise Orchestra",
+    "album_name": "TRIBUTE TO YMO",
     "description": "160日目の紹介文",
     "image": "/images/160.jpg",
     "players": {
@@ -1602,6 +1922,8 @@
   {
     "id": 161,
     "title": "Nakameguro",
+    "artist_name": "Benny Sings",
+    "album_name": "Beat Tape",
     "description": "161日目の紹介文",
     "image": "/images/161.jpg",
     "players": {
@@ -1612,6 +1934,8 @@
   {
     "id": 162,
     "title": "Summer Madness",
+    "artist_name": "Kool & The Gang",
+    "album_name": "Light Of Worlds",
     "description": "162日目の紹介文",
     "image": "/images/162.jpg",
     "players": {
@@ -1622,6 +1946,8 @@
   {
     "id": 163,
     "title": "Cariño",
+    "artist_name": "The Marías",
+    "album_name": "Cariño",
     "description": "163日目の紹介文",
     "image": "/images/163.jpg",
     "players": {
@@ -1632,6 +1958,8 @@
   {
     "id": 164,
     "title": "My Sweet Summer Suite",
+    "artist_name": "The Love Unlimited Orchestra",
+    "album_name": "Gold",
     "description": "164日目の紹介文",
     "image": "/images/164.jpg",
     "players": {
@@ -1642,6 +1970,8 @@
   {
     "id": 165,
     "title": "AM0:52 - (Sweet William Remix)",
+    "artist_name": "kiki vivi lily",
+    "album_name": "vivid",
     "description": "165日目の紹介文",
     "image": "/images/165.jpg",
     "players": {
@@ -1652,6 +1982,8 @@
   {
     "id": 166,
     "title": "san francisco",
+    "artist_name": "MIDICRONICA",
+    "album_name": "#501",
     "description": "166日目の紹介文",
     "image": "/images/166.jpg",
     "players": {
@@ -1662,6 +1994,8 @@
   {
     "id": 167,
     "title": "Charmander",
+    "artist_name": "Aminé",
+    "album_name": "TWOPOINTFIVE",
     "description": "167日目の紹介文",
     "image": "/images/167.jpg",
     "players": {
@@ -1672,6 +2006,8 @@
   {
     "id": 168,
     "title": "El Anillo del Capitán Beto",
+    "artist_name": "Invisible",
+    "album_name": "El Jardin de los Presentes",
     "description": "168日目の紹介文",
     "image": "/images/168.jpg",
     "players": {
@@ -1682,6 +2018,8 @@
   {
     "id": 169,
     "title": "Never Let You Go (feat. Foy Vance) - Don Diablo Remix",
+    "artist_name": "Rudimental",
+    "album_name": "Never Let You Go",
     "description": "169日目の紹介文",
     "image": "/images/169.jpg",
     "players": {
@@ -1692,6 +2030,8 @@
   {
     "id": 170,
     "title": "Fly-day Chinatown",
+    "artist_name": "Yasuha",
+    "album_name": "Fly-day Chinatown",
     "description": "170日目の紹介文",
     "image": "/images/170.jpg",
     "players": {
@@ -1702,6 +2042,8 @@
   {
     "id": 171,
     "title": "I've Seen Footage",
+    "artist_name": "Death Grips",
+    "album_name": "The Money Store",
     "description": "171日目の紹介文",
     "image": "/images/171.jpg",
     "players": {
@@ -1712,6 +2054,8 @@
   {
     "id": 172,
     "title": "Cordao",
+    "artist_name": "Chico Buarque",
+    "album_name": "Construção",
     "description": "172日目の紹介文",
     "image": "/images/172.jpg",
     "players": {
@@ -1722,6 +2066,8 @@
   {
     "id": 173,
     "title": "雨降りの月曜",
+    "artist_name": "LIBRO",
+    "album_name": "胎動",
     "description": "173日目の紹介文",
     "image": "/images/173.jpg",
     "players": {
@@ -1732,6 +2078,8 @@
   {
     "id": 174,
     "title": "Pressure (feat. Tove Lo)",
+    "artist_name": "Martin Garrix",
+    "album_name": "Pressure (feat. Tove Lo)",
     "description": "174日目の紹介文",
     "image": "/images/174.jpg",
     "players": {
@@ -1742,6 +2090,8 @@
   {
     "id": 175,
     "title": "Don't Know Why",
+    "artist_name": "Norah Jones",
+    "album_name": "Come Away With Me (Super Deluxe Edition)",
     "description": "175日目の紹介文",
     "image": "/images/175.jpg",
     "players": {
@@ -1752,6 +2102,8 @@
   {
     "id": 176,
     "title": "Underwater Love",
+    "artist_name": "Smoke City",
+    "album_name": "Flying Away",
     "description": "176日目の紹介文",
     "image": "/images/176.jpg",
     "players": {
@@ -1762,6 +2114,8 @@
   {
     "id": 177,
     "title": "Off Of My Mind",
+    "artist_name": "Icona Pop",
+    "album_name": "Off Of My Mind",
     "description": "177日目の紹介文",
     "image": "/images/177.jpg",
     "players": {
@@ -1772,6 +2126,8 @@
   {
     "id": 178,
     "title": "接吻",
+    "artist_name": "Original Love",
+    "album_name": "Sunny Side Of Original Love",
     "description": "178日目の紹介文",
     "image": "/images/178.jpg",
     "players": {
@@ -1782,6 +2138,8 @@
   {
     "id": 179,
     "title": "Nog Verder",
+    "artist_name": "Cos",
+    "album_name": "Viva Boma",
     "description": "179日目の紹介文",
     "image": "/images/179.jpg",
     "players": {
@@ -1792,6 +2150,8 @@
   {
     "id": 180,
     "title": "Borjormi Spring",
+    "artist_name": "Rezzett",
+    "album_name": "Meant Like This",
     "description": "180日目の紹介文",
     "image": "/images/180.jpg",
     "players": {
@@ -1802,6 +2162,8 @@
   {
     "id": 181,
     "title": "夏の前日",
+    "artist_name": "Tama",
+    "album_name": "犬の約束",
     "description": "181日目の紹介文",
     "image": "/images/181.jpg",
     "players": {
@@ -1812,6 +2174,8 @@
   {
     "id": 182,
     "title": "Summer Connection",
+    "artist_name": "Taeko Onuki",
+    "album_name": "SUNSHOWER",
     "description": "182日目の紹介文",
     "image": "/images/182.jpg",
     "players": {
@@ -1822,6 +2186,8 @@
   {
     "id": 183,
     "title": "Hannah (the sun)",
+    "artist_name": "Fred again..",
+    "album_name": "Hannah (the sun)",
     "description": "183日目の紹介文",
     "image": "/images/183.jpg",
     "players": {
@@ -1832,6 +2198,8 @@
   {
     "id": 184,
     "title": "黄昏サラウンド",
+    "artist_name": "RIP SLYME",
+    "album_name": "MASTERPIECE",
     "description": "184日目の紹介文",
     "image": "/images/184.jpg",
     "players": {
@@ -1842,6 +2210,8 @@
   {
     "id": 185,
     "title": "Oye Como Va",
+    "artist_name": "Santana",
+    "album_name": "Abraxas",
     "description": "185日目の紹介文",
     "image": "/images/185.jpg",
     "players": {
@@ -1852,6 +2222,8 @@
   {
     "id": 186,
     "title": "Viva La Vida",
+    "artist_name": "Coldplay",
+    "album_name": "Viva La Vida or Death and All His Friends",
     "description": "186日目の紹介文",
     "image": "/images/186.jpg",
     "players": {
@@ -1862,6 +2234,8 @@
   {
     "id": 187,
     "title": "ユリイカ",
+    "artist_name": "sakanaction",
+    "album_name": "グッドバイ／ユリイカ",
     "description": "187日目の紹介文",
     "image": "/images/187.jpg",
     "players": {
@@ -1872,6 +2246,8 @@
   {
     "id": 188,
     "title": "American Daydream",
+    "artist_name": "Electric Guest",
+    "album_name": "Mondo",
     "description": "188日目の紹介文",
     "image": "/images/188.jpg",
     "players": {
@@ -1882,6 +2258,8 @@
   {
     "id": 189,
     "title": "D>E>A>T>H>M>E>T>A>L",
+    "artist_name": "Panchiko",
+    "album_name": "D>E>A>T>H>M>E>T>A>L",
     "description": "189日目の紹介文",
     "image": "/images/189.jpg",
     "players": {
@@ -1892,6 +2270,8 @@
   {
     "id": 190,
     "title": "Ojalá",
+    "artist_name": "dani dicostas",
+    "album_name": "veinte",
     "description": "190日目の紹介文",
     "image": "/images/190.jpg",
     "players": {
@@ -1902,6 +2282,8 @@
   {
     "id": 191,
     "title": "Do You Want Me",
+    "artist_name": "Lucas & Steve",
+    "album_name": "Do You Want Me",
     "description": "191日目の紹介文",
     "image": "/images/191.jpg",
     "players": {
@@ -1912,6 +2294,8 @@
   {
     "id": 192,
     "title": "Naadam",
+    "artist_name": "SHIBUSASHIRAZU",
+    "album_name": "渋星",
     "description": "192日目の紹介文",
     "image": "/images/192.jpg",
     "players": {
@@ -1922,6 +2306,8 @@
   {
     "id": 193,
     "title": "そなちね",
+    "artist_name": "Tempalay",
+    "album_name": "21世紀より愛をこめて",
     "description": "193日目の紹介文",
     "image": "/images/193.jpg",
     "players": {
@@ -1932,6 +2318,8 @@
   {
     "id": 194,
     "title": "SHUT UP AND EXPLODE",
+    "artist_name": "BOOM BOOM SATELLITES",
+    "album_name": "EXPOSED",
     "description": "194日目の紹介文",
     "image": "/images/194.jpg",
     "players": {
@@ -1942,6 +2330,8 @@
   {
     "id": 195,
     "title": "When the Music's Over",
+    "artist_name": "The Doors",
+    "album_name": "Strange Days",
     "description": "195日目の紹介文",
     "image": "/images/195.jpg",
     "players": {
@@ -1952,6 +2342,8 @@
   {
     "id": 196,
     "title": "Piece Of Your Heart - Alok Remix",
+    "artist_name": "MEDUZA",
+    "album_name": "Piece Of Your Heart (Alok Remix)",
     "description": "196日目の紹介文",
     "image": "/images/196.jpg",
     "players": {
@@ -1962,6 +2354,8 @@
   {
     "id": 197,
     "title": "夏色の服",
+    "artist_name": "山田庵巳",
+    "album_name": "音のブーケ ～大貫妙子カヴァー集～",
     "description": "197日目の紹介文",
     "image": "/images/197.jpg",
     "players": {
@@ -1972,6 +2366,8 @@
   {
     "id": 198,
     "title": "レモネード",
+    "artist_name": "ZOMBIE-CHANG",
+    "album_name": "PETIT PETIT PETIT",
     "description": "198日目の紹介文",
     "image": "/images/198.jpg",
     "players": {
@@ -1982,6 +2378,8 @@
   {
     "id": 199,
     "title": "Woman Called Yellow \"Z\"",
+    "artist_name": "Strawberry Path",
+    "album_name": "When The Raven Has Come To Earth",
     "description": "199日目の紹介文",
     "image": "/images/199.jpg",
     "players": {
@@ -1992,6 +2390,8 @@
   {
     "id": 200,
     "title": "Safe and Sound (feat. Ashtin Bruere)",
+    "artist_name": "Axel Vapaa",
+    "album_name": "Safe and Sound (feat. Ashtin Bruere)",
     "description": "200日目の紹介文",
     "image": "/images/200.jpg",
     "players": {
@@ -2002,6 +2402,8 @@
   {
     "id": 201,
     "title": "海街diary",
+    "artist_name": "Yoko Kanno",
+    "album_name": "海街diary オリジナルサウンドトラック",
     "description": "201日目の紹介文",
     "image": "/images/201.jpg",
     "players": {
@@ -2012,6 +2414,8 @@
   {
     "id": 202,
     "title": "夏なんです",
+    "artist_name": "はっぴいえんど",
+    "album_name": "風街ろまん",
     "description": "202日目の紹介文",
     "image": "/images/202.jpg",
     "players": {
@@ -2022,6 +2426,8 @@
   {
     "id": 203,
     "title": "I Mind",
+    "artist_name": "James Blake",
+    "album_name": "James Blake",
     "description": "203日目の紹介文",
     "image": "/images/203.jpg",
     "players": {
@@ -2032,6 +2438,8 @@
   {
     "id": 204,
     "title": "O Sol Nascerá (A Sorrir)",
+    "artist_name": "Cartola",
+    "album_name": "Cartola (1974)",
     "description": "204日目の紹介文",
     "image": "/images/204.jpg",
     "players": {
@@ -2042,6 +2450,8 @@
   {
     "id": 205,
     "title": "Go Back (feat. Julia Church)",
+    "artist_name": "John Summit",
+    "album_name": "Go Back (feat. Julia Church)",
     "description": "205日目の紹介文",
     "image": "/images/205.jpg",
     "players": {
@@ -2052,6 +2462,8 @@
   {
     "id": 206,
     "title": "Manguetown",
+    "artist_name": "Chico Science",
+    "album_name": "Afrociberdelia",
     "description": "206日目の紹介文",
     "image": "/images/206.jpg",
     "players": {
@@ -2062,6 +2474,8 @@
   {
     "id": 207,
     "title": "ghost",
+    "artist_name": "踊ってばかりの国",
+    "album_name": "光の中に",
     "description": "207日目の紹介文",
     "image": "/images/207.jpg",
     "players": {
@@ -2072,6 +2486,8 @@
   {
     "id": 208,
     "title": "Everybody Loves The Sunshine",
+    "artist_name": "Roy Ayers Ubiquity",
+    "album_name": "Everybody Loves The Sunshine (Reissue)",
     "description": "208日目の紹介文",
     "image": "/images/208.jpg",
     "players": {
@@ -2082,6 +2498,8 @@
   {
     "id": 209,
     "title": "Up All Night",
+    "artist_name": "Beck",
+    "album_name": "Colors",
     "description": "209日目の紹介文",
     "image": "/images/209.jpg",
     "players": {
@@ -2092,6 +2510,8 @@
   {
     "id": 210,
     "title": "Moon Dance",
+    "artist_name": "Elvin Jones",
+    "album_name": "Time Capsule",
     "description": "210日目の紹介文",
     "image": "/images/210.jpg",
     "players": {
@@ -2102,6 +2522,8 @@
   {
     "id": 211,
     "title": "ようこそ",
+    "artist_name": "Satoko Shibata",
+    "album_name": "ぼちぼち銀河",
     "description": "211日目の紹介文",
     "image": "/images/211.jpg",
     "players": {
@@ -2112,6 +2534,8 @@
   {
     "id": 212,
     "title": "Rational Culture",
+    "artist_name": "Tim Maia",
+    "album_name": "Racional (Vol 1)",
     "description": "212日目の紹介文",
     "image": "/images/212.jpg",
     "players": {
@@ -2122,6 +2546,8 @@
   {
     "id": 213,
     "title": "サブマリン",
+    "artist_name": "ゆうらん船",
+    "album_name": "ゆうらん船",
     "description": "213日目の紹介文",
     "image": "/images/213.jpg",
     "players": {
@@ -2132,6 +2558,8 @@
   {
     "id": 214,
     "title": "Miss Kane",
+    "artist_name": "Donald Byrd",
+    "album_name": "Street Lady",
     "description": "214日目の紹介文",
     "image": "/images/214.jpg",
     "players": {
@@ -2142,6 +2570,8 @@
   {
     "id": 215,
     "title": "四季ノ唄",
+    "artist_name": "MINMI",
+    "album_name": "imagine",
     "description": "215日目の紹介文",
     "image": "/images/215.jpg",
     "players": {
@@ -2152,6 +2582,8 @@
   {
     "id": 216,
     "title": "BELEZA PULA",
+    "artist_name": "Masayoshi Takanaka",
+    "album_name": "BRASILIAN SKIES",
     "description": "216日目の紹介文",
     "image": "/images/216.jpg",
     "players": {
@@ -2162,6 +2594,8 @@
   {
     "id": 217,
     "title": "Lay Me Down",
+    "artist_name": "Avicii",
+    "album_name": "True",
     "description": "217日目の紹介文",
     "image": "/images/217.jpg",
     "players": {
@@ -2172,6 +2606,8 @@
   {
     "id": 218,
     "title": "トワイライト・シーン",
+    "artist_name": "Shohei Takagi Parallela Botanica",
+    "album_name": "Triptych",
     "description": "218日目の紹介文",
     "image": "/images/218.jpg",
     "players": {
@@ -2182,6 +2618,8 @@
   {
     "id": 219,
     "title": "You",
+    "artist_name": "Dai",
+    "album_name": "Thanks You",
     "description": "219日目の紹介文",
     "image": "/images/219.jpg",
     "players": {
@@ -2192,6 +2630,8 @@
   {
     "id": 220,
     "title": "Our Day Will Come",
+    "artist_name": "Isaac Hayes",
+    "album_name": "...To Be Continued",
     "description": "220日目の紹介文",
     "image": "/images/220.jpg",
     "players": {
@@ -2202,6 +2642,8 @@
   {
     "id": 221,
     "title": "Upside Down",
+    "artist_name": "Fela Kuti",
+    "album_name": "Upside Down",
     "description": "221日目の紹介文",
     "image": "/images/221.jpg",
     "players": {
@@ -2212,6 +2654,8 @@
   {
     "id": 222,
     "title": "これが私の生きる道",
+    "artist_name": "Puffy AmiYumi",
+    "album_name": "JET CD",
     "description": "222日目の紹介文",
     "image": "/images/222.jpg",
     "players": {
@@ -2222,6 +2666,8 @@
   {
     "id": 223,
     "title": "Run Wild",
+    "artist_name": "PLS&TY",
+    "album_name": "Run Wild",
     "description": "223日目の紹介文",
     "image": "/images/223.jpg",
     "players": {
@@ -2232,6 +2678,8 @@
   {
     "id": 224,
     "title": "Piercing thru the Night",
+    "artist_name": "dj blackpower",
+    "album_name": "BLP2020 \"King of the Night\"",
     "description": "224日目の紹介文",
     "image": "/images/224.jpg",
     "players": {
@@ -2242,6 +2690,8 @@
   {
     "id": 225,
     "title": "新生相馬盆唄",
+    "artist_name": "大友良英スペシャルビッグバンド",
+    "album_name": "ええじゃないか音頭",
     "description": "225日目の紹介文",
     "image": "/images/225.jpg",
     "players": {
@@ -2252,6 +2702,8 @@
   {
     "id": 226,
     "title": "Saudade",
+    "artist_name": "Ana Frango Elétrico",
+    "album_name": "Little Electric Chicken Heart",
     "description": "226日目の紹介文",
     "image": "/images/226.jpg",
     "players": {
@@ -2262,6 +2714,8 @@
   {
     "id": 227,
     "title": "Tommy Gun Angel",
+    "artist_name": "Bardo Pond",
+    "album_name": "Lapsed",
     "description": "227日目の紹介文",
     "image": "/images/227.jpg",
     "players": {
@@ -2272,6 +2726,8 @@
   {
     "id": 228,
     "title": "晩夏",
+    "artist_name": "MEITEI",
+    "album_name": "晩夏",
     "description": "228日目の紹介文",
     "image": "/images/228.jpg",
     "players": {
@@ -2282,6 +2738,8 @@
   {
     "id": 229,
     "title": "Coolie High",
+    "artist_name": "Camp Lo",
+    "album_name": "Uptown Saturday Night",
     "description": "229日目の紹介文",
     "image": "/images/229.jpg",
     "players": {
@@ -2292,6 +2750,8 @@
   {
     "id": 230,
     "title": "Welcome to Hell",
+    "artist_name": "black midi",
+    "album_name": "Hellfire",
     "description": "230日目の紹介文",
     "image": "/images/230.jpg",
     "players": {
@@ -2302,6 +2762,8 @@
   {
     "id": 231,
     "title": "Make Your Move - Gil Sanders Remix",
+    "artist_name": "Brooks",
+    "album_name": "Make Your Move (Remixes)",
     "description": "231日目の紹介文",
     "image": "/images/231.jpg",
     "players": {
@@ -2312,6 +2774,8 @@
   {
     "id": 232,
     "title": "Roundabout - 2024 Remaster",
+    "artist_name": "Yes",
+    "album_name": "Fragile (Super Deluxe)",
     "description": "232日目の紹介文",
     "image": "/images/232.jpg",
     "players": {
@@ -2322,6 +2786,8 @@
   {
     "id": 233,
     "title": "ノオチラス艦長ネモ",
+    "artist_name": "あがた森魚",
+    "album_name": "日本少年 -ヂパング・ボーイ",
     "description": "233日目の紹介文",
     "image": "/images/233.jpg",
     "players": {
@@ -2332,6 +2798,8 @@
   {
     "id": 234,
     "title": "This Groove",
+    "artist_name": "Oliver Heldens",
+    "album_name": "This Groove",
     "description": "234日目の紹介文",
     "image": "/images/234.jpg",
     "players": {
@@ -2342,6 +2810,8 @@
   {
     "id": 235,
     "title": "45 days",
+    "artist_name": "FACT",
+    "album_name": "FACT",
     "description": "235日目の紹介文",
     "image": "/images/235.jpg",
     "players": {
@@ -2352,6 +2822,8 @@
   {
     "id": 236,
     "title": "Mad Summer",
+    "artist_name": "Joe Hisaishi",
+    "album_name": "菊次郎の夏 (オリジナル・サウンドトラック)",
     "description": "236日目の紹介文",
     "image": "/images/236.jpg",
     "players": {
@@ -2362,6 +2834,8 @@
   {
     "id": 237,
     "title": "lust",
+    "artist_name": "Rei Harakami",
+    "album_name": "[lust]",
     "description": "237日目の紹介文",
     "image": "/images/237.jpg",
     "players": {
@@ -2372,6 +2846,8 @@
   {
     "id": 238,
     "title": "Katchi - Ofenbach vs. Nick Waterhouse; Mr Belt & Wezol Remix",
+    "artist_name": "Ofenbach",
+    "album_name": "Katchi (Ofenbach vs. Nick Waterhouse) [Remixes] - EP",
     "description": "238日目の紹介文",
     "image": "/images/238.jpg",
     "players": {
@@ -2382,6 +2858,8 @@
   {
     "id": 239,
     "title": "Krumville",
+    "artist_name": "Oneohtrix Point Never",
+    "album_name": "Again",
     "description": "239日目の紹介文",
     "image": "/images/239.jpg",
     "players": {
@@ -2392,6 +2870,8 @@
   {
     "id": 240,
     "title": "Behind The Sun",
+    "artist_name": "The Good, the Bad & the Queen",
+    "album_name": "The Good, The Bad and The Queen",
     "description": "240日目の紹介文",
     "image": "/images/240.jpg",
     "players": {
@@ -2402,6 +2882,8 @@
   {
     "id": 241,
     "title": "The Truth - Sam Feldt Remix",
+    "artist_name": "James Blunt",
+    "album_name": "The Truth (Sam Feldt Remix)",
     "description": "241日目の紹介文",
     "image": "/images/241.jpg",
     "players": {
@@ -2412,6 +2894,8 @@
   {
     "id": 242,
     "title": "どしゃぶりの雨の中で",
+    "artist_name": "Akiko Wada",
+    "album_name": "どしゃぶりの雨の中で",
     "description": "242日目の紹介文",
     "image": "/images/242.jpg",
     "players": {
@@ -2422,6 +2906,8 @@
   {
     "id": 243,
     "title": "Summer Wind - Remastered ) [The Frank Sinatra Collection]",
+    "artist_name": "Frank Sinatra",
+    "album_name": "Nothing But The Best [The Frank Sinatra Collection]",
     "description": "243日目の紹介文",
     "image": "/images/243.jpg",
     "players": {
@@ -2432,6 +2918,8 @@
   {
     "id": 244,
     "title": "Heaven or Not",
+    "artist_name": "Diplo",
+    "album_name": "Heaven or Not",
     "description": "244日目の紹介文",
     "image": "/images/244.jpg",
     "players": {
@@ -2442,6 +2930,8 @@
   {
     "id": 245,
     "title": "俺のドジ",
+    "artist_name": "Sekiri",
+    "album_name": "PUSH PUSH BABY",
     "description": "245日目の紹介文",
     "image": "/images/245.jpg",
     "players": {
@@ -2452,6 +2942,8 @@
   {
     "id": 246,
     "title": "Redlight",
+    "artist_name": "Swedish House Mafia",
+    "album_name": "Paradise Again",
     "description": "246日目の紹介文",
     "image": "/images/246.jpg",
     "players": {
@@ -2462,6 +2954,8 @@
   {
     "id": 247,
     "title": "A Bitch Once Told Me",
+    "artist_name": "The Koreatown Oddity",
+    "album_name": "Little Dominiques Nosebleed",
     "description": "247日目の紹介文",
     "image": "/images/247.jpg",
     "players": {
@@ -2472,6 +2966,8 @@
   {
     "id": 248,
     "title": "One of These Days",
+    "artist_name": "Bedouine",
+    "album_name": "Bedouine (Deluxe)",
     "description": "248日目の紹介文",
     "image": "/images/248.jpg",
     "players": {
@@ -2482,6 +2978,8 @@
   {
     "id": 249,
     "title": "Photograph",
+    "artist_name": "Astrud Gilberto",
+    "album_name": "The Astrud Gilberto Album",
     "description": "249日目の紹介文",
     "image": "/images/249.jpg",
     "players": {
@@ -2492,6 +2990,8 @@
   {
     "id": 250,
     "title": "Luglio, agosto, settembre (nero)",
+    "artist_name": "Area",
+    "album_name": "Arbeit Macht Frei",
     "description": "250日目の紹介文",
     "image": "/images/250.jpg",
     "players": {
@@ -2502,6 +3002,8 @@
   {
     "id": 251,
     "title": "旋毛からつま先",
+    "artist_name": "Yuta Orisaka",
+    "album_name": "平成",
     "description": "251日目の紹介文",
     "image": "/images/251.jpg",
     "players": {
@@ -2512,6 +3014,8 @@
   {
     "id": 252,
     "title": "羽",
+    "artist_name": "betcover!!",
+    "album_name": "中学生",
     "description": "252日目の紹介文",
     "image": "/images/252.jpg",
     "players": {
@@ -2522,6 +3026,8 @@
   {
     "id": 253,
     "title": "MIRROR BALLS",
+    "artist_name": "DATE COURSE PENTAGON ROYAL GARDEN",
+    "album_name": "アイアンマウンテン報告",
     "description": "253日目の紹介文",
     "image": "/images/253.jpg",
     "players": {
@@ -2532,6 +3038,8 @@
   {
     "id": 254,
     "title": "Bayou",
+    "artist_name": "Ogawa & Tokoro",
+    "album_name": "Shinmaiko",
     "description": "254日目の紹介文",
     "image": "/images/254.jpg",
     "players": {
@@ -2542,6 +3050,8 @@
   {
     "id": 255,
     "title": "Love Like This",
+    "artist_name": "Human Egg",
+    "album_name": "Jean-Pierre Massiera-Psychoses Discoïd (1976-1981)",
     "description": "255日目の紹介文",
     "image": "/images/255.jpg",
     "players": {
@@ -2552,6 +3062,8 @@
   {
     "id": 256,
     "title": "There's a New Day Coming",
+    "artist_name": "Menahan Street Band",
+    "album_name": "There's a New Day Coming / Tommy Don't",
     "description": "256日目の紹介文",
     "image": "/images/256.jpg",
     "players": {
@@ -2562,6 +3074,8 @@
   {
     "id": 257,
     "title": "You'll die if you sleep in this place",
+    "artist_name": "JAURIM",
+    "album_name": "Lovers",
     "description": "257日目の紹介文",
     "image": "/images/257.jpg",
     "players": {
@@ -2572,6 +3086,8 @@
   {
     "id": 258,
     "title": "Salir De La Melancolía",
+    "artist_name": "Serú Girán",
+    "album_name": "Peperina",
     "description": "258日目の紹介文",
     "image": "/images/258.jpg",
     "players": {
@@ -2582,6 +3098,8 @@
   {
     "id": 259,
     "title": "Amygdala",
+    "artist_name": "Henry Cow",
+    "album_name": "Legend",
     "description": "259日目の紹介文",
     "image": "/images/259.jpg",
     "players": {
@@ -2592,6 +3110,8 @@
   {
     "id": 260,
     "title": "da screets",
+    "artist_name": "MIKE",
+    "album_name": "weight of the world",
     "description": "260日目の紹介文",
     "image": "/images/260.jpg",
     "players": {
@@ -2602,6 +3122,8 @@
   {
     "id": 261,
     "title": "De frente pro crime",
+    "artist_name": "Joyce Moreno",
+    "album_name": "Passarinho Urbano",
     "description": "261日目の紹介文",
     "image": "/images/261.jpg",
     "players": {
@@ -2612,6 +3134,8 @@
   {
     "id": 262,
     "title": "Bocanada",
+    "artist_name": "Gustavo Cerati",
+    "album_name": "Infinito",
     "description": "262日目の紹介文",
     "image": "/images/262.jpg",
     "players": {
@@ -2622,6 +3146,8 @@
   {
     "id": 263,
     "title": "Gila",
+    "artist_name": "Beach House",
+    "album_name": "Devotion",
     "description": "263日目の紹介文",
     "image": "/images/263.jpg",
     "players": {
@@ -2632,6 +3158,8 @@
   {
     "id": 264,
     "title": "R.E.M",
+    "artist_name": "Ariana Grande",
+    "album_name": "Sweetener",
     "description": "264日目の紹介文",
     "image": "/images/264.jpg",
     "players": {
@@ -2642,6 +3170,8 @@
   {
     "id": 265,
     "title": "The Advent Of Panurge",
+    "artist_name": "Gentle Giant",
+    "album_name": "Octopus",
     "description": "265日目の紹介文",
     "image": "/images/265.jpg",
     "players": {
@@ -2652,6 +3182,8 @@
   {
     "id": 266,
     "title": "Giocoso, gioioso",
+    "artist_name": "Ennio Morricone",
+    "album_name": "Giornata nera per l'Ariete (OST)",
     "description": "266日目の紹介文",
     "image": "/images/266.jpg",
     "players": {
@@ -2662,6 +3194,8 @@
   {
     "id": 267,
     "title": "落日",
+    "artist_name": "Tokyo Incidents",
+    "album_name": "深夜枠",
     "description": "267日目の紹介文",
     "image": "/images/267.jpg",
     "players": {
@@ -2672,6 +3206,8 @@
   {
     "id": 268,
     "title": "Loaf Boi",
+    "artist_name": "Mr. Bill",
+    "album_name": "Phantasmagoria",
     "description": "268日目の紹介文",
     "image": "/images/268.jpg",
     "players": {
@@ -2682,6 +3218,8 @@
   {
     "id": 269,
     "title": "Roses",
+    "artist_name": "Outkast",
+    "album_name": "Speakerboxxx/The Love Below",
     "description": "269日目の紹介文",
     "image": "/images/269.jpg",
     "players": {
@@ -2692,6 +3230,8 @@
   {
     "id": 270,
     "title": "All I Can Do",
+    "artist_name": "Carpenters",
+    "album_name": "Ticket To Ride",
     "description": "270日目の紹介文",
     "image": "/images/270.jpg",
     "players": {
@@ -2702,6 +3242,8 @@
   {
     "id": 271,
     "title": "Walkin’ Back to Georgia",
+    "artist_name": "Jim Croce",
+    "album_name": "You Don't Mess Around With Jim",
     "description": "271日目の紹介文",
     "image": "/images/271.jpg",
     "players": {
@@ -2712,6 +3254,8 @@
   {
     "id": 272,
     "title": "New Morning",
+    "artist_name": "ROTH BART BARON",
+    "album_name": "New Morning",
     "description": "272日目の紹介文",
     "image": "/images/272.jpg",
     "players": {
@@ -2722,6 +3266,8 @@
   {
     "id": 273,
     "title": "Are You Gonna Be My Girl",
+    "artist_name": "Jet",
+    "album_name": "Get Born (Deluxe Edition)",
     "description": "273日目の紹介文",
     "image": "/images/273.jpg",
     "players": {
@@ -2732,6 +3278,8 @@
   {
     "id": 274,
     "title": "こんな風に過ぎて行くのなら",
+    "artist_name": "Maki Asakawa",
+    "album_name": "シングル・コレクション",
     "description": "274日目の紹介文",
     "image": "/images/274.jpg",
     "players": {
@@ -2742,6 +3290,8 @@
   {
     "id": 275,
     "title": "Autumn Leaves",
+    "artist_name": "Cannonball Adderley",
+    "album_name": "Somethin' Else (Rudy Van Gelder Edition)",
     "description": "275日目の紹介文",
     "image": "/images/275.jpg",
     "players": {
@@ -2752,6 +3302,8 @@
   {
     "id": 276,
     "title": "Rowan",
+    "artist_name": "OFFICIAL HIGE DANDISM",
+    "album_name": "Traveler",
     "description": "276日目の紹介文",
     "image": "/images/276.jpg",
     "players": {
@@ -2762,6 +3314,8 @@
   {
     "id": 277,
     "title": "Beef",
+    "artist_name": "Ethereal",
+    "album_name": "Beef",
     "description": "277日目の紹介文",
     "image": "/images/277.jpg",
     "players": {
@@ -2772,6 +3326,8 @@
   {
     "id": 278,
     "title": "Sambinha",
+    "artist_name": "Rosalia De Souza",
+    "album_name": "D'Improvviso",
     "description": "278日目の紹介文",
     "image": "/images/278.jpg",
     "players": {
@@ -2782,6 +3338,8 @@
   {
     "id": 279,
     "title": "まちあわせ",
+    "artist_name": "Saho Terao",
+    "album_name": "珈琲",
     "description": "279日目の紹介文",
     "image": "/images/279.jpg",
     "players": {
@@ -2792,6 +3350,8 @@
   {
     "id": 280,
     "title": "Night Lights",
+    "artist_name": "Gerry Mulligan Sextet",
+    "album_name": "Night Lights (Expanded Edition)",
     "description": "280日目の紹介文",
     "image": "/images/280.jpg",
     "players": {
@@ -2802,6 +3362,8 @@
   {
     "id": 281,
     "title": "Tha Divide",
+    "artist_name": "Pink Siifu",
+    "album_name": "FlySiifu's (Deluxe Edition)",
     "description": "281日目の紹介文",
     "image": "/images/281.jpg",
     "players": {
@@ -2812,6 +3374,8 @@
   {
     "id": 282,
     "title": "Where's My Love",
+    "artist_name": "SYML",
+    "album_name": "SYML",
     "description": "282日目の紹介文",
     "image": "/images/282.jpg",
     "players": {
@@ -2822,6 +3386,8 @@
   {
     "id": 283,
     "title": "狐の嫁入り行進曲",
+    "artist_name": "宮間利之とニュー・ハード",
+    "album_name": "仁王と鳩",
     "description": "283日目の紹介文",
     "image": "/images/283.jpg",
     "players": {
@@ -2832,6 +3398,8 @@
   {
     "id": 284,
     "title": "Uncle Albert / Admiral Halsey - Medley / 2012 Remaster",
+    "artist_name": "Paul McCartney",
+    "album_name": "Ram (Archive Collection)",
     "description": "284日目の紹介文",
     "image": "/images/284.jpg",
     "players": {
@@ -2842,6 +3410,8 @@
   {
     "id": 285,
     "title": "Beautiful girl",
+    "artist_name": "Gateballers",
+    "album_name": "「The all」=「Poem」",
     "description": "285日目の紹介文",
     "image": "/images/285.jpg",
     "players": {
@@ -2852,6 +3422,8 @@
   {
     "id": 286,
     "title": "Porto",
+    "artist_name": "Dori Caymmi",
+    "album_name": "Dori Caymmi (1980)",
     "description": "286日目の紹介文",
     "image": "/images/286.jpg",
     "players": {
@@ -2862,6 +3434,8 @@
   {
     "id": 287,
     "title": "The Invisible Man",
+    "artist_name": "Maruja",
+    "album_name": "The Invisible Man",
     "description": "287日目の紹介文",
     "image": "/images/287.jpg",
     "players": {
@@ -2872,6 +3446,8 @@
   {
     "id": 288,
     "title": "I Like to Be with You in the Sun",
+    "artist_name": "Bridget St John",
+    "album_name": "Dandelion Albums and BBC Collection",
     "description": "288日目の紹介文",
     "image": "/images/288.jpg",
     "players": {
@@ -2882,6 +3458,8 @@
   {
     "id": 289,
     "title": "Pachuco Cadaver",
+    "artist_name": "Captain Beefheart",
+    "album_name": "Grow Fins - Rarities 1965-1982",
     "description": "289日目の紹介文",
     "image": "/images/289.jpg",
     "players": {
@@ -2892,6 +3470,8 @@
   {
     "id": 290,
     "title": "Sanfona",
+    "artist_name": "Egberto Gismonti",
+    "album_name": "Em Família",
     "description": "290日目の紹介文",
     "image": "/images/290.jpg",
     "players": {
@@ -2902,6 +3482,8 @@
   {
     "id": 291,
     "title": "真ん中で",
+    "artist_name": "OGRE YOU ASSHOLE",
+    "album_name": "浮かれている人",
     "description": "291日目の紹介文",
     "image": "/images/291.jpg",
     "players": {
@@ -2912,6 +3494,8 @@
   {
     "id": 292,
     "title": "Ouda",
+    "artist_name": "Hamid Al Shaeri",
+    "album_name": "Kawahel",
     "description": "292日目の紹介文",
     "image": "/images/292.jpg",
     "players": {
@@ -2922,6 +3506,8 @@
   {
     "id": 293,
     "title": "Can It Be All So Simple / Intermission",
+    "artist_name": "Wu-Tang Clan",
+    "album_name": "Enter The Wu-Tang (36 Chambers) [Expanded Edition]",
     "description": "293日目の紹介文",
     "image": "/images/293.jpg",
     "players": {
@@ -2932,6 +3518,8 @@
   {
     "id": 294,
     "title": "MR. WALKING DRUGSTORE MAN - 2017 Remaster",
+    "artist_name": "Speed, Glue & Shinki",
+    "album_name": "イヴ 前夜 (2017 Remaster)",
     "description": "294日目の紹介文",
     "image": "/images/294.jpg",
     "players": {
@@ -2942,6 +3530,8 @@
   {
     "id": 295,
     "title": "The Inspector Clouseau Theme",
+    "artist_name": "Henry Mancini",
+    "album_name": "The Trail of the Pink Panther: Music From The Motion Picture",
     "description": "295日目の紹介文",
     "image": "/images/295.jpg",
     "players": {
@@ -2952,6 +3542,8 @@
   {
     "id": 296,
     "title": "Late At Night",
+    "artist_name": "Beta Librae",
+    "album_name": "Late At Night",
     "description": "296日目の紹介文",
     "image": "/images/296.jpg",
     "players": {
@@ -2962,6 +3554,8 @@
   {
     "id": 297,
     "title": "Tell Me What I Don't Know",
+    "artist_name": "Danny Brown",
+    "album_name": "Atrocity Exhibition",
     "description": "297日目の紹介文",
     "image": "/images/297.jpg",
     "players": {
@@ -2972,6 +3566,8 @@
   {
     "id": 298,
     "title": "My White Bicycle - 2023 Remaster",
+    "artist_name": "Tomorrow",
+    "album_name": "Permanent Dream (2023 Remaster)",
     "description": "298日目の紹介文",
     "image": "/images/298.jpg",
     "players": {
@@ -2982,6 +3578,8 @@
   {
     "id": 299,
     "title": "Part of the Game",
+    "artist_name": "Velveteen",
+    "album_name": "Part of the Game",
     "description": "299日目の紹介文",
     "image": "/images/299.jpg",
     "players": {
@@ -2992,6 +3590,8 @@
   {
     "id": 300,
     "title": "Theme For A New Day",
+    "artist_name": "Azar Lawrence",
+    "album_name": "People Moving",
     "description": "300日目の紹介文",
     "image": "/images/300.jpg",
     "players": {
@@ -3002,6 +3602,8 @@
   {
     "id": 301,
     "title": "It's Gonna Get Better - 2007 Remaster",
+    "artist_name": "Genesis",
+    "album_name": "Genesis (2007 Remaster)",
     "description": "301日目の紹介文",
     "image": "/images/301.jpg",
     "players": {
@@ -3012,6 +3614,8 @@
   {
     "id": 302,
     "title": "Não Adianta",
+    "artist_name": "Trio Mocoto",
+    "album_name": "Trio Mocoto",
     "description": "302日目の紹介文",
     "image": "/images/302.jpg",
     "players": {
@@ -3022,6 +3626,8 @@
   {
     "id": 303,
     "title": "Island In The Sun",
+    "artist_name": "Weezer",
+    "album_name": "Weezer",
     "description": "303日目の紹介文",
     "image": "/images/303.jpg",
     "players": {
@@ -3032,6 +3638,8 @@
   {
     "id": 304,
     "title": "天国より野蛮 - (DJ KRUSH mix)",
+    "artist_name": "Miki Nakatani",
+    "album_name": "vague",
     "description": "304日目の紹介文",
     "image": "/images/304.jpg",
     "players": {
@@ -3042,6 +3650,8 @@
   {
     "id": 305,
     "title": "Rustic Hop",
+    "artist_name": "Stan Getz",
+    "album_name": "Stan Getz And The Cool Sounds",
     "description": "305日目の紹介文",
     "image": "/images/305.jpg",
     "players": {
@@ -3052,6 +3662,8 @@
   {
     "id": 306,
     "title": "ぼくの好きな先生",
+    "artist_name": "RC Succession",
+    "album_name": "初期のRCサクセション",
     "description": "306日目の紹介文",
     "image": "/images/306.jpg",
     "players": {
@@ -3062,6 +3674,8 @@
   {
     "id": 307,
     "title": "Sh-Boom",
+    "artist_name": "The Chords",
+    "album_name": "Life Could Be a Dream: The Sh-Boom Sound of The Chords",
     "description": "307日目の紹介文",
     "image": "/images/307.jpg",
     "players": {
@@ -3072,6 +3686,8 @@
   {
     "id": 308,
     "title": "After Hours",
+    "artist_name": "The Velvet Underground",
+    "album_name": "The Velvet Underground (45th Anniversary)",
     "description": "308日目の紹介文",
     "image": "/images/308.jpg",
     "players": {
@@ -3082,6 +3698,8 @@
   {
     "id": 309,
     "title": "Lose Somebody",
+    "artist_name": "Kygo",
+    "album_name": "Lose Somebody",
     "description": "309日目の紹介文",
     "image": "/images/309.jpg",
     "players": {
@@ -3092,6 +3710,8 @@
   {
     "id": 310,
     "title": "Them, Their",
+    "artist_name": "Jan Jelinek",
+    "album_name": "Loop-Finding-Jazz-Records",
     "description": "310日目の紹介文",
     "image": "/images/310.jpg",
     "players": {
@@ -3102,6 +3722,8 @@
   {
     "id": 311,
     "title": "YAKITORI",
+    "artist_name": "Otoboke Beaver",
+    "album_name": "Super Champon",
     "description": "311日目の紹介文",
     "image": "/images/311.jpg",
     "players": {
@@ -3112,6 +3734,8 @@
   {
     "id": 312,
     "title": "Pain",
+    "artist_name": "454",
+    "album_name": "CASTS OF A DREAMER",
     "description": "312日目の紹介文",
     "image": "/images/312.jpg",
     "players": {
@@ -3122,6 +3746,8 @@
   {
     "id": 313,
     "title": "でも・デモ・DEMO",
+    "artist_name": "暗黒大陸じゃがたら",
+    "album_name": "南蛮渡来",
     "description": "313日目の紹介文",
     "image": "/images/313.jpg",
     "players": {
@@ -3132,6 +3758,8 @@
   {
     "id": 314,
     "title": "Happiness Is a Warm Gun",
+    "artist_name": "Tori Amos",
+    "album_name": "Strange Little Girls",
     "description": "314日目の紹介文",
     "image": "/images/314.jpg",
     "players": {
@@ -3142,6 +3770,8 @@
   {
     "id": 315,
     "title": "Memoir",
+    "artist_name": "Ann Annie",
+    "album_name": "Wander Into",
     "description": "315日目の紹介文",
     "image": "/images/315.jpg",
     "players": {
@@ -3152,6 +3782,8 @@
   {
     "id": 316,
     "title": "Turn That Heartbeat Over Again",
+    "artist_name": "Steely Dan",
+    "album_name": "Can't Buy A Thrill",
     "description": "316日目の紹介文",
     "image": "/images/316.jpg",
     "players": {
@@ -3162,6 +3794,8 @@
   {
     "id": 317,
     "title": "Everything Happens to Me",
+    "artist_name": "Wynton Marsalis",
+    "album_name": "Standard Time Vol. 3: The Resolution Of Romance",
     "description": "317日目の紹介文",
     "image": "/images/317.jpg",
     "players": {
@@ -3172,6 +3806,8 @@
   {
     "id": 318,
     "title": "Maykesince",
+    "artist_name": "Knxwledge",
+    "album_name": "Anthology",
     "description": "318日目の紹介文",
     "image": "/images/318.jpg",
     "players": {
@@ -3182,6 +3818,8 @@
   {
     "id": 319,
     "title": "ウォーカーズ・ブルース",
+    "artist_name": "Haruomi Hosono",
+    "album_name": "HoSoNoVa",
     "description": "319日目の紹介文",
     "image": "/images/319.jpg",
     "players": {
@@ -3192,6 +3830,8 @@
   {
     "id": 320,
     "title": "At Pace",
+    "artist_name": "Cola",
+    "album_name": "Deep in View",
     "description": "320日目の紹介文",
     "image": "/images/320.jpg",
     "players": {
@@ -3202,6 +3842,8 @@
   {
     "id": 321,
     "title": "Locket",
+    "artist_name": "Crumb",
+    "album_name": "Locket",
     "description": "321日目の紹介文",
     "image": "/images/321.jpg",
     "players": {
@@ -3212,6 +3854,8 @@
   {
     "id": 322,
     "title": "Stepping Into Tomorrow",
+    "artist_name": "Madlib",
+    "album_name": "Shades Of Blue: Madlib Invades Blue Note",
     "description": "322日目の紹介文",
     "image": "/images/322.jpg",
     "players": {
@@ -3222,6 +3866,8 @@
   {
     "id": 323,
     "title": "Nadia",
+    "artist_name": "Nitin Sawhney",
+    "album_name": "Beyond Skin",
     "description": "323日目の紹介文",
     "image": "/images/323.jpg",
     "players": {
@@ -3232,6 +3878,8 @@
   {
     "id": 324,
     "title": "Can't Make Up My Mind",
+    "artist_name": "Gloria Tells",
+    "album_name": "Shine On You",
     "description": "324日目の紹介文",
     "image": "/images/324.jpg",
     "players": {
@@ -3242,6 +3890,8 @@
   {
     "id": 325,
     "title": "Gold Dust",
+    "artist_name": "Duster",
+    "album_name": "Stratosphere",
     "description": "325日目の紹介文",
     "image": "/images/325.jpg",
     "players": {
@@ -3252,6 +3902,8 @@
   {
     "id": 326,
     "title": "Sock It 2 Me (feat. Da Brat)",
+    "artist_name": "Missy Elliott",
+    "album_name": "Supa Dupa Fly",
     "description": "326日目の紹介文",
     "image": "/images/326.jpg",
     "players": {
@@ -3262,6 +3914,8 @@
   {
     "id": 327,
     "title": "Sims",
+    "artist_name": "Lauv",
+    "album_name": "~how i'm feeling~",
     "description": "327日目の紹介文",
     "image": "/images/327.jpg",
     "players": {
@@ -3272,6 +3926,8 @@
   {
     "id": 328,
     "title": "ザッピング (feat. 髙城晶平)",
+    "artist_name": "Sunny Day Service",
+    "album_name": "the CITY",
     "description": "328日目の紹介文",
     "image": "/images/328.jpg",
     "players": {
@@ -3282,6 +3938,8 @@
   {
     "id": 329,
     "title": "Balamb GARDEN",
+    "artist_name": "Nobuo Uematsu",
+    "album_name": "FINAL FANTASY VIII Original Soundtrack",
     "description": "329日目の紹介文",
     "image": "/images/329.jpg",
     "players": {
@@ -3292,6 +3950,8 @@
   {
     "id": 330,
     "title": "DUET!!",
+    "artist_name": "KOJI-12000",
+    "album_name": "ディスカスティング",
     "description": "330日目の紹介文",
     "image": "/images/330.jpg",
     "players": {
@@ -3302,6 +3962,8 @@
   {
     "id": 331,
     "title": "Saturday in the Park - 2002 Remaster",
+    "artist_name": "Chicago",
+    "album_name": "Chicago V (Expanded & Remastered)",
     "description": "331日目の紹介文",
     "image": "/images/331.jpg",
     "players": {
@@ -3312,6 +3974,8 @@
   {
     "id": 332,
     "title": "Basta",
+    "artist_name": "Raujika",
+    "album_name": "Raujika Best",
     "description": "332日目の紹介文",
     "image": "/images/332.jpg",
     "players": {
@@ -3322,6 +3986,8 @@
   {
     "id": 333,
     "title": "Ilex",
+    "artist_name": "Michal Urbaniak",
+    "album_name": "Atma",
     "description": "333日目の紹介文",
     "image": "/images/333.jpg",
     "players": {
@@ -3332,6 +3998,8 @@
   {
     "id": 334,
     "title": "Swallowtail Butterfly～あいのうた～ - Remastered 2015",
+    "artist_name": "YEN TOWN BAND",
+    "album_name": "MONTAGE (Remastered 2015)",
     "description": "334日目の紹介文",
     "image": "/images/334.jpg",
     "players": {
@@ -3342,6 +4010,8 @@
   {
     "id": 335,
     "title": "アイム・ミー",
+    "artist_name": "CHAI",
+    "album_name": "PUNK",
     "description": "335日目の紹介文",
     "image": "/images/335.jpg",
     "players": {
@@ -3352,6 +4022,8 @@
   {
     "id": 336,
     "title": "Maiden Voyage - Remastered 1999/Rudy Van Gelder Edition",
+    "artist_name": "Herbie Hancock",
+    "album_name": "Maiden Voyage (Remastered 1999/Rudy Van Gelder Edition)",
     "description": "336日目の紹介文",
     "image": "/images/336.jpg",
     "players": {
@@ -3362,6 +4034,8 @@
   {
     "id": 337,
     "title": "Midnight City",
+    "artist_name": "M83",
+    "album_name": "Hurry up, We're Dreaming",
     "description": "337日目の紹介文",
     "image": "/images/337.jpg",
     "players": {
@@ -3372,6 +4046,8 @@
   {
     "id": 338,
     "title": "Reminiscing - Remastered 2010",
+    "artist_name": "Little River Band",
+    "album_name": "Sleeper Catcher (Remastered 2022)",
     "description": "338日目の紹介文",
     "image": "/images/338.jpg",
     "players": {
@@ -3382,6 +4058,8 @@
   {
     "id": 339,
     "title": "Carol of St. Benjamin The Bearded One",
+    "artist_name": "Sufjan Stevens",
+    "album_name": "Silver & Gold",
     "description": "339日目の紹介文",
     "image": "/images/339.jpg",
     "players": {
@@ -3392,6 +4070,8 @@
   {
     "id": 340,
     "title": "Willst du - Radio Mix",
+    "artist_name": "Robin Schulz",
+    "album_name": "Prayer",
     "description": "340日目の紹介文",
     "image": "/images/340.jpg",
     "players": {
@@ -3402,6 +4082,8 @@
   {
     "id": 341,
     "title": "SHOOTING STAR",
+    "artist_name": "XG",
+    "album_name": "SHOOTING STAR",
     "description": "341日目の紹介文",
     "image": "/images/341.jpg",
     "players": {
@@ -3412,6 +4094,8 @@
   {
     "id": 342,
     "title": "Working for Vacation",
+    "artist_name": "Cibo Matto",
+    "album_name": "Stereotype A",
     "description": "342日目の紹介文",
     "image": "/images/342.jpg",
     "players": {
@@ -3422,6 +4106,8 @@
   {
     "id": 343,
     "title": "Instalacao Do Samba",
+    "artist_name": "Toco",
+    "album_name": "Instalacao Do Samba",
     "description": "343日目の紹介文",
     "image": "/images/343.jpg",
     "players": {
@@ -3432,6 +4118,8 @@
   {
     "id": 344,
     "title": "現代に生息する部族",
+    "artist_name": "天国注射",
+    "album_name": "天国注射の一枚目",
     "description": "344日目の紹介文",
     "image": "/images/344.jpg",
     "players": {
@@ -3442,6 +4130,8 @@
   {
     "id": 345,
     "title": "Levitating (feat. DaBaby)",
+    "artist_name": "Dua Lipa",
+    "album_name": "Future Nostalgia",
     "description": "345日目の紹介文",
     "image": "/images/345.jpg",
     "players": {
@@ -3452,6 +4142,8 @@
   {
     "id": 346,
     "title": "ANATATO",
+    "artist_name": "LUVRAW",
+    "album_name": "「スペース☆ダンディ」O.S.T.1　ベストヒット BBP",
     "description": "346日目の紹介文",
     "image": "/images/346.jpg",
     "players": {
@@ -3462,6 +4154,8 @@
   {
     "id": 347,
     "title": "Blood and Rockets:Movement I, Saga of Jack Parsons/Movement II, Too the Moon",
+    "artist_name": "The Claypool Lennon Delirium",
+    "album_name": "South of Reality",
     "description": "347日目の紹介文",
     "image": "/images/347.jpg",
     "players": {
@@ -3472,6 +4166,8 @@
   {
     "id": 348,
     "title": "Sumthin Like This Night",
+    "artist_name": "Snoop Dogg",
+    "album_name": "Doggumentary",
     "description": "348日目の紹介文",
     "image": "/images/348.jpg",
     "players": {
@@ -3482,6 +4178,8 @@
   {
     "id": 349,
     "title": "We Are Love",
+    "artist_name": "Don Diablo",
+    "album_name": "We Are Love",
     "description": "349日目の紹介文",
     "image": "/images/349.jpg",
     "players": {
@@ -3492,6 +4190,8 @@
   {
     "id": 350,
     "title": "All The Way",
+    "artist_name": "Chance the Rapper",
+    "album_name": "Merry Christmas Lil Mama: The Gift That Keeps On Giving",
     "description": "350日目の紹介文",
     "image": "/images/350.jpg",
     "players": {
@@ -3502,6 +4202,8 @@
   {
     "id": 351,
     "title": "うんこ",
+    "artist_name": "Naotaro Moriyama",
+    "album_name": "大傑作撰",
     "description": "351日目の紹介文",
     "image": "/images/351.jpg",
     "players": {
@@ -3512,6 +4214,8 @@
   {
     "id": 352,
     "title": "Old Man River",
+    "artist_name": "Lelio Luttazzi",
+    "album_name": "We Love",
     "description": "352日目の紹介文",
     "image": "/images/352.jpg",
     "players": {
@@ -3522,6 +4226,8 @@
   {
     "id": 353,
     "title": "Eucalyptus",
+    "artist_name": "MF DOOM",
+    "album_name": "Metal Fingers Presents: Special Herbs Vol. 1 & 2",
     "description": "353日目の紹介文",
     "image": "/images/353.jpg",
     "players": {
@@ -3532,6 +4238,8 @@
   {
     "id": 354,
     "title": "カーリーとキャロル",
+    "artist_name": "SHIGEO SEKITO",
+    "album_name": "華麗なるエレクトーン -ザ・ワード-",
     "description": "354日目の紹介文",
     "image": "/images/354.jpg",
     "players": {
@@ -3542,6 +4250,8 @@
   {
     "id": 355,
     "title": "running out of time",
+    "artist_name": "Lil Yachty",
+    "album_name": "Let’s Start Here.",
     "description": "355日目の紹介文",
     "image": "/images/355.jpg",
     "players": {
@@ -3552,6 +4262,8 @@
   {
     "id": 356,
     "title": "Volver A Comenzar",
+    "artist_name": "Café Tacvba",
+    "album_name": "SINO",
     "description": "356日目の紹介文",
     "image": "/images/356.jpg",
     "players": {
@@ -3562,6 +4274,8 @@
   {
     "id": 357,
     "title": "Jazz Excursion",
+    "artist_name": "Mumdance",
+    "album_name": "MD001",
     "description": "357日目の紹介文",
     "image": "/images/357.jpg",
     "players": {
@@ -3572,6 +4286,8 @@
   {
     "id": 358,
     "title": "Bound",
+    "artist_name": "The Ponderosa Twins Plus One",
+    "album_name": "2+2+1=",
     "description": "358日目の紹介文",
     "image": "/images/358.jpg",
     "players": {
@@ -3582,6 +4298,8 @@
   {
     "id": 359,
     "title": "千年紀末に降る雪は",
+    "artist_name": "KIRINJI",
+    "album_name": "3",
     "description": "359日目の紹介文",
     "image": "/images/359.jpg",
     "players": {
@@ -3592,6 +4310,8 @@
   {
     "id": 360,
     "title": "Think One Thing and Sing",
+    "artist_name": "Rémi Panossian Trio",
+    "album_name": "Happy Birthdé",
     "description": "360日目の紹介文",
     "image": "/images/360.jpg",
     "players": {
@@ -3602,6 +4322,8 @@
   {
     "id": 361,
     "title": "Fearing much",
+    "artist_name": "Stefano Torossi",
+    "album_name": "Feelings",
     "description": "361日目の紹介文",
     "image": "/images/361.jpg",
     "players": {
@@ -3612,6 +4334,8 @@
   {
     "id": 362,
     "title": "Sweet Life",
+    "artist_name": "Frank Ocean",
+    "album_name": "channel ORANGE",
     "description": "362日目の紹介文",
     "image": "/images/362.jpg",
     "players": {
@@ -3622,6 +4346,8 @@
   {
     "id": 363,
     "title": "Heaven",
+    "artist_name": "Shuta Hasunuma",
+    "album_name": "Heaven",
     "description": "363日目の紹介文",
     "image": "/images/363.jpg",
     "players": {
@@ -3632,6 +4358,8 @@
   {
     "id": 364,
     "title": "喝采 - 1973年 Live Ver.",
+    "artist_name": "ちあきなおみ",
+    "album_name": "ちあきなおみ ON STAGE (1973)",
     "description": "364日目の紹介文",
     "image": "/images/364.jpg",
     "players": {
@@ -3642,6 +4370,8 @@
   {
     "id": 365,
     "title": "LONG SEASON - Live",
+    "artist_name": "Fishmans",
+    "album_name": "98.12.28 男達の別れ (Live)",
     "description": "365日目の紹介文",
     "image": "/images/365.jpg",
     "players": {

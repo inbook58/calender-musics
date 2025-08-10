@@ -42,11 +42,15 @@ for i, track_item in enumerate(all_tracks):
         song_id = i + 1
         title = track['name']
         track_id = track['id']
+        album_name = track['album']['name']
+        artist_name = track['artists'][0]['name'] if track['artists'] else ''
         spotify_embed_url = f'https://open.spotify.com/embed/track/{track_id}?utm_source=generator&theme=0'
         
         new_songs.append({
             'id': song_id,
             'title': title,
+            'artist_name': artist_name,
+            'album_name': album_name,
             'description': f'{song_id:03d}日目の紹介文',
             'image': f'/images/{song_id:03d}.jpg',
             'players': {
