@@ -2,6 +2,7 @@
 import songs from '@/data/songs.json'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { onMounted } from 'vue'
 
 const props = defineProps<{ id: number }>()
 const router = useRouter()
@@ -51,10 +52,10 @@ const navigateTo = (id: number) => {
 }
 
 onMounted(() => {
-  const today = new Date();
-  const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
-  localStorage.setItem(`viewedTodaySong_${dateString}`, 'true');
-});
+  const today = new Date()
+  const dateString = today.toISOString().slice(0, 10) // YYYY-MM-DD
+  localStorage.setItem(`viewedTodaySong_${dateString}`, 'true')
+})
 </script>
 
 <template>
