@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && copy docs\\index.html docs\\404.html",
     "preview": "vite preview --port 5173 --strictPort",
     "gen:data": "node scripts/genデvDummy.mjs",
     "build-only": "vite build",
