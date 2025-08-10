@@ -7,7 +7,7 @@ export default createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/:id(\d{1,3})',
+      path: '/:id(\\d{1,3})',
       name: 'Song',
       component: SongPage,
       props: (r) => ({ id: Number(r.params.id) }),
