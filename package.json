@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 5173 --strictPort",
-    "gen:data": "node scripts/genDummy.mjs",
+    "gen:data": "node scripts/genデvDummy.mjs",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
