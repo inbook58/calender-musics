@@ -23,6 +23,22 @@ const nextSong = computed(() =>
   currentIndex.value < songs.length - 1 ? songs[currentIndex.value + 1] : null,
 )
 
+const isNextSongDisabled = computed(() => {
+  if (!nextSong.value) {
+    return true // No next song, so disable
+  }
+
+  const today = new Date()
+  today.setHours(0, 0, 0, 0) // Normalize today to start of day
+
+  // Assuming song.id corresponds to the day of the year
+  const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id)
+  nextSongDate.setHours(0, 0, 0, 0) // Normalize nextSongDate to start of day
+
+  // Disable if the next song's date is in the future
+  return nextSongDate > today
+})
+
 const imageUrl = computed(() => {
   if (song.value) {
     return `${import.meta.env.BASE_URL}${song.value.image.startsWith('/') ? song.value.image.substring(1) : song.value.image}`
@@ -49,7 +65,7 @@ const navigateTo = (id: number) => {
 
       <div class="navigation-buttons">
         <button :disabled="!prevSong" @click="navigateTo(prevSong.id)">前の日</button>
-        <button :disabled="!nextSong" @click="navigateTo(nextSong.id)">次の日</button>
+        <button :disabled="isNextSongDisabled" @click="navigateTo(nextSong.id)">次の日</button>
       </div>
     </main>
     <main v-else>404: ページが見つかりません</main>
@@ -92,7 +108,7 @@ img {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
 }
 
 .navigation-buttons button:hover {
@@ -101,7 +117,7 @@ img {
 
 .navigation-buttons button:disabled {
   background-color: #fff;
-  color: #999;
+  color: #ccc;
   cursor: not-allowed;
 }
 </style>
