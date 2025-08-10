@@ -1,46 +1,58 @@
-# calendar-musics
+このテンプレートは、ViteでVue 3を使った開発を始めるのに役立ちます。
 
-This template should help get you started developing with Vue 3 in Vite.
-
-# Apple musicのプレイリスト
+# Apple Musicのプレイリスト
 
 https://music.apple.com/jp/playlist/dia-dia-all/pl.u-MDAWkl3FAlgolkz?l=en
 
-## Recommended IDE Setup
+## 推奨IDE設定
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (Veturは無効にしてください)。
 
-## Type Support for `.vue` Imports in TS
+## TSにおける`.vue`インポートの型サポート
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+TypeScriptはデフォルトで`.vue`インポートの型情報を扱えないため、型チェックには`tsc` CLIの代わりに`vue-tsc`を使用します。エディタでは、`.vue`の型をTypeScript言語サービスに認識させるために[Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)が必要です。
 
-## Customize configuration
+## 設定のカスタマイズ
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+[Vite設定リファレンス](https://vite.dev/config/)を参照してください。
 
-## Project Setup
+## プロジェクトのセットアップ
 
 ```sh
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### 開発のためのコンパイルとホットリロード
 
 ```sh
 pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### 本番環境のための型チェック、コンパイル、ミニファイ
 
 ```sh
 pnpm build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### ESLintによるLint
 
 ```sh
 pnpm lint
 ```
+
+## アプリケーションの機能とロジック
+
+このアプリケーションは、年間365日分の楽曲を表示します。主な機能と内部ロジックは以下の通りです。
+
+*   **想定年:** アプリケーションは現在、すべての日付関連の計算と楽曲の割り当てに**2025年**を想定しています。
+*   **「次の日」ボタンのロジック:**
+    *   楽曲ページにある「次の日」ボタンは、通常、次の日の楽曲が現在の日付よりも未来である場合は無効になります。
+    *   ただし、次の日の楽曲が**実際の今日の日付の楽曲**である場合、そのボタンはユーザーが**すでに実際の今日の日付の楽曲ページを訪問している場合にのみ**有効になります。これにより、ユーザーが時期尚早に未来のコンテンツにアクセスするのを防ぎます。
+*   **タイムゾーンの扱い:** ローカルストレージのフラグの設定やチェックを含む、すべての日付および年間の通算日数の計算は、一貫性を保つために**アジア/東京 (JST)** タイムゾーンに基づいて実行されます。
+*   **訪問済みページの追跡:**
+    *   ユーザーが実際の今日の日付に対応する楽曲ページを訪問すると、ブラウザの `localStorage` にフラグが保存されます。
+    *   これらのフラグは `viewedTodaySong_YYYY-MM-DD` (例: `viewedTodaySong_2025-08-11`) のようなキー形式で保存されます。
+    *   **注:** これらの `localStorage` エントリは現在、**自動的に削除されません**。ユーザーのブラウザに残り続けますが、非常に小さいため、パフォーマンスやストレージに大きな影響を与えることはありません。
 
 ## データ管理スクリプト
 
