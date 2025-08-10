@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Today's Songs</h1>
-    <p>{{ formattedTodayDate }}までの曲一覧です。</p>
+    <p>{{ formattedYesterdayDate }}までの曲一覧です。</p>
     <div class="song-list">
       <RouterLink
         v-for="song in visibleSongs"
@@ -27,7 +27,8 @@ import songs from '@/data/songs.json'
 // 今日の日付（JST）を基準に、年初からの日数を計算
 const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
 const start = new Date(now.getFullYear(), 0, 1) // 今年の1月1日
-const today = Math.floor((+now - +start) / 86400000) + 1
+const currentDayOfYear = Math.floor((+now - +start) / 86400000) + 1 // 1-indexed day of year
+const yesterdayId = currentDayOfYear > 1 ? currentDayOfYear - 1 : 0; // Day of year for yesterday, 0 if it's Jan 1st
 
 const formatDate = (dayOfYear: number, year: number = 2026) => {
   const date = new Date(year, 0, dayOfYear);
@@ -37,11 +38,11 @@ const formatDate = (dayOfYear: number, year: number = 2026) => {
   return `${year}年${month}月${day}日 (${dayOfWeek})`;
 };
 
-const formattedTodayDate = computed(() => formatDate(today));
+const formattedYesterdayDate = computed(() => formatDate(yesterdayId));
 
-// 表示対象の曲を計算（IDが今日の日数以下で、IDの降順にソート）
+// 表示対象の曲を計算（IDが昨日までの日数以下で、IDの降順にソート）
 const visibleSongs = computed(() =>
-  songs.filter((s) => s.id <= today).sort((a, b) => b.id - a.id)
+  songs.filter((s) => s.id <= yesterdayId).sort((a, b) => b.id - a.id)
 )
 </script>
 

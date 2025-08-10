@@ -1,23 +1,27 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { RouterLink, RouterView } from 'vue-router';
+import { computed } from 'vue'
+import { RouterLink, RouterView } from 'vue-router'
 
 // Calculate today's day of the year
 const todayId = computed(() => {
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
-  const start = new Date(now.getFullYear(), 0, 1); // January 1st of current year
-  return Math.floor((+now - +start) / 86400000) + 1;
-});
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+  const start = new Date(now.getFullYear(), 0, 1) // January 1st of current year
+  return Math.floor((+now - +start) / 86400000) + 1
+})
 </script>
 
 <template>
   <header>
-    <RouterLink to="/today-list">Home</RouterLink> <!-- Home links to Today List -->
+    <RouterLink to="/today-list">昨日までの楽曲一覧</RouterLink>
+    <!-- Home links to Today List -->
     <div class="center-link">
-      <RouterLink :to="{ name: 'Song', params: { id: todayId } }">今日のページ</RouterLink> <!-- Centered Today's Page -->
+      <RouterLink :to="{ name: 'Song', params: { id: todayId } }">今日のページ</RouterLink>
+      <!-- Centered Today's Page -->
     </div>
-    <div class="spacer"></div> <!-- For pushing QR button to right -->
-    <RouterLink to="/">QR Scan</RouterLink> <!-- QR Scan on right -->
+    <div class="spacer"></div>
+    <!-- For pushing QR button to right -->
+    <RouterLink to="/">QR Scan</RouterLink>
+    <!-- QR Scan on right -->
   </header>
   <router-view />
 </template>
