@@ -60,11 +60,20 @@ const navigateTo = (id: number) => {
   router.push({ name: 'Song', params: { id } })
 }
 
+// Calculate today's day of the year
+const todayId = computed(() => {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 1); // January 1st of current year
+  return Math.floor((+now - +start) / 86400000) + 1;
+});
+
 onMounted(() => {
-  const today = new Date()
-  const dateString = today.toISOString().slice(0, 10) // YYYY-MM-DD
-  localStorage.setItem(`viewedTodaySong_${dateString}`, 'true')
-})
+  if (typeof window !== 'undefined' && props.id === todayId.value) { // Check if running in browser and if it's today's song
+    const today = new Date();
+    const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
+    localStorage.setItem(`viewedTodaySong_${dateString}`, 'true');
+  }
+});
 </script>
 
 <template>
