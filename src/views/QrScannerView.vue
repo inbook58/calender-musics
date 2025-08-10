@@ -4,7 +4,10 @@
     <p v-if="!hasCamera">No camera found or access denied.</p>
     <p v-else-if="!scanning">Starting camera...</p>
     <p v-else-if="result">Scanned: {{ result }}</p>
-    <p v-else>Point your camera at a QR code.</p>
+    <p v-else>
+      Point your camera at a QR code.<br />
+      読み取れなかったらリロード
+    </p>
 
     <div class="video-wrapper">
       <video ref="video" autoplay playsinline></video>
@@ -122,8 +125,8 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 170px; /* Adjust size as needed */
-  height: 170px; /* Adjust size as needed */
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
   border: 3px solid rgba(255, 255, 255, 0.5); /* Border, adjust color as needed */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   pointer-events: none; /* Allow interaction with elements behind the frame */
