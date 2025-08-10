@@ -1,14 +1,43 @@
 <script setup lang="ts">
 import songs from '@/data/songs.json'
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
+
 const props = defineProps<{ id: number }>()
-const song = songs.find((s) => s.id === props.id)
+const router = useRouter()
+
+const song = computed(() => songs.find((s) => s.id === props.id))
+
+const currentIndex = computed(() => songs.findIndex((s) => s.id === props.id))
+const prevSong = computed(() => (currentIndex.value > 0 ? songs[currentIndex.value - 1] : null))
+const nextSong = computed(() => (currentIndex.value < songs.length - 1 ? songs[currentIndex.value + 1] : null))
+
 const imageUrl = computed(() => {
-  if (song) {
-    return `${import.meta.env.BASE_URL}${song.image.startsWith('/') ? song.image.substring(1) : song.image}`
+  if (song.value) {
+    return `${import.meta.env.BASE_URL}${song.value.image.startsWith('/') ? song.value.image.substring(1) : song.value.image}`
   }
   return ''
 })
+
+const showNextButton = computed(() => {
+  if (!nextSong.value) {
+    return false
+  }
+
+  const today = new Date()
+  today.setHours(0, 0, 0, 0) // Normalize today to start of day
+
+  // Assuming song.id corresponds to the day of the year
+  const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id)
+  nextSongDate.setHours(0, 0, 0, 0) // Normalize nextSongDate to start of day
+
+  // Only show the next button if the next song's date is today or in the past
+  return nextSongDate <= today
+})
+
+const navigateTo = (id: number) => {
+  router.push({ name: 'Song', params: { id } })
+}
 </script>
 
 <template>
@@ -20,6 +49,11 @@ const imageUrl = computed(() => {
       <div class="spotify-player" v-if="song.players?.spotify" v-html="song.players.spotify"></div>
       <div v-if="song.players?.apple" v-html="song.players.apple"></div>
       <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener">リンク</a>
+
+      <div class="navigation-buttons">
+        <button v-if="prevSong" @click="navigateTo(prevSong.id)">前の日</button>
+        <button v-if="showNextButton" @click="navigateTo(nextSong.id)">次の日</button>
+      </div>
     </main>
     <main v-else>404: ページが見つかりません</main>
   </Transition>
@@ -46,5 +80,30 @@ img {
 
 .spotify-player {
   margin-bottom: 16px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  background-color: #42b983;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.navigation-buttons button:hover {
+  background-color: #369f6b;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
 </style>
