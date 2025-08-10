@@ -30,7 +30,7 @@ const start = new Date(now.getFullYear(), 0, 1) // 今年の1月1日
 const currentDayOfYear = Math.floor((+now - +start) / 86400000) + 1 // 1-indexed day of year
 const yesterdayId = currentDayOfYear > 1 ? currentDayOfYear - 1 : 0; // Day of year for yesterday, 0 if it's Jan 1st
 
-const formatDate = (dayOfYear: number, year: number = 2026) => {
+const formatDate = (dayOfYear: number, year: number = 2025) => {
   const date = new Date(year, 0, dayOfYear);
   const month = date.getMonth() + 1;
   const day = date.getDate();

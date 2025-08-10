@@ -10,7 +10,7 @@ const router = useRouter()
 const song = computed(() => songs.find((s) => s.id === props.id))
 
 const displayDate = computed(() => {
-  const year = 2026
+  const year = 2025
   const date = new Date(year, 0, props.id) // Month is 0-indexed, so 0 is January
   const month = date.getMonth() + 1 // getMonth() returns 0-11
   const day = date.getDate()
@@ -26,28 +26,29 @@ const nextSong = computed(() =>
 
 const isNextSongDisabled = computed(() => {
   if (!nextSong.value) {
-    return true; // No next song, so disable
+    return true // No next song, so disable
   }
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0); // Normalize today to start of day
+  const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+  today.setHours(0, 0, 0, 0) // Normalize today to start of day
 
-  const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id);
-  nextSongDate.setHours(0, 0, 0, 0); // Normalize nextSongDate to start of day
+  const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id)
+  nextSongDate.setHours(0, 0, 0, 0) // Normalize nextSongDate to start of day
 
   // Check if today's song has been viewed (from localStorage)
-  const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
-  const viewedTodaySong = typeof window !== 'undefined' ? localStorage.getItem(`viewedTodaySong_${dateString}`) : null;
+  const dateString = today.toISOString().slice(0, 10) // YYYY-MM-DD
+  const viewedTodaySong =
+    typeof window !== 'undefined' ? localStorage.getItem(`viewedTodaySong_${dateString}`) : null
 
   // If today's song has been viewed, then the "次の日" button should be active
   // unless it's the very last song.
   if (viewedTodaySong === 'true') {
-    return false; // Always active if today's song has been viewed
+    return false // Always active if today's song has been viewed
   }
 
   // Otherwise, use the original logic: disable if next song is today or in the future
-  return nextSongDate >= today;
-});
+  return nextSongDate >= today
+})
 
 const imageUrl = computed(() => {
   if (song.value) {
@@ -62,18 +63,19 @@ const navigateTo = (id: number) => {
 
 // Calculate today's day of the year
 const todayId = computed(() => {
-  const now = new Date();
-  const start = new Date(now.getFullYear(), 0, 1); // January 1st of current year
-  return Math.floor((+now - +start) / 86400000) + 1;
-});
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+  const start = new Date(now.getFullYear(), 0, 1) // January 1st of current year
+  return Math.floor((+now - +start) / 86400000) + 1
+})
 
 onMounted(() => {
-  if (typeof window !== 'undefined' && props.id === todayId.value) { // Check if running in browser and if it's today's song
-    const today = new Date();
-    const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
-    localStorage.setItem(`viewedTodaySong_${dateString}`, 'true');
+  if (typeof window !== 'undefined' && props.id === todayId.value) {
+    // Check if running in browser and if it's today's song
+    const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+    const dateString = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}` // YYYY-MM-DD
+    localStorage.setItem(`viewedTodaySong_${dateString}`, 'true')
   }
-});
+})
 </script>
 
 <template>

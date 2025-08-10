@@ -57,8 +57,8 @@ const tick = () => {
 };
 
 onMounted(async () => {
-  const today = new Date();
-  const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
+  const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+  const dateString = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`; // YYYY-MM-DD
   const viewedTodaySong = localStorage.getItem(`viewedTodaySong_${dateString}`);
 
   if (viewedTodaySong === 'true') {
