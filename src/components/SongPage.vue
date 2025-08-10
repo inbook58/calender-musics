@@ -1,20 +1,27 @@
+<script setup lang="ts">
+import songs from '@/data/songs.json'
+import { computed } from 'vue'
+const props = defineProps<{ id: number }>()
+const song = songs.find((s) => s.id === props.id)
+const imageUrl = computed(() => {
+  if (song) {
+    return `${import.meta.env.BASE_URL}${song.image.startsWith('/') ? song.image.substring(1) : song.image}`
+  }
+  return ''
+})
+</script>
+
 <template>
   <Transition name="fade" appear>
     <main v-if="song" class="container">
       <h1>{{ song.title }}</h1>
-      <img :src="song.image" alt="" />
+      <img :src="imageUrl" alt="" />
       <p>{{ song.description }}</p>
       <a :href="song.link" target="_blank" rel="noopener">リンク</a>
     </main>
     <main v-else>404: ページが見つかりません</main>
   </Transition>
 </template>
-
-<script setup lang="ts">
-import songs from '@/data/songs.json'
-const props = defineProps<{ id: number }>()
-const song = songs.find((s) => s.id === props.id)
-</script>
 
 <style scoped>
 .fade-enter-active {
