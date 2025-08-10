@@ -9,39 +9,25 @@ const router = useRouter()
 const song = computed(() => songs.find((s) => s.id === props.id))
 
 const displayDate = computed(() => {
-  const year = 2026;
-  const date = new Date(year, 0, props.id); // Month is 0-indexed, so 0 is January
-  const month = date.getMonth() + 1; // getMonth() returns 0-11
-  const day = date.getDate();
-  const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
-  return `${year}年${month}月${day}日 (${dayOfWeek})`;
-});
+  const year = 2026
+  const date = new Date(year, 0, props.id) // Month is 0-indexed, so 0 is January
+  const month = date.getMonth() + 1 // getMonth() returns 0-11
+  const day = date.getDate()
+  const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()]
+  return `${year}年${month}月${day}日 (${dayOfWeek})`
+})
 
 const currentIndex = computed(() => songs.findIndex((s) => s.id === props.id))
 const prevSong = computed(() => (currentIndex.value > 0 ? songs[currentIndex.value - 1] : null))
-const nextSong = computed(() => (currentIndex.value < songs.length - 1 ? songs[currentIndex.value + 1] : null))
+const nextSong = computed(() =>
+  currentIndex.value < songs.length - 1 ? songs[currentIndex.value + 1] : null,
+)
 
 const imageUrl = computed(() => {
   if (song.value) {
     return `${import.meta.env.BASE_URL}${song.value.image.startsWith('/') ? song.value.image.substring(1) : song.value.image}`
   }
   return ''
-})
-
-const showNextButton = computed(() => {
-  if (!nextSong.value) {
-    return false
-  }
-
-  const today = new Date()
-  today.setHours(0, 0, 0, 0) // Normalize today to start of day
-
-  // Assuming song.id corresponds to the day of the year
-  const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id)
-  nextSongDate.setHours(0, 0, 0, 0) // Normalize nextSongDate to start of day
-
-  // Only show the next button if the next song's date is today or in the past
-  return nextSongDate <= today
 })
 
 const navigateTo = (id: number) => {
@@ -57,11 +43,13 @@ const navigateTo = (id: number) => {
       <p>{{ song.description }}</p>
       <div class="spotify-player" v-if="song.players?.spotify" v-html="song.players.spotify"></div>
       <div v-if="song.players?.apple" v-html="song.players.apple"></div>
-      <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener">リンク</a>
+      <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
+        >リンク</a
+      >
 
       <div class="navigation-buttons">
-        <button v-if="prevSong" @click="navigateTo(prevSong.id)">前の日</button>
-        <button v-if="showNextButton" @click="navigateTo(nextSong.id)">次の日</button>
+        <button :disabled="!prevSong" @click="navigateTo(prevSong.id)">前の日</button>
+        <button :disabled="!nextSong" @click="navigateTo(nextSong.id)">次の日</button>
       </div>
     </main>
     <main v-else>404: ページが見つかりません</main>
@@ -99,20 +87,21 @@ img {
 
 .navigation-buttons button {
   padding: 10px 20px;
-  background-color: #42b983;
-  color: white;
-  border: none;
+  background-color: #fff;
+  color: #111;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  border: 1px solid #ccc;
 }
 
 .navigation-buttons button:hover {
-  background-color: #369f6b;
+  background-color: #eee;
 }
 
 .navigation-buttons button:disabled {
-  background-color: #cccccc;
+  background-color: #fff;
+  color: #999;
   cursor: not-allowed;
 }
 </style>
