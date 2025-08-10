@@ -3,7 +3,7 @@ import SongPage from '@/components/SongPage.vue'
 import Today from '@/components/Today.vue'
 
 export default createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/:id(\\d{1,3})',
