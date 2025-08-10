@@ -17,7 +17,8 @@ const imageUrl = computed(() => {
       <h1>{{ song.title }}</h1>
       <img :src="imageUrl" alt="" />
       <p>{{ song.description }}</p>
-      <a :href="song.link" target="_blank" rel="noopener">リンク</a>
+      <div v-if="song.link.includes('spotify')" v-html="song.link"></div>
+      <a v-else :href="song.link" target="_blank" rel="noopener">リンク</a>
     </main>
     <main v-else>404: ページが見つかりません</main>
   </Transition>

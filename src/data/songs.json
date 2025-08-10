@@ -4,7 +4,7 @@
     "title": "曲タイトル 001",
     "description": "001日目の紹介文",
     "image": "/images/001.jpg",
-    "link": "https://example.com/001"
+    "link": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0TPr5hnZsUpJcibgC9U4OS?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
   },
   {
     "id": 2,
