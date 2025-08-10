@@ -21,17 +21,22 @@ auth_data = {
 auth_response = requests.post(auth_url, headers=auth_headers, data=auth_data)
 access_token = auth_response.json()['access_token']
 
-# Step 2: Get playlist tracks
+# Step 2: Get playlist tracks with pagination
 tracks_url = f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
 headers = {
     'Authorization': f'Bearer {access_token}'
 }
-tracks_response = requests.get(tracks_url, headers=headers)
-tracks = tracks_response.json()['items']
+all_tracks = []
+while tracks_url:
+    tracks_response = requests.get(tracks_url, headers=headers)
+    tracks_data = tracks_response.json()
+    all_tracks.extend(tracks_data['items'])
+    tracks_url = tracks_data.get('next')
+
 
 # Step 3 & 4: Process tracks and create new songs data
 new_songs = []
-for i, track_item in enumerate(tracks):
+for i, track_item in enumerate(all_tracks):
     track = track_item['track']
     if track:
         song_id = i + 1
@@ -54,4 +59,4 @@ for i, track_item in enumerate(tracks):
 with open('src/data/songs.json', 'w', encoding='utf-8') as f:
     json.dump(new_songs, f, ensure_ascii=False, indent=2)
 
-print("songs.json has been updated with the tracks from the playlist.")
+print(f"songs.json has been updated with {len(new_songs)} tracks from the playlist.")
