@@ -4,2554 +4,3285 @@
     "title": "曲タイトル 001",
     "description": "001日目の紹介文",
     "image": "/images/001.jpg",
-    "link": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0TPr5hnZsUpJcibgC9U4OS?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+    "players": {
+      "spotify": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0TPr5hnZsUpJcibgC9U4OS?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+      "apple": "<iframe allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" frameborder=\"0\" height=\"175\" style=\"width:100%;max-width:660px;overflow:hidden;border-radius:10px;\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" src=\"https://embed.music.apple.com/jp/song/luglio-agosto-settembre-nero/726017757\"></iframe>"
+    }
   },
   {
     "id": 2,
     "title": "曲タイトル 002",
     "description": "002日目の紹介文",
     "image": "/images/002.jpg",
-    "link": "https://example.com/002"
+    "players": {
+      "other": "https://example.com/002"
+    }
   },
   {
     "id": 3,
     "title": "曲タイトル 003",
     "description": "003日目の紹介文",
     "image": "/images/003.jpg",
-    "link": "https://example.com/003"
+    "players": {
+      "other": "https://example.com/003"
+    }
   },
   {
     "id": 4,
     "title": "曲タイトル 004",
     "description": "004日目の紹介文",
     "image": "/images/004.jpg",
-    "link": "https://example.com/004"
+    "players": {
+      "other": "https://example.com/004"
+    }
   },
   {
     "id": 5,
     "title": "曲タイトル 005",
     "description": "005日目の紹介文",
     "image": "/images/005.jpg",
-    "link": "https://example.com/005"
+    "players": {
+      "other": "https://example.com/005"
+    }
   },
   {
     "id": 6,
     "title": "曲タイトル 006",
     "description": "006日目の紹介文",
     "image": "/images/006.jpg",
-    "link": "https://example.com/006"
+    "players": {
+      "other": "https://example.com/006"
+    }
   },
   {
     "id": 7,
     "title": "曲タイトル 007",
     "description": "007日目の紹介文",
     "image": "/images/007.jpg",
-    "link": "https://example.com/007"
+    "players": {
+      "other": "https://example.com/007"
+    }
   },
   {
     "id": 8,
     "title": "曲タイトル 008",
     "description": "008日目の紹介文",
     "image": "/images/008.jpg",
-    "link": "https://example.com/008"
+    "players": {
+      "other": "https://example.com/008"
+    }
   },
   {
     "id": 9,
     "title": "曲タイトル 009",
     "description": "009日目の紹介文",
     "image": "/images/009.jpg",
-    "link": "https://example.com/009"
+    "players": {
+      "other": "https://example.com/009"
+    }
   },
   {
     "id": 10,
     "title": "曲タイトル 010",
     "description": "010日目の紹介文",
     "image": "/images/010.jpg",
-    "link": "https://example.com/010"
+    "players": {
+      "other": "https://example.com/010"
+    }
   },
   {
     "id": 11,
     "title": "曲タイトル 011",
     "description": "011日目の紹介文",
     "image": "/images/011.jpg",
-    "link": "https://example.com/011"
+    "players": {
+      "other": "https://example.com/011"
+    }
   },
   {
     "id": 12,
     "title": "曲タイトル 012",
     "description": "012日目の紹介文",
     "image": "/images/012.jpg",
-    "link": "https://example.com/012"
+    "players": {
+      "other": "https://example.com/012"
+    }
   },
   {
     "id": 13,
     "title": "曲タイトル 013",
     "description": "013日目の紹介文",
     "image": "/images/013.jpg",
-    "link": "https://example.com/013"
+    "players": {
+      "other": "https://example.com/013"
+    }
   },
   {
     "id": 14,
     "title": "曲タイトル 014",
     "description": "014日目の紹介文",
     "image": "/images/014.jpg",
-    "link": "https://example.com/014"
+    "players": {
+      "other": "https://example.com/014"
+    }
   },
   {
     "id": 15,
     "title": "曲タイトル 015",
     "description": "015日目の紹介文",
     "image": "/images/015.jpg",
-    "link": "https://example.com/015"
+    "players": {
+      "other": "https://example.com/015"
+    }
   },
   {
     "id": 16,
     "title": "曲タイトル 016",
     "description": "016日目の紹介文",
     "image": "/images/016.jpg",
-    "link": "https://example.com/016"
+    "players": {
+      "other": "https://example.com/016"
+    }
   },
   {
     "id": 17,
     "title": "曲タイトル 017",
     "description": "017日目の紹介文",
     "image": "/images/017.jpg",
-    "link": "https://example.com/017"
+    "players": {
+      "other": "https://example.com/017"
+    }
   },
   {
     "id": 18,
     "title": "曲タイトル 018",
     "description": "018日目の紹介文",
     "image": "/images/018.jpg",
-    "link": "https://example.com/018"
+    "players": {
+      "other": "https://example.com/018"
+    }
   },
   {
     "id": 19,
     "title": "曲タイトル 019",
     "description": "019日目の紹介文",
     "image": "/images/019.jpg",
-    "link": "https://example.com/019"
+    "players": {
+      "other": "https://example.com/019"
+    }
   },
   {
     "id": 20,
     "title": "曲タイトル 020",
     "description": "020日目の紹介文",
     "image": "/images/020.jpg",
-    "link": "https://example.com/020"
+    "players": {
+      "other": "https://example.com/020"
+    }
   },
   {
     "id": 21,
     "title": "曲タイトル 021",
     "description": "021日目の紹介文",
     "image": "/images/021.jpg",
-    "link": "https://example.com/021"
+    "players": {
+      "other": "https://example.com/021"
+    }
   },
   {
     "id": 22,
     "title": "曲タイトル 022",
     "description": "022日目の紹介文",
     "image": "/images/022.jpg",
-    "link": "https://example.com/022"
+    "players": {
+      "other": "https://example.com/022"
+    }
   },
   {
     "id": 23,
     "title": "曲タイトル 023",
     "description": "023日目の紹介文",
     "image": "/images/023.jpg",
-    "link": "https://example.com/023"
+    "players": {
+      "other": "https://example.com/023"
+    }
   },
   {
     "id": 24,
     "title": "曲タイトル 024",
     "description": "024日目の紹介文",
     "image": "/images/024.jpg",
-    "link": "https://example.com/024"
+    "players": {
+      "other": "https://example.com/024"
+    }
   },
   {
     "id": 25,
     "title": "曲タイトル 025",
     "description": "025日目の紹介文",
     "image": "/images/025.jpg",
-    "link": "https://example.com/025"
+    "players": {
+      "other": "https://example.com/025"
+    }
   },
   {
     "id": 26,
     "title": "曲タイトル 026",
     "description": "026日目の紹介文",
     "image": "/images/026.jpg",
-    "link": "https://example.com/026"
+    "players": {
+      "other": "https://example.com/026"
+    }
   },
   {
     "id": 27,
     "title": "曲タイトル 027",
     "description": "027日目の紹介文",
     "image": "/images/027.jpg",
-    "link": "https://example.com/027"
+    "players": {
+      "other": "https://example.com/027"
+    }
   },
   {
     "id": 28,
     "title": "曲タイトル 028",
     "description": "028日目の紹介文",
     "image": "/images/028.jpg",
-    "link": "https://example.com/028"
+    "players": {
+      "other": "https://example.com/028"
+    }
   },
   {
     "id": 29,
     "title": "曲タイトル 029",
     "description": "029日目の紹介文",
     "image": "/images/029.jpg",
-    "link": "https://example.com/029"
+    "players": {
+      "other": "https://example.com/029"
+    }
   },
   {
     "id": 30,
     "title": "曲タイトル 030",
     "description": "030日目の紹介文",
     "image": "/images/030.jpg",
-    "link": "https://example.com/030"
+    "players": {
+      "other": "https://example.com/030"
+    }
   },
   {
     "id": 31,
     "title": "曲タイトル 031",
     "description": "031日目の紹介文",
     "image": "/images/031.jpg",
-    "link": "https://example.com/031"
+    "players": {
+      "other": "https://example.com/031"
+    }
   },
   {
     "id": 32,
     "title": "曲タイトル 032",
     "description": "032日目の紹介文",
     "image": "/images/032.jpg",
-    "link": "https://example.com/032"
+    "players": {
+      "other": "https://example.com/032"
+    }
   },
   {
     "id": 33,
     "title": "曲タイトル 033",
     "description": "033日目の紹介文",
     "image": "/images/033.jpg",
-    "link": "https://example.com/033"
+    "players": {
+      "other": "https://example.com/033"
+    }
   },
   {
     "id": 34,
     "title": "曲タイトル 034",
     "description": "034日目の紹介文",
     "image": "/images/034.jpg",
-    "link": "https://example.com/034"
+    "players": {
+      "other": "https://example.com/034"
+    }
   },
   {
     "id": 35,
     "title": "曲タイトル 035",
     "description": "035日目の紹介文",
     "image": "/images/035.jpg",
-    "link": "https://example.com/035"
+    "players": {
+      "other": "https://example.com/035"
+    }
   },
   {
     "id": 36,
     "title": "曲タイトル 036",
     "description": "036日目の紹介文",
     "image": "/images/036.jpg",
-    "link": "https://example.com/036"
+    "players": {
+      "other": "https://example.com/036"
+    }
   },
   {
     "id": 37,
     "title": "曲タイトル 037",
     "description": "037日目の紹介文",
     "image": "/images/037.jpg",
-    "link": "https://example.com/037"
+    "players": {
+      "other": "https://example.com/037"
+    }
   },
   {
     "id": 38,
     "title": "曲タイトル 038",
     "description": "038日目の紹介文",
     "image": "/images/038.jpg",
-    "link": "https://example.com/038"
+    "players": {
+      "other": "https://example.com/038"
+    }
   },
   {
     "id": 39,
     "title": "曲タイトル 039",
     "description": "039日目の紹介文",
     "image": "/images/039.jpg",
-    "link": "https://example.com/039"
+    "players": {
+      "other": "https://example.com/039"
+    }
   },
   {
     "id": 40,
     "title": "曲タイトル 040",
     "description": "040日目の紹介文",
     "image": "/images/040.jpg",
-    "link": "https://example.com/040"
+    "players": {
+      "other": "https://example.com/040"
+    }
   },
   {
     "id": 41,
     "title": "曲タイトル 041",
     "description": "041日目の紹介文",
     "image": "/images/041.jpg",
-    "link": "https://example.com/041"
+    "players": {
+      "other": "https://example.com/041"
+    }
   },
   {
     "id": 42,
     "title": "曲タイトル 042",
     "description": "042日目の紹介文",
     "image": "/images/042.jpg",
-    "link": "https://example.com/042"
+    "players": {
+      "other": "https://example.com/042"
+    }
   },
   {
     "id": 43,
     "title": "曲タイトル 043",
     "description": "043日目の紹介文",
     "image": "/images/043.jpg",
-    "link": "https://example.com/043"
+    "players": {
+      "other": "https://example.com/043"
+    }
   },
   {
     "id": 44,
     "title": "曲タイトル 044",
     "description": "044日目の紹介文",
     "image": "/images/044.jpg",
-    "link": "https://example.com/044"
+    "players": {
+      "other": "https://example.com/044"
+    }
   },
   {
     "id": 45,
     "title": "曲タイトル 045",
     "description": "045日目の紹介文",
     "image": "/images/045.jpg",
-    "link": "https://example.com/045"
+    "players": {
+      "other": "https://example.com/045"
+    }
   },
   {
     "id": 46,
     "title": "曲タイトル 046",
     "description": "046日目の紹介文",
     "image": "/images/046.jpg",
-    "link": "https://example.com/046"
+    "players": {
+      "other": "https://example.com/046"
+    }
   },
   {
     "id": 47,
     "title": "曲タイトル 047",
     "description": "047日目の紹介文",
     "image": "/images/047.jpg",
-    "link": "https://example.com/047"
+    "players": {
+      "other": "https://example.com/047"
+    }
   },
   {
     "id": 48,
     "title": "曲タイトル 048",
     "description": "048日目の紹介文",
     "image": "/images/048.jpg",
-    "link": "https://example.com/048"
+    "players": {
+      "other": "https://example.com/048"
+    }
   },
   {
     "id": 49,
     "title": "曲タイトル 049",
     "description": "049日目の紹介文",
     "image": "/images/049.jpg",
-    "link": "https://example.com/049"
+    "players": {
+      "other": "https://example.com/049"
+    }
   },
   {
     "id": 50,
     "title": "曲タイトル 050",
     "description": "050日目の紹介文",
     "image": "/images/050.jpg",
-    "link": "https://example.com/050"
+    "players": {
+      "other": "https://example.com/050"
+    }
   },
   {
     "id": 51,
     "title": "曲タイトル 051",
     "description": "051日目の紹介文",
     "image": "/images/051.jpg",
-    "link": "https://example.com/051"
+    "players": {
+      "other": "https://example.com/051"
+    }
   },
   {
     "id": 52,
     "title": "曲タイトル 052",
     "description": "052日目の紹介文",
     "image": "/images/052.jpg",
-    "link": "https://example.com/052"
+    "players": {
+      "other": "https://example.com/052"
+    }
   },
   {
     "id": 53,
     "title": "曲タイトル 053",
     "description": "053日目の紹介文",
     "image": "/images/053.jpg",
-    "link": "https://example.com/053"
+    "players": {
+      "other": "https://example.com/053"
+    }
   },
   {
     "id": 54,
     "title": "曲タイトル 054",
     "description": "054日目の紹介文",
     "image": "/images/054.jpg",
-    "link": "https://example.com/054"
+    "players": {
+      "other": "https://example.com/054"
+    }
   },
   {
     "id": 55,
     "title": "曲タイトル 055",
     "description": "055日目の紹介文",
     "image": "/images/055.jpg",
-    "link": "https://example.com/055"
+    "players": {
+      "other": "https://example.com/055"
+    }
   },
   {
     "id": 56,
     "title": "曲タイトル 056",
     "description": "056日目の紹介文",
     "image": "/images/056.jpg",
-    "link": "https://example.com/056"
+    "players": {
+      "other": "https://example.com/056"
+    }
   },
   {
     "id": 57,
     "title": "曲タイトル 057",
     "description": "057日目の紹介文",
     "image": "/images/057.jpg",
-    "link": "https://example.com/057"
+    "players": {
+      "other": "https://example.com/057"
+    }
   },
   {
     "id": 58,
     "title": "曲タイトル 058",
     "description": "058日目の紹介文",
     "image": "/images/058.jpg",
-    "link": "https://example.com/058"
+    "players": {
+      "other": "https://example.com/058"
+    }
   },
   {
     "id": 59,
     "title": "曲タイトル 059",
     "description": "059日目の紹介文",
     "image": "/images/059.jpg",
-    "link": "https://example.com/059"
+    "players": {
+      "other": "https://example.com/059"
+    }
   },
   {
     "id": 60,
     "title": "曲タイトル 060",
     "description": "060日目の紹介文",
     "image": "/images/060.jpg",
-    "link": "https://example.com/060"
+    "players": {
+      "other": "https://example.com/060"
+    }
   },
   {
     "id": 61,
     "title": "曲タイトル 061",
     "description": "061日目の紹介文",
     "image": "/images/061.jpg",
-    "link": "https://example.com/061"
+    "players": {
+      "other": "https://example.com/061"
+    }
   },
   {
     "id": 62,
     "title": "曲タイトル 062",
     "description": "062日目の紹介文",
     "image": "/images/062.jpg",
-    "link": "https://example.com/062"
+    "players": {
+      "other": "https://example.com/062"
+    }
   },
   {
     "id": 63,
     "title": "曲タイトル 063",
     "description": "063日目の紹介文",
     "image": "/images/063.jpg",
-    "link": "https://example.com/063"
+    "players": {
+      "other": "https://example.com/063"
+    }
   },
   {
     "id": 64,
     "title": "曲タイトル 064",
     "description": "064日目の紹介文",
     "image": "/images/064.jpg",
-    "link": "https://example.com/064"
+    "players": {
+      "other": "https://example.com/064"
+    }
   },
   {
     "id": 65,
     "title": "曲タイトル 065",
     "description": "065日目の紹介文",
     "image": "/images/065.jpg",
-    "link": "https://example.com/065"
+    "players": {
+      "other": "https://example.com/065"
+    }
   },
   {
     "id": 66,
     "title": "曲タイトル 066",
     "description": "066日目の紹介文",
     "image": "/images/066.jpg",
-    "link": "https://example.com/066"
+    "players": {
+      "other": "https://example.com/066"
+    }
   },
   {
     "id": 67,
     "title": "曲タイトル 067",
     "description": "067日目の紹介文",
     "image": "/images/067.jpg",
-    "link": "https://example.com/067"
+    "players": {
+      "other": "https://example.com/067"
+    }
   },
   {
     "id": 68,
     "title": "曲タイトル 068",
     "description": "068日目の紹介文",
     "image": "/images/068.jpg",
-    "link": "https://example.com/068"
+    "players": {
+      "other": "https://example.com/068"
+    }
   },
   {
     "id": 69,
     "title": "曲タイトル 069",
     "description": "069日目の紹介文",
     "image": "/images/069.jpg",
-    "link": "https://example.com/069"
+    "players": {
+      "other": "https://example.com/069"
+    }
   },
   {
     "id": 70,
     "title": "曲タイトル 070",
     "description": "070日目の紹介文",
     "image": "/images/070.jpg",
-    "link": "https://example.com/070"
+    "players": {
+      "other": "https://example.com/070"
+    }
   },
   {
     "id": 71,
     "title": "曲タイトル 071",
     "description": "071日目の紹介文",
     "image": "/images/071.jpg",
-    "link": "https://example.com/071"
+    "players": {
+      "other": "https://example.com/071"
+    }
   },
   {
     "id": 72,
     "title": "曲タイトル 072",
     "description": "072日目の紹介文",
     "image": "/images/072.jpg",
-    "link": "https://example.com/072"
+    "players": {
+      "other": "https://example.com/072"
+    }
   },
   {
     "id": 73,
     "title": "曲タイトル 073",
     "description": "073日目の紹介文",
     "image": "/images/073.jpg",
-    "link": "https://example.com/073"
+    "players": {
+      "other": "https://example.com/073"
+    }
   },
   {
     "id": 74,
     "title": "曲タイトル 074",
     "description": "074日目の紹介文",
     "image": "/images/074.jpg",
-    "link": "https://example.com/074"
+    "players": {
+      "other": "https://example.com/074"
+    }
   },
   {
     "id": 75,
     "title": "曲タイトル 075",
     "description": "075日目の紹介文",
     "image": "/images/075.jpg",
-    "link": "https://example.com/075"
+    "players": {
+      "other": "https://example.com/075"
+    }
   },
   {
     "id": 76,
     "title": "曲タイトル 076",
     "description": "076日目の紹介文",
     "image": "/images/076.jpg",
-    "link": "https://example.com/076"
+    "players": {
+      "other": "https://example.com/076"
+    }
   },
   {
     "id": 77,
     "title": "曲タイトル 077",
     "description": "077日目の紹介文",
     "image": "/images/077.jpg",
-    "link": "https://example.com/077"
+    "players": {
+      "other": "https://example.com/077"
+    }
   },
   {
     "id": 78,
     "title": "曲タイトル 078",
     "description": "078日目の紹介文",
     "image": "/images/078.jpg",
-    "link": "https://example.com/078"
+    "players": {
+      "other": "https://example.com/078"
+    }
   },
   {
     "id": 79,
     "title": "曲タイトル 079",
     "description": "079日目の紹介文",
     "image": "/images/079.jpg",
-    "link": "https://example.com/079"
+    "players": {
+      "other": "https://example.com/079"
+    }
   },
   {
     "id": 80,
     "title": "曲タイトル 080",
     "description": "080日目の紹介文",
     "image": "/images/080.jpg",
-    "link": "https://example.com/080"
+    "players": {
+      "other": "https://example.com/080"
+    }
   },
   {
     "id": 81,
     "title": "曲タイトル 081",
     "description": "081日目の紹介文",
     "image": "/images/081.jpg",
-    "link": "https://example.com/081"
+    "players": {
+      "other": "https://example.com/081"
+    }
   },
   {
     "id": 82,
     "title": "曲タイトル 082",
     "description": "082日目の紹介文",
     "image": "/images/082.jpg",
-    "link": "https://example.com/082"
+    "players": {
+      "other": "https://example.com/082"
+    }
   },
   {
     "id": 83,
     "title": "曲タイトル 083",
     "description": "083日目の紹介文",
     "image": "/images/083.jpg",
-    "link": "https://example.com/083"
+    "players": {
+      "other": "https://example.com/083"
+    }
   },
   {
     "id": 84,
     "title": "曲タイトル 084",
     "description": "084日目の紹介文",
     "image": "/images/084.jpg",
-    "link": "https://example.com/084"
+    "players": {
+      "other": "https://example.com/084"
+    }
   },
   {
     "id": 85,
     "title": "曲タイトル 085",
     "description": "085日目の紹介文",
     "image": "/images/085.jpg",
-    "link": "https://example.com/085"
+    "players": {
+      "other": "https://example.com/085"
+    }
   },
   {
     "id": 86,
     "title": "曲タイトル 086",
     "description": "086日目の紹介文",
     "image": "/images/086.jpg",
-    "link": "https://example.com/086"
+    "players": {
+      "other": "https://example.com/086"
+    }
   },
   {
     "id": 87,
     "title": "曲タイトル 087",
     "description": "087日目の紹介文",
     "image": "/images/087.jpg",
-    "link": "https://example.com/087"
+    "players": {
+      "other": "https://example.com/087"
+    }
   },
   {
     "id": 88,
     "title": "曲タイトル 088",
     "description": "088日目の紹介文",
     "image": "/images/088.jpg",
-    "link": "https://example.com/088"
+    "players": {
+      "other": "https://example.com/088"
+    }
   },
   {
     "id": 89,
     "title": "曲タイトル 089",
     "description": "089日目の紹介文",
     "image": "/images/089.jpg",
-    "link": "https://example.com/089"
+    "players": {
+      "other": "https://example.com/089"
+    }
   },
   {
     "id": 90,
     "title": "曲タイトル 090",
     "description": "090日目の紹介文",
     "image": "/images/090.jpg",
-    "link": "https://example.com/090"
+    "players": {
+      "other": "https://example.com/090"
+    }
   },
   {
     "id": 91,
     "title": "曲タイトル 091",
     "description": "091日目の紹介文",
     "image": "/images/091.jpg",
-    "link": "https://example.com/091"
+    "players": {
+      "other": "https://example.com/091"
+    }
   },
   {
     "id": 92,
     "title": "曲タイトル 092",
     "description": "092日目の紹介文",
     "image": "/images/092.jpg",
-    "link": "https://example.com/092"
+    "players": {
+      "other": "https://example.com/092"
+    }
   },
   {
     "id": 93,
     "title": "曲タイトル 093",
     "description": "093日目の紹介文",
     "image": "/images/093.jpg",
-    "link": "https://example.com/093"
+    "players": {
+      "other": "https://example.com/093"
+    }
   },
   {
     "id": 94,
     "title": "曲タイトル 094",
     "description": "094日目の紹介文",
     "image": "/images/094.jpg",
-    "link": "https://example.com/094"
+    "players": {
+      "other": "https://example.com/094"
+    }
   },
   {
     "id": 95,
     "title": "曲タイトル 095",
     "description": "095日目の紹介文",
     "image": "/images/095.jpg",
-    "link": "https://example.com/095"
+    "players": {
+      "other": "https://example.com/095"
+    }
   },
   {
     "id": 96,
     "title": "曲タイトル 096",
     "description": "096日目の紹介文",
     "image": "/images/096.jpg",
-    "link": "https://example.com/096"
+    "players": {
+      "other": "https://example.com/096"
+    }
   },
   {
     "id": 97,
     "title": "曲タイトル 097",
     "description": "097日目の紹介文",
     "image": "/images/097.jpg",
-    "link": "https://example.com/097"
+    "players": {
+      "other": "https://example.com/097"
+    }
   },
   {
     "id": 98,
     "title": "曲タイトル 098",
     "description": "098日目の紹介文",
     "image": "/images/098.jpg",
-    "link": "https://example.com/098"
+    "players": {
+      "other": "https://example.com/098"
+    }
   },
   {
     "id": 99,
     "title": "曲タイトル 099",
     "description": "099日目の紹介文",
     "image": "/images/099.jpg",
-    "link": "https://example.com/099"
+    "players": {
+      "other": "https://example.com/099"
+    }
   },
   {
     "id": 100,
     "title": "曲タイトル 100",
     "description": "100日目の紹介文",
     "image": "/images/100.jpg",
-    "link": "https://example.com/100"
+    "players": {
+      "other": "https://example.com/100"
+    }
   },
   {
     "id": 101,
     "title": "曲タイトル 101",
     "description": "101日目の紹介文",
     "image": "/images/101.jpg",
-    "link": "https://example.com/101"
+    "players": {
+      "other": "https://example.com/101"
+    }
   },
   {
     "id": 102,
     "title": "曲タイトル 102",
     "description": "102日目の紹介文",
     "image": "/images/102.jpg",
-    "link": "https://example.com/102"
+    "players": {
+      "other": "https://example.com/102"
+    }
   },
   {
     "id": 103,
     "title": "曲タイトル 103",
     "description": "103日目の紹介文",
     "image": "/images/103.jpg",
-    "link": "https://example.com/103"
+    "players": {
+      "other": "https://example.com/103"
+    }
   },
   {
     "id": 104,
     "title": "曲タイトル 104",
     "description": "104日目の紹介文",
     "image": "/images/104.jpg",
-    "link": "https://example.com/104"
+    "players": {
+      "other": "https://example.com/104"
+    }
   },
   {
     "id": 105,
     "title": "曲タイトル 105",
     "description": "105日目の紹介文",
     "image": "/images/105.jpg",
-    "link": "https://example.com/105"
+    "players": {
+      "other": "https://example.com/105"
+    }
   },
   {
     "id": 106,
     "title": "曲タイトル 106",
     "description": "106日目の紹介文",
     "image": "/images/106.jpg",
-    "link": "https://example.com/106"
+    "players": {
+      "other": "https://example.com/106"
+    }
   },
   {
     "id": 107,
     "title": "曲タイトル 107",
     "description": "107日目の紹介文",
     "image": "/images/107.jpg",
-    "link": "https://example.com/107"
+    "players": {
+      "other": "https://example.com/107"
+    }
   },
   {
     "id": 108,
     "title": "曲タイトル 108",
     "description": "108日目の紹介文",
     "image": "/images/108.jpg",
-    "link": "https://example.com/108"
+    "players": {
+      "other": "https://example.com/108"
+    }
   },
   {
     "id": 109,
     "title": "曲タイトル 109",
     "description": "109日目の紹介文",
     "image": "/images/109.jpg",
-    "link": "https://example.com/109"
+    "players": {
+      "other": "https://example.com/109"
+    }
   },
   {
     "id": 110,
     "title": "曲タイトル 110",
     "description": "110日目の紹介文",
     "image": "/images/110.jpg",
-    "link": "https://example.com/110"
+    "players": {
+      "other": "https://example.com/110"
+    }
   },
   {
     "id": 111,
     "title": "曲タイトル 111",
     "description": "111日目の紹介文",
     "image": "/images/111.jpg",
-    "link": "https://example.com/111"
+    "players": {
+      "other": "https://example.com/111"
+    }
   },
   {
     "id": 112,
     "title": "曲タイトル 112",
     "description": "112日目の紹介文",
     "image": "/images/112.jpg",
-    "link": "https://example.com/112"
+    "players": {
+      "other": "https://example.com/112"
+    }
   },
   {
     "id": 113,
     "title": "曲タイトル 113",
     "description": "113日目の紹介文",
     "image": "/images/113.jpg",
-    "link": "https://example.com/113"
+    "players": {
+      "other": "https://example.com/113"
+    }
   },
   {
     "id": 114,
     "title": "曲タイトル 114",
     "description": "114日目の紹介文",
     "image": "/images/114.jpg",
-    "link": "https://example.com/114"
+    "players": {
+      "other": "https://example.com/114"
+    }
   },
   {
     "id": 115,
     "title": "曲タイトル 115",
     "description": "115日目の紹介文",
     "image": "/images/115.jpg",
-    "link": "https://example.com/115"
+    "players": {
+      "other": "https://example.com/115"
+    }
   },
   {
     "id": 116,
     "title": "曲タイトル 116",
     "description": "116日目の紹介文",
     "image": "/images/116.jpg",
-    "link": "https://example.com/116"
+    "players": {
+      "other": "https://example.com/116"
+    }
   },
   {
     "id": 117,
     "title": "曲タイトル 117",
     "description": "117日目の紹介文",
     "image": "/images/117.jpg",
-    "link": "https://example.com/117"
+    "players": {
+      "other": "https://example.com/117"
+    }
   },
   {
     "id": 118,
     "title": "曲タイトル 118",
     "description": "118日目の紹介文",
     "image": "/images/118.jpg",
-    "link": "https://example.com/118"
+    "players": {
+      "other": "https://example.com/118"
+    }
   },
   {
     "id": 119,
     "title": "曲タイトル 119",
     "description": "119日目の紹介文",
     "image": "/images/119.jpg",
-    "link": "https://example.com/119"
+    "players": {
+      "other": "https://example.com/119"
+    }
   },
   {
     "id": 120,
     "title": "曲タイトル 120",
     "description": "120日目の紹介文",
     "image": "/images/120.jpg",
-    "link": "https://example.com/120"
+    "players": {
+      "other": "https://example.com/120"
+    }
   },
   {
     "id": 121,
     "title": "曲タイトル 121",
     "description": "121日目の紹介文",
     "image": "/images/121.jpg",
-    "link": "https://example.com/121"
+    "players": {
+      "other": "https://example.com/121"
+    }
   },
   {
     "id": 122,
     "title": "曲タイトル 122",
     "description": "122日目の紹介文",
     "image": "/images/122.jpg",
-    "link": "https://example.com/122"
+    "players": {
+      "other": "https://example.com/122"
+    }
   },
   {
     "id": 123,
     "title": "曲タイトル 123",
     "description": "123日目の紹介文",
     "image": "/images/123.jpg",
-    "link": "https://example.com/123"
+    "players": {
+      "other": "https://example.com/123"
+    }
   },
   {
     "id": 124,
     "title": "曲タイトル 124",
     "description": "124日目の紹介文",
     "image": "/images/124.jpg",
-    "link": "https://example.com/124"
+    "players": {
+      "other": "https://example.com/124"
+    }
   },
   {
     "id": 125,
     "title": "曲タイトル 125",
     "description": "125日目の紹介文",
     "image": "/images/125.jpg",
-    "link": "https://example.com/125"
+    "players": {
+      "other": "https://example.com/125"
+    }
   },
   {
     "id": 126,
     "title": "曲タイトル 126",
     "description": "126日目の紹介文",
     "image": "/images/126.jpg",
-    "link": "https://example.com/126"
+    "players": {
+      "other": "https://example.com/126"
+    }
   },
   {
     "id": 127,
     "title": "曲タイトル 127",
     "description": "127日目の紹介文",
     "image": "/images/127.jpg",
-    "link": "https://example.com/127"
+    "players": {
+      "other": "https://example.com/127"
+    }
   },
   {
     "id": 128,
     "title": "曲タイトル 128",
     "description": "128日目の紹介文",
     "image": "/images/128.jpg",
-    "link": "https://example.com/128"
+    "players": {
+      "other": "https://example.com/128"
+    }
   },
   {
     "id": 129,
     "title": "曲タイトル 129",
     "description": "129日目の紹介文",
     "image": "/images/129.jpg",
-    "link": "https://example.com/129"
+    "players": {
+      "other": "https://example.com/129"
+    }
   },
   {
     "id": 130,
     "title": "曲タイトル 130",
     "description": "130日目の紹介文",
     "image": "/images/130.jpg",
-    "link": "https://example.com/130"
+    "players": {
+      "other": "https://example.com/130"
+    }
   },
   {
     "id": 131,
     "title": "曲タイトル 131",
     "description": "131日目の紹介文",
     "image": "/images/131.jpg",
-    "link": "https://example.com/131"
+    "players": {
+      "other": "https://example.com/131"
+    }
   },
   {
     "id": 132,
     "title": "曲タイトル 132",
     "description": "132日目の紹介文",
     "image": "/images/132.jpg",
-    "link": "https://example.com/132"
+    "players": {
+      "other": "https://example.com/132"
+    }
   },
   {
     "id": 133,
     "title": "曲タイトル 133",
     "description": "133日目の紹介文",
     "image": "/images/133.jpg",
-    "link": "https://example.com/133"
+    "players": {
+      "other": "https://example.com/133"
+    }
   },
   {
     "id": 134,
     "title": "曲タイトル 134",
     "description": "134日目の紹介文",
     "image": "/images/134.jpg",
-    "link": "https://example.com/134"
+    "players": {
+      "other": "https://example.com/134"
+    }
   },
   {
     "id": 135,
     "title": "曲タイトル 135",
     "description": "135日目の紹介文",
     "image": "/images/135.jpg",
-    "link": "https://example.com/135"
+    "players": {
+      "other": "https://example.com/135"
+    }
   },
   {
     "id": 136,
     "title": "曲タイトル 136",
     "description": "136日目の紹介文",
     "image": "/images/136.jpg",
-    "link": "https://example.com/136"
+    "players": {
+      "other": "https://example.com/136"
+    }
   },
   {
     "id": 137,
     "title": "曲タイトル 137",
     "description": "137日目の紹介文",
     "image": "/images/137.jpg",
-    "link": "https://example.com/137"
+    "players": {
+      "other": "https://example.com/137"
+    }
   },
   {
     "id": 138,
     "title": "曲タイトル 138",
     "description": "138日目の紹介文",
     "image": "/images/138.jpg",
-    "link": "https://example.com/138"
+    "players": {
+      "other": "https://example.com/138"
+    }
   },
   {
     "id": 139,
     "title": "曲タイトル 139",
     "description": "139日目の紹介文",
     "image": "/images/139.jpg",
-    "link": "https://example.com/139"
+    "players": {
+      "other": "https://example.com/139"
+    }
   },
   {
     "id": 140,
     "title": "曲タイトル 140",
     "description": "140日目の紹介文",
     "image": "/images/140.jpg",
-    "link": "https://example.com/140"
+    "players": {
+      "other": "https://example.com/140"
+    }
   },
   {
     "id": 141,
     "title": "曲タイトル 141",
     "description": "141日目の紹介文",
     "image": "/images/141.jpg",
-    "link": "https://example.com/141"
+    "players": {
+      "other": "https://example.com/141"
+    }
   },
   {
     "id": 142,
     "title": "曲タイトル 142",
     "description": "142日目の紹介文",
     "image": "/images/142.jpg",
-    "link": "https://example.com/142"
+    "players": {
+      "other": "https://example.com/142"
+    }
   },
   {
     "id": 143,
     "title": "曲タイトル 143",
     "description": "143日目の紹介文",
     "image": "/images/143.jpg",
-    "link": "https://example.com/143"
+    "players": {
+      "other": "https://example.com/143"
+    }
   },
   {
     "id": 144,
     "title": "曲タイトル 144",
     "description": "144日目の紹介文",
     "image": "/images/144.jpg",
-    "link": "https://example.com/144"
+    "players": {
+      "other": "https://example.com/144"
+    }
   },
   {
     "id": 145,
     "title": "曲タイトル 145",
     "description": "145日目の紹介文",
     "image": "/images/145.jpg",
-    "link": "https://example.com/145"
+    "players": {
+      "other": "https://example.com/145"
+    }
   },
   {
     "id": 146,
     "title": "曲タイトル 146",
     "description": "146日目の紹介文",
     "image": "/images/146.jpg",
-    "link": "https://example.com/146"
+    "players": {
+      "other": "https://example.com/146"
+    }
   },
   {
     "id": 147,
     "title": "曲タイトル 147",
     "description": "147日目の紹介文",
     "image": "/images/147.jpg",
-    "link": "https://example.com/147"
+    "players": {
+      "other": "https://example.com/147"
+    }
   },
   {
     "id": 148,
     "title": "曲タイトル 148",
     "description": "148日目の紹介文",
     "image": "/images/148.jpg",
-    "link": "https://example.com/148"
+    "players": {
+      "other": "https://example.com/148"
+    }
   },
   {
     "id": 149,
     "title": "曲タイトル 149",
     "description": "149日目の紹介文",
     "image": "/images/149.jpg",
-    "link": "https://example.com/149"
+    "players": {
+      "other": "https://example.com/149"
+    }
   },
   {
     "id": 150,
     "title": "曲タイトル 150",
     "description": "150日目の紹介文",
     "image": "/images/150.jpg",
-    "link": "https://example.com/150"
+    "players": {
+      "other": "https://example.com/150"
+    }
   },
   {
     "id": 151,
     "title": "曲タイトル 151",
     "description": "151日目の紹介文",
     "image": "/images/151.jpg",
-    "link": "https://example.com/151"
+    "players": {
+      "other": "https://example.com/151"
+    }
   },
   {
     "id": 152,
     "title": "曲タイトル 152",
     "description": "152日目の紹介文",
     "image": "/images/152.jpg",
-    "link": "https://example.com/152"
+    "players": {
+      "other": "https://example.com/152"
+    }
   },
   {
     "id": 153,
     "title": "曲タイトル 153",
     "description": "153日目の紹介文",
     "image": "/images/153.jpg",
-    "link": "https://example.com/153"
+    "players": {
+      "other": "https://example.com/153"
+    }
   },
   {
     "id": 154,
     "title": "曲タイトル 154",
     "description": "154日目の紹介文",
     "image": "/images/154.jpg",
-    "link": "https://example.com/154"
+    "players": {
+      "other": "https://example.com/154"
+    }
   },
   {
     "id": 155,
     "title": "曲タイトル 155",
     "description": "155日目の紹介文",
     "image": "/images/155.jpg",
-    "link": "https://example.com/155"
+    "players": {
+      "other": "https://example.com/155"
+    }
   },
   {
     "id": 156,
     "title": "曲タイトル 156",
     "description": "156日目の紹介文",
     "image": "/images/156.jpg",
-    "link": "https://example.com/156"
+    "players": {
+      "other": "https://example.com/156"
+    }
   },
   {
     "id": 157,
     "title": "曲タイトル 157",
     "description": "157日目の紹介文",
     "image": "/images/157.jpg",
-    "link": "https://example.com/157"
+    "players": {
+      "other": "https://example.com/157"
+    }
   },
   {
     "id": 158,
     "title": "曲タイトル 158",
     "description": "158日目の紹介文",
     "image": "/images/158.jpg",
-    "link": "https://example.com/158"
+    "players": {
+      "other": "https://example.com/158"
+    }
   },
   {
     "id": 159,
     "title": "曲タイトル 159",
     "description": "159日目の紹介文",
     "image": "/images/159.jpg",
-    "link": "https://example.com/159"
+    "players": {
+      "other": "https://example.com/159"
+    }
   },
   {
     "id": 160,
     "title": "曲タイトル 160",
     "description": "160日目の紹介文",
     "image": "/images/160.jpg",
-    "link": "https://example.com/160"
+    "players": {
+      "other": "https://example.com/160"
+    }
   },
   {
     "id": 161,
     "title": "曲タイトル 161",
     "description": "161日目の紹介文",
     "image": "/images/161.jpg",
-    "link": "https://example.com/161"
+    "players": {
+      "other": "https://example.com/161"
+    }
   },
   {
     "id": 162,
     "title": "曲タイトル 162",
     "description": "162日目の紹介文",
     "image": "/images/162.jpg",
-    "link": "https://example.com/162"
+    "players": {
+      "other": "https://example.com/162"
+    }
   },
   {
     "id": 163,
     "title": "曲タイトル 163",
     "description": "163日目の紹介文",
     "image": "/images/163.jpg",
-    "link": "https://example.com/163"
+    "players": {
+      "other": "https://example.com/163"
+    }
   },
   {
     "id": 164,
     "title": "曲タイトル 164",
     "description": "164日目の紹介文",
     "image": "/images/164.jpg",
-    "link": "https://example.com/164"
+    "players": {
+      "other": "https://example.com/164"
+    }
   },
   {
     "id": 165,
     "title": "曲タイトル 165",
     "description": "165日目の紹介文",
     "image": "/images/165.jpg",
-    "link": "https://example.com/165"
+    "players": {
+      "other": "https://example.com/165"
+    }
   },
   {
     "id": 166,
     "title": "曲タイトル 166",
     "description": "166日目の紹介文",
     "image": "/images/166.jpg",
-    "link": "https://example.com/166"
+    "players": {
+      "other": "https://example.com/166"
+    }
   },
   {
     "id": 167,
     "title": "曲タイトル 167",
     "description": "167日目の紹介文",
     "image": "/images/167.jpg",
-    "link": "https://example.com/167"
+    "players": {
+      "other": "https://example.com/167"
+    }
   },
   {
     "id": 168,
     "title": "曲タイトル 168",
     "description": "168日目の紹介文",
     "image": "/images/168.jpg",
-    "link": "https://example.com/168"
+    "players": {
+      "other": "https://example.com/168"
+    }
   },
   {
     "id": 169,
     "title": "曲タイトル 169",
     "description": "169日目の紹介文",
     "image": "/images/169.jpg",
-    "link": "https://example.com/169"
+    "players": {
+      "other": "https://example.com/169"
+    }
   },
   {
     "id": 170,
     "title": "曲タイトル 170",
     "description": "170日目の紹介文",
     "image": "/images/170.jpg",
-    "link": "https://example.com/170"
+    "players": {
+      "other": "https://example.com/170"
+    }
   },
   {
     "id": 171,
     "title": "曲タイトル 171",
     "description": "171日目の紹介文",
     "image": "/images/171.jpg",
-    "link": "https://example.com/171"
+    "players": {
+      "other": "https://example.com/171"
+    }
   },
   {
     "id": 172,
     "title": "曲タイトル 172",
     "description": "172日目の紹介文",
     "image": "/images/172.jpg",
-    "link": "https://example.com/172"
+    "players": {
+      "other": "https://example.com/172"
+    }
   },
   {
     "id": 173,
     "title": "曲タイトル 173",
     "description": "173日目の紹介文",
     "image": "/images/173.jpg",
-    "link": "https://example.com/173"
+    "players": {
+      "other": "https://example.com/173"
+    }
   },
   {
     "id": 174,
     "title": "曲タイトル 174",
     "description": "174日目の紹介文",
     "image": "/images/174.jpg",
-    "link": "https://example.com/174"
+    "players": {
+      "other": "https://example.com/174"
+    }
   },
   {
     "id": 175,
     "title": "曲タイトル 175",
     "description": "175日目の紹介文",
     "image": "/images/175.jpg",
-    "link": "https://example.com/175"
+    "players": {
+      "other": "https://example.com/175"
+    }
   },
   {
     "id": 176,
     "title": "曲タイトル 176",
     "description": "176日目の紹介文",
     "image": "/images/176.jpg",
-    "link": "https://example.com/176"
+    "players": {
+      "other": "https://example.com/176"
+    }
   },
   {
     "id": 177,
     "title": "曲タイトル 177",
     "description": "177日目の紹介文",
     "image": "/images/177.jpg",
-    "link": "https://example.com/177"
+    "players": {
+      "other": "https://example.com/177"
+    }
   },
   {
     "id": 178,
     "title": "曲タイトル 178",
     "description": "178日目の紹介文",
     "image": "/images/178.jpg",
-    "link": "https://example.com/178"
+    "players": {
+      "other": "https://example.com/178"
+    }
   },
   {
     "id": 179,
     "title": "曲タイトル 179",
     "description": "179日目の紹介文",
     "image": "/images/179.jpg",
-    "link": "https://example.com/179"
+    "players": {
+      "other": "https://example.com/179"
+    }
   },
   {
     "id": 180,
     "title": "曲タイトル 180",
     "description": "180日目の紹介文",
     "image": "/images/180.jpg",
-    "link": "https://example.com/180"
+    "players": {
+      "other": "https://example.com/180"
+    }
   },
   {
     "id": 181,
     "title": "曲タイトル 181",
     "description": "181日目の紹介文",
     "image": "/images/181.jpg",
-    "link": "https://example.com/181"
+    "players": {
+      "other": "https://example.com/181"
+    }
   },
   {
     "id": 182,
     "title": "曲タイトル 182",
     "description": "182日目の紹介文",
     "image": "/images/182.jpg",
-    "link": "https://example.com/182"
+    "players": {
+      "other": "https://example.com/182"
+    }
   },
   {
     "id": 183,
     "title": "曲タイトル 183",
     "description": "183日目の紹介文",
     "image": "/images/183.jpg",
-    "link": "https://example.com/183"
+    "players": {
+      "other": "https://example.com/183"
+    }
   },
   {
     "id": 184,
     "title": "曲タイトル 184",
     "description": "184日目の紹介文",
     "image": "/images/184.jpg",
-    "link": "https://example.com/184"
+    "players": {
+      "other": "https://example.com/184"
+    }
   },
   {
     "id": 185,
     "title": "曲タイトル 185",
     "description": "185日目の紹介文",
     "image": "/images/185.jpg",
-    "link": "https://example.com/185"
+    "players": {
+      "other": "https://example.com/185"
+    }
   },
   {
     "id": 186,
     "title": "曲タイトル 186",
     "description": "186日目の紹介文",
     "image": "/images/186.jpg",
-    "link": "https://example.com/186"
+    "players": {
+      "other": "https://example.com/186"
+    }
   },
   {
     "id": 187,
     "title": "曲タイトル 187",
     "description": "187日目の紹介文",
     "image": "/images/187.jpg",
-    "link": "https://example.com/187"
+    "players": {
+      "other": "https://example.com/187"
+    }
   },
   {
     "id": 188,
     "title": "曲タイトル 188",
     "description": "188日目の紹介文",
     "image": "/images/188.jpg",
-    "link": "https://example.com/188"
+    "players": {
+      "other": "https://example.com/188"
+    }
   },
   {
     "id": 189,
     "title": "曲タイトル 189",
     "description": "189日目の紹介文",
     "image": "/images/189.jpg",
-    "link": "https://example.com/189"
+    "players": {
+      "other": "https://example.com/189"
+    }
   },
   {
     "id": 190,
     "title": "曲タイトル 190",
     "description": "190日目の紹介文",
     "image": "/images/190.jpg",
-    "link": "https://example.com/190"
+    "players": {
+      "other": "https://example.com/190"
+    }
   },
   {
     "id": 191,
     "title": "曲タイトル 191",
     "description": "191日目の紹介文",
     "image": "/images/191.jpg",
-    "link": "https://example.com/191"
+    "players": {
+      "other": "https://example.com/191"
+    }
   },
   {
     "id": 192,
     "title": "曲タイトル 192",
     "description": "192日目の紹介文",
     "image": "/images/192.jpg",
-    "link": "https://example.com/192"
+    "players": {
+      "other": "https://example.com/192"
+    }
   },
   {
     "id": 193,
     "title": "曲タイトル 193",
     "description": "193日目の紹介文",
     "image": "/images/193.jpg",
-    "link": "https://example.com/193"
+    "players": {
+      "other": "https://example.com/193"
+    }
   },
   {
     "id": 194,
     "title": "曲タイトル 194",
     "description": "194日目の紹介文",
     "image": "/images/194.jpg",
-    "link": "https://example.com/194"
+    "players": {
+      "other": "https://example.com/194"
+    }
   },
   {
     "id": 195,
     "title": "曲タイトル 195",
     "description": "195日目の紹介文",
     "image": "/images/195.jpg",
-    "link": "https://example.com/195"
+    "players": {
+      "other": "https://example.com/195"
+    }
   },
   {
     "id": 196,
     "title": "曲タイトル 196",
     "description": "196日目の紹介文",
     "image": "/images/196.jpg",
-    "link": "https://example.com/196"
+    "players": {
+      "other": "https://example.com/196"
+    }
   },
   {
     "id": 197,
     "title": "曲タイトル 197",
     "description": "197日目の紹介文",
     "image": "/images/197.jpg",
-    "link": "https://example.com/197"
+    "players": {
+      "other": "https://example.com/197"
+    }
   },
   {
     "id": 198,
     "title": "曲タイトル 198",
     "description": "198日目の紹介文",
     "image": "/images/198.jpg",
-    "link": "https://example.com/198"
+    "players": {
+      "other": "https://example.com/198"
+    }
   },
   {
     "id": 199,
     "title": "曲タイトル 199",
     "description": "199日目の紹介文",
     "image": "/images/199.jpg",
-    "link": "https://example.com/199"
+    "players": {
+      "other": "https://example.com/199"
+    }
   },
   {
     "id": 200,
     "title": "曲タイトル 200",
     "description": "200日目の紹介文",
     "image": "/images/200.jpg",
-    "link": "https://example.com/200"
+    "players": {
+      "other": "https://example.com/200"
+    }
   },
   {
     "id": 201,
     "title": "曲タイトル 201",
     "description": "201日目の紹介文",
     "image": "/images/201.jpg",
-    "link": "https://example.com/201"
+    "players": {
+      "other": "https://example.com/201"
+    }
   },
   {
     "id": 202,
     "title": "曲タイトル 202",
     "description": "202日目の紹介文",
     "image": "/images/202.jpg",
-    "link": "https://example.com/202"
+    "players": {
+      "other": "https://example.com/202"
+    }
   },
   {
     "id": 203,
     "title": "曲タイトル 203",
     "description": "203日目の紹介文",
     "image": "/images/203.jpg",
-    "link": "https://example.com/203"
+    "players": {
+      "other": "https://example.com/203"
+    }
   },
   {
     "id": 204,
     "title": "曲タイトル 204",
     "description": "204日目の紹介文",
     "image": "/images/204.jpg",
-    "link": "https://example.com/204"
+    "players": {
+      "other": "https://example.com/204"
+    }
   },
   {
     "id": 205,
     "title": "曲タイトル 205",
     "description": "205日目の紹介文",
     "image": "/images/205.jpg",
-    "link": "https://example.com/205"
+    "players": {
+      "other": "https://example.com/205"
+    }
   },
   {
     "id": 206,
     "title": "曲タイトル 206",
     "description": "206日目の紹介文",
     "image": "/images/206.jpg",
-    "link": "https://example.com/206"
+    "players": {
+      "other": "https://example.com/206"
+    }
   },
   {
     "id": 207,
     "title": "曲タイトル 207",
     "description": "207日目の紹介文",
     "image": "/images/207.jpg",
-    "link": "https://example.com/207"
+    "players": {
+      "other": "https://example.com/207"
+    }
   },
   {
     "id": 208,
     "title": "曲タイトル 208",
     "description": "208日目の紹介文",
     "image": "/images/208.jpg",
-    "link": "https://example.com/208"
+    "players": {
+      "other": "https://example.com/208"
+    }
   },
   {
     "id": 209,
     "title": "曲タイトル 209",
     "description": "209日目の紹介文",
     "image": "/images/209.jpg",
-    "link": "https://example.com/209"
+    "players": {
+      "other": "https://example.com/209"
+    }
   },
   {
     "id": 210,
     "title": "曲タイトル 210",
     "description": "210日目の紹介文",
     "image": "/images/210.jpg",
-    "link": "https://example.com/210"
+    "players": {
+      "other": "https://example.com/210"
+    }
   },
   {
     "id": 211,
     "title": "曲タイトル 211",
     "description": "211日目の紹介文",
     "image": "/images/211.jpg",
-    "link": "https://example.com/211"
+    "players": {
+      "other": "https://example.com/211"
+    }
   },
   {
     "id": 212,
     "title": "曲タイトル 212",
     "description": "212日目の紹介文",
     "image": "/images/212.jpg",
-    "link": "https://example.com/212"
+    "players": {
+      "other": "https://example.com/212"
+    }
   },
   {
     "id": 213,
     "title": "曲タイトル 213",
     "description": "213日目の紹介文",
     "image": "/images/213.jpg",
-    "link": "https://example.com/213"
+    "players": {
+      "other": "https://example.com/213"
+    }
   },
   {
     "id": 214,
     "title": "曲タイトル 214",
     "description": "214日目の紹介文",
     "image": "/images/214.jpg",
-    "link": "https://example.com/214"
+    "players": {
+      "other": "https://example.com/214"
+    }
   },
   {
     "id": 215,
     "title": "曲タイトル 215",
     "description": "215日目の紹介文",
     "image": "/images/215.jpg",
-    "link": "https://example.com/215"
+    "players": {
+      "other": "https://example.com/215"
+    }
   },
   {
     "id": 216,
     "title": "曲タイトル 216",
     "description": "216日目の紹介文",
     "image": "/images/216.jpg",
-    "link": "https://example.com/216"
+    "players": {
+      "other": "https://example.com/216"
+    }
   },
   {
     "id": 217,
     "title": "曲タイトル 217",
     "description": "217日目の紹介文",
     "image": "/images/217.jpg",
-    "link": "https://example.com/217"
+    "players": {
+      "other": "https://example.com/217"
+    }
   },
   {
     "id": 218,
     "title": "曲タイトル 218",
     "description": "218日目の紹介文",
     "image": "/images/218.jpg",
-    "link": "https://example.com/218"
+    "players": {
+      "other": "https://example.com/218"
+    }
   },
   {
     "id": 219,
     "title": "曲タイトル 219",
     "description": "219日目の紹介文",
     "image": "/images/219.jpg",
-    "link": "https://example.com/219"
+    "players": {
+      "other": "https://example.com/219"
+    }
   },
   {
     "id": 220,
     "title": "曲タイトル 220",
     "description": "220日目の紹介文",
     "image": "/images/220.jpg",
-    "link": "https://example.com/220"
+    "players": {
+      "other": "https://example.com/220"
+    }
   },
   {
     "id": 221,
     "title": "曲タイトル 221",
     "description": "221日目の紹介文",
     "image": "/images/221.jpg",
-    "link": "https://example.com/221"
+    "players": {
+      "other": "https://example.com/221"
+    }
   },
   {
     "id": 222,
     "title": "曲タイトル 222",
     "description": "222日目の紹介文",
     "image": "/images/222.jpg",
-    "link": "https://example.com/222"
+    "players": {
+      "other": "https://example.com/222"
+    }
   },
   {
     "id": 223,
     "title": "曲タイトル 223",
     "description": "223日目の紹介文",
     "image": "/images/223.jpg",
-    "link": "https://example.com/223"
+    "players": {
+      "other": "https://example.com/223"
+    }
   },
   {
     "id": 224,
     "title": "曲タイトル 224",
     "description": "224日目の紹介文",
     "image": "/images/224.jpg",
-    "link": "https://example.com/224"
+    "players": {
+      "other": "https://example.com/224"
+    }
   },
   {
     "id": 225,
     "title": "曲タイトル 225",
     "description": "225日目の紹介文",
     "image": "/images/225.jpg",
-    "link": "https://example.com/225"
+    "players": {
+      "other": "https://example.com/225"
+    }
   },
   {
     "id": 226,
     "title": "曲タイトル 226",
     "description": "226日目の紹介文",
     "image": "/images/226.jpg",
-    "link": "https://example.com/226"
+    "players": {
+      "other": "https://example.com/226"
+    }
   },
   {
     "id": 227,
     "title": "曲タイトル 227",
     "description": "227日目の紹介文",
     "image": "/images/227.jpg",
-    "link": "https://example.com/227"
+    "players": {
+      "other": "https://example.com/227"
+    }
   },
   {
     "id": 228,
     "title": "曲タイトル 228",
     "description": "228日目の紹介文",
     "image": "/images/228.jpg",
-    "link": "https://example.com/228"
+    "players": {
+      "other": "https://example.com/228"
+    }
   },
   {
     "id": 229,
     "title": "曲タイトル 229",
     "description": "229日目の紹介文",
     "image": "/images/229.jpg",
-    "link": "https://example.com/229"
+    "players": {
+      "other": "https://example.com/229"
+    }
   },
   {
     "id": 230,
     "title": "曲タイトル 230",
     "description": "230日目の紹介文",
     "image": "/images/230.jpg",
-    "link": "https://example.com/230"
+    "players": {
+      "other": "https://example.com/230"
+    }
   },
   {
     "id": 231,
     "title": "曲タイトル 231",
     "description": "231日目の紹介文",
     "image": "/images/231.jpg",
-    "link": "https://example.com/231"
+    "players": {
+      "other": "https://example.com/231"
+    }
   },
   {
     "id": 232,
     "title": "曲タイトル 232",
     "description": "232日目の紹介文",
     "image": "/images/232.jpg",
-    "link": "https://example.com/232"
+    "players": {
+      "other": "https://example.com/232"
+    }
   },
   {
     "id": 233,
     "title": "曲タイトル 233",
     "description": "233日目の紹介文",
     "image": "/images/233.jpg",
-    "link": "https://example.com/233"
+    "players": {
+      "other": "https://example.com/233"
+    }
   },
   {
     "id": 234,
     "title": "曲タイトル 234",
     "description": "234日目の紹介文",
     "image": "/images/234.jpg",
-    "link": "https://example.com/234"
+    "players": {
+      "other": "https://example.com/234"
+    }
   },
   {
     "id": 235,
     "title": "曲タイトル 235",
     "description": "235日目の紹介文",
     "image": "/images/235.jpg",
-    "link": "https://example.com/235"
+    "players": {
+      "other": "https://example.com/235"
+    }
   },
   {
     "id": 236,
     "title": "曲タイトル 236",
     "description": "236日目の紹介文",
     "image": "/images/236.jpg",
-    "link": "https://example.com/236"
+    "players": {
+      "other": "https://example.com/236"
+    }
   },
   {
     "id": 237,
     "title": "曲タイトル 237",
     "description": "237日目の紹介文",
     "image": "/images/237.jpg",
-    "link": "https://example.com/237"
+    "players": {
+      "other": "https://example.com/237"
+    }
   },
   {
     "id": 238,
     "title": "曲タイトル 238",
     "description": "238日目の紹介文",
     "image": "/images/238.jpg",
-    "link": "https://example.com/238"
+    "players": {
+      "other": "https://example.com/238"
+    }
   },
   {
     "id": 239,
     "title": "曲タイトル 239",
     "description": "239日目の紹介文",
     "image": "/images/239.jpg",
-    "link": "https://example.com/239"
+    "players": {
+      "other": "https://example.com/239"
+    }
   },
   {
     "id": 240,
     "title": "曲タイトル 240",
     "description": "240日目の紹介文",
     "image": "/images/240.jpg",
-    "link": "https://example.com/240"
+    "players": {
+      "other": "https://example.com/240"
+    }
   },
   {
     "id": 241,
     "title": "曲タイトル 241",
     "description": "241日目の紹介文",
     "image": "/images/241.jpg",
-    "link": "https://example.com/241"
+    "players": {
+      "other": "https://example.com/241"
+    }
   },
   {
     "id": 242,
     "title": "曲タイトル 242",
     "description": "242日目の紹介文",
     "image": "/images/242.jpg",
-    "link": "https://example.com/242"
+    "players": {
+      "other": "https://example.com/242"
+    }
   },
   {
     "id": 243,
     "title": "曲タイトル 243",
     "description": "243日目の紹介文",
     "image": "/images/243.jpg",
-    "link": "https://example.com/243"
+    "players": {
+      "other": "https://example.com/243"
+    }
   },
   {
     "id": 244,
     "title": "曲タイトル 244",
     "description": "244日目の紹介文",
     "image": "/images/244.jpg",
-    "link": "https://example.com/244"
+    "players": {
+      "other": "https://example.com/244"
+    }
   },
   {
     "id": 245,
     "title": "曲タイトル 245",
     "description": "245日目の紹介文",
     "image": "/images/245.jpg",
-    "link": "https://example.com/245"
+    "players": {
+      "other": "https://example.com/245"
+    }
   },
   {
     "id": 246,
     "title": "曲タイトル 246",
     "description": "246日目の紹介文",
     "image": "/images/246.jpg",
-    "link": "https://example.com/246"
+    "players": {
+      "other": "https://example.com/246"
+    }
   },
   {
     "id": 247,
     "title": "曲タイトル 247",
     "description": "247日目の紹介文",
     "image": "/images/247.jpg",
-    "link": "https://example.com/247"
+    "players": {
+      "other": "https://example.com/247"
+    }
   },
   {
     "id": 248,
     "title": "曲タイトル 248",
     "description": "248日目の紹介文",
     "image": "/images/248.jpg",
-    "link": "https://example.com/248"
+    "players": {
+      "other": "https://example.com/248"
+    }
   },
   {
     "id": 249,
     "title": "曲タイトル 249",
     "description": "249日目の紹介文",
     "image": "/images/249.jpg",
-    "link": "https://example.com/249"
+    "players": {
+      "other": "https://example.com/249"
+    }
   },
   {
     "id": 250,
     "title": "曲タイトル 250",
     "description": "250日目の紹介文",
     "image": "/images/250.jpg",
-    "link": "https://example.com/250"
+    "players": {
+      "other": "https://example.com/250"
+    }
   },
   {
     "id": 251,
     "title": "曲タイトル 251",
     "description": "251日目の紹介文",
     "image": "/images/251.jpg",
-    "link": "https://example.com/251"
+    "players": {
+      "other": "https://example.com/251"
+    }
   },
   {
     "id": 252,
     "title": "曲タイトル 252",
     "description": "252日目の紹介文",
     "image": "/images/252.jpg",
-    "link": "https://example.com/252"
+    "players": {
+      "other": "https://example.com/252"
+    }
   },
   {
     "id": 253,
     "title": "曲タイトル 253",
     "description": "253日目の紹介文",
     "image": "/images/253.jpg",
-    "link": "https://example.com/253"
+    "players": {
+      "other": "https://example.com/253"
+    }
   },
   {
     "id": 254,
     "title": "曲タイトル 254",
     "description": "254日目の紹介文",
     "image": "/images/254.jpg",
-    "link": "https://example.com/254"
+    "players": {
+      "other": "https://example.com/254"
+    }
   },
   {
     "id": 255,
     "title": "曲タイトル 255",
     "description": "255日目の紹介文",
     "image": "/images/255.jpg",
-    "link": "https://example.com/255"
+    "players": {
+      "other": "https://example.com/255"
+    }
   },
   {
     "id": 256,
     "title": "曲タイトル 256",
     "description": "256日目の紹介文",
     "image": "/images/256.jpg",
-    "link": "https://example.com/256"
+    "players": {
+      "other": "https://example.com/256"
+    }
   },
   {
     "id": 257,
     "title": "曲タイトル 257",
     "description": "257日目の紹介文",
     "image": "/images/257.jpg",
-    "link": "https://example.com/257"
+    "players": {
+      "other": "https://example.com/257"
+    }
   },
   {
     "id": 258,
     "title": "曲タイトル 258",
     "description": "258日目の紹介文",
     "image": "/images/258.jpg",
-    "link": "https://example.com/258"
+    "players": {
+      "other": "https://example.com/258"
+    }
   },
   {
     "id": 259,
     "title": "曲タイトル 259",
     "description": "259日目の紹介文",
     "image": "/images/259.jpg",
-    "link": "https://example.com/259"
+    "players": {
+      "other": "https://example.com/259"
+    }
   },
   {
     "id": 260,
     "title": "曲タイトル 260",
     "description": "260日目の紹介文",
     "image": "/images/260.jpg",
-    "link": "https://example.com/260"
+    "players": {
+      "other": "https://example.com/260"
+    }
   },
   {
     "id": 261,
     "title": "曲タイトル 261",
     "description": "261日目の紹介文",
     "image": "/images/261.jpg",
-    "link": "https://example.com/261"
+    "players": {
+      "other": "https://example.com/261"
+    }
   },
   {
     "id": 262,
     "title": "曲タイトル 262",
     "description": "262日目の紹介文",
     "image": "/images/262.jpg",
-    "link": "https://example.com/262"
+    "players": {
+      "other": "https://example.com/262"
+    }
   },
   {
     "id": 263,
     "title": "曲タイトル 263",
     "description": "263日目の紹介文",
     "image": "/images/263.jpg",
-    "link": "https://example.com/263"
+    "players": {
+      "other": "https://example.com/263"
+    }
   },
   {
     "id": 264,
     "title": "曲タイトル 264",
     "description": "264日目の紹介文",
     "image": "/images/264.jpg",
-    "link": "https://example.com/264"
+    "players": {
+      "other": "https://example.com/264"
+    }
   },
   {
     "id": 265,
     "title": "曲タイトル 265",
     "description": "265日目の紹介文",
     "image": "/images/265.jpg",
-    "link": "https://example.com/265"
+    "players": {
+      "other": "https://example.com/265"
+    }
   },
   {
     "id": 266,
     "title": "曲タイトル 266",
     "description": "266日目の紹介文",
     "image": "/images/266.jpg",
-    "link": "https://example.com/266"
+    "players": {
+      "other": "https://example.com/266"
+    }
   },
   {
     "id": 267,
     "title": "曲タイトル 267",
     "description": "267日目の紹介文",
     "image": "/images/267.jpg",
-    "link": "https://example.com/267"
+    "players": {
+      "other": "https://example.com/267"
+    }
   },
   {
     "id": 268,
     "title": "曲タイトル 268",
     "description": "268日目の紹介文",
     "image": "/images/268.jpg",
-    "link": "https://example.com/268"
+    "players": {
+      "other": "https://example.com/268"
+    }
   },
   {
     "id": 269,
     "title": "曲タイトル 269",
     "description": "269日目の紹介文",
     "image": "/images/269.jpg",
-    "link": "https://example.com/269"
+    "players": {
+      "other": "https://example.com/269"
+    }
   },
   {
     "id": 270,
     "title": "曲タイトル 270",
     "description": "270日目の紹介文",
     "image": "/images/270.jpg",
-    "link": "https://example.com/270"
+    "players": {
+      "other": "https://example.com/270"
+    }
   },
   {
     "id": 271,
     "title": "曲タイトル 271",
     "description": "271日目の紹介文",
     "image": "/images/271.jpg",
-    "link": "https://example.com/271"
+    "players": {
+      "other": "https://example.com/271"
+    }
   },
   {
     "id": 272,
     "title": "曲タイトル 272",
     "description": "272日目の紹介文",
     "image": "/images/272.jpg",
-    "link": "https://example.com/272"
+    "players": {
+      "other": "https://example.com/272"
+    }
   },
   {
     "id": 273,
     "title": "曲タイトル 273",
     "description": "273日目の紹介文",
     "image": "/images/273.jpg",
-    "link": "https://example.com/273"
+    "players": {
+      "other": "https://example.com/273"
+    }
   },
   {
     "id": 274,
     "title": "曲タイトル 274",
     "description": "274日目の紹介文",
     "image": "/images/274.jpg",
-    "link": "https://example.com/274"
+    "players": {
+      "other": "https://example.com/274"
+    }
   },
   {
     "id": 275,
     "title": "曲タイトル 275",
     "description": "275日目の紹介文",
     "image": "/images/275.jpg",
-    "link": "https://example.com/275"
+    "players": {
+      "other": "https://example.com/275"
+    }
   },
   {
     "id": 276,
     "title": "曲タイトル 276",
     "description": "276日目の紹介文",
     "image": "/images/276.jpg",
-    "link": "https://example.com/276"
+    "players": {
+      "other": "https://example.com/276"
+    }
   },
   {
     "id": 277,
     "title": "曲タイトル 277",
     "description": "277日目の紹介文",
     "image": "/images/277.jpg",
-    "link": "https://example.com/277"
+    "players": {
+      "other": "https://example.com/277"
+    }
   },
   {
     "id": 278,
     "title": "曲タイトル 278",
     "description": "278日目の紹介文",
     "image": "/images/278.jpg",
-    "link": "https://example.com/278"
+    "players": {
+      "other": "https://example.com/278"
+    }
   },
   {
     "id": 279,
     "title": "曲タイトル 279",
     "description": "279日目の紹介文",
     "image": "/images/279.jpg",
-    "link": "https://example.com/279"
+    "players": {
+      "other": "https://example.com/279"
+    }
   },
   {
     "id": 280,
     "title": "曲タイトル 280",
     "description": "280日目の紹介文",
     "image": "/images/280.jpg",
-    "link": "https://example.com/280"
+    "players": {
+      "other": "https://example.com/280"
+    }
   },
   {
     "id": 281,
     "title": "曲タイトル 281",
     "description": "281日目の紹介文",
     "image": "/images/281.jpg",
-    "link": "https://example.com/281"
+    "players": {
+      "other": "https://example.com/281"
+    }
   },
   {
     "id": 282,
     "title": "曲タイトル 282",
     "description": "282日目の紹介文",
     "image": "/images/282.jpg",
-    "link": "https://example.com/282"
+    "players": {
+      "other": "https://example.com/282"
+    }
   },
   {
     "id": 283,
     "title": "曲タイトル 283",
     "description": "283日目の紹介文",
     "image": "/images/283.jpg",
-    "link": "https://example.com/283"
+    "players": {
+      "other": "https://example.com/283"
+    }
   },
   {
     "id": 284,
     "title": "曲タイトル 284",
     "description": "284日目の紹介文",
     "image": "/images/284.jpg",
-    "link": "https://example.com/284"
+    "players": {
+      "other": "https://example.com/284"
+    }
   },
   {
     "id": 285,
     "title": "曲タイトル 285",
     "description": "285日目の紹介文",
     "image": "/images/285.jpg",
-    "link": "https://example.com/285"
+    "players": {
+      "other": "https://example.com/285"
+    }
   },
   {
     "id": 286,
     "title": "曲タイトル 286",
     "description": "286日目の紹介文",
     "image": "/images/286.jpg",
-    "link": "https://example.com/286"
+    "players": {
+      "other": "https://example.com/286"
+    }
   },
   {
     "id": 287,
     "title": "曲タイトル 287",
     "description": "287日目の紹介文",
     "image": "/images/287.jpg",
-    "link": "https://example.com/287"
+    "players": {
+      "other": "https://example.com/287"
+    }
   },
   {
     "id": 288,
     "title": "曲タイトル 288",
     "description": "288日目の紹介文",
     "image": "/images/288.jpg",
-    "link": "https://example.com/288"
+    "players": {
+      "other": "https://example.com/288"
+    }
   },
   {
     "id": 289,
     "title": "曲タイトル 289",
     "description": "289日目の紹介文",
     "image": "/images/289.jpg",
-    "link": "https://example.com/289"
+    "players": {
+      "other": "https://example.com/289"
+    }
   },
   {
     "id": 290,
     "title": "曲タイトル 290",
     "description": "290日目の紹介文",
     "image": "/images/290.jpg",
-    "link": "https://example.com/290"
+    "players": {
+      "other": "https://example.com/290"
+    }
   },
   {
     "id": 291,
     "title": "曲タイトル 291",
     "description": "291日目の紹介文",
     "image": "/images/291.jpg",
-    "link": "https://example.com/291"
+    "players": {
+      "other": "https://example.com/291"
+    }
   },
   {
     "id": 292,
     "title": "曲タイトル 292",
     "description": "292日目の紹介文",
     "image": "/images/292.jpg",
-    "link": "https://example.com/292"
+    "players": {
+      "other": "https://example.com/292"
+    }
   },
   {
     "id": 293,
     "title": "曲タイトル 293",
     "description": "293日目の紹介文",
     "image": "/images/293.jpg",
-    "link": "https://example.com/293"
+    "players": {
+      "other": "https://example.com/293"
+    }
   },
   {
     "id": 294,
     "title": "曲タイトル 294",
     "description": "294日目の紹介文",
     "image": "/images/294.jpg",
-    "link": "https://example.com/294"
+    "players": {
+      "other": "https://example.com/294"
+    }
   },
   {
     "id": 295,
     "title": "曲タイトル 295",
     "description": "295日目の紹介文",
     "image": "/images/295.jpg",
-    "link": "https://example.com/295"
+    "players": {
+      "other": "https://example.com/295"
+    }
   },
   {
     "id": 296,
     "title": "曲タイトル 296",
     "description": "296日目の紹介文",
     "image": "/images/296.jpg",
-    "link": "https://example.com/296"
+    "players": {
+      "other": "https://example.com/296"
+    }
   },
   {
     "id": 297,
     "title": "曲タイトル 297",
     "description": "297日目の紹介文",
     "image": "/images/297.jpg",
-    "link": "https://example.com/297"
+    "players": {
+      "other": "https://example.com/297"
+    }
   },
   {
     "id": 298,
     "title": "曲タイトル 298",
     "description": "298日目の紹介文",
     "image": "/images/298.jpg",
-    "link": "https://example.com/298"
+    "players": {
+      "other": "https://example.com/298"
+    }
   },
   {
     "id": 299,
     "title": "曲タイトル 299",
     "description": "299日目の紹介文",
     "image": "/images/299.jpg",
-    "link": "https://example.com/299"
+    "players": {
+      "other": "https://example.com/299"
+    }
   },
   {
     "id": 300,
     "title": "曲タイトル 300",
     "description": "300日目の紹介文",
     "image": "/images/300.jpg",
-    "link": "https://example.com/300"
+    "players": {
+      "other": "https://example.com/300"
+    }
   },
   {
     "id": 301,
     "title": "曲タイトル 301",
     "description": "301日目の紹介文",
     "image": "/images/301.jpg",
-    "link": "https://example.com/301"
+    "players": {
+      "other": "https://example.com/301"
+    }
   },
   {
     "id": 302,
     "title": "曲タイトル 302",
     "description": "302日目の紹介文",
     "image": "/images/302.jpg",
-    "link": "https://example.com/302"
+    "players": {
+      "other": "https://example.com/302"
+    }
   },
   {
     "id": 303,
     "title": "曲タイトル 303",
     "description": "303日目の紹介文",
     "image": "/images/303.jpg",
-    "link": "https://example.com/303"
+    "players": {
+      "other": "https://example.com/303"
+    }
   },
   {
     "id": 304,
     "title": "曲タイトル 304",
     "description": "304日目の紹介文",
     "image": "/images/304.jpg",
-    "link": "https://example.com/304"
+    "players": {
+      "other": "https://example.com/304"
+    }
   },
   {
     "id": 305,
     "title": "曲タイトル 305",
     "description": "305日目の紹介文",
     "image": "/images/305.jpg",
-    "link": "https://example.com/305"
+    "players": {
+      "other": "https://example.com/305"
+    }
   },
   {
     "id": 306,
     "title": "曲タイトル 306",
     "description": "306日目の紹介文",
     "image": "/images/306.jpg",
-    "link": "https://example.com/306"
+    "players": {
+      "other": "https://example.com/306"
+    }
   },
   {
     "id": 307,
     "title": "曲タイトル 307",
     "description": "307日目の紹介文",
     "image": "/images/307.jpg",
-    "link": "https://example.com/307"
+    "players": {
+      "other": "https://example.com/307"
+    }
   },
   {
     "id": 308,
     "title": "曲タイトル 308",
     "description": "308日目の紹介文",
     "image": "/images/308.jpg",
-    "link": "https://example.com/308"
+    "players": {
+      "other": "https://example.com/308"
+    }
   },
   {
     "id": 309,
     "title": "曲タイトル 309",
     "description": "309日目の紹介文",
     "image": "/images/309.jpg",
-    "link": "https://example.com/309"
+    "players": {
+      "other": "https://example.com/309"
+    }
   },
   {
     "id": 310,
     "title": "曲タイトル 310",
     "description": "310日目の紹介文",
     "image": "/images/310.jpg",
-    "link": "https://example.com/310"
+    "players": {
+      "other": "https://example.com/310"
+    }
   },
   {
     "id": 311,
     "title": "曲タイトル 311",
     "description": "311日目の紹介文",
     "image": "/images/311.jpg",
-    "link": "https://example.com/311"
+    "players": {
+      "other": "https://example.com/311"
+    }
   },
   {
     "id": 312,
     "title": "曲タイトル 312",
     "description": "312日目の紹介文",
     "image": "/images/312.jpg",
-    "link": "https://example.com/312"
+    "players": {
+      "other": "https://example.com/312"
+    }
   },
   {
     "id": 313,
     "title": "曲タイトル 313",
     "description": "313日目の紹介文",
     "image": "/images/313.jpg",
-    "link": "https://example.com/313"
+    "players": {
+      "other": "https://example.com/313"
+    }
   },
   {
     "id": 314,
     "title": "曲タイトル 314",
     "description": "314日目の紹介文",
     "image": "/images/314.jpg",
-    "link": "https://example.com/314"
+    "players": {
+      "other": "https://example.com/314"
+    }
   },
   {
     "id": 315,
     "title": "曲タイトル 315",
     "description": "315日目の紹介文",
     "image": "/images/315.jpg",
-    "link": "https://example.com/315"
+    "players": {
+      "other": "https://example.com/315"
+    }
   },
   {
     "id": 316,
     "title": "曲タイトル 316",
     "description": "316日目の紹介文",
     "image": "/images/316.jpg",
-    "link": "https://example.com/316"
+    "players": {
+      "other": "https://example.com/316"
+    }
   },
   {
     "id": 317,
     "title": "曲タイトル 317",
     "description": "317日目の紹介文",
     "image": "/images/317.jpg",
-    "link": "https://example.com/317"
+    "players": {
+      "other": "https://example.com/317"
+    }
   },
   {
     "id": 318,
     "title": "曲タイトル 318",
     "description": "318日目の紹介文",
     "image": "/images/318.jpg",
-    "link": "https://example.com/318"
+    "players": {
+      "other": "https://example.com/318"
+    }
   },
   {
     "id": 319,
     "title": "曲タイトル 319",
     "description": "319日目の紹介文",
     "image": "/images/319.jpg",
-    "link": "https://example.com/319"
+    "players": {
+      "other": "https://example.com/319"
+    }
   },
   {
     "id": 320,
     "title": "曲タイトル 320",
     "description": "320日目の紹介文",
     "image": "/images/320.jpg",
-    "link": "https://example.com/320"
+    "players": {
+      "other": "https://example.com/320"
+    }
   },
   {
     "id": 321,
     "title": "曲タイトル 321",
     "description": "321日目の紹介文",
     "image": "/images/321.jpg",
-    "link": "https://example.com/321"
+    "players": {
+      "other": "https://example.com/321"
+    }
   },
   {
     "id": 322,
     "title": "曲タイトル 322",
     "description": "322日目の紹介文",
     "image": "/images/322.jpg",
-    "link": "https://example.com/322"
+    "players": {
+      "other": "https://example.com/322"
+    }
   },
   {
     "id": 323,
     "title": "曲タイトル 323",
     "description": "323日目の紹介文",
     "image": "/images/323.jpg",
-    "link": "https://example.com/323"
+    "players": {
+      "other": "https://example.com/323"
+    }
   },
   {
     "id": 324,
     "title": "曲タイトル 324",
     "description": "324日目の紹介文",
     "image": "/images/324.jpg",
-    "link": "https://example.com/324"
+    "players": {
+      "other": "https://example.com/324"
+    }
   },
   {
     "id": 325,
     "title": "曲タイトル 325",
     "description": "325日目の紹介文",
     "image": "/images/325.jpg",
-    "link": "https://example.com/325"
+    "players": {
+      "other": "https://example.com/325"
+    }
   },
   {
     "id": 326,
     "title": "曲タイトル 326",
     "description": "326日目の紹介文",
     "image": "/images/326.jpg",
-    "link": "https://example.com/326"
+    "players": {
+      "other": "https://example.com/326"
+    }
   },
   {
     "id": 327,
     "title": "曲タイトル 327",
     "description": "327日目の紹介文",
     "image": "/images/327.jpg",
-    "link": "https://example.com/327"
+    "players": {
+      "other": "https://example.com/327"
+    }
   },
   {
     "id": 328,
     "title": "曲タイトル 328",
     "description": "328日目の紹介文",
     "image": "/images/328.jpg",
-    "link": "https://example.com/328"
+    "players": {
+      "other": "https://example.com/328"
+    }
   },
   {
     "id": 329,
     "title": "曲タイトル 329",
     "description": "329日目の紹介文",
     "image": "/images/329.jpg",
-    "link": "https://example.com/329"
+    "players": {
+      "other": "https://example.com/329"
+    }
   },
   {
     "id": 330,
     "title": "曲タイトル 330",
     "description": "330日目の紹介文",
     "image": "/images/330.jpg",
-    "link": "https://example.com/330"
+    "players": {
+      "other": "https://example.com/330"
+    }
   },
   {
     "id": 331,
     "title": "曲タイトル 331",
     "description": "331日目の紹介文",
     "image": "/images/331.jpg",
-    "link": "https://example.com/331"
+    "players": {
+      "other": "https://example.com/331"
+    }
   },
   {
     "id": 332,
     "title": "曲タイトル 332",
     "description": "332日目の紹介文",
     "image": "/images/332.jpg",
-    "link": "https://example.com/332"
+    "players": {
+      "other": "https://example.com/332"
+    }
   },
   {
     "id": 333,
     "title": "曲タイトル 333",
     "description": "333日目の紹介文",
     "image": "/images/333.jpg",
-    "link": "https://example.com/333"
+    "players": {
+      "other": "https://example.com/333"
+    }
   },
   {
     "id": 334,
     "title": "曲タイトル 334",
     "description": "334日目の紹介文",
     "image": "/images/334.jpg",
-    "link": "https://example.com/334"
+    "players": {
+      "other": "https://example.com/334"
+    }
   },
   {
     "id": 335,
     "title": "曲タイトル 335",
     "description": "335日目の紹介文",
     "image": "/images/335.jpg",
-    "link": "https://example.com/335"
+    "players": {
+      "other": "https://example.com/335"
+    }
   },
   {
     "id": 336,
     "title": "曲タイトル 336",
     "description": "336日目の紹介文",
     "image": "/images/336.jpg",
-    "link": "https://example.com/336"
+    "players": {
+      "other": "https://example.com/336"
+    }
   },
   {
     "id": 337,
     "title": "曲タイトル 337",
     "description": "337日目の紹介文",
     "image": "/images/337.jpg",
-    "link": "https://example.com/337"
+    "players": {
+      "other": "https://example.com/337"
+    }
   },
   {
     "id": 338,
     "title": "曲タイトル 338",
     "description": "338日目の紹介文",
     "image": "/images/338.jpg",
-    "link": "https://example.com/338"
+    "players": {
+      "other": "https://example.com/338"
+    }
   },
   {
     "id": 339,
     "title": "曲タイトル 339",
     "description": "339日目の紹介文",
     "image": "/images/339.jpg",
-    "link": "https://example.com/339"
+    "players": {
+      "other": "https://example.com/339"
+    }
   },
   {
     "id": 340,
     "title": "曲タイトル 340",
     "description": "340日目の紹介文",
     "image": "/images/340.jpg",
-    "link": "https://example.com/340"
+    "players": {
+      "other": "https://example.com/340"
+    }
   },
   {
     "id": 341,
     "title": "曲タイトル 341",
     "description": "341日目の紹介文",
     "image": "/images/341.jpg",
-    "link": "https://example.com/341"
+    "players": {
+      "other": "https://example.com/341"
+    }
   },
   {
     "id": 342,
     "title": "曲タイトル 342",
     "description": "342日目の紹介文",
     "image": "/images/342.jpg",
-    "link": "https://example.com/342"
+    "players": {
+      "other": "https://example.com/342"
+    }
   },
   {
     "id": 343,
     "title": "曲タイトル 343",
     "description": "343日目の紹介文",
     "image": "/images/343.jpg",
-    "link": "https://example.com/343"
+    "players": {
+      "other": "https://example.com/343"
+    }
   },
   {
     "id": 344,
     "title": "曲タイトル 344",
     "description": "344日目の紹介文",
     "image": "/images/344.jpg",
-    "link": "https://example.com/344"
+    "players": {
+      "other": "https://example.com/344"
+    }
   },
   {
     "id": 345,
     "title": "曲タイトル 345",
     "description": "345日目の紹介文",
     "image": "/images/345.jpg",
-    "link": "https://example.com/345"
+    "players": {
+      "other": "https://example.com/345"
+    }
   },
   {
     "id": 346,
     "title": "曲タイトル 346",
     "description": "346日目の紹介文",
     "image": "/images/346.jpg",
-    "link": "https://example.com/346"
+    "players": {
+      "other": "https://example.com/346"
+    }
   },
   {
     "id": 347,
     "title": "曲タイトル 347",
     "description": "347日目の紹介文",
     "image": "/images/347.jpg",
-    "link": "https://example.com/347"
+    "players": {
+      "other": "https://example.com/347"
+    }
   },
   {
     "id": 348,
     "title": "曲タイトル 348",
     "description": "348日目の紹介文",
     "image": "/images/348.jpg",
-    "link": "https://example.com/348"
+    "players": {
+      "other": "https://example.com/348"
+    }
   },
   {
     "id": 349,
     "title": "曲タイトル 349",
     "description": "349日目の紹介文",
     "image": "/images/349.jpg",
-    "link": "https://example.com/349"
+    "players": {
+      "other": "https://example.com/349"
+    }
   },
   {
     "id": 350,
     "title": "曲タイトル 350",
     "description": "350日目の紹介文",
     "image": "/images/350.jpg",
-    "link": "https://example.com/350"
+    "players": {
+      "other": "https://example.com/350"
+    }
   },
   {
     "id": 351,
     "title": "曲タイトル 351",
     "description": "351日目の紹介文",
     "image": "/images/351.jpg",
-    "link": "https://example.com/351"
+    "players": {
+      "other": "https://example.com/351"
+    }
   },
   {
     "id": 352,
     "title": "曲タイトル 352",
     "description": "352日目の紹介文",
     "image": "/images/352.jpg",
-    "link": "https://example.com/352"
+    "players": {
+      "other": "https://example.com/352"
+    }
   },
   {
     "id": 353,
     "title": "曲タイトル 353",
     "description": "353日目の紹介文",
     "image": "/images/353.jpg",
-    "link": "https://example.com/353"
+    "players": {
+      "other": "https://example.com/353"
+    }
   },
   {
     "id": 354,
     "title": "曲タイトル 354",
     "description": "354日目の紹介文",
     "image": "/images/354.jpg",
-    "link": "https://example.com/354"
+    "players": {
+      "other": "https://example.com/354"
+    }
   },
   {
     "id": 355,
     "title": "曲タイトル 355",
     "description": "355日目の紹介文",
     "image": "/images/355.jpg",
-    "link": "https://example.com/355"
+    "players": {
+      "other": "https://example.com/355"
+    }
   },
   {
     "id": 356,
     "title": "曲タイトル 356",
     "description": "356日目の紹介文",
     "image": "/images/356.jpg",
-    "link": "https://example.com/356"
+    "players": {
+      "other": "https://example.com/356"
+    }
   },
   {
     "id": 357,
     "title": "曲タイトル 357",
     "description": "357日目の紹介文",
     "image": "/images/357.jpg",
-    "link": "https://example.com/357"
+    "players": {
+      "other": "https://example.com/357"
+    }
   },
   {
     "id": 358,
     "title": "曲タイトル 358",
     "description": "358日目の紹介文",
     "image": "/images/358.jpg",
-    "link": "https://example.com/358"
+    "players": {
+      "other": "https://example.com/358"
+    }
   },
   {
     "id": 359,
     "title": "曲タイトル 359",
     "description": "359日目の紹介文",
     "image": "/images/359.jpg",
-    "link": "https://example.com/359"
+    "players": {
+      "other": "https://example.com/359"
+    }
   },
   {
     "id": 360,
     "title": "曲タイトル 360",
     "description": "360日目の紹介文",
     "image": "/images/360.jpg",
-    "link": "https://example.com/360"
+    "players": {
+      "other": "https://example.com/360"
+    }
   },
   {
     "id": 361,
     "title": "曲タイトル 361",
     "description": "361日目の紹介文",
     "image": "/images/361.jpg",
-    "link": "https://example.com/361"
+    "players": {
+      "other": "https://example.com/361"
+    }
   },
   {
     "id": 362,
     "title": "曲タイトル 362",
     "description": "362日目の紹介文",
     "image": "/images/362.jpg",
-    "link": "https://example.com/362"
+    "players": {
+      "other": "https://example.com/362"
+    }
   },
   {
     "id": 363,
     "title": "曲タイトル 363",
     "description": "363日目の紹介文",
     "image": "/images/363.jpg",
-    "link": "https://example.com/363"
+    "players": {
+      "other": "https://example.com/363"
+    }
   },
   {
     "id": 364,
     "title": "曲タイトル 364",
     "description": "364日目の紹介文",
     "image": "/images/364.jpg",
-    "link": "https://example.com/364"
+    "players": {
+      "other": "https://example.com/364"
+    }
   },
   {
     "id": 365,
     "title": "曲タイトル 365",
     "description": "365日目の紹介文",
     "image": "/images/365.jpg",
-    "link": "https://example.com/365"
+    "players": {
+      "other": "https://example.com/365"
+    }
   }
 ]
