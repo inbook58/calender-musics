@@ -49,6 +49,12 @@ const imageUrl = computed(() => {
 const navigateTo = (id: number) => {
   router.push({ name: 'Song', params: { id } })
 }
+
+onMounted(() => {
+  const today = new Date();
+  const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
+  localStorage.setItem(`viewedTodaySong_${dateString}`, 'true');
+});
 </script>
 
 <template>

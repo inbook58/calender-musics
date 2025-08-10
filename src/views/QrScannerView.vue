@@ -57,6 +57,18 @@ const tick = () => {
 };
 
 onMounted(async () => {
+  const today = new Date();
+  const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
+  const viewedTodaySong = localStorage.getItem(`viewedTodaySong_${dateString}`);
+
+  if (viewedTodaySong === 'true') {
+    // Calculate today's day of the year
+    const start = new Date(today.getFullYear(), 0, 1); // January 1st of current year
+    const todayId = Math.floor((+today - +start) / 86400000) + 1;
+    router.replace({ name: 'Song', params: { id: todayId } });
+    return; // Stop further execution of this component
+  }
+
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
     if (video.value) {

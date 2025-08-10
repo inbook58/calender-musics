@@ -14,10 +14,7 @@ const todayId = computed(() => {
   <header>
     <RouterLink to="/today-list">昨日までの楽曲一覧</RouterLink>
     <!-- Home links to Today List -->
-    <div class="center-link">
-      <RouterLink :to="{ name: 'Song', params: { id: todayId } }">今日のページ</RouterLink>
-      <!-- Centered Today's Page -->
-    </div>
+
     <div class="spacer"></div>
     <!-- For pushing QR button to right -->
     <RouterLink to="/">QR Scan</RouterLink>
