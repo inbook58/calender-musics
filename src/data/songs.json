@@ -6,7 +6,7 @@
     "image": "/images/001.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/1tDWVeCR9oWGX8d5J9rswk?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
-      "apple": null
+      "apple": "<iframe allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" frameborder=\"0\" height=\"152\" style=\"width:100%;overflow:hidden;border-radius:10px;\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" src=\"https://embed.music.apple.com/jp/song/eclipse/1665304041\"></iframe>"
     }
   },
   {

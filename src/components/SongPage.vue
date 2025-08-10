@@ -17,7 +17,7 @@ const imageUrl = computed(() => {
       <h1>{{ song.title }}</h1>
       <img :src="imageUrl" alt="" />
       <p>{{ song.description }}</p>
-      <div v-if="song.players?.spotify" v-html="song.players.spotify"></div>
+      <div class="spotify-player" v-if="song.players?.spotify" v-html="song.players.spotify"></div>
       <div v-if="song.players?.apple" v-html="song.players.apple"></div>
       <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener">リンク</a>
     </main>
@@ -42,5 +42,9 @@ img {
   max-width: 100%;
   display: block;
   margin: 16px 0;
+}
+
+.spotify-player {
+  margin-bottom: 16px;
 }
 </style>
