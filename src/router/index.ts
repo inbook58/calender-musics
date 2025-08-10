@@ -12,7 +12,7 @@ export default createRouter({
       component: SongPage,
       props: (r) => ({ id: Number(r.params.id) }),
     },
-    { path: '/', name: 'Today', component: Today },
-    { path: '/qr-scan', name: 'QrScanner', component: QrScannerView }, // New route
+    { path: '/', name: 'QrScanner', component: QrScannerView }, // QR Scanner is now root
+    { path: '/today-list', name: 'TodayList', component: Today }, // Today page moved to /today-list
   ],
 })
