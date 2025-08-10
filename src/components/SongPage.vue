@@ -36,8 +36,8 @@ const isNextSongDisabled = computed(() => {
   const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id)
   nextSongDate.setHours(0, 0, 0, 0) // Normalize nextSongDate to start of day
 
-  // Disable if the next song's date is in the future
-  return nextSongDate > today
+  // Disable if the next song's date is today or in the future
+  return nextSongDate >= today
 })
 
 const imageUrl = computed(() => {
