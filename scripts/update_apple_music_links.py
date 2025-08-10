@@ -135,7 +135,7 @@ def update_songs_with_apple_music_links():
                     
                     if album_id and track_id:
                         embed_url = f"https://embed.music.apple.com/{APPLE_STOREFRONT}/album/{album_id}/{track_id}?app=music"
-                        apple_embed_iframe = f'<iframe src="{embed_url}" height="150px" frameborder="0" allow="autoplay; encrypted-media;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>'
+                        apple_embed_iframe = f'<iframe src="{embed_url}" width="100%" height="152" frameborder="0" allow="autoplay; encrypted-media;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>'
                         
                         if 'players' not in song:
                             song['players'] = {}
