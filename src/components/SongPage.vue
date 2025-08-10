@@ -26,19 +26,28 @@ const nextSong = computed(() =>
 
 const isNextSongDisabled = computed(() => {
   if (!nextSong.value) {
-    return true // No next song, so disable
+    return true; // No next song, so disable
   }
 
-  const today = new Date()
-  today.setHours(0, 0, 0, 0) // Normalize today to start of day
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Normalize today to start of day
 
-  // Assuming song.id corresponds to the day of the year
-  const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id)
-  nextSongDate.setHours(0, 0, 0, 0) // Normalize nextSongDate to start of day
+  const nextSongDate = new Date(today.getFullYear(), 0, nextSong.value.id);
+  nextSongDate.setHours(0, 0, 0, 0); // Normalize nextSongDate to start of day
 
-  // Disable if the next song's date is today or in the future
-  return nextSongDate >= today
-})
+  // Check if today's song has been viewed (from localStorage)
+  const dateString = today.toISOString().slice(0, 10); // YYYY-MM-DD
+  const viewedTodaySong = typeof window !== 'undefined' ? localStorage.getItem(`viewedTodaySong_${dateString}`) : null;
+
+  // If today's song has been viewed, then the "次の日" button should be active
+  // unless it's the very last song.
+  if (viewedTodaySong === 'true') {
+    return false; // Always active if today's song has been viewed
+  }
+
+  // Otherwise, use the original logic: disable if next song is today or in the future
+  return nextSongDate >= today;
+});
 
 const imageUrl = computed(() => {
   if (song.value) {
