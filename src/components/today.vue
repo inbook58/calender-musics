@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Today's Songs</h1>
-    <p>{{ today }}日目までの曲一覧です。</p>
+    <p>{{ formattedTodayDate }}までの曲一覧です。</p>
     <div class="song-list">
       <RouterLink
         v-for="song in visibleSongs"
@@ -11,7 +11,7 @@
       >
         <img :src="song.image" :alt="song.title" class="thumbnail" />
         <div class="song-info">
-          <h2 class="title">{{ song.id }}: {{ song.title }}</h2>
+          <h2 class="title">{{ formatDate(song.id) }}: {{ song.title }}</h2>
           <p class="description">{{ song.description }}</p>
         </div>
       </RouterLink>
@@ -28,6 +28,16 @@ import songs from '@/data/songs.json'
 const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
 const start = new Date(now.getFullYear(), 0, 1) // 今年の1月1日
 const today = Math.floor((+now - +start) / 86400000) + 1
+
+const formatDate = (dayOfYear: number, year: number = 2026) => {
+  const date = new Date(year, 0, dayOfYear);
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
+  return `${year}年${month}月${day}日 (${dayOfWeek})`;
+};
+
+const formattedTodayDate = computed(() => formatDate(today));
 
 // 表示対象の曲を計算（IDが今日の日数以下で、IDの降順にソート）
 const visibleSongs = computed(() =>

@@ -8,6 +8,15 @@ const router = useRouter()
 
 const song = computed(() => songs.find((s) => s.id === props.id))
 
+const displayDate = computed(() => {
+  const year = 2026;
+  const date = new Date(year, 0, props.id); // Month is 0-indexed, so 0 is January
+  const month = date.getMonth() + 1; // getMonth() returns 0-11
+  const day = date.getDate();
+  const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
+  return `${year}年${month}月${day}日 (${dayOfWeek})`;
+});
+
 const currentIndex = computed(() => songs.findIndex((s) => s.id === props.id))
 const prevSong = computed(() => (currentIndex.value > 0 ? songs[currentIndex.value - 1] : null))
 const nextSong = computed(() => (currentIndex.value < songs.length - 1 ? songs[currentIndex.value + 1] : null))
@@ -43,7 +52,7 @@ const navigateTo = (id: number) => {
 <template>
   <Transition name="fade" appear>
     <main v-if="song" class="container">
-      <h1>{{ song.title }}</h1>
+      <h1>{{ displayDate }}</h1>
       <img :src="imageUrl" alt="" />
       <p>{{ song.description }}</p>
       <div class="spotify-player" v-if="song.players?.spotify" v-html="song.players.spotify"></div>
