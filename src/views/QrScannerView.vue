@@ -30,6 +30,44 @@ const hasCamera = ref(true)
 const router = useRouter()
 
 let animationFrameId: number
+let stream: MediaStream | null = null
+
+const stopCamera = () => {
+  if (stream) {
+    stream.getTracks().forEach((track) => track.stop())
+    stream = null
+  }
+  if (video.value) {
+    video.value.srcObject = null
+  }
+  cancelAnimationFrame(animationFrameId)
+  scanning.value = false
+}
+
+const startCamera = async () => {
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: 'environment' },
+    })
+    if (video.value) {
+      video.value.srcObject = stream
+      video.value.play()
+      animationFrameId = requestAnimationFrame(tick)
+    }
+  } catch (err) {
+    console.error('Error accessing camera:', err)
+    hasCamera.value = false
+    scanning.value = false
+  }
+}
+
+const handleVisibilityChange = () => {
+  if (document.hidden) {
+    stopCamera()
+  } else if (video.value) {
+    startCamera()
+  }
+}
 
 const tick = () => {
   if (video.value && video.value.readyState === video.value.HAVE_ENOUGH_DATA) {
@@ -54,7 +92,7 @@ const tick = () => {
           // Handle non-URL QR codes, e.g., display the text
           alert('Scanned text: ' + code.data)
         }
-        cancelAnimationFrame(animationFrameId)
+        stopCamera() // Stop camera after scan
         return // Stop scanning after first successful scan
       }
     }
@@ -64,7 +102,9 @@ const tick = () => {
 
 onMounted(async () => {
   const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
-  const dateString = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}` // YYYY-MM-DD
+  const dateString = `${today.getFullYear()}-${(
+    today.getMonth() + 1
+  ).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}` // YYYY-MM-DD
   const viewedTodaySong = localStorage.getItem(`viewedTodaySong_${dateString}`)
 
   if (viewedTodaySong === 'true') {
@@ -75,27 +115,13 @@ onMounted(async () => {
     return // Stop further execution of this component
   }
 
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: 'environment' },
-    })
-    if (video.value) {
-      video.value.srcObject = stream
-      video.value.play()
-      animationFrameId = requestAnimationFrame(tick)
-    }
-  } catch (err) {
-    console.error('Error accessing camera:', err)
-    hasCamera.value = false
-    scanning.value = false
-  }
+  await startCamera()
+  document.addEventListener('visibilitychange', handleVisibilityChange)
 })
 
 onUnmounted(() => {
-  if (video.value && video.value.srcObject) {
-    ;(video.value.srcObject as MediaStream).getTracks().forEach((track) => track.stop())
-  }
-  cancelAnimationFrame(animationFrameId)
+  stopCamera()
+  document.removeEventListener('visibilitychange', handleVisibilityChange)
 })
 </script>
 
