@@ -56,7 +56,7 @@
     "image": "/images/005.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/4MIPpjKWw1lLVwS6tLhis1?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/i-love-music/1443878968\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -68,7 +68,7 @@
     "image": "/images/006.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/7dmHNa6KpsyakWQsMOjHUx?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/the-flower-called-nowhere/1230517317\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -80,7 +80,7 @@
     "image": "/images/007.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/6XhNXDIgiBqlYpb0SuhUef?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/starry-sky/215188199\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -92,7 +92,7 @@
     "image": "/images/008.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/6uMqJQvja5YpIWqcGOLRoj?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/post-panic/1546826137\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -104,7 +104,7 @@
     "image": "/images/009.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/5CQq81hMIMNR7TONtEsbbr?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/its-lovely-day-tomorrow/70263584\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -116,7 +116,7 @@
     "image": "/images/010.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/1cFr7dSrGGyzGWHJ5SldVp?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/kick-loud-with-towa-tei/1248730479\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -2852,7 +2852,7 @@
     "image": "/images/238.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/4W2SJypIBzoL5g4aMCzOLz?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/katchi-ofenbach-vs-nick-waterhouse-mr-belt-wezol-remix/1303665615\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -2864,7 +2864,7 @@
     "image": "/images/239.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/0U5dURd7EQUCGjiMktmTQ4?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/krumville/1701849980\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -2876,7 +2876,7 @@
     "image": "/images/240.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/53pygCy9jXomVw03qvx7WD?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/behind-the-sun/850770471\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -2888,7 +2888,7 @@
     "image": "/images/241.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/4ERDsm0YhyQuP32Qrvg2ne?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/the-truth-sam-feldt-remix/1490857677\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -2900,7 +2900,7 @@
     "image": "/images/242.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/31RU1ou4nMMO3qKDdRLeuO?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/doshaburino-ameno-nakade/1568021356\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
@@ -2912,7 +2912,7 @@
     "image": "/images/243.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/5yEl8U4FXj5IyAyFkAzveZ?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": null
+      "apple": "<iframe src=\"https://embed.music.apple.com/us/song/summer-wind/1440858130\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     }
   },
   {
