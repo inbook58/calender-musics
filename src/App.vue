@@ -17,7 +17,7 @@ const todayId = computed(() => {
 
     <div class="spacer"></div>
     <!-- For pushing QR button to right -->
-    <RouterLink to="/">今日の楽曲</RouterLink>
+    <RouterLink to="/">今日の一曲</RouterLink>
     <!-- QR Scan on right -->
   </header>
   <router-view />
