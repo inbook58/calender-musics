@@ -1,12 +1,10 @@
 <template>
   <div class="qr-scanner-container">
-    <h1>QR Code Scanner</h1>
     <p v-if="!hasCamera">No camera found or access denied.</p>
     <p v-else-if="!scanning">Starting camera...</p>
     <p v-else-if="result">Scanned: {{ result }}</p>
     <p v-else>
-      Point your camera at a QR code.<br />
-      読み取れなかったらリロード
+      QRコードを読み取ってください<br />
     </p>
 
     <div class="video-wrapper">
@@ -88,12 +86,10 @@ const tick = () => {
         // Navigate to the scanned URL
         if (code.data.startsWith('http://') || code.data.startsWith('https://')) {
           window.location.href = code.data
-        } else {
-          // Handle non-URL QR codes, e.g., display the text
-          alert('Scanned text: ' + code.data)
+          stopCamera() // Stop camera after scan
+          return // Stop scanning after first successful scan
         }
-        stopCamera() // Stop camera after scan
-        return // Stop scanning after first successful scan
+        // If not a URL, do nothing and continue scanning.
       }
     }
   }

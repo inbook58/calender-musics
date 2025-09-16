@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h1>Today's Songs</h1>
-    <p>{{ formattedYesterdayDate }}までの曲一覧です。</p>
+    <h2>{{ formattedYesterdayDate }}までの楽曲</h2>
     <div class="song-list">
       <RouterLink
         v-for="song in visibleSongs"
@@ -11,18 +10,26 @@
       >
         <img :src="song.image" :alt="song.title" class="thumbnail" />
         <div class="song-info">
-          <h2 class="title">{{ formatDate(song.id) }}: {{ song.title }}</h2>
-          <p class="description">{{ song.description }}</p>
+          <p class="song-date">{{ formatDate(song.id) }}</p>
+          <h2 class="song-title">{{ song.title }}</h2>
         </div>
       </RouterLink>
+    </div>
+    <div class="load-more-container" v-if="hasMore">
+      <button @click="loadMore" class="load-more-button">もっと見る</button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import songs from '@/data/songs.json'
+
+const INITIAL_DISPLAY_COUNT = 5
+const LOAD_MORE_COUNT = 10
+
+const displayCount = ref(INITIAL_DISPLAY_COUNT)
 
 // 今日の日付（JST）を基準に、年初からの日数を計算
 const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
@@ -35,27 +42,38 @@ const formatDate = (dayOfYear: number, year: number = 2025) => {
   const month = date.getMonth() + 1;
   const day = date.getDate();
   const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
-  return `${year}年${month}月${day}日 (${dayOfWeek})`;
+  return `${month}月${day}日 (${dayOfWeek})`;
 };
 
 const formattedYesterdayDate = computed(() => formatDate(yesterdayId));
 
-// 表示対象の曲を計算（IDが昨日までの日数以下で、IDの降順にソート）
-const visibleSongs = computed(() =>
+// 表示対象の全曲リスト（ソート済み）
+const allVisibleSongs = computed(() =>
   songs.filter((s) => s.id <= yesterdayId).sort((a, b) => b.id - a.id)
 )
+
+// 現在表示する曲のリスト
+const visibleSongs = computed(() => allVisibleSongs.value.slice(0, displayCount.value))
+
+// さらに読み込む曲があるかどうか
+const hasMore = computed(() => displayCount.value < allVisibleSongs.value.length)
+
+// 曲をさらに読み込む
+const loadMore = () => {
+  displayCount.value += LOAD_MORE_COUNT
+}
 </script>
 
 <style scoped>
 .container {
   max-width: 960px;
   margin: 40px auto;
-  padding: 0 16px;
+  padding: 0px;
 }
 
 .song-list {
   display: grid;
-  gap: 24px;
+  gap: 12px;
   margin-top: 24px;
 }
 
@@ -76,8 +94,8 @@ const visibleSongs = computed(() =>
 }
 
 .thumbnail {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
@@ -87,7 +105,13 @@ const visibleSongs = computed(() =>
   flex: 1;
 }
 
-.title {
+.song-date {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0 0 4px 0;
+}
+
+.song-title {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0 0 8px 0;
@@ -100,5 +124,24 @@ const visibleSongs = computed(() =>
   -webkit-line-clamp: 2; /* 表示する行数を2行に制限 */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.load-more-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.load-more-button:hover {
+  background-color: #f0f0f0;
 }
 </style>
