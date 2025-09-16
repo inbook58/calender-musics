@@ -112,7 +112,7 @@ onMounted(() => {
 .container {
   max-width: 720px;
   margin: 40px auto;
-  padding: 0 16px;
+  padding: 20px 36px;
 }
 img {
   max-width: 100%;
