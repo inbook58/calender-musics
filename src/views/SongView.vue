@@ -133,7 +133,7 @@ watch(idAsNumber, () => {
         ></iframe>
       </div>
 
-      <div v-if="song.players?.apple" v-html="song.players.apple"></div>
+      <div v-if="song.players?.apple" v-html="song.players.apple" class="apple-player" :class="{ 'is-loaded': isPlayerLoaded }"></div>
       <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
         >リンク</a
       >
@@ -180,6 +180,18 @@ img {
 .spotify-player.is-loaded {
   opacity: 1;
 }
+
+.apple-player {
+  min-height: 152px;
+  margin-bottom: 16px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.apple-player.is-loaded {
+  opacity: 1;
+}
+
 
 .navigation-buttons {
   display: flex;

@@ -51,7 +51,7 @@ def standardize_iframe_dimensions(iframe_html):
         new_attrs_str = ' '.join(new_attrs_list)
         
         # Reconstruct the iframe tag
-        iframe_html = re.sub(pattern, f'<iframe {new_attrs_str}>' + iframe_html[match.end():], iframe_html, 1)
+        iframe_html = re.sub(pattern, f'<iframe {new_attrs_str}>' + iframe_html[match.end():], iframe_html, count=1)
         
     return iframe_html
 
