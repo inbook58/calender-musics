@@ -102,7 +102,7 @@ onMounted(() => {
       <img v-if="imageUrl" :src="imageUrl" alt="" @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')" />
       <p>{{ song.description }}</p>
       <div class="spotify-player" v-if="song.players?.spotify" v-html="song.players.spotify"></div>
-      <div v-if="song.players?.apple" v-html="song.players.apple"></div>
+      <div v-if="song.players?.apple" v-html="song.players.apple" class="apple-player"></div>
       <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
         >リンク</a
       >
@@ -140,6 +140,12 @@ img {
 }
 
 .spotify-player {
+  min-height: 152px;
+  margin-bottom: 16px;
+}
+
+.apple-player {
+  min-height: 152px;
   margin-bottom: 16px;
 }
 
