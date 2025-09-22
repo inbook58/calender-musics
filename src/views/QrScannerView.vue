@@ -1,4 +1,5 @@
 <template>
+  <TheHeader />
   <div class="qr-scanner-container">
     <p v-if="!hasCamera">No camera found or access denied.</p>
     <p v-else-if="!scanning">Starting camera...</p>
@@ -19,6 +20,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import jsQR from 'jsqr'
 import { useRouter } from 'vue-router'
+import TheHeader from '@/components/TheHeader.vue'
 
 const video = ref<HTMLVideoElement | null>(null)
 const canvas = ref<HTMLCanvasElement | null>(null)

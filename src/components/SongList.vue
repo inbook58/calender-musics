@@ -25,6 +25,7 @@
 import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import songs from '@/data/songs.json'
+import TheHeader from '@/components/TheHeader.vue'
 
 const INITIAL_DISPLAY_COUNT = 5
 const LOAD_MORE_COUNT = 10
@@ -65,10 +66,11 @@ const loadMore = () => {
 </script>
 
 <style scoped>
+
 .container {
   max-width: 960px;
   margin: 40px auto;
-  padding: 0px;
+  padding: 0px 20px;
 }
 
 .song-list {
