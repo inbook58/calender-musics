@@ -61,8 +61,6 @@ import TheHeader from '@/components/TheHeader.vue'
     height: auto;
   }
   .about-migeru {
-    width: 300;
-    height: auto;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -85,8 +83,6 @@ import TheHeader from '@/components/TheHeader.vue'
     height: auto;
   }
   .about-konboi {
-    width: "300";
-    height: auto;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -100,11 +96,17 @@ import TheHeader from '@/components/TheHeader.vue'
     text-align: center;
     margin-top: 20px;
   }
+  .ibuki-img {
+    width: 200px;
+    height:auto;
+  }
   .about-ibuki {
-    width: "200";
-    height: auto;
     text-align: center;
     margin: 40px 0;
+  }
+  .migeru-img {
+    width: 200px;
+    height: auto;
   }
   .about-migeru {
     width: "200";
@@ -112,11 +114,19 @@ import TheHeader from '@/components/TheHeader.vue'
     text-align: center;
     margin: 40px 0;
   }
+  .miumi-img {
+    width: 200px;
+    height: auto;
+  }
   .about-miumi {
     width: "200";
     height: auto;
     text-align: center;
     margin: 40px 0;
+  }
+  .konboi-img {
+    width: 200px;
+    height: auto;
   }
   .about-konboi {
     width: "200";
