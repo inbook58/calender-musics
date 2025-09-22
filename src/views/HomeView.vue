@@ -24,7 +24,7 @@ onMounted(() => {
     <section class="hero">
       <div class="hero__overlay">
         <h1 class="hero__title">dia dia</h1>
-        <p class="hero__subtitle">クァW瀬drftgyふじこlp</p>
+        <p class="hero__subtitle">めっちゃいい感じ日めくりカレンダー</p>
       </div>
     </section>
   </main>
