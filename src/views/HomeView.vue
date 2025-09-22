@@ -27,9 +27,8 @@ onMounted(() => {
         <p class="hero__subtitle">クァW瀬drftgyふじこlp</p>
       </div>
     </section>
-
-    <SongList />
   </main>
+  <SongList />
 </template>
 
 <style scoped>
@@ -51,7 +50,7 @@ onMounted(() => {
   width: 100%;
   z-index: 1200;
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 2.5s ease;
 }
 
 .home-header--visible {
