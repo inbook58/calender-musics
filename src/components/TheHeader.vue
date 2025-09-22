@@ -106,8 +106,10 @@ const goToTodaysSong = () => {
   padding: 8px 12px;
   font-size: 0.9rem;
   font-weight: bold;
+  height: 48px;
+  width: auto;
   color: #111;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -119,12 +121,12 @@ const goToTodaysSong = () => {
 }
 
 .menu-button {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.7);
   border: none;
   cursor: pointer;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
