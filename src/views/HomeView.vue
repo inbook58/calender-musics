@@ -9,11 +9,9 @@ const isHeaderVisible = ref(false)
 onMounted(() => {
   requestAnimationFrame(() => {
     isReady.value = true
-    const now = new Date()
-    const delayMs = ((now.getSeconds() % 5) + 1) * 400
     setTimeout(() => {
       isHeaderVisible.value = true
-    }, delayMs)
+    }, 1600)
   })
 })
 </script>
