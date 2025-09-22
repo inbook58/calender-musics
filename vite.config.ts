@@ -6,7 +6,10 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa' // Import VitePWA
 
 // https://vite.dev/config/
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
+  const repoBase = '/calender-musics/'
+  const base = process.env.VITE_BASE_URL ?? (command === 'build' ? repoBase : '/')
+
   return {
     plugins: [
       vue(),
@@ -48,7 +51,7 @@ export default defineConfig(() => {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
-    base: process.env.VITE_BASE_URL ?? '/',
+    base,
     build: {
       outDir: 'docs'
     }
