@@ -39,7 +39,9 @@ const goToTodaysSong = () => {
 
 <template>
   <header class="header">
-    <RouterLink to="/home" class="site-title" @click="closeMenu">Calendar Musics</RouterLink>
+    <RouterLink to="/home" class="site-title" @click="closeMenu">
+      <img src="/images/icon_sample.png" alt="Calendar Musics" class="site-logo" />
+    </RouterLink>
 
     <div class="header-actions">
       <button @click="goToTodaysSong" class="today-song-button">今日の一曲</button>
@@ -75,11 +77,23 @@ const goToTodaysSong = () => {
 }
 
 .site-title {
-  font-size: 1.2rem;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  color: #000;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  color: #111;
+  height: 48px;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.site-logo {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .header-actions {
