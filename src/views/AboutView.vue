@@ -39,11 +39,11 @@ import TheHeader from '@/components/TheHeader.vue'
 <style scoped>
 .about-product {
   padding: 20px;
+  align-items: center;
 }
 @media (min-width: 1024px) {
   .about-product {
     display: flex;
-    align-items: center;
   }
   .about-members {
 
@@ -95,6 +95,9 @@ import TheHeader from '@/components/TheHeader.vue'
   .about-image {
     text-align: center;
     margin-top: 20px;
+  }
+  .about-product {
+    text-align: center;
   }
   .ibuki-img {
     width: 200px;
