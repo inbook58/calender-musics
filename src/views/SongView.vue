@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import songs from '@/data/songs.json'
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { onMounted } from 'vue'
 import TheHeader from '@/components/TheHeader.vue'
 
 const props = defineProps<{ id: string }>()
 const router = useRouter()
+
+const isPlayerLoaded = ref(false)
 
 const idAsNumber = computed(() => {
   const n = Number(props.id)
@@ -14,6 +15,21 @@ const idAsNumber = computed(() => {
 })
 
 const song = computed(() => songs.find((s) => s.id === idAsNumber.value))
+
+const spotifySrc = computed(() => {
+  const spotifyHtml = song.value?.players?.spotify
+  if (!spotifyHtml) return ''
+  const match = spotifyHtml.match(/src="([^"]+)"/) // Extract src URL from iframe HTML
+  return match ? match[1] : ''
+})
+
+watch(
+  song,
+  () => {
+    isPlayerLoaded.value = false
+  },
+  { flush: 'post' },
+)
 
 const displayDate = computed(() => {
   const year = 2025
@@ -82,7 +98,7 @@ const navigateTo = (id: number) => {
   router.push({ name: 'Song', params: { id } })
 }
 
-onMounted(() => {
+watch(idAsNumber, () => {
   if (typeof window !== 'undefined' && idAsNumber.value === todayId.value) {
     // Check if running in browser and if it's today's song
     const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
@@ -91,7 +107,7 @@ onMounted(() => {
       .padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}` // YYYY-MM-DD
     localStorage.setItem(`viewedTodaySong_${dateString}`, 'true')
   }
-})
+}, { immediate: true })
 </script>
 
 <template>
@@ -101,8 +117,23 @@ onMounted(() => {
       <h1>{{ displayDate }}</h1>
       <img v-if="imageUrl" :src="imageUrl" alt="" @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')" />
       <p>{{ song.description }}</p>
-      <div class="spotify-player" v-if="song.players?.spotify" v-html="song.players.spotify"></div>
-      <div v-if="song.players?.apple" v-html="song.players.apple" class="apple-player"></div>
+
+      <div class="spotify-player" :class="{ 'is-loaded': isPlayerLoaded }">
+        <iframe
+          v-if="spotifySrc"
+          :key="spotifySrc"
+          :src="spotifySrc"
+          width="100%"
+          height="152"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          @load="isPlayerLoaded = true"
+        ></iframe>
+      </div>
+
+      <div v-if="song.players?.apple" v-html="song.players.apple"></div>
       <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
         >リンク</a
       >
@@ -142,11 +173,12 @@ img {
 .spotify-player {
   min-height: 152px;
   margin-bottom: 16px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.apple-player {
-  min-height: 152px;
-  margin-bottom: 16px;
+.spotify-player.is-loaded {
+  opacity: 1;
 }
 
 .navigation-buttons {
