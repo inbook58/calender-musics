@@ -84,6 +84,8 @@ pip install -r requirements.txt
 ### データ変換 (JSON <-> CSV)
 
 これらのスクリプトは、スプレッドシートを介したデータ編集を容易にします。
+csvのスプシ：
+https://docs.google.com/spreadsheets/d/1ZAhKxK5c-LJv5-WquLi_vdzPefqOBsRd6oIGSX9gS9A/edit?gid=0#gid=0
 
 #### JSONからCSVへ
 

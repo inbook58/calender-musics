@@ -12,47 +12,49 @@
       <video ref="video" autoplay playsinline></video>
       <div class="qr-frame"></div>
     </div>
-    <canvas ref="canvas" style="display: none"></canvas>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import jsQR from 'jsqr'
+import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library'
 import { useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 
 const video = ref<HTMLVideoElement | null>(null)
-const canvas = ref<HTMLCanvasElement | null>(null)
 const result = ref<string | null>(null)
 const scanning = ref(false)
 const hasCamera = ref(true)
 const router = useRouter()
 
-let animationFrameId: number
-let stream: MediaStream | null = null
+const codeReader = new BrowserMultiFormatReader()
 
 const stopCamera = () => {
-  if (stream) {
-    stream.getTracks().forEach((track) => track.stop())
-    stream = null
-  }
-  if (video.value) {
-    video.value.srcObject = null
-  }
-  cancelAnimationFrame(animationFrameId)
+  codeReader.reset()
   scanning.value = false
 }
 
 const startCamera = async () => {
+  scanning.value = true
   try {
-    stream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: 'environment' },
-    })
     if (video.value) {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: 'environment' },
+      })
       video.value.srcObject = stream
-      video.value.play()
-      animationFrameId = requestAnimationFrame(tick)
+      codeReader.decodeFromStream(stream, video.value, (decodeResult, err) => {
+        if (decodeResult) {
+          result.value = decodeResult.getText()
+          console.log('QR Code Scanned:', result.value)
+          if (result.value.startsWith('http://') || result.value.startsWith('https://')) {
+            window.location.href = result.value
+            stopCamera()
+          }
+        }
+        if (err && !(err instanceof NotFoundException)) {
+          console.error('Error decoding QR code:', err)
+        }
+      })
     }
   } catch (err) {
     console.error('Error accessing camera:', err)
@@ -64,38 +66,9 @@ const startCamera = async () => {
 const handleVisibilityChange = () => {
   if (document.hidden) {
     stopCamera()
-  } else if (video.value) {
+  } else {
     startCamera()
   }
-}
-
-const tick = () => {
-  if (video.value && video.value.readyState === video.value.HAVE_ENOUGH_DATA) {
-    scanning.value = true
-    const context = canvas.value?.getContext('2d')
-    if (context && canvas.value) {
-      canvas.value.height = video.value.videoHeight
-      canvas.value.width = video.value.videoWidth
-      context.drawImage(video.value, 0, 0, canvas.value.width, canvas.value.height)
-      const imageData = context.getImageData(0, 0, canvas.value.width, canvas.value.height)
-      const code = jsQR(imageData.data, imageData.width, imageData.height, {
-        inversionAttempts: 'dontInvert',
-      })
-
-      if (code) {
-        result.value = code.data
-        console.log('QR Code Scanned:', code.data)
-        // Navigate to the scanned URL
-        if (code.data.startsWith('http://') || code.data.startsWith('https://')) {
-          window.location.href = code.data
-          stopCamera() // Stop camera after scan
-          return // Stop scanning after first successful scan
-        }
-        // If not a URL, do nothing and continue scanning.
-      }
-    }
-  }
-  animationFrameId = requestAnimationFrame(tick)
 }
 
 onMounted(async () => {
@@ -106,11 +79,10 @@ onMounted(async () => {
   const viewedTodaySong = localStorage.getItem(`viewedTodaySong_${dateString}`)
 
   if (viewedTodaySong === 'true') {
-    // Calculate today's day of the year
-    const start = new Date(today.getFullYear(), 0, 1) // January 1st of current year
+    const start = new Date(today.getFullYear(), 0, 1)
     const todayId = Math.floor((+today - +start) / 86400000) + 1
     router.replace({ name: 'Song', params: { id: todayId } })
-    return // Stop further execution of this component
+    return
   }
 
   await startCamera()
