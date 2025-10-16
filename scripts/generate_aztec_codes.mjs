@@ -41,8 +41,8 @@ const generationPromises = songs.map(song => {
     bwipjs.toBuffer({
       bcid: 'azteccode',      // Barcode type
       text: song.shareId,     // Text to encode
-      scale: 5,               // 5x scaling factor
-      layers: 3,              // Force a fixed number of layers for uniform size
+      scale: 6,               // 5x scaling factor
+      layers: 1,              // Force a fixed number of layers for uniform size
       includetext: false,     // Don't include human-readable text
       textxalign: 'center',   // Always good to set this
     }, (err, png) => {

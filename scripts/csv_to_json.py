@@ -1,6 +1,11 @@
 import csv
 import json
 import re
+import random
+import string
+
+def generate_share_id(length=5):
+    return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(length))
 
 def standardize_iframe_dimensions(iframe_html):
     if not iframe_html:
@@ -82,6 +87,7 @@ def convert_csv_to_json():
                         'apple': standardized_apple_player
                     }
                 }
+                song['shareId'] = generate_share_id()
                 songs.append(song)
     except FileNotFoundError:
         print("Error: src/data/songs.csv not found. Please ensure the CSV file exists.")
