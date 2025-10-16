@@ -25,7 +25,7 @@ export default defineConfig(({ command }) => {
           short_name: 'CalMusics',
           description: 'A calendar of musics',
           theme_color: '#ffffff',
-          start_url: '/qr-scanner',
+          start_url: `${base}qr-scanner`,
           scope: base,
           icons: [
             {
