@@ -14,37 +14,39 @@ export default defineConfig(({ command }) => {
     plugins: [
       vue(),
       // vueDevTools(),
-      // VitePWA({ // PWA Configuration
-      //   registerType: 'autoUpdate',
-      //   injectRegister: 'autoUpdate',
-      //   workbox: {
-      //     globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,json,vue}'],
-      //   },
-      //   manifest: {
-      //     name: 'Calendar Musics',
-      //     short_name: 'CalMusics',
-      //     description: 'A calendar of musics',
-      //     theme_color: '#ffffff',
-      //     icons: [
-      //       {
-      //         src: 'pwa-icons/pwa-192x192.png',
-      //         sizes: '192x192',
-      //         type: 'image/png',
-      //       },
-      //       {
-      //         src: 'pwa-icons/pwa-512x512.png',
-      //         sizes: '512x512',
-      //         type: 'image/png',
-      //       },
-      //       {
-      //         src: 'pwa-icons/pwa-512x512.png',
-      //         sizes: '512x512',
-      //         type: 'image/png',
-      //         purpose: 'any maskable',
-      //       },
-      //     ],
-      //   },
-      // }),
+      VitePWA({ // PWA Configuration
+        registerType: 'autoUpdate',
+        injectRegister: 'autoUpdate',
+        workbox: {
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,json,vue}'],
+        },
+        manifest: {
+          name: 'Calendar Musics',
+          short_name: 'CalMusics',
+          description: 'A calendar of musics',
+          theme_color: '#ffffff',
+          start_url: '/qr-scanner',
+          scope: base,
+          icons: [
+            {
+              src: 'pwa-icons/pwa-192x192.png',
+              sizes: '192x192',
+              type: 'image/png',
+            },
+            {
+              src: 'pwa-icons/pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+            },
+            {
+              src: 'pwa-icons/pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any maskable',
+            },
+          ],
+        },
+      }),
     ],
     resolve: {
       alias: {

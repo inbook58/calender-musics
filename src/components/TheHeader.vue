@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
+import songs from '@/data/songs.json'
 
 const isMenuOpen = ref(false)
 const router = useRouter()
@@ -29,17 +30,20 @@ const goToTodaysSong = () => {
 
   if (viewedTodaySong === 'true') {
     // If already viewed, go directly to the song page
-    router.push({ name: 'Song', params: { id: todayId.value } })
+    const todaySong = songs.find((s) => s.id === todayId.value)
+    if (todaySong) {
+      router.push({ name: 'Song', params: { shareId: todaySong.shareId } })
+    }
   } else {
-    // If not viewed, go to the QR scanner page (root)
-    router.push({ path: '/' })
+    // If not viewed, go to the QR scanner page
+    router.push({ path: '/qr-scanner' })
   }
 }
 </script>
 
 <template>
   <header class="header">
-    <RouterLink to="/home" class="site-title" @click="closeMenu">
+    <RouterLink to="/" class="site-title" @click="closeMenu">
       <img src="/images/icon_sample.png" alt="Calendar Musics" class="site-logo" />
     </RouterLink>
 
@@ -52,8 +56,8 @@ const goToTodaysSong = () => {
   </header>
 
   <nav class="drawer-nav" :class="{ open: isMenuOpen }">
-    <RouterLink to="/home" @click="closeMenu">ホーム</RouterLink>
-    <RouterLink to="/" @click="closeMenu">今日の一曲</RouterLink>
+    <RouterLink to="/" @click="closeMenu">ホーム</RouterLink>
+    <RouterLink to="/qr-scanner" @click="closeMenu">今日の一曲</RouterLink>
     <RouterLink to="/song-list" @click="closeMenu">昨日までの楽曲</RouterLink>
     <RouterLink to="/about" @click="closeMenu">アプリの使い方</RouterLink>
     <RouterLink to="/about" @click="closeMenu">販売促進ページ</RouterLink>

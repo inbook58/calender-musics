@@ -10,14 +10,14 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      name: 'QrScanner',
-      component: QrScannerView
-    },
-    {
-      path: '/home',
       name: 'Home',
       component: HomeView,
       meta: { fullWidth: true }
+    },
+    {
+      path: '/qr-scanner',
+      name: 'QrScanner',
+      component: QrScannerView
     },
     {
       path: '/about',
