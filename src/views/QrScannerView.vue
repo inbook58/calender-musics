@@ -20,6 +20,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library'
 import { useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
+import songs from '@/data/songs.json'
 
 const video = ref<HTMLVideoElement | null>(null)
 const result = ref<string | null>(null)
@@ -44,11 +45,15 @@ const startCamera = async () => {
       video.value.srcObject = stream
       codeReader.decodeFromStream(stream, video.value, (decodeResult, err) => {
         if (decodeResult) {
-          result.value = decodeResult.getText()
-          console.log('QR Code Scanned:', result.value)
-          if (result.value.startsWith('http://') || result.value.startsWith('https://')) {
-            window.location.href = result.value
-            stopCamera()
+          const scannedText = decodeResult.getText()
+          result.value = scannedText
+          console.log('Scanned:', scannedText)
+          stopCamera()
+
+          if (scannedText.startsWith('http://') || scannedText.startsWith('https://')) {
+            window.location.href = scannedText
+          } else {
+            router.push({ name: 'Song', params: { shareId: scannedText } })
           }
         }
         if (err && !(err instanceof NotFoundException)) {
@@ -81,7 +86,10 @@ onMounted(async () => {
   if (viewedTodaySong === 'true') {
     const start = new Date(today.getFullYear(), 0, 1)
     const todayId = Math.floor((+today - +start) / 86400000) + 1
-    router.replace({ name: 'Song', params: { id: todayId } })
+    const todaySong = songs.find((s) => s.id === todayId)
+    if (todaySong) {
+      router.replace({ name: 'Song', params: { shareId: todaySong.shareId } })
+    }
     return
   }
 

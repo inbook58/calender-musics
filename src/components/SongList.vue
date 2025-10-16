@@ -5,7 +5,7 @@
       <RouterLink
         v-for="song in visibleSongs"
         :key="song.id"
-        :to="{ name: 'Song', params: { id: song.id } }"
+        :to="{ name: 'Song', params: { shareId: song.shareId } }"
         class="song-item"
       >
         <img :src="song.image" :alt="song.title" class="thumbnail" />

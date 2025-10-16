@@ -30,3 +30,4 @@ gemini.md
 
 *.tsbuildinfo
 .env
+/public/qr-codes

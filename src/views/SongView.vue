@@ -4,17 +4,12 @@ import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 
-const props = defineProps<{ id: string }>()
+const props = defineProps<{ shareId: string }>()
 const router = useRouter()
 
 const isPlayerLoaded = ref(false)
 
-const idAsNumber = computed(() => {
-  const n = Number(props.id)
-  return Number.isFinite(n) ? n : NaN
-})
-
-const song = computed(() => songs.find((s) => s.id === idAsNumber.value))
+const song = computed(() => songs.find((s) => s.shareId === props.shareId))
 
 const spotifySrc = computed(() => {
   const spotifyHtml = song.value?.players?.spotify
@@ -32,15 +27,16 @@ watch(
 )
 
 const displayDate = computed(() => {
+  if (!song.value) return ''
   const year = 2025
-  const date = new Date(year, 0, idAsNumber.value) // Month is 0-indexed, so 0 is January
+  const date = new Date(year, 0, song.value.id) // Month is 0-indexed, so 0 is January
   const month = date.getMonth() + 1 // getMonth() returns 0-11
   const day = date.getDate()
   const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()]
   return `${year}年${month}月${day}日 (${dayOfWeek})`
 })
 
-const currentIndex = computed(() => songs.findIndex((s) => s.id === idAsNumber.value))
+const currentIndex = computed(() => (song.value ? songs.findIndex((s) => s.id === song.value.id) : -1))
 const prevSong = computed(() => (currentIndex.value > 0 ? songs[currentIndex.value - 1] : null))
 const nextSong = computed(() =>
   currentIndex.value < songs.length - 1 ? songs[currentIndex.value + 1] : null,
@@ -94,12 +90,12 @@ const imageUrl = computed(() => {
   return base + normalized
 })
 
-const navigateTo = (id: number) => {
-  router.push({ name: 'Song', params: { id } })
+const navigateTo = (shareId: string) => {
+  router.push({ name: 'Song', params: { shareId } })
 }
 
-watch(idAsNumber, () => {
-  if (typeof window !== 'undefined' && idAsNumber.value === todayId.value) {
+watch(song, () => {
+  if (typeof window !== 'undefined' && song.value && song.value.id === todayId.value) {
     // Check if running in browser and if it's today's song
     const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
     const dateString = `${today.getFullYear()}-${(today.getMonth() + 1)
@@ -139,8 +135,8 @@ watch(idAsNumber, () => {
       >
 
       <div class="navigation-buttons">
-        <button :disabled="!prevSong" @click="navigateTo(prevSong.id)">前の日</button>
-        <button :disabled="isNextSongDisabled" @click="navigateTo(nextSong.id)">次の日</button>
+        <button :disabled="!prevSong" @click="navigateTo(prevSong.shareId)">前の日</button>
+        <button :disabled="isNextSongDisabled" @click="navigateTo(nextSong.shareId)">次の日</button>
       </div>
     </main>
     <main v-else>404: ページが見つかりません</main>

@@ -25,7 +25,7 @@ export default createRouter({
       component: AboutView
     },
     {
-      path: '/:id',
+      path: '/song/:shareId',
       name: 'Song',
       component: SongPage,
       props: true
