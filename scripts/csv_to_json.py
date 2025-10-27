@@ -62,12 +62,22 @@ def standardize_iframe_dimensions(iframe_html):
 
 
 def convert_csv_to_json():
+    ids_file_path = 'src/data/share_ids.json'
+    
+    try:
+        with open(ids_file_path, 'r', encoding='utf-8') as f:
+            share_ids_map = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        share_ids_map = {}
+
     songs = []
+    updated_ids = False
     try:
         with open('src/data/songs.csv', 'r', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                song_id = int(row.get('id'))
+                song_id_str = row.get('id')
+                song_id = int(song_id_str)
                 spotify_player_html = row.get('spotify_player')
                 apple_player_html = row.get('apple_player')
 
@@ -87,7 +97,15 @@ def convert_csv_to_json():
                         'apple': standardized_apple_player
                     }
                 }
-                song['shareId'] = generate_share_id()
+                
+                if song_id_str in share_ids_map:
+                    song['shareId'] = share_ids_map[song_id_str]
+                else:
+                    new_share_id = generate_share_id()
+                    song['shareId'] = new_share_id
+                    share_ids_map[song_id_str] = new_share_id
+                    updated_ids = True
+                
                 songs.append(song)
     except FileNotFoundError:
         print("Error: src/data/songs.csv not found. Please ensure the CSV file exists.")
@@ -95,6 +113,14 @@ def convert_csv_to_json():
     except Exception as e:
         print(f"An error occurred while reading the CSV: {e}")
         return
+
+    if updated_ids:
+        try:
+            with open(ids_file_path, 'w', encoding='utf-8') as f:
+                json.dump(share_ids_map, f, indent=2)
+            print("Successfully updated share_ids.json with new IDs.")
+        except Exception as e:
+            print(f"An error occurred while writing share_ids.json: {e}")
 
     try:
         with open('src/data/songs.json', 'w', encoding='utf-8') as jsonfile:
