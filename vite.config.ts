@@ -7,7 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa' // Import VitePWA
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => {
-  const repoBase = '/'
+  const repoBase = '/calender-musics/'
   const base = process.env.VITE_BASE_URL ?? (command === 'build' ? repoBase : '/')
 
   return {
