@@ -83,6 +83,7 @@ onMounted(() => {
           the one that defines your day.</p>
         </div>
       </div>
+      <br>
 
       <div class="text-block">
         <div class="main-text">
