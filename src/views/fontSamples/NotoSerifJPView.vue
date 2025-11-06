@@ -86,8 +86,15 @@ onMounted(() => {
 
       <div class="text-block">
         <div class="main-text">
-          <p>いい日とよくない日<br>好きな曲とそうでない曲</p>
-          <p class="en">Good days and bad days.<br>Songs you love and songs you don’t.</p>
+          <p>いい日とよくない日</p>
+          <p class="en">Good days and bad days.</p>
+        </div>
+      </div>
+
+      <div class="text-block">
+        <div class="main-text">
+          <p>好きな曲とそうでない曲</p>
+          <p class="en">Songs you love and songs you don’t.</p>
         </div>
       </div>
 
