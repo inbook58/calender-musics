@@ -101,8 +101,8 @@ onMounted(() => {
 
       <div class="text-block">
         <div class="main-text">
-          <p>dia a dia(一日一日)は<br>あなたの一年を<br>音楽とともに楽しむカレンダー</p>
-          <p class="en">dia a dia is a calendar<br>to experience your year,<br>one day at a time,<br>through music.</p>
+          <p>dia diaは<br>あなたの一年を<br>音楽とともに楽しむカレンダー</p>
+          <p class="en">dia dia is a calendar<br>to experience your year,<br>one day at a time,<br>through music.</p>
         </div>
       </div>
     </div>
