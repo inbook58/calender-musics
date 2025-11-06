@@ -9,6 +9,7 @@ import BIZUDPGothicView from '@/views/fontSamples/BIZ_UDPGothic.vue'
 import KosugiView from '@/views/fontSamples/KosugiView.vue'
 import NotoSerifJPView from '@/views/fontSamples/NotoSerifJPView.vue'
 import RampartOneView from '@/views/fontSamples/RampartOneView.vue'
+import IBMPlexSansJPView from '@/views/fontSamples/IBMPlexSansJPView.vue'
 
 export default createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -68,6 +69,12 @@ export default createRouter({
       path: '/font-sample/rampart-one',
       name: 'RampartOne',
       component: RampartOneView,
+      meta: { fullWidth: true }
+    },
+    {
+      path: '/font-sample/ibm-plex-sans-jp',
+      name: 'IBMPlexSansJP',
+      component: IBMPlexSansJPView,
       meta: { fullWidth: true }
     }
   ]

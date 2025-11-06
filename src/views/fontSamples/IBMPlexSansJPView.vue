@@ -212,11 +212,11 @@ onMounted(() => {
 }
 
 .jp {
-  font-family: 'Kosugi', sans-serif;
+  font-family: 'IBM Plex Sans JP', sans-serif;
 }
 
 .jp-heading {
-  font-family: 'Kosugi', sans-serif;
+  font-family: 'IBM Plex Sans JP', sans-serif;
 }
 
 .en {
