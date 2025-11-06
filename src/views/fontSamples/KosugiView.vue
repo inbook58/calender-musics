@@ -12,6 +12,24 @@ onMounted(() => {
       isHeaderVisible.value = true
     }, 1600)
   })
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    {
+      threshold: 0.2, // Trigger when 20% of the element is visible
+    }
+  )
+
+  document.querySelectorAll('.text-block').forEach((el) => {
+    observer.observe(el)
+  })
 })
 </script>
 
@@ -35,15 +53,9 @@ onMounted(() => {
           <span class="en-heading">Tear the pages</span>
         </h1>
         <div class="main-text">
-          <p>
-            あなたが向き合うのは<br>
-            今日だけです<br>
-            前も後もありません。
-          </p>
-          <p class="en">
-            What you face is only today<br>
-            —no before, no after.
-          </p>
+          <p>あなたが向き合うのは<br>今日だけです<br>
+          前も後もありません。</p>
+          <p class="en">What you face is only today<br>—no before, no after.</p>
         </div>
       </div>
 
@@ -53,16 +65,8 @@ onMounted(() => {
           <span class="en-heading">Find the changes</span>
         </h1>
         <div class="main-text">
-          <p>
-            よく見てください<br>
-            日付やイラストは<br>
-            毎日少しづつ変わっていきます
-          </p>
-          <p class="en">
-            Pay attention to the page.<br>
-            The dates and illustrations shift,<br>
-            little by little.
-          </p>
+          <p>よく見てください<br>日付やイラストは<br>毎日少しづつ変わっていきます</p>
+          <p class="en">Pay attention to the page.<br>The dates and illustrations shift,<br>little by little.</p>
         </div>
       </div>
 
@@ -72,17 +76,11 @@ onMounted(() => {
           <span class="en-heading">Listen the songs</span>
         </h1>
         <div class="main-text">
-          <p>
-            一曲づつ並び替えました<br>
-            その曲はその日を<br>
-            象徴するものになるかもしれません
-          </p>
-          <p class="en">
-            Each song has been carefully selected<br>
-            and reordered.<br>
-            That song might become<br>
-            the one that defines your day.
-          </p>
+          <p>一曲づつ並び替えました<br>
+          その曲はその日を<br>象徴するものになるかもしれません</p>
+          <p class="en">Each song has been carefully selected<br>
+          and reordered.<br>That song might become<br>
+          the one that defines your day.</p>
         </div>
       </div>
 
@@ -96,7 +94,7 @@ onMounted(() => {
       <div class="text-block">
         <div class="main-text">
           <p>dia a dia(一日一日)は<br>あなたの一年を<br>音楽とともに楽しむカレンダー</p>
-          <p class="en">dia dia is a calendar<br>to experience your year,<br>one day at a time,<br>through music.</p>
+          <p class="en">dia a dia is a calendar<br>to experience your year,<br>one day at a time,<br>through music.</p>
         </div>
       </div>
     </div>
@@ -182,6 +180,14 @@ onMounted(() => {
 
 .text-block {
   margin-bottom: 45px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .heading {
