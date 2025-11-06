@@ -14,22 +14,22 @@ import TheHeader from '@/components/TheHeader.vue'
   </div>
   <div class="about-members">
     <div class="about-ibuki">
-      <img src="/images/ibuki.jpg" alt="Ibuki" class="ibuki-img"/>
       <h2>いぶき</h2>
       <p></p>
     </div>
     <div class="about-migeru">
-      <img src="/images/migeru.jpg" alt="Migeru" class="migeru-img"/>
       <h2>ミゲル</h2>
       <p></p>
     </div>
     <div class="about-miumi">
-      <img src="/images/miumi.jpg" alt="Miumi" class="miumi-img"/>
       <h2>みうみ</h2>
       <p></p>
     </div>
+    <div class="about-ishii">
+      <h2>石井さん</h2>
+      <p></p>
+    </div>
     <div class="about-konboi">
-      <img src="/images/konboi.jpg" alt="Konboi" class="konboi-img"/>
       <h2>コンボーイ</h2>
       <p></p>
     </div>
@@ -72,6 +72,17 @@ import TheHeader from '@/components/TheHeader.vue'
     height: auto;
   }
   .about-miumi {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    top: 20px;
+    left: 20px;
+  }
+  .ishii-img {
+    width: 300px;
+    height: auto;
+  }
+  .about-ishii {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -122,6 +133,12 @@ import TheHeader from '@/components/TheHeader.vue'
     height: auto;
   }
   .about-miumi {
+    width: "200";
+    height: auto;
+    text-align: center;
+    margin: 40px 0;
+  }
+  .about-ishii {
     width: "200";
     height: auto;
     text-align: center;

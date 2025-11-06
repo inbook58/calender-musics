@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import songs from '@/data/songs.json'
-import { computed, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, nextTick, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 
@@ -34,6 +34,26 @@ const displayDate = computed(() => {
   const day = date.getDate()
   const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()]
   return `${year}年${month}月${day}日 (${dayOfWeek})`
+})
+
+const displayDateEn = computed(() => {
+  if (!song.value) return ''
+  const year = 2025
+  const date = new Date(year, 0, song.value.id)
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit',
+    weekday: 'long'
+  })
+  const parts = formatter.formatToParts(date)
+  const pick = (type: Intl.DateTimeFormatPartTypes) => parts.find((part) => part.type === type)?.value ?? ''
+  const month = pick('month')
+  const day = pick('day')
+  const yearStr = pick('year')
+  const weekday = pick('weekday')
+  if (!month || !day || !yearStr || !weekday) return formatter.format(date)
+  return `${month} ${day}, ${yearStr} (${weekday})`
 })
 
 const currentIndex = computed(() => (song.value ? songs.findIndex((s) => s.id === song.value.id) : -1))
@@ -86,8 +106,52 @@ const imageUrl = computed(() => {
   const base = import.meta.env.BASE_URL.endsWith('/')
     ? import.meta.env.BASE_URL
     : import.meta.env.BASE_URL + '/'
-  const normalized = src.startsWith('/') ? src.slice(1) : src
+  let normalized = src
+  if (normalized.startsWith('@public/')) {
+    normalized = normalized.slice('@public/'.length)
+  } else if (normalized.startsWith('/')) {
+    normalized = normalized.slice(1)
+  }
   return base + normalized
+})
+
+const usesBackground = computed(() => Boolean(imageUrl.value))
+
+const headerEl = ref<HTMLElement | null>(null)
+const artAnchor = ref('50%')
+
+const updateArtAnchor = () => {
+  if (!usesBackground.value) {
+    artAnchor.value = '50%'
+    return
+  }
+  const header = headerEl.value
+  if (!header) {
+    artAnchor.value = '50%'
+    return
+  }
+  const container = header.closest('.song-page') as HTMLElement | null
+  if (!container) {
+    artAnchor.value = '50%'
+    return
+  }
+  const headerRect = header.getBoundingClientRect()
+  const containerRect = container.getBoundingClientRect()
+  const centerOffset = headerRect.top - containerRect.top + headerRect.height / 2 - 20
+  artAnchor.value = `${centerOffset}px`
+}
+
+const handleResize = () => {
+  if (typeof window === 'undefined') return
+  updateArtAnchor()
+}
+
+const headerArtStyle = computed<Record<string, string> | undefined>(() => {
+  if (!usesBackground.value || !imageUrl.value) return undefined
+  return {
+    '--song-date-art-image': `url('${imageUrl.value}')`,
+    '--song-date-art-anchor': artAnchor.value,
+  }
 })
 
 const navigateTo = (shareId: string) => {
@@ -104,39 +168,81 @@ watch(song, () => {
     localStorage.setItem(`viewedTodaySong_${dateString}`, 'true')
   }
 }, { immediate: true })
+
+watch([song, usesBackground], async () => {
+  if (typeof window === 'undefined') return
+  await nextTick()
+  updateArtAnchor()
+})
+
+watch(headerEl, async () => {
+  if (typeof window === 'undefined') return
+  await nextTick()
+  updateArtAnchor()
+})
+
+onMounted(() => {
+  if (typeof window === 'undefined') return
+  updateArtAnchor()
+  window.addEventListener('resize', handleResize, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  if (typeof window === 'undefined') return
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <template>
   <TheHeader />
   <Transition name="fade" appear>
-    <main v-if="song" class="container">
-      <h1>{{ displayDate }}</h1>
-      <img v-if="imageUrl" :src="imageUrl" alt="" @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')" />
-      <p>{{ song.description }}</p>
+    <main
+      v-if="song"
+      class="song-page"
+      :class="{ 'song-page--with-date-art': usesBackground, 'song-page--standard': !usesBackground }"
+      :style="headerArtStyle"
+    >
+      <div class="content">
+        <header ref="headerEl" class="song-page__header">
+          <h1>{{ displayDate }}</h1>
+          <p v-if="displayDateEn" class="song-page__date-en">{{ displayDateEn }}</p>
+        </header>
+        <img
+          v-if="imageUrl && !usesBackground"
+          :src="imageUrl"
+          alt=""
+          @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')"
+        />
 
-      <div class="spotify-player" :class="{ 'is-loaded': isPlayerLoaded }">
-        <iframe
-          v-if="spotifySrc"
-          :key="spotifySrc"
-          :src="spotifySrc"
-          width="100%"
-          height="152"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          @load="isPlayerLoaded = true"
-        ></iframe>
-      </div>
+        <div class="spotify-player" :class="{ 'is-loaded': isPlayerLoaded }">
+          <iframe
+            v-if="spotifySrc"
+            :key="spotifySrc"
+            :src="spotifySrc"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            @load="isPlayerLoaded = true"
+          ></iframe>
+        </div>
 
-      <div v-if="song.players?.apple" v-html="song.players.apple" class="apple-player" :class="{ 'is-loaded': isPlayerLoaded }"></div>
-      <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
-        >リンク</a
-      >
+        <div
+          v-if="song.players?.apple"
+          v-html="song.players.apple"
+          class="apple-player"
+          :class="{ 'is-loaded': isPlayerLoaded }"
+        ></div>
+        <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
+          >リンク</a
+        >
 
-      <div class="navigation-buttons">
-        <button :disabled="!prevSong" @click="navigateTo(prevSong.shareId)">前の日</button>
-        <button :disabled="isNextSongDisabled" @click="navigateTo(nextSong.shareId)">次の日</button>
+        <div class="navigation-buttons">
+          <button :disabled="!prevSong" @click="navigateTo(prevSong.shareId)">前の日</button>
+          <button :disabled="isNextSongDisabled" @click="navigateTo(nextSong.shareId)">次の日</button>
+        </div>
       </div>
     </main>
     <main v-else>404: ページが見つかりません</main>
@@ -144,10 +250,6 @@ watch(song, () => {
 </template>
 
 <style scoped>
-main {
-  padding: 20px;
-}
-
 .fade-enter-active {
   transition: opacity 2s ease;
 }
@@ -155,11 +257,95 @@ main {
   opacity: 0;
 }
 
-.container {
+
+.song-page {
+  position: relative;
+  padding: 24px 16px;
+}
+
+.song-page--standard {
   max-width: 720px;
   margin: 40px auto;
   padding: 20px 36px;
 }
+
+.song-page--with-date-art {
+  position: relative;
+  max-width: 960px;
+  margin: 60px auto;
+  padding: clamp(32px, 6vw, 64px);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.song-page__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(36px, 7vw, 88px) 0;
+}
+
+.song-page__header h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.85);
+}
+
+.song-page__date-en {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(30, 30, 30, 0.82);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+}
+
+.song-page--with-date-art::before {
+  content: '';
+  position: absolute;
+  top: var(--song-date-art-anchor, 50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 280px;
+  background-image: var(--song-date-art-image);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+@media (max-width: 760px) {
+  .song-page--with-date-art {
+    margin: 0px auto;
+    padding: 24px 20px;
+  }
+
+  .song-page__header {
+    padding: 32px 0;
+  }
+
+  .song-page__date-en {
+    font-size: 0.95rem;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;

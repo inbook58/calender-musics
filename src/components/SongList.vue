@@ -1,14 +1,24 @@
 <template>
   <div class="container">
-    <h2>{{ formattedYesterdayDate }}までの楽曲</h2>
+    <h2>{{ formattedSelectedDate }}までの楽曲</h2>
+    <div class="date-selector">
+      <select v-model="selectedMonth">
+        <option v-for="m in availableMonths" :key="m" :value="m">{{ m }}月</option>
+      </select>
+      <select v-model="selectedDay">
+        <option v-for="d in availableDaysInMonth" :key="d" :value="d">{{ d }}日</option>
+      </select>
+    </div>
     <div class="song-list">
       <RouterLink
         v-for="song in visibleSongs"
         :key="song.id"
         :to="{ name: 'Song', params: { shareId: song.shareId } }"
         class="song-item"
+        :class="{ 'song-item--with-image': resolveImageUrl(song.image) }"
+        :style="cardBackgroundStyle(song.image)"
       >
-        <img :src="song.image" :alt="song.title" class="thumbnail" />
+        <div class="song-item__overlay"></div>
         <div class="song-info">
           <p class="song-date">{{ formatDate(song.id) }}</p>
           <h2 class="song-title">{{ song.title }}</h2>
@@ -22,35 +32,118 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import songs from '@/data/songs.json'
 import TheHeader from '@/components/TheHeader.vue'
+
+// songs.json から存在する日付の情報を前処理する
+const availableDates = songs.reduce(
+  (acc, song) => {
+    const date = new Date(2025, 0, song.id)
+    const month = date.getMonth() + 1
+    const day = date.getDate()
+    if (!acc[month]) {
+      acc[month] = new Set()
+    }
+    acc[month].add(day)
+    return acc
+  },
+  {} as Record<number, Set<number>>
+)
+
+const availableMonths = Object.keys(availableDates).map(Number).sort((a, b) => a - b)
 
 const INITIAL_DISPLAY_COUNT = 5
 const LOAD_MORE_COUNT = 10
 
 const displayCount = ref(INITIAL_DISPLAY_COUNT)
 
+const resolveImageUrl = (src?: string) => {
+  if (!src) return ''
+  if (/^https?:\/\//.test(src)) return src
+  const base = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`
+  let normalized = src
+  if (normalized.startsWith('@public/')) {
+    normalized = normalized.slice('@public/'.length)
+  } else if (normalized.startsWith('/')) {
+    normalized = normalized.slice(1)
+  }
+  return base + normalized
+}
+
+const cardBackgroundStyle = (src?: string) => {
+  const url = resolveImageUrl(src)
+  return url
+    ? {
+        '--song-card-image': `url('${url}')`
+      }
+    : undefined
+}
+
 // 今日の日付（JST）を基準に、年初からの日数を計算
 const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
 const start = new Date(now.getFullYear(), 0, 1) // 今年の1月1日
 const currentDayOfYear = Math.floor((+now - +start) / 86400000) + 1 // 1-indexed day of year
-const yesterdayId = currentDayOfYear > 1 ? currentDayOfYear - 1 : 0; // Day of year for yesterday, 0 if it's Jan 1st
+
+const yesterday = new Date(now)
+yesterday.setDate(now.getDate() - 1)
+
+const selectedMonth = ref(yesterday.getMonth() + 1)
+const selectedDay = ref(yesterday.getDate())
+
+const availableDaysInMonth = computed(() => {
+  return availableDates[selectedMonth.value]
+    ? Array.from(availableDates[selectedMonth.value]).sort((a, b) => a - b)
+    : []
+})
+
+// 月が変更されたときに日の妥当性をチェック
+watch(selectedMonth, (newMonth) => {
+  const days = availableDates[newMonth]
+  if (!days || !days.has(selectedDay.value)) {
+    // 新しい月で現在の日付が存在しない場合、その月の最初の日付を選択
+    selectedDay.value = availableDaysInMonth.value[0]
+  }
+})
+
+const getDayOfYear = (month: number, day: number, year: number = 2025) => {
+  const date = new Date(year, month - 1, day)
+  const start = new Date(year, 0, 1)
+  return Math.floor((+date - +start) / 86400000) + 1
+}
+
+const selectedDayOfYear = computed(() => getDayOfYear(selectedMonth.value, selectedDay.value))
 
 const formatDate = (dayOfYear: number, year: number = 2025) => {
-  const date = new Date(year, 0, dayOfYear);
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
-  return `${month}月${day}日 (${dayOfWeek})`;
-};
+  const date = new Date(year, 0, dayOfYear)
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()]
+  return `${month}月${day}日 (${dayOfWeek})`
+}
 
-const formattedYesterdayDate = computed(() => formatDate(yesterdayId));
+const formattedSelectedDate = computed(() => formatDate(selectedDayOfYear.value))
 
 // 表示対象の全曲リスト（ソート済み）
 const allVisibleSongs = computed(() =>
-  songs.filter((s) => s.id <= yesterdayId).sort((a, b) => b.id - a.id)
+  songs
+    .filter((s) => {
+      if (s.id > currentDayOfYear) {
+        return false
+      }
+      if (s.id === currentDayOfYear) {
+        const dateString = `${now.getFullYear()}-${(now.getMonth() + 1)
+          .toString()
+          .padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`
+        const viewedTodaySong = localStorage.getItem(`viewedTodaySong_${dateString}`)
+        return viewedTodaySong === 'true' && s.id <= selectedDayOfYear.value
+      }
+      return s.id <= selectedDayOfYear.value
+    })
+    .sort((a, b) => b.id - a.id)
 )
 
 // 現在表示する曲のリスト
@@ -73,50 +166,102 @@ const loadMore = () => {
   padding: 0px 20px;
 }
 
+.date-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.date-selector select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
 .song-list {
   display: grid;
   gap: 12px;
   margin-top: 24px;
 }
 
+
 .song-item {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(18px, 3vw, 28px);
+  border-radius: 14px;
+  border: 1px solid rgba(230, 230, 230, 0.5);
+  background: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-decoration: none;
   color: inherit;
-  transition: background-color 0.2s ease;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.song-item--with-image {
+  background: #fff;
+  color: #111;
+}
+
+.song-item--with-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--song-card-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.song-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.9));
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .song-item:hover {
-  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(20, 20, 20, 0.18);
 }
 
-.thumbnail {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 4px;
-  flex-shrink: 0;
+.song-item--with-image:hover::before {
+  transform: scale(1.02);
+  opacity: 0.45;
+}
+
+.song-item--with-image:hover .song-item__overlay {
+  opacity: 0.85;
 }
 
 .song-info {
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .song-date {
-  font-size: 0.8rem;
-  color: #666;
-  margin: 0 0 4px 0;
+  font-size: 0.78rem;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.75;
 }
 
 .song-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0 0 8px 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-weight: 700;
+  margin: 0;
+  color: inherit;
 }
 
 .description {
@@ -147,3 +292,4 @@ const loadMore = () => {
   background-color: #f0f0f0;
 }
 </style>
+
