@@ -29,17 +29,17 @@ export default defineConfig(({ command }) => {
           scope: base,
           icons: [
             {
-              src: 'public/images/icon_sample.png',
+              src: 'images/icon_sample.png',
               sizes: '192x192',
               type: 'image/png',
             },
             {
-              src: 'public/images/icon_sample.png',
+              src: 'images/icon_sample.png',
               sizes: '512x512',
               type: 'image/png',
             },
             {
-              src: 'public/images/icon_sample.png',
+              src: 'images/icon_sample.png',
               sizes: '512x512',
               type: 'image/png',
               purpose: 'any maskable',
