@@ -113,6 +113,7 @@ onMounted(() => {
           </div>
           <div class="product-info">
             <h2 class="product-name">diadia</h2>
+            <h2 class="product-name">日めくりカレンダー2026</h2>
             <p class="product-price">¥3,500</p>
           </div>
         </a>
@@ -273,34 +274,34 @@ onMounted(() => {
   }
 
   .product-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
   }
 
   .product-price {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 8px 0 0;
     color: #555;
   }
 }
 @media screen and (max-width: 480px) {
   .product-image img{
-    width: 160px;
+    width: 140px;
     height: auto;
     border-radius: 8px;
   }
   .product-info {
-    margin-left: 22px;
+    margin-left: 16px;
     text-align: left;
   }
   .product-name {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     margin: 0;
   }
   .product-price {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0px 0 0;
     color: #555;
   }
