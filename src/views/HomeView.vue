@@ -27,21 +27,21 @@ onMounted(() => {
     }
   )
 
-  document.querySelectorAll('.text-block').forEach((el) => {
+  document.querySelectorAll('.text-block, .product-section').forEach((el) => {
     observer.observe(el)
   })
 })
 </script>
 
 <template>
-  <div class="font-sample">
+  <div class="font-en">
     <div class="home-header" :class="{ 'home-header--visible': isHeaderVisible }">
       <TheHeader />
     </div>
     <main class="home" :class="{ 'home--visible': isReady }">
       <section class="hero">
         <div class="hero__overlay">
-          <h1 class="hero__title">dia dia</h1>
+          <h1 class="hero__title">diadia</h1>
           <p class="hero__subtitle"></p>
         </div>
       </section>
@@ -53,7 +53,7 @@ onMounted(() => {
           </h1>
           <div class="main-text">
             <p class="jp">あなたが向き合うのは<br>今日だけです<br>
-            前も後もありません。</p>
+            前も後ろもありません。</p>
             <p class="en">What you face is only today<br>—no before, no after.</p>
           </div>
         </div>
@@ -101,17 +101,28 @@ onMounted(() => {
         <br>
         <div class="text-block">
           <div class="main-text">
-            <p class="jp">dia diaは<br>あなたの一年を<br>音楽とともに楽しむカレンダー</p>
-            <p class="en">dia dia is a calendar<br>to experience your year,<br>one day at a time,<br>through music.</p>
+            <p class="jp"><span class="font-en">diadia</span>は<br>あなたの一年を<br>音楽とともに楽しむカレンダー</p>
+            <p class="en">diadia is a calendar<br>to experience your year,<br>one day at a time,<br>through music.</p>
           </div>
         </div>
       </div>
+      <section class="product-section text-block">
+        <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
+          <div class="product-image">
+            <img src="/images/pics_product.jpg" alt="diadia calendar">
+          </div>
+          <div class="product-info">
+            <h2 class="product-name">diadia</h2>
+            <p class="product-price">¥3,500</p>
+          </div>
+        </a>
+      </section>
     </main>
   </div>
 </template>
 
 <style scoped>
-.font-sample {
+.font-en {
   font-family: 'Noto Serif JP', serif;
 }
 
@@ -172,12 +183,6 @@ onMounted(() => {
   font-size: clamp(1.1rem, 3.2vw, 1.6rem);
 }
 
-@media (min-width: 768px) {
-  .home {
-    gap: 32px;
-  }
-}
-
 .container {
   max-width: 720px;
   margin: 40px auto;
@@ -230,5 +235,74 @@ onMounted(() => {
   font-weight: normal;
   margin-top: 4px;
   opacity: 0.8;
+}
+
+.product-section {
+  margin-top: 80px;
+  padding: 20px;
+  text-align: center;;
+}
+
+.product-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: inherit;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.product-link:hover {
+  background-color: #f9f9f9;
+}
+
+@media screen and (min-width: 481px)  {
+  .product-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .product-info {
+    margin-left: 30px;
+    text-align: left;
+  }
+
+  .product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+    margin: 8px 0 0;
+    color: #555;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product-image img{
+    width: 160px;
+    height: auto;
+  }
+  .product-info {
+    margin-left: 22px;
+    text-align: left;
+  }
+  .product-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  .product-price {
+    font-size: 1rem;
+    margin: 0px 0 0;
+    color: #555;
+  }
 }
 </style>

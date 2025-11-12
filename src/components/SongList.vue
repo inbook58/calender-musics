@@ -40,7 +40,7 @@ import TheHeader from '@/components/TheHeader.vue'
 // songs.json から存在する日付の情報を前処理する
 const availableDates = songs.reduce(
   (acc, song) => {
-    const date = new Date(2025, 0, song.id)
+    const date = new Date(2026, 0, song.id)
     const month = date.getMonth() + 1
     const day = date.getDate()
     if (!acc[month]) {
@@ -109,7 +109,7 @@ watch(selectedMonth, (newMonth) => {
   }
 })
 
-const getDayOfYear = (month: number, day: number, year: number = 2025) => {
+const getDayOfYear = (month: number, day: number, year: number = 2026) => {
   const date = new Date(year, month - 1, day)
   const start = new Date(year, 0, 1)
   return Math.floor((+date - +start) / 86400000) + 1
@@ -117,7 +117,7 @@ const getDayOfYear = (month: number, day: number, year: number = 2025) => {
 
 const selectedDayOfYear = computed(() => getDayOfYear(selectedMonth.value, selectedDay.value))
 
-const formatDate = (dayOfYear: number, year: number = 2025) => {
+const formatDate = (dayOfYear: number, year: number = 2026) => {
   const date = new Date(year, 0, dayOfYear)
   const month = date.getMonth() + 1
   const day = date.getDate()

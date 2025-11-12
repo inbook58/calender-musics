@@ -28,7 +28,7 @@ watch(
 
 const displayDate = computed(() => {
   if (!song.value) return ''
-  const year = 2025
+  const year = 2026
   const date = new Date(year, 0, song.value.id) // Month is 0-indexed, so 0 is January
   const month = date.getMonth() + 1 // getMonth() returns 0-11
   const day = date.getDate()
@@ -38,7 +38,7 @@ const displayDate = computed(() => {
 
 const displayDateEn = computed(() => {
   if (!song.value) return ''
-  const year = 2025
+  const year = 2026
   const date = new Date(year, 0, song.value.id)
   const formatter = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -272,8 +272,8 @@ onBeforeUnmount(() => {
 .song-page--with-date-art {
   position: relative;
   max-width: 960px;
-  margin: 60px auto;
-  padding: clamp(32px, 6vw, 64px);
+  margin: 0 auto 60px auto;
+  padding: 0 clamp(32px, 6vw, 64px);
 }
 
 .content {
