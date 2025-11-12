@@ -34,12 +34,12 @@ export default defineConfig(({ command }) => {
               type: 'image/png',
             },
             {
-              src: 'pwa-icons/pwa-512x512.png',
+              src: 'public/images/icon_sample.png',
               sizes: '512x512',
               type: 'image/png',
             },
             {
-              src: 'pwa-icons/pwa-512x512.png',
+              src: 'public/images/icon_sample.png',
               sizes: '512x512',
               type: 'image/png',
               purpose: 'any maskable',
