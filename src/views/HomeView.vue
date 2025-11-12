@@ -109,7 +109,7 @@ onMounted(() => {
       <section class="product-section text-block">
         <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
           <div class="product-image">
-            <img src="/images/pics_product.jpg" alt="diadia calendar">
+            <img src="/images/pics_product2.jpg" alt="diadia calendar">
           </div>
           <div class="product-info">
             <h2 class="product-name">diadia</h2>
