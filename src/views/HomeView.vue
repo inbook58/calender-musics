@@ -238,7 +238,6 @@ onMounted(() => {
 }
 
 .product-section {
-  margin-top: 80px;
   padding: 20px;
   text-align: center;;
 }
@@ -265,7 +264,7 @@ onMounted(() => {
   .product-image img {
     width: 200px;
     height: auto;
-    border-radius: 6px;
+    border-radius: 8px;
   }
 
   .product-info {
@@ -289,6 +288,7 @@ onMounted(() => {
   .product-image img{
     width: 160px;
     height: auto;
+    border-radius: 8px;
   }
   .product-info {
     margin-left: 22px;
