@@ -21,8 +21,8 @@ export default defineConfig(({ command }) => {
           globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,json,vue}'],
         },
         manifest: {
-          name: 'Calendar Musics',
-          short_name: 'CalMusics',
+          name: 'diadia',
+          short_name: 'diadia',
           description: 'A calendar of musics',
           theme_color: '#ffffff',
           start_url: `${base}qr-scanner`,
