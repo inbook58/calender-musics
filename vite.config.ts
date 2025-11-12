@@ -29,7 +29,7 @@ export default defineConfig(({ command }) => {
           scope: base,
           icons: [
             {
-              src: 'pwa-icons/pwa-192x192.png',
+              src: 'public/images/icon_sample.png',
               sizes: '192x192',
               type: 'image/png',
             },
