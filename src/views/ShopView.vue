@@ -98,6 +98,10 @@ import TheHeader from '@/components/TheHeader.vue'
     margin: 8px 0 0;
     color: #555;
   }
+
+  .product-link {
+    margin-left: 20px;
+  }
 }
 @media screen and (max-width: 480px) {
   .product-image img{
