@@ -13,33 +13,38 @@ export default createRouter({
       path: '/',
       name: 'Home',
       component: HomeView,
-      meta: { fullWidth: true }
+      meta: {title: 'ホーム - diadia', fullWidth: true }
     },
     {
       path: '/qr-scanner',
       name: 'QrScanner',
-      component: QrScannerView
+      component: QrScannerView,
+      meta: {title: 'QRスキャナー - diadia'}
     },
     {
       path: '/how-to-use',
       name: 'HowToUse',
-      component: HowToUseView
+      component: HowToUseView,
+      meta: {title: '使い方 - diadia'}
     },
     {
       path: '/shop',
       name: 'Shop',
-      component: ShopView
+      component: ShopView,
+      meta: {title: 'SHOP - diadia'}
     },
     {
       path: '/song/:shareId',
       name: 'Song',
       component: SongPage,
-      props: true
+      props: true,
+      meta: {title: 'song - diadia'}
     },
     {
       path: '/song-list',
       name: 'SongList',
-      component: Today
+      component: Today,
+      meta: {title: '昨日までの楽曲 - diadia'}
     }
   ]
 })
