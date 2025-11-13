@@ -44,7 +44,7 @@ const goToTodaysSong = () => {
 <template>
   <header class="header">
     <RouterLink to="/" class="site-title" @click="closeMenu">
-      <img src="/images/icon_sample.png" alt="Calendar Musics" class="site-logo" />
+      <img src="/images/diadia_icon.jpg" alt="Calendar Musics" class="site-logo" />
     </RouterLink>
 
     <div class="header-actions">
@@ -94,7 +94,7 @@ const goToTodaysSong = () => {
 }
 
 .site-logo {
-  height: 48px;
+  height: 56px;
   width: auto;
   display: block;
 }
@@ -138,11 +138,13 @@ const goToTodaysSong = () => {
 }
 
 .qr-icon{
-  height: 28px;
+  height: 24px;
   width: auto;
-  margin-right: 6px;
+  margin-right: 4px;
   vertical-align: middle;
   opacity: 0.9;
+  position: relative;
+  top: -1px;
 }
 
 .menu-icon {
