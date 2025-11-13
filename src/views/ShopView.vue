@@ -4,83 +4,120 @@ import TheHeader from '@/components/TheHeader.vue'
 
 <template>
   <TheHeader />
-  <div class="about-image">
-    <img src="/images/about.png" alt="About" />
+  <div class="product-description">
+    <h1 class="heading">SHOP</h1>
+    <div class="product-specs">
+    <p>サイズ：A5</p>
+    <p>厚み　：2.5cm</p>
+    </div>
+    <p>【diadia】</p>
+    <p>
+      "diadia"はスペイン語の "día a día"（一日一日）という言葉から名づけました。<br>
+      「一日一日を大切に」という意味をもつこの言葉に、その日と向き合ってほしいという思いを込めました。<br>
+      365日すべてのページにその日の1曲があります。<br>
+      ページを破ってQRコードを読み取るだけでその日の1曲が聴けます。<br>
+      diadiaはあなたの1年を音楽とともに楽しむカレンダーです。</p>
   </div>
+  <section class="product-section text-block">
+  <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
+    <div class="product-image">
+      <img src="/images/pics_product2.jpg" alt="diadia calendar">
+    </div>
+    <div class="product-info">
+      <h2 class="product-name">diadia</h2>
+      <h2 class="product-name">日めくりカレンダー2026</h2>
+      <p class="product-price">¥3,500</p>
+    </div>
+  </a>
+  </section>
   <div class="about-product">
-    <div class="product-image-container">
-      <img class="how-to-use-img" src="/images/how-to-use/how-to-use1.jpg" alt="Ibuki">
-    </div>
-    <div class="product-description">
-      <p>このアプリはホゲららら。</p>
-    </div>
-  </div>
-  <div class="about-members">
-    <div class="about-ibuki">
-      <h2>いぶき</h2>
-      <p></p>
-    </div>
-    <div class="about-migeru">
-      <h2>ミゲル</h2>
-      <p></p>
-    </div>
-    <div class="about-miumi">
-      <h2>みうみ</h2>
-      <p></p>
-    </div>
-    <div class="about-ishii">
-      <h2>石井さん</h2>
-      <p></p>
-    </div>
-    <div class="about-konboi">
-      <h2>コンボーイ</h2>
-      <p></p>
-    </div>
+
   </div>
 </template>
 
 <style scoped>
-.about-image,
-.about-product {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
 
-.about-image img,
-.how-to-use-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.about-product {
-  align-items: center;
+.heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0px 16px 0px;
 }
 
 .product-description {
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
-@media (min-width: 1024px) {
-  .about-product {
-    display: flex;
-    gap: 20px;
-  }
-  .product-image-container {
-    flex: 0 0 50%; /* Take up 50% of the width */
-  }
-  .product-description {
-    flex: 1;
-  }
+.product-section {
+  padding: 20px;
+  text-align: center;;
 }
 
-@media (max-width: 1023px) {
-  .about-image {
-    text-align: center;
+.product-specs{
+  margin-bottom: 16px;
+}
+
+.product-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: inherit;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.product-link:hover {
+  background-color: #f9f9f9;
+}
+
+@media screen and (min-width: 481px)  {
+  .product-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
   }
-  .about-product {
-    text-align: center;
+
+  .product-info {
+    margin-left: 30px;
+    text-align: left;
+  }
+
+  .product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+    margin: 8px 0 0;
+    color: #555;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product-image img{
+    width: 140px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .product-info {
+    margin-left: 16px;
+    text-align: left;
+  }
+  .product-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  .product-price {
+    font-size: 0.9rem;
+    margin: 0px 0 0;
+    color: #555;
   }
 }
 </style>
