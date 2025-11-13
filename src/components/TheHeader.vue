@@ -59,8 +59,8 @@ const goToTodaysSong = () => {
     <RouterLink to="/" @click="closeMenu">ホーム</RouterLink>
     <RouterLink to="/qr-scanner" @click="closeMenu">今日の一曲</RouterLink>
     <RouterLink to="/song-list" @click="closeMenu">昨日までの楽曲</RouterLink>
-    <RouterLink to="/about" @click="closeMenu">アプリの使い方</RouterLink>
-    <RouterLink to="/about" @click="closeMenu">SHOP</RouterLink>
+    <RouterLink to="/how-to-use" @click="closeMenu">使い方</RouterLink>
+    <RouterLink to="/shop" @click="closeMenu">SHOP</RouterLink>
   </nav>
 
   <div v-if="isMenuOpen" @click="closeMenu" class="overlay"></div>
