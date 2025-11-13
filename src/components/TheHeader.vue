@@ -48,7 +48,7 @@ const goToTodaysSong = () => {
     </RouterLink>
 
     <div class="header-actions">
-      <button @click="goToTodaysSong" class="today-song-button">今日の一曲</button>
+      <button @click="goToTodaysSong" class="today-song-button"><img src="/images/qr-icon.svg" alt="QR Code" class="qr-icon">今日の一曲</button>
       <button @click="toggleMenu" class="menu-button" aria-label="Toggle menu">
         <span class="menu-icon"></span>
       </button>
@@ -60,8 +60,7 @@ const goToTodaysSong = () => {
     <RouterLink to="/qr-scanner" @click="closeMenu">今日の一曲</RouterLink>
     <RouterLink to="/song-list" @click="closeMenu">昨日までの楽曲</RouterLink>
     <RouterLink to="/about" @click="closeMenu">アプリの使い方</RouterLink>
-    <RouterLink to="/about" @click="closeMenu">販売促進ページ</RouterLink>
-    <RouterLink to="/about" @click="closeMenu">ABOUT US</RouterLink>
+    <RouterLink to="/about" @click="closeMenu">SHOP</RouterLink>
   </nav>
 
   <div v-if="isMenuOpen" @click="closeMenu" class="overlay"></div>
@@ -136,6 +135,14 @@ const goToTodaysSong = () => {
   align-items: center;
   justify-content: center;
   z-index: 1100;
+}
+
+.qr-icon{
+  height: 28px;
+  width: auto;
+  margin-right: 6px;
+  vertical-align: middle;
+  opacity: 0.9;
 }
 
 .menu-icon {
