@@ -8,7 +8,7 @@
         :editable="false"
         :clearable="false"
         :disabled-date="isDateDisabled"
-        :lang="datePickerLang"
+        
         format="yyyy/MM/dd"
       />
     </div>
@@ -39,7 +39,7 @@
 import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import DatePicker from 'vue-datepicker-next'
-import ja from 'vue-datepicker-next/locale/ja'
+import 'vue-datepicker-next/locale/ja'
 import 'vue-datepicker-next/index.css'
 import songs from '@/data/songs.json'
 import TheHeader from '@/components/TheHeader.vue'
@@ -54,7 +54,7 @@ const displayCount = ref(INITIAL_DISPLAY_COUNT)
 const sortedDayIds = songs.map((song) => song.id).sort((a, b) => a - b)
 const maxSongDay = sortedDayIds[sortedDayIds.length - 1] ?? 0
 const availableDaySet = new Set(sortedDayIds)
-const datePickerLang = ja
+
 
 const resolveImageUrl = (src?: string) => {
   if (!src) return ''

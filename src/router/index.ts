@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import SongPage from '@/views/SongView.vue'
 import Today from '@/views/SongListView.vue'
@@ -6,8 +6,8 @@ import QrScannerView from '@/views/QrScannerView.vue'
 import HowToUseView from '@/views/HowToUseView.vue'
 import ShopView from '@/views/ShopView.vue'
 
-export default createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -48,3 +48,12 @@ export default createRouter({
     }
   ]
 })
+
+// 404.htmlからのリダイレクトを処理
+const redirectPath = sessionStorage.getItem('redirect')
+if (redirectPath) {
+  sessionStorage.removeItem('redirect')
+  router.replace(redirectPath)
+}
+
+export default router
