@@ -5,7 +5,7 @@
     "artist_name": "Pink Floyd",
     "album_name": "The Dark Side of the Moon",
     "description": "001日目の紹介文",
-    "image": "@public/images/daily-images/1_1@4x.png",
+    "image": "/images/001.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/1tDWVeCR9oWGX8d5J9rswk?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/eclipse/1065973712?l=en-US\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -18,7 +18,7 @@
     "artist_name": "The Pees",
     "album_name": "リハビリ中断",
     "description": "002日目の紹介文",
-    "image": "@public/images/daily-images/1_2@4x.png",
+    "image": "/images/002.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/1VYtVTWqezZdDixIsj4s6N?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/%E5%AE%9F%E9%A8%934%E5%8F%B7/267213952?l=en-US\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -31,7 +31,7 @@
     "artist_name": "Takaki Horigome",
     "album_name": "Home Ground",
     "description": "003日目の紹介文",
-    "image": "@public/images/daily-images/1_3@4x.png",
+    "image": "/images/003.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/3v5KSO3GW9spJ3pgW3UyF4?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/%E9%9B%AA%E3%82%93%E3%81%93/96589779?l=en-US\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -44,7 +44,7 @@
     "artist_name": "Sly & The Family Stone",
     "album_name": "There's a Riot Goin' On",
     "description": "004日目の紹介文",
-    "image": "@public/images/daily-images/1_4@4x.png",
+    "image": "/images/004.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/2SNjUokqJifysK3qsjyK4F?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/i-love-music/1608242979?l=en-US\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -57,7 +57,7 @@
     "artist_name": "Ahmad Jamal Trio",
     "album_name": "The Awakening",
     "description": "005日目の紹介文",
-    "image": "@public/images/daily-images/1_5@4x.png",
+    "image": "/images/005.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/4MIPpjKWw1lLVwS6tLhis1?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/us/song/i-love-music/1443878968\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -70,7 +70,7 @@
     "artist_name": "Stereolab",
     "album_name": "Dots And Loops (Expanded Edition)",
     "description": "006日目の紹介文",
-    "image": "@public/images/daily-images/1_6@4x.png",
+    "image": "/images/006.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/7dmHNa6KpsyakWQsMOjHUx?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/us/song/the-flower-called-nowhere/1230517317\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -83,7 +83,7 @@
     "artist_name": "CAPSULE",
     "album_name": "Sugarless GiRL",
     "description": "007日目の紹介文",
-    "image": "@public/images/daily-images/1_7@4x.png",
+    "image": "/images/007.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/6XhNXDIgiBqlYpb0SuhUef?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/us/song/starry-sky/215188199\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -96,7 +96,7 @@
     "artist_name": "Navy Blue",
     "album_name": "Song of Sage: Post Panic!",
     "description": "008日目の紹介文",
-    "image": "@public/images/daily-images/1_8@4x.png",
+    "image": "/images/008.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/6uMqJQvja5YpIWqcGOLRoj?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/us/song/post-panic/1546826137\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -109,7 +109,7 @@
     "artist_name": "Connie Stevens",
     "album_name": "Conchetta",
     "description": "009日目の紹介文",
-    "image": "@public/images/daily-images/1_9@4x.png",
+    "image": "/images/009.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/5CQq81hMIMNR7TONtEsbbr?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/us/song/its-lovely-day-tomorrow/70263584\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -122,7 +122,7 @@
     "artist_name": "GEISHA GIRLS",
     "album_name": "Grandma Is Still Alive",
     "description": "010日目の紹介文",
-    "image": "@public/images/daily-images/1_10@4x.png",
+    "image": "/images/010.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/1cFr7dSrGGyzGWHJ5SldVp?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/us/song/kick-loud-with-towa-tei/1248730479\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -135,7 +135,7 @@
     "artist_name": "Ember Island",
     "album_name": "Ember Island (Remixed)",
     "description": "011日目の紹介文",
-    "image": "@public/images/daily-images/1_11@4x.png",
+    "image": "/images/011.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/5JktuKp6xXfX7MokHmprxi?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/need-you-asher-postman-remix/1769457158\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -148,7 +148,7 @@
     "artist_name": "0.8Syooogeki",
     "album_name": "エスノファンキードフトエフスキーカムカムクラブ",
     "description": "012日目の紹介文",
-    "image": "@public/images/daily-images/1_12@4x.png",
+    "image": "/images/012.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/2eXa1thPMPnikhVputJZsZ?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/21%E4%B8%96%E7%B4%80%E3%81%AE%E8%87%AA%E6%AE%BA%E8%80%85/1008696911\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -161,7 +161,7 @@
     "artist_name": "Flower Travellin' Band",
     "album_name": "Satori",
     "description": "013日目の紹介文",
-    "image": "@public/images/daily-images/1_13@4x.png",
+    "image": "/images/013.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/0TO8Bs4jZx0SDnpEisSh9y?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/satori-part-i/415296161\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -174,7 +174,7 @@
     "artist_name": "NaraBara",
     "album_name": "Hamt Zamin Hümüs",
     "description": "014日目の紹介文",
-    "image": "@public/images/daily-images/1_14@4x.png",
+    "image": "/images/014.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/2nssq7FJXwaQeH0b6blObQ?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/%C3%BCher/1688125562\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -187,7 +187,7 @@
     "artist_name": "South Penguin",
     "album_name": "R",
     "description": "015日目の紹介文",
-    "image": "@public/images/daily-images/1_15@4x.png",
+    "image": "/images/015.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/2loW9YugZjLrxiowgjHCPp?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/vitamin-feat-%E6%B2%A1-a-k-a-ngs/1595920291\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -200,7 +200,7 @@
     "artist_name": "D.A.N.",
     "album_name": "D.A.N.",
     "description": "016日目の紹介文",
-    "image": "@public/images/daily-images/1_16@4x.png",
+    "image": "/images/016.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/4oTLxsKrbGnspeeLIjwDRu?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/ghana/1098082893\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -213,7 +213,7 @@
     "artist_name": "Ella Fitzgerald",
     "album_name": "Lullabies Of Birdland",
     "description": "017日目の紹介文",
-    "image": "@public/images/daily-images/1_17@4x.png",
+    "image": "/images/017.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/2cvztQuBIxwV38kg1Ydaww?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/%E3%83%8F%E3%82%A6-%E3%83%8F%E3%82%A4-%E3%82%B6-%E3%83%A0%E3%83%BC%E3%83%B3/1442950236\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -226,7 +226,7 @@
     "artist_name": "Origa",
     "album_name": "攻殻機動隊 STAND ALONE COMPLEX　O.S.T.＋",
     "description": "018日目の紹介文",
-    "image": "@public/images/daily-images/1_18@4x.png",
+    "image": "/images/018.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/0UuMRmKDZSuSlUbTg5F3MG?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/inner-universe/423766416\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -239,7 +239,7 @@
     "artist_name": "Brand X",
     "album_name": "Unorthodox Behaviour",
     "description": "019日目の紹介文",
-    "image": "@public/images/daily-images/1_19@4x.png",
+    "image": "/images/019.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/0aVwclUm2FsksllwpJRlaX?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/nuclear-burn/723752777\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -252,7 +252,7 @@
     "artist_name": "Caroline Polachek",
     "album_name": "Desire, I Want To Turn Into You: Everasking Edition",
     "description": "020日目の紹介文",
-    "image": "@public/images/daily-images/1_20@4x.png",
+    "image": "/images/020.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/3RRGqoQw0xUWz2OhyNu8Lk?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/long-road-home/1732295325\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -265,7 +265,7 @@
     "artist_name": "Julieta Venegas",
     "album_name": "Realmente Lo Mejor",
     "description": "021日目の紹介文",
-    "image": "@public/images/daily-images/1_21@4x.png",
+    "image": "/images/021.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/36hGQCmqvJ48hSmdNSiXAT?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/lento/322340291\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -278,7 +278,7 @@
     "artist_name": "TOKYOPILL",
     "album_name": "Abandon The Flesh !",
     "description": "022日目の紹介文",
-    "image": "@public/images/daily-images/1_22@4x.png",
+    "image": "/images/022.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/7xHSUc0jYMT78BA0c2CSl8?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/t-o-k-y-o-f-r-u-i-t/1677249164\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -291,7 +291,7 @@
     "artist_name": "Marvin Gaye",
     "album_name": "United",
     "description": "023日目の紹介文",
-    "image": "@public/images/daily-images/1_23@4x.png",
+    "image": "/images/023.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/7tqhbajSfrz2F7E1Z75ASX?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/aint-no-mountain-high-enough/1469575663\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -304,7 +304,7 @@
     "artist_name": "EVISBEATS",
     "album_name": "That's Life",
     "description": "024日目の紹介文",
-    "image": "@public/images/daily-images/1_24@4x.png",
+    "image": "/images/024.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/1pu2FjZqdPi7si2IIRQ1o5?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/odaigahara/1667197952\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -317,7 +317,7 @@
     "artist_name": "DOMi & JD BECK",
     "album_name": "NOT TiGHT",
     "description": "025日目の紹介文",
-    "image": "@public/images/daily-images/1_25@4x.png",
+    "image": "/images/025.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/10UmWJn4BXev5y6uj1VwMl?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/moon/1629569587\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -330,7 +330,7 @@
     "artist_name": "Beastie Boys",
     "album_name": "Paul's Boutique (20th Anniversary Edition / Remastered)",
     "description": "026日目の紹介文",
-    "image": "@public/images/daily-images/1_26@4x.png",
+    "image": "/images/026.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/2qq0RYYIuQxXcOxQKN0drC?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/shake-your-rump/721277055\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -343,7 +343,7 @@
     "artist_name": "くるり",
     "album_name": "ハイウェイ",
     "description": "027日目の紹介文",
-    "image": "@public/images/daily-images/1_27@4x.png",
+    "image": "/images/027.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/2y9eyrw8Ur7lwy26QQ0ucD?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4/1590793761\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -356,7 +356,7 @@
     "artist_name": "1 9 0 5",
     "album_name": "We Don't Play No Mo",
     "description": "028日目の紹介文",
-    "image": "@public/images/daily-images/1_28@4x.png",
+    "image": "/images/028.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/3lsK8vyutnffn1LyVbBYgX?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/we-dont-play-no-mo/1693208733\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -369,7 +369,7 @@
     "artist_name": "Ichiko Aoba",
     "album_name": "０",
     "description": "029日目の紹介文",
-    "image": "@public/images/daily-images/1_29@4x.png",
+    "image": "/images/029.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/4k62bx1qhEW0vJ3agGuGYZ?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/%E6%A9%9F%E6%A2%B0%E4%BB%95%E6%8E%9B%E4%B9%83%E5%AE%87%E5%AE%99/720743523\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -382,7 +382,7 @@
     "artist_name": "JPEGMAFIA",
     "album_name": "LP!",
     "description": "030日目の紹介文",
-    "image": "@public/images/daily-images/1_30@4x.png",
+    "image": "/images/030.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/0O0q3mDpIZH1BJXBEH5ad8?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/thots-prayer/1590921093\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -395,7 +395,7 @@
     "artist_name": "Okay Kaya",
     "album_name": "Watch This Liquid Pour Itself",
     "description": "031日目の紹介文",
-    "image": "@public/images/daily-images/1_31@4x.png",
+    "image": "/images/031.jpg",
     "players": {
       "spotify": "<iframe src=\"https://open.spotify.com/embed/track/3vy3ld7my2hDUTv4u7KIJR?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
       "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/mother-natures-bitch/1484716280\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
@@ -989,14 +989,14 @@
   },
   {
     "id": 77,
-    "title": "Don't Know Why",
-    "artist_name": "parthenope",
+    "title": "Epistrophy",
+    "artist_name": "Theon Cross",
     "album_name": "Blue Note Re:imagined II",
     "description": "077日目の紹介文",
     "image": "/images/077.jpg",
     "players": {
-      "spotify": "<iframe src=\"https://open.spotify.com/embed/track/4aTE7qVnR3BXcPwE6LrxZ1?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
-      "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/dont-know-why/1635966929\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
+      "spotify": "<iframe src=\"https://open.spotify.com/embed/track/6fZ7XePp0cgaQ4lsowEoG8?utm_source=generator&theme=0\" width=\"100%\" height=\"152\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\" frameBorder=\"0\"></iframe></iframe>",
+      "apple": "<iframe src=\"https://embed.music.apple.com/jp/song/epistrophy/1635967035\" width=\"100%\" height=\"152\" frameborder=\"0\" allow=\"autoplay *; encrypted-media *; fullscreen *; clipboard-write\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" style=\"width:100%;overflow:hidden;border-radius:10px;\"></iframe></iframe>"
     },
     "shareId": "UEEe5"
   },
