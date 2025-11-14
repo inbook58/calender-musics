@@ -1,18 +1,15 @@
 <template>
   <div class="container">
-    <h2 class="date-caption">{{ formattedSelectedDate }}までの楽曲</h2>
+    <h2>{{ formattedSelectedDate }}までの楽曲</h2>
     <div class="date-selector">
-      <DatePicker
-        v-model:value="selectedDate"
-        value-type="date"
-        :editable="false"
-        :clearable="false"
-        :disabled-date="isDateDisabled"
-        
-        format="yyyy/MM/dd"
-      />
+      <select v-model="selectedMonth">
+        <option v-for="m in availableMonths" :key="m" :value="m">{{ m }}月</option>
+      </select>
+      <select v-model="selectedDay">
+        <option v-for="d in availableDaysInMonth" :key="d" :value="d">{{ d }}日</option>
+      </select>
     </div>
-    <div v-if="visibleSongs.length" class="song-list">
+    <div class="song-list">
       <RouterLink
         v-for="song in visibleSongs"
         :key="song.id"
@@ -28,7 +25,6 @@
         </div>
       </RouterLink>
     </div>
-    <p v-else class="song-list-empty">{{ selectedDateLabel }}までで表示できる曲はありません</p>
     <div class="load-more-container" v-if="hasMore">
       <button @click="loadMore" class="load-more-button">もっと見る</button>
     </div>
@@ -36,25 +32,60 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { RouterLink } from 'vue-router'
-import DatePicker from 'vue-datepicker-next'
-import 'vue-datepicker-next/locale/ja'
-import 'vue-datepicker-next/index.css'
 import songs from '@/data/songs.json'
 import TheHeader from '@/components/TheHeader.vue'
 
 const SONG_YEAR = 2026
-const DAY_IN_MS = 86400000
+
+// 今日の日付（JST）を基準に、年初からの日数を計算
+const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+const currentDayOfYear = (() => {
+  // 曲の年より前なら、何も解禁されていない
+  if (now.getFullYear() < SONG_YEAR) return 0
+  // 曲の年より後なら、すべて解禁済み
+  if (now.getFullYear() > SONG_YEAR) return 366 // うるう年も考慮して366
+  // 曲の年と同じなら、今日までの日数を計算
+  const start = new Date(SONG_YEAR, 0, 1)
+  return Math.floor((+now - +start) / 86400000) + 1
+})()
+
+// songs.json から「解禁済みの」日付の情報を前処理する
+const availableDates = songs
+  .filter((song) => song.id <= currentDayOfYear) // 未来の日付を除外
+  .reduce(
+    (acc, song) => {
+      const date = new Date(SONG_YEAR, 0, song.id)
+      const month = date.getMonth() + 1
+      const day = date.getDate()
+      if (!acc[month]) {
+        acc[month] = new Set()
+      }
+      acc[month].add(day)
+      return acc
+    },
+    {} as Record<number, Set<number>>
+  )
+
+const availableMonths = Object.keys(availableDates).map(Number).sort((a, b) => a - b)
+
+// デフォルトで選択される日付を「解禁済みの最新日」に設定
+const lastAvailableSong = songs
+  .filter((song) => song.id <= currentDayOfYear)
+  .sort((a, b) => b.id - a.id)[0]
+
+const defaultDate = lastAvailableSong
+  ? new Date(SONG_YEAR, 0, lastAvailableSong.id)
+  : new Date(now)
+
+const selectedMonth = ref(defaultDate.getMonth() + 1)
+const selectedDay = ref(defaultDate.getDate())
 
 const INITIAL_DISPLAY_COUNT = 5
 const LOAD_MORE_COUNT = 10
 
 const displayCount = ref(INITIAL_DISPLAY_COUNT)
-const sortedDayIds = songs.map((song) => song.id).sort((a, b) => a - b)
-const maxSongDay = sortedDayIds[sortedDayIds.length - 1] ?? 0
-const availableDaySet = new Set(sortedDayIds)
-
 
 const resolveImageUrl = (src?: string) => {
   if (!src) return ''
@@ -80,62 +111,28 @@ const cardBackgroundStyle = (src?: string) => {
     : undefined
 }
 
+const availableDaysInMonth = computed(() => {
+  return availableDates[selectedMonth.value]
+    ? Array.from(availableDates[selectedMonth.value]).sort((a, b) => a - b)
+    : []
+})
+
+// 月が変更されたときに日の妥当性をチェック
+watch(selectedMonth, (newMonth) => {
+  const days = availableDates[newMonth]
+  if (!days || !days.has(selectedDay.value)) {
+    // 新しい月で現在の日付が存在しない場合、その月の最後の日付を選択
+    selectedDay.value = availableDaysInMonth.value[availableDaysInMonth.value.length - 1]
+  }
+})
+
 const getDayOfYear = (month: number, day: number, year: number = SONG_YEAR) => {
   const date = new Date(year, month - 1, day)
   const start = new Date(year, 0, 1)
-  return Math.floor((+date - +start) / DAY_IN_MS) + 1
+  return Math.floor((+date - +start) / 86400000) + 1
 }
 
-const dayOfYearToDate = (dayOfYear: number, year: number = SONG_YEAR) => new Date(year, 0, dayOfYear)
-
-// 今日の日付（JST）を基準に、年初からの日数を計算
-const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
-const currentDayOfYear = (() => {
-  if (now.getFullYear() < SONG_YEAR) {
-    return 0
-  }
-  if (now.getFullYear() > SONG_YEAR) {
-    return maxSongDay
-  }
-  const startOfSongYear = new Date(SONG_YEAR, 0, 1)
-  return Math.min(Math.floor((+now - +startOfSongYear) / DAY_IN_MS) + 1, maxSongDay)
-})()
-
-const getClosestAvailableDay = (day?: number) => {
-  if (day === undefined) return undefined
-  for (let i = sortedDayIds.length - 1; i >= 0; i -= 1) {
-    if (sortedDayIds[i] <= day) {
-      return sortedDayIds[i]
-    }
-  }
-  return undefined
-}
-
-const defaultDayOfYear = (() => {
-  if (!sortedDayIds.length) {
-    return 1
-  }
-  const target = currentDayOfYear > 1 ? currentDayOfYear - 1 : currentDayOfYear
-  return getClosestAvailableDay(target > 0 ? target : undefined) ?? sortedDayIds[0]
-})()
-
-const selectedDate = ref(dayOfYearToDate(defaultDayOfYear))
-
-const selectedDayOfYear = computed(() =>
-  getDayOfYear(selectedDate.value.getMonth() + 1, selectedDate.value.getDate())
-)
-
-const isDateDisabled = (date: Date) => {
-  if (date.getFullYear() !== SONG_YEAR) {
-    return true
-  }
-  const dayOfYear = getDayOfYear(date.getMonth() + 1, date.getDate())
-  if (!availableDaySet.has(dayOfYear)) {
-    return true
-  }
-  const unlockedDay = currentDayOfYear || 1
-  return dayOfYear > unlockedDay
-}
+const selectedDayOfYear = computed(() => getDayOfYear(selectedMonth.value, selectedDay.value))
 
 const formatDate = (dayOfYear: number, year: number = SONG_YEAR) => {
   const date = new Date(year, 0, dayOfYear)
@@ -146,26 +143,28 @@ const formatDate = (dayOfYear: number, year: number = SONG_YEAR) => {
 }
 
 const formattedSelectedDate = computed(() => formatDate(selectedDayOfYear.value))
-const selectedDateLabel = computed(() => {
-  const date = selectedDate.value
-  return `${date.getMonth() + 1}月${date.getDate()}日`
-})
 
 // 表示対象の全曲リスト（ソート済み）
 const allVisibleSongs = computed(() =>
   songs
     .filter((s) => {
+      // 選択された日付より未来の曲は表示しない
+      if (s.id > selectedDayOfYear.value) {
+        return false
+      }
+      // 解禁されていない曲は表示しない
       if (s.id > currentDayOfYear) {
         return false
       }
+      // 今日の曲は、一度再生ページで見てからリストに表示する
       if (s.id === currentDayOfYear) {
         const dateString = `${now.getFullYear()}-${(now.getMonth() + 1)
           .toString()
           .padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`
         const viewedTodaySong = localStorage.getItem(`viewedTodaySong_${dateString}`)
-        return viewedTodaySong === 'true' && s.id <= selectedDayOfYear.value
+        return viewedTodaySong === 'true'
       }
-      return s.id <= selectedDayOfYear.value
+      return true
     })
     .sort((a, b) => b.id - a.id)
 )
@@ -190,27 +189,14 @@ const loadMore = () => {
   padding: 0px 20px;
 }
 
-.date-caption {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
 .date-selector {
   display: flex;
+  gap: 10px;
   margin-bottom: 20px;
   align-items: center;
-  justify-content: center;
 }
 
-.date-selector :deep(.mx-datepicker) {
-  width: 100%;
-  max-width: 260px;
-}
-
-.date-selector :deep(.mx-input) {
-  width: 100%;
+.date-selector select {
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -222,15 +208,6 @@ const loadMore = () => {
   display: grid;
   gap: 12px;
   margin-top: 24px;
-}
-
-.song-list-empty {
-  margin-top: 24px;
-  padding: 16px;
-  border-radius: 10px;
-  border: 1px dashed #d0d0d0;
-  text-align: center;
-  color: #555;
 }
 
 
@@ -338,3 +315,4 @@ const loadMore = () => {
   background-color: #f0f0f0;
 }
 </style>
+
