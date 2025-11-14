@@ -303,6 +303,13 @@ const loadMore = () => {
   color: inherit;
 }
 
+.song-list-empty {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 40px;
+}
+
 .description {
   font-size: 0.9rem;
   margin: 0;
