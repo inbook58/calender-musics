@@ -26,7 +26,7 @@
       </RouterLink>
     </div>
     <p v-else class="song-list-empty">
-      {{ formattedSelectedDate }}までに表示できる楽曲はありません
+      まだ表示できる楽曲はありません
     </p>
     <div class="load-more-container" v-if="hasMore">
       <button @click="loadMore" class="load-more-button">もっと見る</button>
@@ -45,16 +45,24 @@ const SONG_YEAR = 2026
 // 今日の日付（JST）を基準に、年初からの日数を計算
 const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
 const currentDayOfYear = (() => {
-  // 開発モードではすべての日付を有効にする
+  // 開発モードでのみクエリパラメータで日付を上書き可能にする
   if (import.meta.env.DEV) {
+    const params = new URLSearchParams(window.location.search)
+    const dayParam = params.get('day')
+    if (dayParam) {
+      const day = parseInt(dayParam, 10)
+      if (!isNaN(day)) {
+        return day
+      }
+    }
+    // クエリパラメータがなければ、すべての日付を有効にする
     return 366
   }
+
   // 本番モードでは実際の日付に基づいて計算
-  // 曲の年より前なら、何も解禁されていない
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
   if (now.getFullYear() < SONG_YEAR) return 0
-  // 曲の年より後なら、すべて解禁済み
-  if (now.getFullYear() > SONG_YEAR) return 366 // うるう年も考慮して366
-  // 曲の年と同じなら、今日までの日数を計算
+  if (now.getFullYear() > SONG_YEAR) return 366
   const start = new Date(SONG_YEAR, 0, 1)
   return Math.floor((+now - +start) / 86400000) + 1
 })()
@@ -254,7 +262,7 @@ const loadMore = () => {
   inset: 0;
   background-image: var(--song-card-image);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   transition: transform 0.4s ease, opacity 0.3s ease;
 }
