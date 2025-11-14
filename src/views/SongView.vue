@@ -260,6 +260,7 @@ onBeforeUnmount(() => {
           >リンク</a
         >
 
+        <p class="note">配信サービスの都合により楽曲が再生できない場合があります</p>
         <div class="navigation-buttons">
           <button :disabled="!prevSong" @click="navigateTo(prevSong.shareId)">前の日</button>
           <button :disabled="isNextSongDisabled" @click="navigateTo(nextSong.shareId)">次の日</button>
@@ -409,6 +410,13 @@ img {
   background-color: #fff;
   color: #ccc;
   cursor: not-allowed;
+}
+
+.note {
+  font-size: 0.7em;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
 }
 </style>
 

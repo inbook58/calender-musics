@@ -11,12 +11,14 @@ import TheHeader from '@/components/TheHeader.vue'
     <p>厚み　：2.5cm</p>
     </div>
     <p>
-      "diadia"はスペイン語の "día a día"（一日一日）という言葉から名づけました。<br>
-      「一日一日を大切に」という意味をもつこの言葉に、その日と向き合ってほしいという<br>思いを込めました。<br>
-      365日すべてのページにその日の1曲があります。<br>
-      ページを破ってQRコードを読み取るだけでその日の1曲が聴けます。<br>
-      diadiaはあなたの1年を音楽とともに楽しむカレンダーです。</p>
-  </div>
+      "diadia"は<br>スペイン語の "día a día"（一日一日）<br>という言葉から名づけました。<br><br>
+      「一日一日を大切に」<br>という意味をもつこの言葉に、<br>その日と向き合ってほしいという<br>思いを込めました。<br><br>
+      365日すべてのページに<br>その日の1曲があります。<br><br>
+      ページを破って<br>QRコードを読み取るだけで<br>その日の1曲が聴けます。<br><br>
+      diadiaは<br>あなたの1年を<br>音楽とともに楽しむカレンダーです。</p><br>
+      <p class="note">* 本商品の使用にはSpotifyもしくはApple Musicの有料サブスクリプションに入会している必要があります</p>
+      <p class="note">* 配信サービスの都合により楽曲が再生できない場合があります</p>
+    </div>
   <section class="product-section text-block">
   <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
     <div class="product-image">
@@ -55,6 +57,13 @@ import TheHeader from '@/components/TheHeader.vue'
 
 .product-specs{
   margin-bottom: 16px;
+}
+
+.note{
+  font-size: 0.8em;
+  color: #B00020;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .product-link {
