@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>{{ formattedSelectedDate }}までの楽曲</h2>
+    <h2 class="date-caption">{{ formattedSelectedDate }}までの楽曲</h2>
     <div class="date-selector">
       <select v-model="selectedMonth">
         <option v-for="m in availableMonths" :key="m" :value="m">{{ m }}月</option>
@@ -9,7 +9,7 @@
         <option v-for="d in availableDaysInMonth" :key="d" :value="d">{{ d }}日</option>
       </select>
     </div>
-    <div class="song-list">
+    <div v-if="visibleSongs.length > 0" class="song-list">
       <RouterLink
         v-for="song in visibleSongs"
         :key="song.id"
@@ -25,6 +25,9 @@
         </div>
       </RouterLink>
     </div>
+    <p v-else class="song-list-empty">
+      {{ formattedSelectedDate }}までに表示できる楽曲はありません
+    </p>
     <div class="load-more-container" v-if="hasMore">
       <button @click="loadMore" class="load-more-button">もっと見る</button>
     </div>
@@ -42,6 +45,11 @@ const SONG_YEAR = 2026
 // 今日の日付（JST）を基準に、年初からの日数を計算
 const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
 const currentDayOfYear = (() => {
+  // 開発モードではすべての日付を有効にする
+  if (import.meta.env.DEV) {
+    return 366
+  }
+  // 本番モードでは実際の日付に基づいて計算
   // 曲の年より前なら、何も解禁されていない
   if (now.getFullYear() < SONG_YEAR) return 0
   // 曲の年より後なら、すべて解禁済み
@@ -77,7 +85,7 @@ const lastAvailableSong = songs
 
 const defaultDate = lastAvailableSong
   ? new Date(SONG_YEAR, 0, lastAvailableSong.id)
-  : new Date(now)
+  : new Date(SONG_YEAR, 0, 1)
 
 const selectedMonth = ref(defaultDate.getMonth() + 1)
 const selectedDay = ref(defaultDate.getDate())
@@ -189,11 +197,19 @@ const loadMore = () => {
   padding: 0px 20px;
 }
 
+.date-caption{
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
 .date-selector {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
   align-items: center;
+  justify-content: center;
 }
 
 .date-selector select {
