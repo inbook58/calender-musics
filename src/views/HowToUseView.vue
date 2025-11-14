@@ -17,27 +17,27 @@ import TheHeader from '@/components/TheHeader.vue'
         </a>
         を開き<br>ブラウザのメニューボタンを押す
       </p>
-      <img class="how-to-use-img" src="/images/how-to-use/how-to-use1.jpg" alt="Ibuki">
+      <img class="how-to-use-img" src="/images/how-to-use/how-to-use1.png" alt="Ibuki">
     </div>
     <div class="how-to-use-container">
       <p>「ホーム画面に追加」を選択</p>
-      <img class="how-to-use-img" src="/images/how-to-use/how-to-use2.jpg" alt="Ibuki">
+      <img class="how-to-use-img" src="/images/how-to-use/how-to-use2.png" alt="Ibuki">
     </div>
     <div class="how-to-use-container">
       <p>アプリをインストール</p>
-      <img class="how-to-use-img" src="/images/how-to-use/how-to-use3.jpg" alt="Ibuki">
+      <img class="how-to-use-img" src="/images/how-to-use/how-to-use3.png" alt="Ibuki">
     </div>
     <div class="how-to-use-container">
       <p>インストールしたアプリを開くと<br>QRリーダーが表示される</p>
-      <img class="how-to-use-img" src="/images/how-to-use/how-to-use4.jpg" alt="Ibuki">
+      <img class="how-to-use-img" src="/images/how-to-use/how-to-use4.png" alt="Ibuki">
     </div>
     <div class="how-to-use-container">
       <p>カメラの使用許可を聞かれた場合は<br>これを許可する</p>
-      <img class="how-to-use-img" src="/images/how-to-use/how-to-use5.jpg" alt="Ibuki">
+      <img class="how-to-use-img" src="/images/how-to-use/how-to-use5.png" alt="Ibuki">
     </div>
     <div class="how-to-use-container">
       <p>QRリーダーを使って<br>その日のQRコードをカレンダーから読みとる</p>
-      <img class="how-to-use-img" src="/images/how-to-use/how-to-use6.jpg" alt="Ibuki">
+      <img class="how-to-use-img" src="/images/how-to-use/how-to-use6.png" alt="Ibuki">
     </div>
   </div>
 
