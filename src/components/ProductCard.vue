@@ -1,20 +1,47 @@
+<script setup lang="ts">
+defineProps({
+  showNotes: {
+    type: Boolean,
+    default: false
+  }
+})
+</script>
+
 <template>
-  <section class="product-section">
-    <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
-      <div class="product-image">
-        <img src="/images/pics_product2.jpg" alt="diadia calendar">
-      </div>
-      <div class="product-info">
-        <h2 class="product-name">diadia</h2>
-        <h2 class="product-name">日めくりカレンダー2026</h2>
-        <p class="product-price">¥3,500</p>
-        <p class="product-note">※ 外部販売サイトへ遷移します</p>
-      </div>
-    </a>
-  </section>
+  <div class="product-card-wrapper">
+    <div v-if="showNotes" class="notes-container">
+      <p class="note">* 本商品の使用にはSpotifyもしくはApple Musicの有料サブスクリプションに入会している必要があります</p>
+      <p class="note">* 配信サービスの都合により楽曲が再生できない場合があります</p>
+    </div>
+    <section class="product-section">
+      <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
+        <div class="product-image">
+          <img src="/images/pics_product2.jpg" alt="diadia calendar">
+        </div>
+        <div class="product-info">
+          <h2 class="product-name">diadia</h2>
+          <h2 class="product-name">日めくりカレンダー2026</h2>
+          <p class="product-price">¥3,500</p>
+          <p class="product-note">※ 外部販売サイトへ遷移します</p>
+        </div>
+      </a>
+    </section>
+  </div>
 </template>
 
 <style scoped>
+.notes-container {
+  text-align: center;
+  padding: 0 40px;
+}
+
+.note{
+  font-size: 0.8em;
+  color: #000000;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .product-section {
   padding: 20px;
   text-align: center;
@@ -39,7 +66,7 @@
 }
 
 .product-note {
-  font-size: 0.75em;
+  font-size: 0.7em;
   color: #888;
   margin-top: 5px;
   text-align: left; /* product-info内の他のテキストと揃える */

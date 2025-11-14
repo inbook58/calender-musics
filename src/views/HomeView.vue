@@ -49,7 +49,7 @@ onMounted(() => {
       <div class="container">
         <div class="text-block">
           <h1 class="heading">
-            <span class="jp">破って</span>
+            <span class="jp-heading">破って</span>
             <span class="en-heading">Tear the pages</span>
           </h1>
           <div class="main-text">
@@ -61,7 +61,7 @@ onMounted(() => {
 
         <div class="text-block">
           <h1 class="heading">
-            <span class="jp">見て</span>
+            <span class="jp-heading">見て</span>
             <span class="en-heading">Find the changes</span>
           </h1>
           <div class="main-text">
@@ -72,7 +72,7 @@ onMounted(() => {
 
         <div class="text-block">
           <h1 class="heading">
-            <span class="jp">聴いて</span>
+            <span class="jp-heading">聴いて</span>
             <span class="en-heading">Listen the songs</span>
           </h1>
           <div class="main-text">
@@ -107,8 +107,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <p class="note jp">* 本商品の使用にはSpotifyもしくはApple Musicの有料サブスクリプションに入会している必要があります<br>* 配信サービスの都合により楽曲が再生できない場合があります</p>
-      <ProductCard class="text-block" />
+      <ProductCard :show-notes="true" class="text-block" />
     </main>
   </div>
 </template>
@@ -196,12 +195,6 @@ onMounted(() => {
   transform: translateY(0);
 }
 
-.note {
-  font-size: 0.8em;
-  color: #000000;
-  text-align: center;
-  margin-top: 20px;
-}
 
 .heading {
   font-size: 1.8rem;
@@ -215,6 +208,10 @@ onMounted(() => {
 }
 
 .jp {
+  font-family: 'Kosugi', sans-serif;
+}
+
+.jp-heading {
   font-family: 'Kosugi', sans-serif;
 }
 
