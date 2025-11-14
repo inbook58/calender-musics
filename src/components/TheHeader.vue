@@ -58,7 +58,7 @@ const goToTodaysSong = () => {
   <nav class="drawer-nav" :class="{ open: isMenuOpen }">
     <RouterLink to="/" @click="closeMenu">ホーム</RouterLink>
     <RouterLink to="/qr-scanner" @click="closeMenu">今日の一曲</RouterLink>
-    <RouterLink to="/song-list" @click="closeMenu">昨日までの楽曲</RouterLink>
+    <RouterLink to="/song-list" @click="closeMenu">これまでの楽曲</RouterLink>
     <RouterLink to="/how-to-use" @click="closeMenu">使い方</RouterLink>
     <RouterLink to="/shop" @click="closeMenu">SHOP</RouterLink>
   </nav>

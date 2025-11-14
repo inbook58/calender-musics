@@ -7,7 +7,8 @@ import TheHeader from '@/components/TheHeader.vue'
 const props = defineProps<{ shareId: string }>()
 const router = useRouter()
 
-const isPlayerLoaded = ref(false)
+const isPlayerVisible = ref(false)
+const isContentLoaded = ref(false)
 
 const song = computed(() => songs.find((s) => s.shareId === props.shareId))
 
@@ -18,12 +19,27 @@ const spotifySrc = computed(() => {
   return match ? match[1] : ''
 })
 
+const onContentLoad = () => {
+  isContentLoaded.value = true
+}
+
 watch(
   song,
-  () => {
-    isPlayerLoaded.value = false
+  async (newSong) => {
+    isPlayerVisible.value = false
+    isContentLoaded.value = false
+    await nextTick()
+    isPlayerVisible.value = true
+
+    // For Apple Music, we can't easily detect iframe load from v-html.
+    // We'll simulate it with a short delay.
+    if (newSong?.players?.apple && !newSong?.players?.spotify) {
+      setTimeout(() => {
+        onContentLoad()
+      }, 200) // Adjust delay as needed
+    }
   },
-  { flush: 'post' },
+  { immediate: true },
 )
 
 const displayDate = computed(() => {
@@ -214,7 +230,11 @@ onBeforeUnmount(() => {
           @error="(e) => ((e.target as HTMLImageElement).style.display = 'none')"
         />
 
-        <div class="spotify-player" :class="{ 'is-loaded': isPlayerLoaded }">
+        <div
+          v-if="isPlayerVisible"
+          class="spotify-player"
+          :class="{ 'is-content-loaded': isContentLoaded }"
+        >
           <iframe
             v-if="spotifySrc"
             :key="spotifySrc"
@@ -225,16 +245,17 @@ onBeforeUnmount(() => {
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
-            @load="isPlayerLoaded = true"
+            @load="onContentLoad"
           ></iframe>
         </div>
 
         <div
-          v-if="song.players?.apple"
+          v-if="isPlayerVisible && song.players?.apple"
           v-html="song.players.apple"
           class="apple-player"
-          :class="{ 'is-loaded': isPlayerLoaded }"
+          :class="{ 'is-content-loaded': isContentLoaded }"
         ></div>
+
         <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
           >リンク</a
         >
@@ -256,7 +277,6 @@ onBeforeUnmount(() => {
 .fade-enter-from {
   opacity: 0;
 }
-
 
 .song-page {
   position: relative;
@@ -352,28 +372,18 @@ img {
   margin: 16px 0;
 }
 
-.spotify-player {
-  min-height: 152px;
-  margin-bottom: 16px;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.spotify-player.is-loaded {
-  opacity: 1;
-}
-
+.spotify-player,
 .apple-player {
   min-height: 152px;
   margin-bottom: 16px;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.apple-player.is-loaded {
+.spotify-player.is-content-loaded,
+.apple-player.is-content-loaded {
   opacity: 1;
 }
-
 
 .navigation-buttons {
   display: flex;
@@ -401,3 +411,4 @@ img {
   cursor: not-allowed;
 }
 </style>
+

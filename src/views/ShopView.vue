@@ -11,11 +11,11 @@ import TheHeader from '@/components/TheHeader.vue'
     <p>厚み　：2.5cm</p>
     </div>
     <p>
-      "diadia"は<br>スペイン語の "día a día"（一日一日）<br>という言葉から名づけました。<br><br>
-      「一日一日を大切に」<br>という意味をもつこの言葉に、<br>その日と向き合ってほしいという<br>思いを込めました。<br><br>
-      365日すべてのページに<br>その日の1曲があります。<br><br>
-      ページを破ってQRコードを読み取るだけでその日の1曲が聴けます。<br><br>
-      diadiaはあなたの1年を<br>音楽とともに楽しむカレンダーです。</p>
+      "diadia"はスペイン語の "día a día"（一日一日）という言葉から名づけました。<br>
+      「一日一日を大切に」という意味をもつこの言葉に、その日と向き合ってほしいという<br>思いを込めました。<br>
+      365日すべてのページにその日の1曲があります。<br>
+      ページを破ってQRコードを読み取るだけでその日の1曲が聴けます。<br>
+      diadiaはあなたの1年を音楽とともに楽しむカレンダーです。</p>
   </div>
   <section class="product-section text-block">
   <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
