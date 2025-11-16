@@ -54,7 +54,7 @@ onMounted(() => {
           </h1>
           <div class="main-text">
             <p class="jp">あなたが向き合うのは<br>今日だけです<br>
-            前も後ろもありません。</p>
+            前も後ろもありません</p>
             <p class="en">What you face is only today<br>—no before, no after.</p>
           </div>
         </div>
