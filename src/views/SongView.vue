@@ -1,16 +1,66 @@
 <script setup lang="ts">
 import songs from '@/data/songs.json'
-import { computed, onBeforeUnmount, onMounted, nextTick, ref, watch } from 'vue'
-import { useRouter } from 'vue-router'
+import { computed, onBeforeUnmount, onMounted, nextTick, ref, watch, inject, Ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
+import { CALENDAR_YEAR } from '@/config'
 
-const props = defineProps<{ shareId: string }>()
+const props = defineProps<{ shareId?: string }>()
 const router = useRouter()
+const route = useRoute()
+
+const overriddenDate = inject<Ref<Date | null>>('overriddenDate')
+
+const song = ref<(typeof songs)[number] | undefined>()
 
 const isPlayerVisible = ref(false)
 const isContentLoaded = ref(false)
 
-const song = computed(() => songs.find((s) => s.shareId === props.shareId))
+const now = computed(() => overriddenDate?.value || new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' })))
+
+const todayId = computed(() => {
+  const targetDate = now.value
+  
+  // 現在の年がカレンダーの基準年に達していない場合、解禁されている曲はない
+  if (targetDate.getFullYear() < CALENDAR_YEAR) {
+    return 0
+  }
+  
+  // 現在の年がカレンダーの基準年を超えている場合、すべての曲が解禁済み
+  if (targetDate.getFullYear() > CALENDAR_YEAR) {
+    return 366; // or a larger number to unlock all
+  }
+
+  // 現在の年がカレンダーの基準年と一致する場合のみ、通算日を計算
+  const start = Date.UTC(CALENDAR_YEAR, 0, 1)
+  const end = Date.UTC(CALENDAR_YEAR, targetDate.getUTCMonth(), targetDate.getUTCDate())
+  return (end - start) / 86400000 + 1
+})
+
+watch(() => props.shareId, (newId) => {
+  if (!newId) {
+    song.value = undefined
+    return
+  }
+
+  const targetSong = songs.find((s) => s.shareId === newId)
+
+  if (!targetSong) {
+    song.value = undefined
+    return
+  }
+
+  // 未来の曲へのアクセスガード
+  const songId = targetSong.id
+  // todayId は overriddenDate を考慮しているので、そのまま比較するだけで良い
+  if (songId > todayId.value) {
+    song.value = undefined // 未来の曲なら表示しない
+    return
+  }
+
+  song.value = targetSong
+}, { immediate: true })
+
 
 const spotifySrc = computed(() => {
   const spotifyHtml = song.value?.players?.spotify
@@ -44,7 +94,7 @@ watch(
 
 const displayDate = computed(() => {
   if (!song.value) return ''
-  const year = 2026
+  const year = CALENDAR_YEAR
   const date = new Date(year, 0, song.value.id) // Month is 0-indexed, so 0 is January
   const month = date.getMonth() + 1 // getMonth() returns 0-11
   const day = date.getDate()
@@ -54,7 +104,7 @@ const displayDate = computed(() => {
 
 const displayDateEn = computed(() => {
   if (!song.value) return ''
-  const year = 2026
+  const year = CALENDAR_YEAR
   const date = new Date(year, 0, song.value.id)
   const formatter = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -78,14 +128,8 @@ const nextSong = computed(() =>
   currentIndex.value < songs.length - 1 ? songs[currentIndex.value + 1] : null,
 )
 
-const todayId = computed(() => {
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
-  const start = new Date(now.getFullYear(), 0, 1) // January 1st of current year
-  return Math.floor((+now - +start) / 86400000) + 1
-})
-
 const isNextSongDisabled = computed(() => {
-  const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+  const today = new Date(CALENDAR_YEAR, now.value.getMonth(), now.value.getDate())
   today.setHours(0, 0, 0, 0)
 
   // 1. If there is no next song, disable.
@@ -95,12 +139,12 @@ const isNextSongDisabled = computed(() => {
 
   // From here, nextSong.value is valid.
   const nextSongId = nextSong.value.id
-  const nextSongDate = new Date(today.getFullYear(), 0, nextSongId)
+  const nextSongDate = new Date(CALENDAR_YEAR, 0, nextSongId)
   nextSongDate.setHours(0, 0, 0, 0)
 
   // 2. If the next song is today's song
   if (nextSongId === todayId.value) {
-    const dateString = `${today.getFullYear()}-${(today.getMonth() + 1)
+    const dateString = `${CALENDAR_YEAR}-${(today.getMonth() + 1)
       .toString()
       .padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`
     const viewedTodaySong =
@@ -171,14 +215,14 @@ const headerArtStyle = computed<Record<string, string> | undefined>(() => {
 })
 
 const navigateTo = (shareId: string) => {
-  router.push({ name: 'Song', params: { shareId } })
+  router.push({ name: 'Song', params: { shareId }, query: route.query })
 }
 
 watch(song, () => {
   if (typeof window !== 'undefined' && song.value && song.value.id === todayId.value) {
     // Check if running in browser and if it's today's song
-    const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
-    const dateString = `${today.getFullYear()}-${(today.getMonth() + 1)
+    const today = now.value
+    const dateString = `${CALENDAR_YEAR}-${(today.getMonth() + 1)
       .toString()
       .padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}` // YYYY-MM-DD
     localStorage.setItem(`viewedTodaySong_${dateString}`, 'true')

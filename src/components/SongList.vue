@@ -13,7 +13,7 @@
       <RouterLink
         v-for="song in visibleSongs"
         :key="song.id"
-        :to="{ name: 'Song', params: { shareId: song.shareId } }"
+        :to="{ name: 'Song', params: { shareId: song.shareId }, query: route.query }"
         class="song-item"
         :class="{ 'song-item--with-image': resolveImageUrl(song.image) }"
         :style="cardBackgroundStyle(song.image)"
@@ -35,44 +35,42 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
-import { RouterLink } from 'vue-router'
+import { ref, computed, watch, inject, Ref } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 import songs from '@/data/songs.json'
-import TheHeader from '@/components/TheHeader.vue'
+import { CALENDAR_YEAR } from '@/config'
 
-const SONG_YEAR = 2026
+const route = useRoute()
 
-// 今日の日付（JST）を基準に、年初からの日数を計算
-const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
-const currentDayOfYear = (() => {
-  // 開発モードでのみクエリパラメータで日付を上書き可能にする
-  if (import.meta.env.DEV) {
-    const params = new URLSearchParams(window.location.search)
-    const dayParam = params.get('day')
-    if (dayParam) {
-      const day = parseInt(dayParam, 10)
-      if (!isNaN(day)) {
-        return day
-      }
-    }
-    // クエリパラメータがなければ、すべての日付を有効にする
-    return 366
+const overriddenDate = inject<Ref<Date | null>>('overriddenDate')
+
+const now = computed(() => overriddenDate?.value || new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' })))
+
+const currentDayOfYear = computed(() => {
+  const targetDate = now.value
+
+  // 現在の年がカレンダーの基準年に達していない場合、解禁されている曲はない
+  if (targetDate.getFullYear() < CALENDAR_YEAR) {
+    return 0
   }
 
-  // 本番モードでは実際の日付に基づいて計算
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
-  if (now.getFullYear() < SONG_YEAR) return 0
-  if (now.getFullYear() > SONG_YEAR) return 366
-  const start = new Date(SONG_YEAR, 0, 1)
-  return Math.floor((+now - +start) / 86400000) + 1
-})()
+  // 現在の年がカレンダーの基準年を超えている場合、すべての曲が解禁済み
+  if (targetDate.getFullYear() > CALENDAR_YEAR) {
+    return 366 // or a larger number to unlock all
+  }
+
+  // 現在の年がカレンダーの基準年と一致する場合のみ、通算日を計算
+  const start = Date.UTC(CALENDAR_YEAR, 0, 1)
+  const end = Date.UTC(CALENDAR_YEAR, targetDate.getUTCMonth(), targetDate.getUTCDate())
+  return (end - start) / 86400000 + 1
+})
 
 // songs.json から「解禁済みの」日付の情報を前処理する
-const availableDates = songs
-  .filter((song) => song.id <= currentDayOfYear) // 未来の日付を除外
+const availableDates = computed(() => songs
+  .filter((song) => song.id <= currentDayOfYear.value) // 未来の日付を除外
   .reduce(
     (acc, song) => {
-      const date = new Date(SONG_YEAR, 0, song.id)
+      const date = new Date(CALENDAR_YEAR, 0, song.id)
       const month = date.getMonth() + 1
       const day = date.getDate()
       if (!acc[month]) {
@@ -82,21 +80,27 @@ const availableDates = songs
       return acc
     },
     {} as Record<number, Set<number>>
-  )
+  ))
 
-const availableMonths = Object.keys(availableDates).map(Number).sort((a, b) => a - b)
+const availableMonths = computed(() => Object.keys(availableDates.value).map(Number).sort((a, b) => a - b))
 
 // デフォルトで選択される日付を「解禁済みの最新日」に設定
-const lastAvailableSong = songs
-  .filter((song) => song.id <= currentDayOfYear)
+const lastAvailableSong = computed(() => songs
+  .filter((song) => song.id <= currentDayOfYear.value)
   .sort((a, b) => b.id - a.id)[0]
+)
 
-const defaultDate = lastAvailableSong
-  ? new Date(SONG_YEAR, 0, lastAvailableSong.id)
-  : new Date(SONG_YEAR, 0, 1)
+const selectedMonth = ref(1)
+const selectedDay = ref(1)
 
-const selectedMonth = ref(defaultDate.getMonth() + 1)
-const selectedDay = ref(defaultDate.getDate())
+watch(lastAvailableSong, (newLastSong) => {
+  const defaultDate = newLastSong
+    ? new Date(CALENDAR_YEAR, 0, newLastSong.id)
+    : new Date(CALENDAR_YEAR, 0, 1)
+  selectedMonth.value = defaultDate.getMonth() + 1
+  selectedDay.value = defaultDate.getDate()
+}, { immediate: true })
+
 
 const INITIAL_DISPLAY_COUNT = 5
 const LOAD_MORE_COUNT = 10
@@ -128,21 +132,21 @@ const cardBackgroundStyle = (src?: string) => {
 }
 
 const availableDaysInMonth = computed(() => {
-  return availableDates[selectedMonth.value]
-    ? Array.from(availableDates[selectedMonth.value]).sort((a, b) => a - b)
+  return availableDates.value[selectedMonth.value]
+    ? Array.from(availableDates.value[selectedMonth.value]).sort((a, b) => a - b)
     : []
 })
 
 // 月が変更されたときに日の妥当性をチェック
 watch(selectedMonth, (newMonth) => {
-  const days = availableDates[newMonth]
+  const days = availableDates.value[newMonth]
   if (!days || !days.has(selectedDay.value)) {
     // 新しい月で現在の日付が存在しない場合、その月の最後の日付を選択
     selectedDay.value = availableDaysInMonth.value[availableDaysInMonth.value.length - 1]
   }
 })
 
-const getDayOfYear = (month: number, day: number, year: number = SONG_YEAR) => {
+const getDayOfYear = (month: number, day: number, year: number = CALENDAR_YEAR) => {
   const date = new Date(year, month - 1, day)
   const start = new Date(year, 0, 1)
   return Math.floor((+date - +start) / 86400000) + 1
@@ -150,7 +154,7 @@ const getDayOfYear = (month: number, day: number, year: number = SONG_YEAR) => {
 
 const selectedDayOfYear = computed(() => getDayOfYear(selectedMonth.value, selectedDay.value))
 
-const formatDate = (dayOfYear: number, year: number = SONG_YEAR) => {
+const formatDate = (dayOfYear: number, year: number = CALENDAR_YEAR) => {
   const date = new Date(year, 0, dayOfYear)
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -169,14 +173,15 @@ const allVisibleSongs = computed(() =>
         return false
       }
       // 解禁されていない曲は表示しない
-      if (s.id > currentDayOfYear) {
+      if (s.id > currentDayOfYear.value) {
         return false
       }
       // 今日の曲は、一度再生ページで見てからリストに表示する
-      if (s.id === currentDayOfYear) {
-        const dateString = `${now.getFullYear()}-${(now.getMonth() + 1)
+      if (s.id === currentDayOfYear.value) {
+        const today = now.value
+        const dateString = `${CALENDAR_YEAR}-${(today.getMonth() + 1)
           .toString()
-          .padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`
+          .padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`
         const viewedTodaySong = localStorage.getItem(`viewedTodaySong_${dateString}`)
         return viewedTodaySong === 'true'
       }
