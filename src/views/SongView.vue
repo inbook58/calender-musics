@@ -39,26 +39,24 @@ const todayId = computed(() => {
 
 watch(() => props.shareId, (newId) => {
   if (!newId) {
-    song.value = undefined
-    return
+    router.push({ name: 'NotFound' });
+    return;
   }
 
   const targetSong = songs.find((s) => s.shareId === newId)
 
   if (!targetSong) {
-    song.value = undefined
-    return
+    router.push({ name: 'NotFound' });
+    return;
   }
 
-  // 未来の曲へのアクセスガード
-  const songId = targetSong.id
-  // todayId は overriddenDate を考慮しているので、そのまま比較するだけで良い
-  if (songId > todayId.value) {
-    song.value = undefined // 未来の曲なら表示しない
-    return
+  if (targetSong.id > todayId.value) {
+    router.push({ name: 'FutureSong' });
+    return;
   }
 
   song.value = targetSong
+
 }, { immediate: true })
 
 
@@ -215,7 +213,7 @@ const headerArtStyle = computed<Record<string, string> | undefined>(() => {
 })
 
 const navigateTo = (shareId: string) => {
-  router.push({ name: 'Song', params: { shareId }, query: route.query })
+  router.push({ name: 'Song', params: { shareId } })
 }
 
 watch(song, () => {
@@ -311,7 +309,6 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </main>
-    <main v-else>404: ページが見つかりません</main>
   </Transition>
 </template>
 

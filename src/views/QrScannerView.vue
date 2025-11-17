@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { BrowserMultiFormatReader, NotFoundException } from '@zxing/library'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 import songs from '@/data/songs.json'
 
@@ -27,6 +27,7 @@ const result = ref<string | null>(null)
 const scanning = ref(false)
 const hasCamera = ref(true)
 const router = useRouter()
+const route = useRoute()
 
 const codeReader = new BrowserMultiFormatReader()
 

@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <h2 class="date-caption">{{ formattedSelectedDate }}までの楽曲</h2>
+    <div class="description">
+      本日分の楽曲はQRコードを読み取らないと表示されません
+    </div>
 
     <div class="calendar-container">
       <div class="calendar-header">
@@ -31,7 +34,7 @@
       <RouterLink
         v-for="song in visibleSongs"
         :key="song.id"
-        :to="{ name: 'Song', params: { shareId: song.shareId }, query: route.query }"
+        :to="{ name: 'Song', params: { shareId: song.shareId } }"
         class="song-item"
         :class="{ 'song-item--with-image': resolveImageUrl(song.image) }"
         :style="cardBackgroundStyle(song.image)"
@@ -539,10 +542,11 @@ const loadMore = () => {
 }
 
 .description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #555;
   margin: 0;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* 表示する行数を2行に制限 */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

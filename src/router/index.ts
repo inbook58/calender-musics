@@ -45,6 +45,18 @@ const router = createRouter({
       name: 'SongList',
       component: Today,
       meta: {title: '昨日までの楽曲 - diadia'}
+    },
+    {
+      path: '/future-song',
+      name: 'FutureSong',
+      component: () => import('../views/FutureSongView.vue'),
+      meta: {title: 'もうちょい待ってね - diadia'}
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('../views/NotFoundView.vue'),
+      meta: {title: 'ページが見つかりません - diadia'}
     }
   ]
 })
@@ -55,5 +67,28 @@ if (redirectPath) {
   sessionStorage.removeItem('redirect')
   router.replace(redirectPath)
 }
+
+router.beforeEach((to, from, next) => {
+  // 引き継ぎたいクエリパラメータのキー
+  const persistentQueries = ['mode', 'date'];
+  
+  const newQuery = { ...to.query };
+  let queryChanged = false;
+
+  persistentQueries.forEach(key => {
+    // 遷移先にキーがなく、遷移元にキーがある場合
+    if (to.query[key] === undefined && from.query[key] !== undefined) {
+      newQuery[key] = from.query[key];
+      queryChanged = true;
+    }
+  });
+
+  // クエリが変更された場合は、新しいクエリでナビゲーションを再実行
+  if (queryChanged) {
+    next({ ...to, query: newQuery, replace: to.fullPath === from.fullPath });
+  } else {
+    next(); // それ以外は通常通り
+  }
+});
 
 export default router

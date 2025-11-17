@@ -73,7 +73,7 @@ onMounted(() => {
         <div class="text-block">
           <h1 class="heading">
             <span class="jp-heading">聴いて</span>
-            <span class="en-heading">Listen the songs</span>
+            <span class="en-heading">Listen to the songs</span>
           </h1>
           <div class="main-text">
             <p class="jp">一曲づつ並び替えました<br>
