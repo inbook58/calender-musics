@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="date-caption">{{ formattedSelectedDate }}までの楽曲</h2>
     <div class="description">
-      本日分の楽曲はQRコードを読み取らないと表示されません
+      本日分の楽曲はQRコードを読み取るまで表示されません
     </div>
 
     <div class="calendar-container">
