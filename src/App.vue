@@ -36,35 +36,37 @@ watch(
 </script>
 
 <template>
-  <main>
-    <RouterView />
-  </main>
-  <footer>
-    <div class="footer-content">
-      <a href="https://www.instagram.com/diadia_official/" target="_blank" rel="noopener noreferrer" class="social-icon-link">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="mailto:info@dia-a-dia.com" class="social-icon-link">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
-  </footer>
+  <div class="app-wrapper">
+    <main>
+      <RouterView />
+    </main>
+    <footer>
+      <div class="footer-content">
+        <a href="https://www.instagram.com/diadia_official/" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:info@dia-a-dia.com" class="social-icon-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
-main {
-  padding: 0;
-  flex: 1;
-}
-
-#app {
+.app-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+main {
+  padding: 0;
+  flex-grow: 1;
+}
+
 footer {
-  margin-top: 60px;
+  margin-top: 0px;
   padding: 20px;
   background-color: white;
   text-align: center;
@@ -87,6 +89,6 @@ footer {
 }
 
 .social-icon-link:hover {
-  color: #555; /* ホバー時の色 */
+  color: #555;
 }
 </style>
