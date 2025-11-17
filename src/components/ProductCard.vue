@@ -16,7 +16,7 @@ defineProps({
     <section class="product-section">
       <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
         <div class="product-image">
-          <img src="/images/pics_product2.jpg" alt="diadia calendar">
+          <img src="/images/pics_product3.jpg" alt="diadia calendar">
         </div>
         <div class="product-info">
           <h2 class="product-name">diadia</h2>
@@ -40,6 +40,7 @@ defineProps({
   color: #000000;
   text-align: center;
   margin-top: 10px;
+  font-family: 'Kosugi', sans-serif;
 }
 
 .product-section {
@@ -69,7 +70,8 @@ defineProps({
   font-size: 0.7em;
   color: #888;
   margin-top: 5px;
-  text-align: left; /* product-info内の他のテキストと揃える */
+  text-align: left;
+  font-family: 'Kosugi', sans-serif;
 }
 
 @media screen and (min-width: 481px)  {
@@ -88,14 +90,14 @@ defineProps({
     font-size: 1.2rem;
     font-weight: bold;
     margin: 0;
+    font-family: 'Kosugi', sans-serif;
   }
-
   .product-price {
     font-size: 1.1rem;
     margin: 8px 0 0;
     color: #555;
-  }
-}
+    font-family: 'Kosugi', sans-serif;
+  }}
 @media screen and (max-width: 480px) {
   .product-image img{
     width: 140px;
@@ -110,11 +112,13 @@ defineProps({
     font-size: 1rem;
     font-weight: bold;
     margin: 0;
+    font-family: 'Kosugi', sans-serif;
   }
   .product-price {
     font-size: 0.9rem;
     margin: 0px 0 0;
     color: #555;
+    font-family: 'Kosugi', sans-serif;
   }
 }
 </style>

@@ -39,10 +39,54 @@ watch(
   <main>
     <RouterView />
   </main>
+  <footer>
+    <div class="footer-content">
+      <a href="https://www.instagram.com/diadia_official/" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:info@dia-a-dia.com" class="social-icon-link">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
 main {
   padding: 0;
+  flex: 1;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-icon-link {
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-icon-link:hover {
+  color: #555; /* ホバー時の色 */
 }
 </style>
