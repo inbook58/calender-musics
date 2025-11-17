@@ -1,14 +1,32 @@
 <template>
   <div class="container">
     <h2 class="date-caption">{{ formattedSelectedDate }}までの楽曲</h2>
-    <div class="date-selector">
-      <select v-model="selectedMonth">
-        <option v-for="m in availableMonths" :key="m" :value="m">{{ m }}月</option>
-      </select>
-      <select v-model="selectedDay">
-        <option v-for="d in availableDaysInMonth" :key="d" :value="d">{{ d }}日</option>
-      </select>
+
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button @click="prevMonth" :disabled="isPrevMonthDisabled">&lt;</button>
+        <h2>{{ displayDate.getFullYear() }}年 {{ displayDate.getMonth() + 1 }}月</h2>
+        <button @click="nextMonth" :disabled="isNextMonthDisabled">&gt;</button>
+      </div>
+      <div class="calendar-grid">
+        <div v-for="day in weekdays" :key="day" class="weekday">{{ day }}</div>
+        <div
+          v-for="(date, index) in calendarGrid"
+          :key="index"
+          class="day"
+          :class="{
+            'not-current-month': !date.isCurrentMonth,
+            'unavailable': !date.isAvailable,
+            'selected': date.isSelected,
+            'empty': date.day === 0,
+          }"
+          @click="selectDate(date)"
+        >
+          {{ date.day > 0 ? date.day : '' }}
+        </div>
+      </div>
     </div>
+
     <div v-if="visibleSongs.length > 0" class="song-list">
       <RouterLink
         v-for="song in visibleSongs"
@@ -93,12 +111,128 @@ const lastAvailableSong = computed(() => songs
 const selectedMonth = ref(1)
 const selectedDay = ref(1)
 
+// --- Calendar Logic ---
+const displayDate = ref(new Date(CALENDAR_YEAR, 0, 1))
+const weekdays = ['日', '月', '火', '水', '木', '金', '土']
+
+const calendarGrid = computed(() => {
+  const year = displayDate.value.getFullYear()
+  const month = displayDate.value.getMonth()
+
+  const firstDayOfMonth = new Date(year, month, 1)
+  const lastDayOfMonth = new Date(year, month + 1, 0)
+
+  const startDayOfWeek = firstDayOfMonth.getDay() // 0 (Sun) - 6 (Sat)
+  const totalDays = lastDayOfMonth.getDate()
+
+  const grid: { day: number; month: number; year: number; isCurrentMonth: boolean; isAvailable: boolean; isSelected: boolean; }[] = []
+
+  // Days from previous month
+  if (!isPrevMonthDisabled.value) {
+    const prevMonthDate = new Date(year, month, 0)
+    const prevMonth = prevMonthDate.getMonth() + 1
+    const prevMonthYear = prevMonthDate.getFullYear()
+    const prevMonthLastDay = prevMonthDate.getDate()
+    const availableDaysInPrevMonth = availableDates.value[prevMonth] || new Set()
+
+    for (let i = startDayOfWeek; i > 0; i--) {
+      const day = prevMonthLastDay - i + 1
+      grid.push({
+        day: day,
+        month: prevMonth,
+        year: prevMonthYear,
+        isCurrentMonth: false,
+        isAvailable: availableDaysInPrevMonth.has(day),
+        isSelected: false,
+      })
+    }
+  } else {
+    for (let i = 0; i < startDayOfWeek; i++) {
+      grid.push({ day: 0, month: 0, year: 0, isCurrentMonth: false, isAvailable: false, isSelected: false })
+    }
+  }
+
+  // Days of current month
+  const availableDaysInCurrentMonth = availableDates.value[month + 1] || new Set()
+  for (let day = 1; day <= totalDays; day++) {
+    grid.push({
+      day: day,
+      month: month + 1,
+      year: year,
+      isCurrentMonth: true,
+      isAvailable: availableDaysInCurrentMonth.has(day),
+      isSelected: day === selectedDay.value && month + 1 === selectedMonth.value,
+    })
+  }
+
+  // Days from next month
+  if (!isNextMonthDisabled.value) {
+    const nextMonthDate = new Date(year, month + 1, 1)
+    const nextMonth = nextMonthDate.getMonth() + 1
+    const nextMonthYear = nextMonthDate.getFullYear()
+    const availableDaysInNextMonth = availableDates.value[nextMonth] || new Set()
+    const remainingCells = 7 - (grid.length % 7)
+    if (remainingCells < 7) {
+      for (let i = 1; i <= remainingCells; i++) {
+        grid.push({
+          day: i,
+          month: nextMonth,
+          year: nextMonthYear,
+          isCurrentMonth: false,
+          isAvailable: availableDaysInNextMonth.has(i),
+          isSelected: false,
+        })
+      }
+    }
+  } else {
+    const remainingCells = 7 - (grid.length % 7)
+    if (remainingCells < 7) {
+      for (let i = 0; i < remainingCells; i++) {
+        grid.push({ day: 0, month: 0, year: 0, isCurrentMonth: false, isAvailable: false, isSelected: false })
+      }
+    }
+  }
+
+  return grid
+})
+
+const isPrevMonthDisabled = computed(() => {
+  return displayDate.value.getFullYear() === CALENDAR_YEAR && displayDate.value.getMonth() === 0
+})
+
+const isNextMonthDisabled = computed(() => {
+  return displayDate.value.getFullYear() === CALENDAR_YEAR && displayDate.value.getMonth() === 11
+})
+
+const prevMonth = () => {
+  if (isPrevMonthDisabled.value) return
+  displayDate.value = new Date(displayDate.value.getFullYear(), displayDate.value.getMonth() - 1, 1)
+}
+
+const nextMonth = () => {
+  if (isNextMonthDisabled.value) return
+  displayDate.value = new Date(displayDate.value.getFullYear(), displayDate.value.getMonth() + 1, 1)
+}
+
+const selectDate = (date: { day: number; month: number; year: number; isAvailable: boolean; }) => {
+  if (!date.isAvailable) return
+
+  selectedMonth.value = date.month
+  selectedDay.value = date.day
+
+  if (displayDate.value.getMonth() + 1 !== date.month) {
+    displayDate.value = new Date(date.year, date.month - 1, 1)
+  }
+}
+
 watch(lastAvailableSong, (newLastSong) => {
   const defaultDate = newLastSong
     ? new Date(CALENDAR_YEAR, 0, newLastSong.id)
     : new Date(CALENDAR_YEAR, 0, 1)
   selectedMonth.value = defaultDate.getMonth() + 1
   selectedDay.value = defaultDate.getDate()
+  // Also update calendar display to the selected month
+  displayDate.value = new Date(CALENDAR_YEAR, defaultDate.getMonth(), 1)
 }, { immediate: true })
 
 
@@ -142,7 +276,13 @@ watch(selectedMonth, (newMonth) => {
   const days = availableDates.value[newMonth]
   if (!days || !days.has(selectedDay.value)) {
     // 新しい月で現在の日付が存在しない場合、その月の最後の日付を選択
-    selectedDay.value = availableDaysInMonth.value[availableDaysInMonth.value.length - 1]
+    if (availableDaysInMonth.value.length > 0) {
+      selectedDay.value = availableDaysInMonth.value[availableDaysInMonth.value.length - 1]
+    }
+  }
+  // Update calendar display when selectedMonth changes
+  if (displayDate.value.getMonth() !== newMonth - 1) {
+    displayDate.value = new Date(CALENDAR_YEAR, newMonth - 1, 1)
   }
 })
 
@@ -203,6 +343,97 @@ const loadMore = () => {
 </script>
 
 <style scoped>
+.calendar-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar-header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.calendar-header button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.calendar-header button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+.calendar-header button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.weekday, .day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  font-size: 0.9rem;
+}
+
+.weekday {
+  font-weight: 600;
+  color: #666;
+}
+
+.day {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.day:not(.unavailable):hover {
+  background-color: #f0f0f0;
+}
+
+.day.not-current-month {
+  color: #aaa;
+}
+
+.day.empty {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.day.unavailable {
+  color: #d9d9d9;
+  pointer-events: none;
+}
+
+.day.not-current-month.unavailable {
+  color: #eee;
+}
+
+.day.selected {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
 
 .container {
   max-width: 960px;
@@ -215,22 +446,6 @@ const loadMore = () => {
   font-weight: bold;
   margin-bottom: 16px;
   text-align: center;
-}
-
-.date-selector {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-.date-selector select {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  font-size: 1rem;
 }
 
 .song-list {
