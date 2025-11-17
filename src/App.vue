@@ -47,7 +47,7 @@ const isFooterVisible = computed(() => route.name !== 'QrScanner')
         <a href="https://www.instagram.com/diadia_official/" target="_blank" rel="noopener noreferrer" class="social-icon-link">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="mailto:info@dia-a-dia.com" class="social-icon-link">
+        <a href="mailto:hello.diadia365@gmail.com" class="social-icon-link">
           <i class="fas fa-envelope"></i>
         </a>
       </div>
