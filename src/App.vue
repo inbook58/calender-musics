@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView, useRoute } from 'vue-router'
-import { watch, ref, provide, watchEffect } from 'vue'
+import { watch, ref, provide, watchEffect, computed } from 'vue'
 
 const route = useRoute()
 
@@ -33,6 +33,8 @@ watch(
   },
   { immediate: true }
 )
+
+const isFooterVisible = computed(() => route.name !== 'QrScanner')
 </script>
 
 <template>
@@ -40,7 +42,7 @@ watch(
     <main>
       <RouterView />
     </main>
-    <footer>
+    <footer v-if="isFooterVisible">
       <div class="footer-content">
         <a href="https://www.instagram.com/diadia_official/" target="_blank" rel="noopener noreferrer" class="social-icon-link">
           <i class="fab fa-instagram"></i>

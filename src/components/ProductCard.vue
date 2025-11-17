@@ -56,7 +56,7 @@ defineProps({
   color: inherit;
   max-width: 460px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #eee;
   border-radius: 8px;
   transition: background-color 0.3s ease;
