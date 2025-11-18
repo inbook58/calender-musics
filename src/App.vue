@@ -44,7 +44,7 @@ const isFooterVisible = computed(() => route.name !== 'QrScanner')
     </main>
     <footer v-if="isFooterVisible">
       <div class="footer-content">
-        <a href="https://www.instagram.com/diadia_official/" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+        <a href="https://www.instagram.com/diadia_2026/" target="_blank" rel="noopener noreferrer" class="social-icon-link">
           <i class="fab fa-instagram"></i>
         </a>
         <a href="mailto:hello.diadia365@gmail.com" class="social-icon-link">
