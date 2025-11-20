@@ -15,7 +15,7 @@
   {
     "id": 2,
     "title": "実験4号",
-    "artist_name": "The Pees",
+    "artist_name": "The ピーズ",
     "album_name": "リハビリ中断",
     "description": "002日目の紹介文",
     "image": "@public/images/daily-images/1_2@4x.png",
@@ -28,7 +28,7 @@
   {
     "id": 3,
     "title": "雪んこ",
-    "artist_name": "Takaki Horigome",
+    "artist_name": "堀込高樹",
     "album_name": "Home Ground",
     "description": "003日目の紹介文",
     "image": "@public/images/daily-images/1_3@4x.png",
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "title": "Luv N' Haight - Single Version",
+    "title": "Luv N' Haight",
     "artist_name": "Sly & The Family Stone",
     "album_name": "There's a Riot Goin' On",
     "description": "004日目の紹介文",
@@ -68,7 +68,7 @@
     "id": 6,
     "title": "The Flower Called Nowhere",
     "artist_name": "Stereolab",
-    "album_name": "Dots And Loops (Expanded Edition)",
+    "album_name": "Dots And Loops",
     "description": "006日目の紹介文",
     "image": "@public/images/daily-images/1_6@4x.png",
     "players": {
@@ -145,7 +145,7 @@
   {
     "id": 12,
     "title": "21世紀の自殺者",
-    "artist_name": "0.8Syooogeki",
+    "artist_name": "0.8秒と衝撃",
     "album_name": "エスノファンキードフトエフスキーカムカムクラブ",
     "description": "012日目の紹介文",
     "image": "@public/images/daily-images/1_12@4x.png",
@@ -366,7 +366,7 @@
   {
     "id": 29,
     "title": "機械仕掛乃宇宙",
-    "artist_name": "Ichiko Aoba",
+    "artist_name": "青葉市子",
     "album_name": "０",
     "description": "029日目の紹介文",
     "image": "@public/images/daily-images/1_29@4x.png",
@@ -456,9 +456,9 @@
   },
   {
     "id": 36,
-    "title": "Born Under Punches (The Heat Goes On) - 2005 Remaster",
+    "title": "Born Under Punches (The Heat Goes On)",
     "artist_name": "Talking Heads",
-    "album_name": "Remain in Light (Deluxe Version)",
+    "album_name": "Remain in Light",
     "description": "036日目の紹介文",
     "image": "@public/images/daily-images/2_5@4x.png",
     "players": {
@@ -547,9 +547,9 @@
   },
   {
     "id": 43,
-    "title": "A Day In The Life - Remastered 2009",
+    "title": "A Day In The Life",
     "artist_name": "The Beatles",
-    "album_name": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+    "album_name": "Sgt. Pepper's Lonely Hearts Club Band",
     "description": "043日目の紹介文",
     "image": "@public/images/daily-images/2_12@4x.png",
     "players": {
@@ -652,7 +652,7 @@
   {
     "id": 51,
     "title": "燃え殻",
-    "artist_name": "umanohone",
+    "artist_name": "馬の骨",
     "album_name": "馬の骨",
     "description": "051日目の紹介文",
     "image": "@public/images/daily-images/2_20@4x.png",
@@ -756,7 +756,7 @@
   {
     "id": 59,
     "title": "そいえば台湾",
-    "artist_name": "FUJIN CLUB",
+    "artist_name": "婦人倶楽部",
     "album_name": "そいえば台湾",
     "description": "059日目の紹介文",
     "image": "@public/images/daily-images/2_28@4x.png",
@@ -783,7 +783,7 @@
     "id": 61,
     "title": "Theme from Goodbye Renaldo",
     "artist_name": "Squarepusher",
-    "album_name": "Feed Me Weird Things (Remastered)",
+    "album_name": "Feed Me Weird Things",
     "description": "061日目の紹介文",
     "image": "@public/images/daily-images/3_2@4x.png",
     "players": {
@@ -976,9 +976,9 @@
   },
   {
     "id": 76,
-    "title": "I'd Have You Anytime (2014 Remaster)",
+    "title": "I'd Have You Anytime",
     "artist_name": "George Harrison",
-    "album_name": "All Things Must Pass (2014 Remaster)",
+    "album_name": "All Things Must Pass",
     "description": "076日目の紹介文",
     "image": "@public/images/daily-images/3_17@4x.png",
     "players": {
@@ -1082,7 +1082,7 @@
     "id": 84,
     "title": "Hope For Happiness",
     "artist_name": "Soft Machine",
-    "album_name": "The Soft Machine (Remastered And Expanded)",
+    "album_name": "The Soft Machine",
     "description": "084日目の紹介文",
     "image": "@public/images/daily-images/3_25@4x.png",
     "players": {
@@ -1119,9 +1119,9 @@
   },
   {
     "id": 87,
-    "title": "Virtual Insanity - Remastered 2013",
+    "title": "Virtual Insanity",
     "artist_name": "Jamiroquai",
-    "album_name": "Travelling Without Moving (Remastered)",
+    "album_name": "Travelling Without Moving",
     "description": "087日目の紹介文",
     "image": "@public/images/daily-images/3_28@4x.png",
     "players": {
@@ -1211,7 +1211,7 @@
   {
     "id": 94,
     "title": "The Late Show",
-    "artist_name": "SCHA DARA PARR",
+    "artist_name": "スチャダラパー",
     "album_name": "5th WHEEL 2 the COACH Standard of 90's",
     "description": "094日目の紹介文",
     "image": "@public/images/daily-images/4_4@4x.png",
@@ -1275,9 +1275,9 @@
   },
   {
     "id": 99,
-    "title": "21st Century Schizoid Man - Including \"Mirrors\"",
+    "title": "21st Century Schizoid Man",
     "artist_name": "King Crimson",
-    "album_name": "In The Court Of The Crimson King (Expanded & Remastered Original Album Mix)",
+    "album_name": "In The Court Of The Crimson King",
     "description": "099日目の紹介文",
     "image": "@public/images/daily-images/4_9@4x.png",
     "players": {
@@ -1614,7 +1614,7 @@
   {
     "id": 125,
     "title": "Thousand Knives",
-    "artist_name": "Ryuichi Sakamoto",
+    "artist_name": "坂本龍一",
     "album_name": "/05",
     "description": "125日目の紹介文",
     "image": "@public/images/daily-images/5_5@4x.png",
@@ -1756,9 +1756,9 @@
   },
   {
     "id": 136,
-    "title": "Flying Teapot - Remastered 2018",
+    "title": "Flying Teapot",
     "artist_name": "Gong",
-    "album_name": "Flying Teapot (Deluxe Edition)",
+    "album_name": "Flying Teapot",
     "description": "136日目の紹介文",
     "image": "@public/images/daily-images/5_16@4x.png",
     "players": {
@@ -1771,7 +1771,7 @@
     "id": 137,
     "title": "Runnin'",
     "artist_name": "The Pharcyde",
-    "album_name": "Labcabincalifornia (Deluxe Edition)",
+    "album_name": "Labcabincalifornia",
     "description": "137日目の紹介文",
     "image": "@public/images/daily-images/5_17@4x.png",
     "players": {
@@ -1783,7 +1783,7 @@
   {
     "id": 138,
     "title": "塀までひとっとび",
-    "artist_name": "Sadistic Mika Band",
+    "artist_name": "サディスティック・ミカ・バンド",
     "album_name": "黒船",
     "description": "138日目の紹介文",
     "image": "@public/images/daily-images/5_18@4x.png",
@@ -1912,9 +1912,9 @@
   },
   {
     "id": 148,
-    "title": "Endomorph (Dedicated to My Parents) - Remastered",
+    "title": "Endomorph (Dedicated to My Parents)",
     "artist_name": "Allan Holdsworth",
-    "album_name": "Secrets (Remastered)",
+    "album_name": "Secrets",
     "description": "148日目の紹介文",
     "image": "@public/images/daily-images/5_28@4x.png",
     "players": {
@@ -1952,7 +1952,7 @@
   {
     "id": 151,
     "title": "やめられないなぜか",
-    "artist_name": "Shintaro Sakamoto",
+    "artist_name": "坂本慎太郎",
     "album_name": "ナマで踊ろう",
     "description": "151日目の紹介文",
     "image": "@public/images/daily-images/5_31@4x.png",
@@ -2355,7 +2355,7 @@
   {
     "id": 182,
     "title": "Summer Connection",
-    "artist_name": "Taeko Onuki",
+    "artist_name": "大貫妙子",
     "album_name": "SUNSHOWER",
     "description": "182日目の紹介文",
     "image": "@public/images/daily-images/7_1@4x.png",
@@ -2420,7 +2420,7 @@
   {
     "id": 187,
     "title": "ユリイカ",
-    "artist_name": "sakanaction",
+    "artist_name": "サカナクション",
     "album_name": "グッドバイ／ユリイカ",
     "description": "187日目の紹介文",
     "image": "@public/images/daily-images/7_6@4x.png",
@@ -2602,7 +2602,7 @@
   {
     "id": 201,
     "title": "海街diary",
-    "artist_name": "Yoko Kanno",
+    "artist_name": "菅野よう子",
     "album_name": "海街diary オリジナルサウンドトラック",
     "description": "201日目の紹介文",
     "image": "@public/images/daily-images/7_20@4x.png",
@@ -2875,7 +2875,7 @@
   {
     "id": 222,
     "title": "これが私の生きる道",
-    "artist_name": "Puffy AmiYumi",
+    "artist_name": "PUFFY",
     "album_name": "JET CD",
     "description": "222日目の紹介文",
     "image": "@public/images/daily-images/8_10@4x.png",
@@ -3147,7 +3147,7 @@
   },
   {
     "id": 243,
-    "title": "Summer Wind - Remastered ) [The Frank Sinatra Collection]",
+    "title": "Summer Wind",
     "artist_name": "Frank Sinatra",
     "album_name": "Nothing But The Best [The Frank Sinatra Collection]",
     "description": "243日目の紹介文",
@@ -3252,7 +3252,7 @@
   {
     "id": 251,
     "title": "旋毛からつま先",
-    "artist_name": "Yuta Orisaka",
+    "artist_name": "折坂悠太",
     "album_name": "平成",
     "description": "251日目の紹介文",
     "image": "@public/images/daily-images/9_8@4x.png",
@@ -3539,7 +3539,7 @@
     "id": 273,
     "title": "Are You Gonna Be My Girl",
     "artist_name": "Jet",
-    "album_name": "Get Born (Deluxe Edition)",
+    "album_name": "Get Born",
     "description": "273日目の紹介文",
     "image": "@public/images/daily-images/9_30@4x.png",
     "players": {
@@ -3551,7 +3551,7 @@
   {
     "id": 274,
     "title": "こんな風に過ぎて行くのなら",
-    "artist_name": "Maki Asakawa",
+    "artist_name": "浅川マキ",
     "album_name": "シングル・コレクション",
     "description": "274日目の紹介文",
     "image": "@public/images/daily-images/10_1@4x.png",
@@ -3577,7 +3577,7 @@
   {
     "id": 276,
     "title": "Rowan",
-    "artist_name": "OFFICIAL HIGE DANDISM",
+    "artist_name": "Official髭男dism",
     "album_name": "Traveler",
     "description": "276日目の紹介文",
     "image": "@public/images/daily-images/10_3@4x.png",
@@ -3616,7 +3616,7 @@
   {
     "id": 279,
     "title": "まちあわせ",
-    "artist_name": "Saho Terao",
+    "artist_name": "寺尾紗穂",
     "album_name": "珈琲",
     "description": "279日目の紹介文",
     "image": "@public/images/daily-images/10_6@4x.png",
@@ -3643,7 +3643,7 @@
     "id": 281,
     "title": "Tha Divide",
     "artist_name": "Pink Siifu",
-    "album_name": "FlySiifu's (Deluxe Edition)",
+    "album_name": "FlySiifu's",
     "description": "281日目の紹介文",
     "image": "@public/images/daily-images/10_8@4x.png",
     "players": {
@@ -3810,9 +3810,9 @@
   },
   {
     "id": 294,
-    "title": "MR. WALKING DRUGSTORE MAN - 2017 Remaster",
-    "artist_name": "Speed, Glue & Shinki",
-    "album_name": "イヴ 前夜 (2017 Remaster)",
+    "title": "MR. WALKING DRUGSTORE MAN",
+    "artist_name": "スピード・グルー＆シンキ",
+    "album_name": "イヴ 前夜",
     "description": "294日目の紹介文",
     "image": "@public/images/daily-images/10_21@4x.png",
     "players": {
@@ -3862,9 +3862,9 @@
   },
   {
     "id": 298,
-    "title": "My White Bicycle - 2023 Remaster",
+    "title": "My White Bicycle",
     "artist_name": "Tomorrow",
-    "album_name": "Permanent Dream (2023 Remaster)",
+    "album_name": "Permanent Dream",
     "description": "298日目の紹介文",
     "image": "@public/images/daily-images/10_25@4x.png",
     "players": {
@@ -3901,9 +3901,9 @@
   },
   {
     "id": 301,
-    "title": "It's Gonna Get Better - 2007 Remaster",
+    "title": "It's Gonna Get Better",
     "artist_name": "Genesis",
-    "album_name": "Genesis (2007 Remaster)",
+    "album_name": "Genesis",
     "description": "301日目の紹介文",
     "image": "@public/images/daily-images/10_28@4x.png",
     "players": {
@@ -3941,7 +3941,7 @@
   {
     "id": 304,
     "title": "天国より野蛮 - (DJ KRUSH mix)",
-    "artist_name": "Miki Nakatani",
+    "artist_name": "中谷美紀",
     "album_name": "vague",
     "description": "304日目の紹介文",
     "image": "@public/images/daily-images/10_31@4x.png",
@@ -3967,7 +3967,7 @@
   {
     "id": 306,
     "title": "ぼくの好きな先生",
-    "artist_name": "RC Succession",
+    "artist_name": "RCサクセション",
     "album_name": "初期のRCサクセション",
     "description": "306日目の紹介文",
     "image": "@public/images/daily-images/11_2@4x.png",
@@ -3994,7 +3994,7 @@
     "id": 308,
     "title": "After Hours",
     "artist_name": "The Velvet Underground",
-    "album_name": "The Velvet Underground (45th Anniversary)",
+    "album_name": "The Velvet Underground",
     "description": "308日目の紹介文",
     "image": "@public/images/daily-images/11_4@4x.png",
     "players": {
@@ -4291,9 +4291,9 @@
   },
   {
     "id": 331,
-    "title": "Saturday in the Park - 2002 Remaster",
+    "title": "Saturday in the Park",
     "artist_name": "Chicago",
-    "album_name": "Chicago V (Expanded & Remastered)",
+    "album_name": "Chicago V",
     "description": "331日目の紹介文",
     "image": "@public/images/daily-images/11_27@4x.png",
     "players": {
@@ -4330,9 +4330,9 @@
   },
   {
     "id": 334,
-    "title": "Swallowtail Butterfly～あいのうた～ - Remastered 2015",
+    "title": "Swallowtail Butterfly～あいのうた～",
     "artist_name": "YEN TOWN BAND",
-    "album_name": "MONTAGE (Remastered 2015)",
+    "album_name": "MONTAGE",
     "description": "334日目の紹介文",
     "image": "@public/images/daily-images/11_30@4x.png",
     "players": {
@@ -4356,9 +4356,9 @@
   },
   {
     "id": 336,
-    "title": "Maiden Voyage - Remastered 1999/Rudy Van Gelder Edition",
+    "title": "Maiden Voyage",
     "artist_name": "Herbie Hancock",
-    "album_name": "Maiden Voyage (Remastered 1999/Rudy Van Gelder Edition)",
+    "album_name": "Maiden Voyage",
     "description": "336日目の紹介文",
     "image": "@public/images/daily-images/12_2@4x.png",
     "players": {
@@ -4382,9 +4382,9 @@
   },
   {
     "id": 338,
-    "title": "Reminiscing - Remastered 2010",
+    "title": "Reminiscing",
     "artist_name": "Little River Band",
-    "album_name": "Sleeper Catcher (Remastered 2022)",
+    "album_name": "Sleeper Catcher",
     "description": "338日目の紹介文",
     "image": "@public/images/daily-images/12_4@4x.png",
     "players": {

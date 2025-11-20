@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import songs from '@/data/songs.json'
-import { computed, onBeforeUnmount, onMounted, nextTick, ref, watch, inject, Ref } from 'vue'
+import { computed, ref, watch, inject, Ref, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 import { CALENDAR_YEAR } from '@/config'
@@ -20,12 +20,12 @@ const now = computed(() => overriddenDate?.value || new Date(new Date().toLocale
 
 const todayId = computed(() => {
   const targetDate = now.value
-  
+
   // 現在の年がカレンダーの基準年に達していない場合、解禁されている曲はない
   if (targetDate.getFullYear() < CALENDAR_YEAR) {
     return 0
   }
-  
+
   // 現在の年がカレンダーの基準年を超えている場合、すべての曲が解禁済み
   if (targetDate.getFullYear() > CALENDAR_YEAR) {
     return 366; // or a larger number to unlock all
@@ -175,40 +175,10 @@ const imageUrl = computed(() => {
 
 const usesBackground = computed(() => Boolean(imageUrl.value))
 
-const headerEl = ref<HTMLElement | null>(null)
-const artAnchor = ref('50%')
-
-const updateArtAnchor = () => {
-  if (!usesBackground.value) {
-    artAnchor.value = '50%'
-    return
-  }
-  const header = headerEl.value
-  if (!header) {
-    artAnchor.value = '50%'
-    return
-  }
-  const container = header.closest('.song-page') as HTMLElement | null
-  if (!container) {
-    artAnchor.value = '50%'
-    return
-  }
-  const headerRect = header.getBoundingClientRect()
-  const containerRect = container.getBoundingClientRect()
-  const centerOffset = headerRect.top - containerRect.top + headerRect.height / 2 - 20
-  artAnchor.value = `${centerOffset}px`
-}
-
-const handleResize = () => {
-  if (typeof window === 'undefined') return
-  updateArtAnchor()
-}
-
-const headerArtStyle = computed<Record<string, string> | undefined>(() => {
+const backgroundStyle = computed<Record<string, string> | undefined>(() => {
   if (!usesBackground.value || !imageUrl.value) return undefined
   return {
-    '--song-date-art-image': `url('${imageUrl.value}')`,
-    '--song-date-art-anchor': artAnchor.value,
+    '--song-art-image': `url('${imageUrl.value}')`,
   }
 })
 
@@ -227,28 +197,6 @@ watch(song, () => {
   }
 }, { immediate: true })
 
-watch([song, usesBackground], async () => {
-  if (typeof window === 'undefined') return
-  await nextTick()
-  updateArtAnchor()
-})
-
-watch(headerEl, async () => {
-  if (typeof window === 'undefined') return
-  await nextTick()
-  updateArtAnchor()
-})
-
-onMounted(() => {
-  if (typeof window === 'undefined') return
-  updateArtAnchor()
-  window.addEventListener('resize', handleResize, { passive: true })
-})
-
-onBeforeUnmount(() => {
-  if (typeof window === 'undefined') return
-  window.removeEventListener('resize', handleResize)
-})
 </script>
 
 <template>
@@ -257,13 +205,18 @@ onBeforeUnmount(() => {
     <main
       v-if="song"
       class="song-page"
-      :class="{ 'song-page--with-date-art': usesBackground, 'song-page--standard': !usesBackground }"
-      :style="headerArtStyle"
     >
       <div class="content">
-        <header ref="headerEl" class="song-page__header">
+        <header class="song-page__header">
           <h1>{{ displayDate }}</h1>
           <p v-if="displayDateEn" class="song-page__date-en">{{ displayDateEn }}</p>
+          <div v-if="song" class="song-details"
+            :class="{ 'with-background': usesBackground }"
+            :style="backgroundStyle">
+            <h2 class="song-title">{{ song.title }}</h2>
+            <p class="song-artist">{{ song.artist_name }}</p>
+            <p class="song-album">{{ song.album_name }}</p>
+          </div>
         </header>
         <img
           v-if="imageUrl && !usesBackground"
@@ -323,19 +276,8 @@ onBeforeUnmount(() => {
 .song-page {
   position: relative;
   padding: 24px 16px;
-}
-
-.song-page--standard {
   max-width: 720px;
   margin: 40px auto;
-  padding: 20px 36px;
-}
-
-.song-page--with-date-art {
-  position: relative;
-  max-width: 960px;
-  margin: 0 auto 60px auto;
-  padding: 0 clamp(32px, 6vw, 64px);
 }
 
 .content {
@@ -362,7 +304,6 @@ onBeforeUnmount(() => {
   color: #111;
   font-weight: 700;
   letter-spacing: 0.02em;
-  text-shadow: 0 0 18px rgba(255, 255, 255, 0.85);
 }
 
 .song-page__date-en {
@@ -373,28 +314,57 @@ onBeforeUnmount(() => {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(30, 30, 30, 0.82);
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
 }
 
-.song-page--with-date-art::before {
+.song-details {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.song-details.with-background {
+  position: relative;
+  z-index: 1;
+}
+
+.song-details.with-background::before {
   content: '';
   position: absolute;
-  top: var(--song-date-art-anchor, 50%);
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 180px;
   height: 280px;
-  background-image: var(--song-date-art-image);
+  background-image: var(--song-art-image);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+.song-title {
+  font-size: clamp(1.2rem, 4vw, 1.8rem); /* 最小1.2rem, 画面幅の4vw, 最大1.8rem */
+  font-weight: bold;
+  margin: 0;
+}
+
+.song-artist {
+  font-size: 1.1rem;
+  margin: 8px 0 0;
+  color: #555;
+}
+
+.song-album {
+  font-size: 0.9rem;
+  margin: 4px 0 0;
+  color: #555;
+  font-style: italic;
 }
 
 @media (max-width: 760px) {
-  .song-page--with-date-art {
+  .song-page {
     margin: 0px auto;
     padding: 24px 20px;
   }
