@@ -24,7 +24,7 @@ import TheHeader from '@/components/TheHeader.vue'
       <img class="how-to-use-img" src="/images/how-to-use/how-to-use2.png" alt="Ibuki">
     </div>
     <div class="how-to-use-container">
-      <p>アプリをインストール</p>
+      <p>ホーム画面に追加する</p>
       <img class="how-to-use-img" src="/images/how-to-use/how-to-use3.png" alt="Ibuki">
     </div>
     <div class="how-to-use-container">
