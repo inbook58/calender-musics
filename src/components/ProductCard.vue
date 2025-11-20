@@ -10,8 +10,7 @@ defineProps({
 <template>
   <div class="product-card-wrapper">
     <div v-if="showNotes" class="notes-container">
-      <p class="note">* 本商品の使用にはSpotifyもしくはApple Musicの有料サブスクリプションに入会している必要があります</p>
-      <p class="note">* 配信サービスの都合により楽曲が再生できない場合があります</p>
+      <p class="note">* SpotifyかApple Musicの有料プランをご利用の場合、紹介している楽曲をそのままフル再生できます(配信サービスの都合により楽曲が再生できなくなっている場合があります)</p>
     </div>
     <section class="product-section">
       <a href="https://diadia2026.base.shop/items/122333158" target="_blank" rel="noopener noreferrer" class="product-link">
