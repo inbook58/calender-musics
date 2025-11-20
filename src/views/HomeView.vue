@@ -208,11 +208,13 @@ onMounted(() => {
 }
 
 .jp {
-  font-family: 'Kosugi', sans-serif;
+  /* font-family: 'Kosugi', sans-serif; */
+  font-family: 'Noto Serif JP', serif;
 }
 
 .jp-heading {
-  font-family: 'Kosugi', sans-serif;
+  /* font-family: 'Kosugi', sans-serif; */
+  font-family: 'Noto Serif JP', serif;
 }
 
 .en {
