@@ -61,7 +61,7 @@ import TheHeader from '@/components/TheHeader.vue'
 
 .about-image,
 .about-product {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 20px auto;
   padding: 0 20px;
 }
@@ -81,29 +81,15 @@ import TheHeader from '@/components/TheHeader.vue'
   padding: 0 20px;
 }
 
-@media (min-width: 1024px) {
-  .about-product {
-    display: flex;
-    gap: 20px;
-  }
-  .how-to-use-container {
-    flex: 0 0 50%; /* Take up 50% of the width */
-  }
-  .product-description {
-    flex: 1;
-  }
+.about-image {
+  text-align: center;
+}
+.about-product {
+  text-align: center;
+}
+.how-to-use-container {
+  flex: 0 0 50%; /* Take up 50% of the width */
+  margin-top: 50px;
 }
 
-@media (max-width: 1023px) {
-  .about-image {
-    text-align: center;
-  }
-  .about-product {
-    text-align: center;
-  }
-  .how-to-use-container {
-    flex: 0 0 50%; /* Take up 50% of the width */
-    margin-top: 50px;
-  }
-}
 </style>
