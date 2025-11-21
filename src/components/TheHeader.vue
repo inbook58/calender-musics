@@ -7,8 +7,16 @@ const isMenuOpen = ref(false)
 const router = useRouter()
 
 const todayId = computed(() => {
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
-  const start = new Date(now.getFullYear(), 0, 1)
+  const route = router.currentRoute.value
+  const mode = route.query.mode
+  const overrideDate = route.query.date
+  let now
+  if(mode === "dev" && overrideDate){
+    now = new Date(`${overrideDate}T12:00:00+09:00`)
+  } else {
+    now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+  }
+  const start = new Date(2026, 0, 1) // 固定
   return Math.floor((+now - +start) / 86400000) + 1
 })
 
@@ -22,7 +30,17 @@ const closeMenu = () => {
 
 const goToTodaysSong = () => {
   closeMenu()
-  const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+  // クエリパラメーターでmode=devとdate=YYYY-MM-DDが指定されている場合、オーバーライドされた日付を使用
+  const route = router.currentRoute.value
+  const mode = route.query.mode
+  const overrideDate = route.query.date
+  let today
+  if(mode === "dev" && overrideDate){
+    today = new Date(`${overrideDate}T12:00:00+09:00`)
+  } else {
+    today = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }))
+  }
+
   const dateString = `${today.getFullYear()}-${(today.getMonth() + 1)
     .toString()
     .padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`
