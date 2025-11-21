@@ -5,6 +5,8 @@ import Today from '@/views/SongListView.vue'
 import QrScannerView from '@/views/QrScannerView.vue'
 import HowToUseView from '@/views/HowToUseView.vue'
 import ShopView from '@/views/ShopView.vue'
+import WaitingRoomView from '@/views/WaitingRoomView.vue'
+import FutureSongView from '@/views/FutureSongView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,10 +49,16 @@ const router = createRouter({
       meta: {title: '昨日までの楽曲 - diadia'}
     },
     {
+      path: '/waiting-room',
+      name: 'WaitingRoom',
+      component: WaitingRoomView,
+      meta: {title: 'Waiting Room - diadia'}
+    },
+    {
       path: '/future-song',
       name: 'FutureSong',
-      component: () => import('../views/FutureSongView.vue'),
-      meta: {title: 'もうちょい待ってね - diadia'}
+      component: FutureSongView,
+      meta: {title: 'チョットマッテクダサイ - diadia'}
     },
     {
       path: '/:pathMatch(.*)*',
@@ -71,7 +79,7 @@ if (redirectPath) {
 router.beforeEach((to, from, next) => {
   // 引き継ぎたいクエリパラメータのキー
   const persistentQueries = ['mode', 'date'];
-  
+
   const newQuery = { ...to.query };
   let queryChanged = false;
 

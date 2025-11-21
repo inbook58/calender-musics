@@ -34,7 +34,7 @@ watch(
   { immediate: true }
 )
 
-const isFooterVisible = computed(() => route.name !== 'QrScanner')
+const isFooterVisible = computed(() => route.name !== 'QrScanner' && route.name !== 'Song')
 </script>
 
 <template>

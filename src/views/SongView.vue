@@ -51,7 +51,11 @@ watch(() => props.shareId, (newId) => {
   }
 
   if (targetSong.id > todayId.value) {
-    router.push({ name: 'FutureSong' });
+    if (now.value.getFullYear() < CALENDAR_YEAR) {
+      router.push({ name: 'WaitingRoom' });
+    } else {
+      router.push({ name: 'FutureSong' });
+    }
     return;
   }
 

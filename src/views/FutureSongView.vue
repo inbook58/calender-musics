@@ -1,6 +1,6 @@
 <template>
   <div class="message-page">
-    <p>もうちょい待ってね</p>
+    <p>その日付までのお楽しみです</p>
     <RouterLink :to="{ name: 'SongList' }" class="button">曲リストに戻る</RouterLink>
   </div>
 </template>
@@ -17,6 +17,7 @@ import { RouterLink } from 'vue-router';
   align-items: center;
   height: 80vh;
   text-align: center;
+  font-family: 'Kosugi', sans-serif;
 }
 
 p {
