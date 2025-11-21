@@ -138,9 +138,8 @@ onBeforeUnmount(() => {
           class="apple-player is-content-loaded"
         ></div>
 
-        <p v-if="song.players?.other" class="note">
-          <a :href="song.players.other" target="_blank" rel="noopener">その他のサービスで聴く</a>
-        </p>
+        <RouterLink :to="{ name: 'Home' }" class="button">トップページ</RouterLink>
+
       </div>
     </main>
   </Transition>
@@ -275,11 +274,22 @@ onBeforeUnmount(() => {
   margin-bottom: 16px;
 }
 
-.note {
-  font-size: 0.7em;
-  color: #666;
-  text-align: center;
-  margin-top: 10px;
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background-color: #555;
 }
 </style>
 
