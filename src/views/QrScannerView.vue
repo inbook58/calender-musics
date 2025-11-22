@@ -8,7 +8,7 @@
       QRコードを読み取ってください<br />
     </p>
 
-    <div class="video-wrapper">
+    <div class="video-wrapper" :class="{ 'video-ready': isVideoReady }">
       <video ref="video" autoplay playsinline></video>
       <div class="qr-frame"></div>
     </div>
@@ -26,6 +26,7 @@ const video = ref<HTMLVideoElement | null>(null)
 const result = ref<string | null>(null)
 const scanning = ref(false)
 const hasCamera = ref(true)
+const isVideoReady = ref(false)
 const router = useRouter()
 const route = useRoute()
 
@@ -44,6 +45,9 @@ const startCamera = async () => {
         video: { facingMode: 'environment' },
       })
       video.value.srcObject = stream
+      video.value.onloadedmetadata = () => {
+        isVideoReady.value = true;
+      };
       codeReader.decodeFromStream(stream, video.value, (decodeResult, err) => {
         if (decodeResult) {
           const scannedText = decodeResult.getText()
@@ -116,6 +120,12 @@ onUnmounted(() => {
   position: relative;
   width: 100%;
   max-width: 500px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.video-wrapper.video-ready {
+  opacity: 1;
 }
 
 video {
