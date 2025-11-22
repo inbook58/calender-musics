@@ -41,6 +41,8 @@ defineProps({
   margin-top: 10px;
   font-family: 'Kosugi', sans-serif;
   max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-section {
