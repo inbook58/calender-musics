@@ -210,6 +210,7 @@ onMounted(() => {
 .jp {
   /* font-family: 'Kosugi', sans-serif; */
   font-family: 'Noto Serif JP', serif;
+  line-height: 1.4;
 }
 
 .jp-heading {
@@ -220,6 +221,7 @@ onMounted(() => {
 .en {
   font-size: 0.8rem;
   opacity: 0.8;
+  margin-top: 4px;
 }
 
 .en-heading {
@@ -228,5 +230,6 @@ onMounted(() => {
   font-weight: normal;
   margin-top: 4px;
   opacity: 0.8;
+  margin-bottom: 20px;
 }
 </style>
