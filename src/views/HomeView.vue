@@ -221,7 +221,8 @@ onMounted(() => {
 .en {
   font-size: 0.8rem;
   opacity: 0.8;
-  margin-top: 4px;
+  margin-top: 8px;
+  line-height: 1.4;
 }
 
 .en-heading {
