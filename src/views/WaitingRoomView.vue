@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import songs from '@/data/songs-waiting-room.json'
-import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
+import { computed, ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
 
 // waiting-room.json から最初の曲を常に表示
 const song = ref(songs[0]);
 
-const isPlayerVisible = ref(true); // 常に表示
+const isPlayerVisible = ref(false)
+const isContentLoaded = ref(false)
 
 const spotifySrc = computed(() => {
   const spotifyHtml = song.value?.players?.spotify
@@ -15,6 +16,29 @@ const spotifySrc = computed(() => {
   const match = spotifyHtml.match(/src="([^"]+)"/)
   return match ? match[1] : ''
 })
+
+const onContentLoad = () => {
+  isContentLoaded.value = true
+}
+
+watch(
+  song,
+  async (newSong) => {
+    isPlayerVisible.value = false
+    isContentLoaded.value = false
+    await nextTick()
+    isPlayerVisible.value = true
+
+    // For Apple Music, we can't easily detect iframe load from v-html.
+    // We'll simulate it with a short delay.
+    if (newSong?.players?.apple && !newSong?.players?.spotify) {
+      setTimeout(() => {
+        onContentLoad()
+      }, 200) // Adjust delay as needed
+    }
+  },
+  { immediate: true },
+)
 
 const imageUrl = computed(() => {
   const src = song.value?.image
@@ -118,7 +142,8 @@ onBeforeUnmount(() => {
 
         <div
           v-if="isPlayerVisible && spotifySrc"
-          class="spotify-player is-content-loaded"
+          class="spotify-player"
+          :class="{ 'is-content-loaded': isContentLoaded }"
         >
           <iframe
             :key="spotifySrc"
@@ -129,16 +154,22 @@ onBeforeUnmount(() => {
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
+            @load="onContentLoad"
           ></iframe>
         </div>
 
         <div
           v-if="isPlayerVisible && song.players?.apple"
           v-html="song.players.apple"
-          class="apple-player is-content-loaded"
+          class="apple-player"
+          :class="{ 'is-content-loaded': isContentLoaded }"
         ></div>
 
-        <RouterLink :to="{ name: 'Home' }" class="button">トップページ</RouterLink>
+        <p class="note">配信サービスの都合により楽曲が再生できない場合があります</p>
+
+        <div class="navigation-buttons">
+          <RouterLink :to="{ name: 'Home' }" class="button">トップページ</RouterLink>
+        </div>
 
       </div>
     </main>
@@ -157,6 +188,7 @@ onBeforeUnmount(() => {
   position: relative;
   padding: 24px 16px;
   max-width: 720px;
+  margin: 40px auto;
   font-family: 'Kosugi', sans-serif;
 }
 
@@ -268,28 +300,65 @@ onBeforeUnmount(() => {
   font-style: italic;
 }
 
+@media (max-width: 760px) {
+  .song-page {
+    margin: 0px auto;
+    padding: 24px 20px;
+  }
+
+  .song-page__header {
+    padding: 32px 0;
+  }
+
+  .song-page__date-en {
+    font-size: 0.95rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 16px 0;
+}
+
 .spotify-player,
 .apple-player {
   min-height: 152px;
   margin-bottom: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.spotify-player.is-content-loaded,
+.apple-player.is-content-loaded {
+  opacity: 1;
+}
+
+.note {
+  font-size: 0.7em;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .button {
-  display: inline-block;
   padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #333;
+  background-color: #fff;
+  color: #111;
   border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid #eee;
 }
 
 .button:hover {
-  background-color: #555;
+  background-color: #eee;
 }
 </style>
 

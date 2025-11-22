@@ -255,10 +255,6 @@ watch(song, () => {
           :class="{ 'is-content-loaded': isContentLoaded }"
         ></div>
 
-        <a v-if="song.players?.other" :href="song.players.other" target="_blank" rel="noopener"
-          >リンク</a
-        >
-
         <p class="note">配信サービスの都合により楽曲が再生できない場合があります</p>
         <div class="navigation-buttons">
           <button :disabled="!prevSong" @click="navigateTo(prevSong.shareId)">前の日</button>
@@ -298,7 +294,10 @@ watch(song, () => {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: clamp(36px, 7vw, 88px) 0;
+  padding-top: 0;
+  padding-right: clamp(24px, 6vw, 48px);
+  padding-bottom: clamp(24px, 6vw, 48px);
+  padding-left: clamp(24px, 6vw, 48px);
 }
 
 .song-page__header h1 {
@@ -374,7 +373,7 @@ watch(song, () => {
   }
 
   .song-page__header {
-    padding: 32px 0;
+    padding: clamp(36px, 7vw, 88px) 0;
   }
 
   .song-page__date-en {
