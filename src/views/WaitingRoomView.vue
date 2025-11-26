@@ -112,24 +112,12 @@ onBeforeUnmount(() => {
     <main class="song-page">
       <div class="content">
         <header class="song-page__header">
-          <div class="countdown">
-            <div class="countdown-item">
-              <span class="countdown-number">{{ days }}</span>
-              <span class="countdown-label">日</span>
-            </div>
-            <div class="countdown-item">
-              <span class="countdown-number">{{ hours }}</span>
-              <span class="countdown-label">時間</span>
-            </div>
-            <div class="countdown-item">
-              <span class="countdown-number">{{ minutes }}</span>
-              <span class="countdown-label">分</span>
-            </div>
-            <div class="countdown-item">
-              <span class="countdown-number">{{ seconds }}</span>
-              <span class="countdown-label">秒</span>
-            </div>
-          </div>
+          <h1 class="message-container">
+            おっと!<br><br>
+            2026まではこの曲を聴いて待っててね
+            <hr class="message-divider" />
+          </h1>
+
           <div v-if="song" class="song-details"
             :class="{ 'with-background': usesBackground }"
             :style="backgroundStyle">
@@ -213,7 +201,11 @@ onBeforeUnmount(() => {
 }
 
 .message-container {
-  margin-bottom: 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #444;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .countdown-title {
@@ -254,8 +246,8 @@ onBeforeUnmount(() => {
 
 
 .song-details {
-  margin-top: 20px;
-  padding: 20px;
+  /* margin-top: 20px; */
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -307,7 +299,7 @@ onBeforeUnmount(() => {
   }
 
   .song-page__header {
-    padding: 32px 0;
+    padding: 6px 0;
   }
 
   .song-page__date-en {
@@ -359,6 +351,13 @@ img {
 
 .button:hover {
   background-color: #eee;
+}
+
+.message-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px auto;
+  width: 100%;
 }
 </style>
 
