@@ -81,8 +81,9 @@ const currentDayOfYear = computed(() => {
   }
 
   // 現在の年がカレンダーの基準年と一致する場合のみ、通算日を計算
+  // targetDateは東京タイムゾーンに揃えているため、UTC換算時もローカルの月日を使う
   const start = Date.UTC(CALENDAR_YEAR, 0, 1)
-  const end = Date.UTC(CALENDAR_YEAR, targetDate.getUTCMonth(), targetDate.getUTCDate())
+  const end = Date.UTC(CALENDAR_YEAR, targetDate.getMonth(), targetDate.getDate())
   return (end - start) / 86400000 + 1
 })
 
@@ -570,4 +571,3 @@ const loadMore = () => {
   background-color: #f0f0f0;
 }
 </style>
-

@@ -32,8 +32,9 @@ const todayId = computed(() => {
   }
 
   // 現在の年がカレンダーの基準年と一致する場合のみ、通算日を計算
+  // targetDateは東京タイムゾーンに調整済みなので、月日もローカル値を使ってUTC上の差分を算出する
   const start = Date.UTC(CALENDAR_YEAR, 0, 1)
-  const end = Date.UTC(CALENDAR_YEAR, targetDate.getUTCMonth(), targetDate.getUTCDate())
+  const end = Date.UTC(CALENDAR_YEAR, targetDate.getMonth(), targetDate.getDate())
   return (end - start) / 86400000 + 1
 })
 
@@ -51,11 +52,11 @@ watch(() => props.shareId, (newId) => {
   }
 
   if (targetSong.id > todayId.value) {
-    if (now.value.getFullYear() < CALENDAR_YEAR) {
-      router.push({ name: 'WaitingRoom' });
-    } else {
-      router.push({ name: 'FutureSong' });
-    }
+    const isBeforeCalendarYear = now.value.getFullYear() < CALENDAR_YEAR
+    const routeOptions = isBeforeCalendarYear
+      ? { name: 'WaitingRoom' }
+      : { name: 'WaitingRoom', query: { mode: 'future' } }
+    router.push(routeOptions)
     return;
   }
 
@@ -433,4 +434,3 @@ img {
   margin-top: 10px;
 }
 </style>
-

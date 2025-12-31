@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import songs from '@/data/songs-waiting-room.json'
 import { computed, ref, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import TheHeader from '@/components/TheHeader.vue'
+import { CALENDAR_YEAR } from '@/config'
 
 // waiting-room.json から最初の曲を常に表示
 const song = ref(songs[0]);
@@ -67,12 +68,18 @@ const backgroundStyle = computed<Record<string, string> | undefined>(() => {
 
 // --- Countdown Logic ---
 const router = useRouter();
-const targetDate = new Date('2026-01-01T00:00:00+09:00').getTime();
+const route = useRoute();
+const isFutureLock = computed(() => route.query.mode === 'future')
+const waitingMessage = computed(() =>
+  isFutureLock.value ? 'その日まではこの曲を聴いて待っててね' : `${CALENDAR_YEAR}まではこの曲を聴いて待っててね`
+)
+const shouldRunCountdown = computed(() => !isFutureLock.value)
+const targetDate = new Date(`${CALENDAR_YEAR}-01-01T00:00:00+09:00`).getTime();
 const days = ref(0);
 const hours = ref(0);
 const minutes = ref(0);
 const seconds = ref(0);
-let intervalId: number;
+let intervalId: number | null = null;
 
 const updateCountdown = () => {
   const now = new Date().getTime();
@@ -83,8 +90,12 @@ const updateCountdown = () => {
     hours.value = 0;
     minutes.value = 0;
     seconds.value = 0;
-    clearInterval(intervalId);
-    router.push({ name: 'QrScanner' });
+    if (intervalId !== null) {
+      clearInterval(intervalId);
+    }
+    if (shouldRunCountdown.value) {
+      router.push({ name: 'QrScanner' });
+    }
     return;
   }
 
@@ -95,12 +106,16 @@ const updateCountdown = () => {
 };
 
 onMounted(() => {
-  updateCountdown();
-  intervalId = window.setInterval(updateCountdown, 1000);
+  if (shouldRunCountdown.value) {
+    updateCountdown();
+    intervalId = window.setInterval(updateCountdown, 1000);
+  }
 });
 
 onBeforeUnmount(() => {
-  clearInterval(intervalId);
+  if (intervalId !== null) {
+    clearInterval(intervalId);
+  }
 });
 // --- End Countdown Logic ---
 
@@ -114,7 +129,7 @@ onBeforeUnmount(() => {
         <header class="song-page__header">
           <h1 class="message-container">
             おっと!<br><br>
-            2026まではこの曲を聴いて待っててね
+            {{ waitingMessage }}
             <hr class="message-divider" />
           </h1>
 
@@ -360,4 +375,3 @@ img {
   width: 100%;
 }
 </style>
-
